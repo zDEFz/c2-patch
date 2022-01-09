@@ -29,7 +29,7 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 - End=Colorpreset last
 
 ## Recent Fixes and additions
-- Adding an updater just for the cultris2.jar
+- Adding an **updater** just for the cultris2.jar
 - Added tons of colors to choose from in the presets and a colorpicker. Note: ColorPicker will stop working when used after coming from Fullscreen.
 - All piece colors by default unlocked
 - Class with Zulu15 Java in order to be used in older JAVA and Linux.
