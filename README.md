@@ -47,6 +47,7 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 - Can already skip challenges todo any challenge at anytime, except for uberleet.
 - Can also modify each challenge. Could modify the first few challenges to always have interesting one in.
 - Fix blocking queue. See modified uberleet challenge with X lines each 0.10s
+- **MAC Updater**
 
 ## Additional Info
 Edits / changes were done with
