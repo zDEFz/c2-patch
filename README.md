@@ -47,7 +47,12 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 - Can already skip challenges todo any challenge at anytime, except for uberleet.
 - Can also modify each challenge. Could modify the first few challenges to always have interesting one in.
 - Fix blocking queue. See modified uberleet challenge with X lines each 0.10s
-- **MAC Updater**
+- **MAC Updater**. Essentially redo that, but for MAC. Done. 
+```
+#!/bin/bash
+echo starting update in 10 seconds. Make sure you close Cultris II before updating.
+"./resources/jdk-17.0.1-lin/bin/java" -Djava.library.path=./libs -cp cultris2.jar updater
+```
 
 ## Additional Info
 Edits / changes were done with
