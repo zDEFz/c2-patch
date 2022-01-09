@@ -1,5 +1,12 @@
 # c2-patch
 
+## C2 AIO Linux
+Package bundled with https://jdk.java.net/19/
+## C2 AIO Windows
+Package bundled with https://jdk.java.net/19/
+## C2 AIO Mac
+Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it with https://github.com/chinatsu/c2lina.
+
 ## Shortcuts ingame:
 F9=Animation on/off
 F10=Blur on/off
@@ -28,9 +35,8 @@ End=Colorpreset last
 - Can also modify each challenge. Could modify the first few challenges to always have interesting one in.
 - Fix blocking queue. See modified uberleet challenge with X lines each 0.10s
 
-## C2 AIO Linux
-Package bundled with https://jdk.java.net/19/
-## C2 AIO Windows
-Package bundled with https://jdk.java.net/19/
-## C2 AIO Mac
-Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it with https://github.com/chinatsu/c2lina.
+## Additional Info
+Edits / changes were done with
+- https://github.com/Col-E/Recaf
+- https://github.com/GraxCode/JByteMod-Beta/
+- https://java-decompiler.github.io/
