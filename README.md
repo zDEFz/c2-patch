@@ -1,4 +1,4 @@
-# c2-patch
+# C2-patch
 
 ![image](https://user-images.githubusercontent.com/24463722/148704070-f121e7b7-e65b-44c4-8f9a-1e327781ac23.png)
 
