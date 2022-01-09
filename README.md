@@ -1,6 +1,6 @@
 # C2-patch
 
-![image](https://user-images.githubusercontent.com/24463722/148704070-f121e7b7-e65b-44c4-8f9a-1e327781ac23.png | width=250)
+![image](https://user-images.githubusercontent.com/24463722/148704070-f121e7b7-e65b-44c4-8f9a-1e327781ac23.png)
 
 ## C2 AIO Windows
 - **Google Drive** https://drive.google.com/file/d/1sk13vGKh55rKcII6EyNre4EvQ1fWam8k/view?usp=sharing
