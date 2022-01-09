@@ -37,7 +37,7 @@ public class updater {
         String shaChecksumResult = getFileChecksum(shaDigest, file);
         shaChecksumResult=shaChecksumResult.toUpperCase(Locale.ROOT);
         //see checksum
-        System.out.println(shaChecksumResult);
+        System.out.println("Local cultris2.jar: " + shaChecksumResult);
 
         //get checksum from file on server
         URL oracle = new URL("https://raw.githubusercontent.com/zDEFz/c2-patch/main/SHA256");
@@ -46,7 +46,7 @@ public class updater {
 
         String websiteInputLine;
         while ((websiteInputLine = in.readLine()) != null) {
-            System.out.println(websiteInputLine);
+            System.out.println("Remoted cultris2.jar: " + websiteInputLine);
 
 
             if (websiteInputLine.equals(shaChecksumResult)) {
