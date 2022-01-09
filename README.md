@@ -20,13 +20,13 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 5. Report any issues/crashes.
 
 ## Shortcuts ingame:
-F9=Animation on/off
-F10=Blur on/off
-F12=Save Settings
-PageDown=Colorpreset down
-PageUp=Colorpreset up
-Home=Colorpreset first
-End=Colorpreset last
+- F9=Animation on/off
+- F10=Blur on/off
+- F12=Save Settings
+- PageDown=Colorpreset down
+- PageUp=Colorpreset up
+- Home=Colorpreset first
+- End=Colorpreset last
 
 ## Recent Fixes and additions
 - Adding an updater just for the cultris2.jar
