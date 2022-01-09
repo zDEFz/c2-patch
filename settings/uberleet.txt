@@ -1,0 +1,4 @@
+Fastl33t,120,3.5
+Uberl33t,250,6.5
+Longl33t,500,6.5
+Ultral33t,250,3.5
