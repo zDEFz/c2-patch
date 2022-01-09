@@ -3,11 +3,11 @@
 ![image](https://user-images.githubusercontent.com/24463722/148704070-f121e7b7-e65b-44c4-8f9a-1e327781ac23.png)
 
 ## C2 AIO Windows
-- https://drive.google.com/file/d/1sk13vGKh55rKcII6EyNre4EvQ1fWam8k/view?usp=sharing
-Package bundled with https://jdk.java.net/19/
+- **Google Drive** https://drive.google.com/file/d/1sk13vGKh55rKcII6EyNre4EvQ1fWam8k/view?usp=sharing
+- **MEGA.NZ** https://mega.nz/file/ooFWhTKZ#Nw6ihB4eicc1YDJUQENZMo7BwworRfXuMa_Q6N-_v1Q
 ## C2 AIO Linux
-- https://drive.google.com/file/d/18GKx8C5THz9H5vOs8W8YLM1F1hQmTV0Z/view?usp=sharing
-Package bundled with https://jdk.java.net/19/
+- **Google Drive** https://drive.google.com/file/d/18GKx8C5THz9H5vOs8W8YLM1F1hQmTV0Z/view?usp=sharing
+- **MEGA.NZ** https://mega.nz/file/h8EyGLKJ#qRHEQKzS-BRavfxpCWS0f6DS9d_wh_CetC5QpBGqcJ0
 ## C2 AIO Mac
 Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it with https://github.com/chinatsu/c2lina.
 
