@@ -1,6 +1,5 @@
 public class returnMethodsC2 {
-
-
+    
     //returns to fe-gamebackground/bg
     //INVOKESTATIC returnMethodsC2.returnRvalue()F
     //INVOKESTATIC returnMethodsC2.returnGvalue()F
