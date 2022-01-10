@@ -13,7 +13,7 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 
 ## How-To
 
-1. Run the cultrisTool and configure as you wish and save.
+1. Run the update and then the cultrisTool and configure as you wish and save.
 2. If you want to play in fullscreen, click "Auto" at the "Hz" section in order to fixate the current refresh rate of your monitor in fullscreen-mode
 3. Performance tweaks are: Animation off, Skip Audio on
 4. Run the game and enjoy.
