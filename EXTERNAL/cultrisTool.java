@@ -428,7 +428,11 @@ class cultrisTool implements ChangeListener {
             String outString = join(System.lineSeparator(), listOfLines);
 
             try {
+                //empty file before writing
+                new FileWriter(currentPath+settingsPath).close();
+                //write settings
                 writeString(Paths.get(currentPath + settingsPath), outString + System.lineSeparator(), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
