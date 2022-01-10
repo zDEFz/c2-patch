@@ -7,7 +7,7 @@
 |SE-challenges  | uberleet()  | returnMethodsC2.returnUberLeetLines()I | NO  | YES   |
 |SE-challenges  | uberleet()  | returnMethodsC2.returnUberLeetPiecesPerSec()F | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F10toggleBlur()V| NO  | YES   |
-|cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F12pressSave()VNO  | YES   |
+|cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F12pressSave()VNO  | YES   | NO
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F9toggleAnimation()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.colorPresetSelectFirstItemEND()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.colorPresetSelectFirstItemHOME()V | NO  | YES   |
