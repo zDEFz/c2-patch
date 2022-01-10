@@ -40,7 +40,6 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 - Using FlatLAf in Dark Theme https://www.formdev.com/flatlaf/ for the look and feel.
 
 ## Todo and "in question"
-- **MAC Updater**. Essentially redo that, but for MAC. Done. 
 - After each round end when in unblurred mode priorly. Note: Tested, was distracting.
 - Can already skip challenges todo any challenge at anytime, except for uberleet.
 - Can also modify each challenge. Could modify the first few challenges to always have interesting one in.
@@ -49,6 +48,8 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 - TODO find out how to keep the "Blur-layer" but without the Blur.
 - UAC Virtualisation by default + High Priority
 - Unlock all challenges by default
+
+- **MAC Updater**. Essentially redo that, but for MAC. Done. 
 ```
 #!/bin/bash
 echo starting update in 10 seconds. Make sure you close Cultris II before updating.
