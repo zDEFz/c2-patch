@@ -7,6 +7,7 @@
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F9toggleAnimation()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.pgDownSwitchPresetDown()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.pgDownSwitchPresetUp()V | NO  | YES   |
+|fe-gamebackground  | bg()  | cultrisTool.run()V| NO  | YES   |
 |fe-gamebackground  | bg()  | returnMethodsC2.returnAnimationValue()I | NO  | YES   |
 |fe-gamebackground  | bg()  | returnMethodsC2.returnBvalue()F  | NO  | YES   |
 |fe-gamebackground  | bg()  | returnMethodsC2.returnGvalue()F  | NO  | YES   |
