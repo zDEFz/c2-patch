@@ -7,10 +7,10 @@
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F9toggleAnimation()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.pgDownSwitchPresetDown()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.pgDownSwitchPresetUp()V | NO  | YES   |
-|fe-gamebackground  | bg  | returnMethodsC2.returnAnimationValue()I | NO  | YES   |
-|fe-gamebackground  | bg  | returnMethodsC2.returnBvalue()F  | NO  | YES   |
-|fe-gamebackground  | bg  | returnMethodsC2.returnGvalue()F  | NO  | YES   |
-|fe-gamebackground  | bg  | returnMethodsC2.returnRvalue()F  | NO  | YES   |
+|fe-gamebackground  | bg()  | returnMethodsC2.returnAnimationValue()I | NO  | YES   |
+|fe-gamebackground  | bg()  | returnMethodsC2.returnBvalue()F  | NO  | YES   |
+|fe-gamebackground  | bg()  | returnMethodsC2.returnGvalue()F  | NO  | YES   |
+|fe-gamebackground  | bg()  | returnMethodsC2.returnRvalue()F  | NO  | YES   |
 |FE-maingameloopgraphics   | blurMethod()  | returnMethodsC2.returnBlurvalue()F| NO   | YES  |
 |FE-maingameloopgraphics   | for()  | readHzStatus()   | YES   | NO  |
 |FE-maingameloopgraphics   | FPSfoundHere()  | returnMethodsC2.returnFPSvalue()I| NO   | YES  |
