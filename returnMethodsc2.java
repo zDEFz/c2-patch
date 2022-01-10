@@ -34,6 +34,7 @@ public class returnMethodsC2 {
     }
 
     //returns to SE-challenges/uberleet
+    //INVOKESTATIC returnUberLeetPiecesPerSec()F
     public static float returnUberLeetPiecesPerSec() {
         //System.out.println("returnUberLeetPiecesPerSec() called " + leetLinesPerSec);
         return cultrisTool.leetLinesPerSec;
