@@ -480,66 +480,6 @@ class cultrisTool implements ChangeListener {
 
     }
 
-    public static float returnRvalue() {
-        return cultrisTool.R;
-    }
-
-    public static float returnGvalue() {
-        return cultrisTool.G;
-    }
-
-    public static float returnBvalue() {
-        return cultrisTool.B;
-    }
-
-    public static float returnBlurvalue() {
-        return cultrisTool.blurStatus;
-    }
-
-    public static int returnBlurvalueAsInt() {
-        int tmp;
-        if (cultrisTool.blurStatus == 20.0F) {
-            tmp = 1;
-        } else {
-            tmp = 0;
-        }
-        return tmp;
-    }
-
-    public static int returnBassvalue() {
-        return cultrisTool.bassStatus;
-    }
-
-    public static int returnAnimationValue() {
-        return cultrisTool.animationStatus;
-    }
-
-    public static int returnFPSvalue() {
-        //  System.out.println("returnFPSvalue() called " + FPSvalue);
-        return cultrisTool.FPSvalue;
-    }
-
-    public static int returnHzvalue() {
-        // System.out.println("returnHzvalue() called " + Hzvalue);
-
-        return cultrisTool.Hzvalue;
-    }
-
-    public static void readUberl33tFile() {
-        String[] settingsLines = readTextFile(currentPath + uberleetPath);
-        String[] uberleetchallengeString = settingsLines[0].split(",");
-
-        String uberleetName = uberleetchallengeString[0];
-        int uberleetLines = Integer.parseInt(uberleetchallengeString[1]);
-        float uberleetLinesPerSecond = Float.parseFloat(uberleetchallengeString[2]);
-
-        System.out.println(uberleetName + " " + uberleetLines + " " + uberleetLinesPerSecond);
-
-        leetChallengeName = uberleetName;
-        leetLines = uberleetLines;
-        leetLinesPerSec = uberleetLinesPerSecond;
-    }
-
     public static void readSettings() {
 
         String[] settingsLines, animationStatus, blurStatus, fpsNumber, HzNumber, skipAudioStatus;
@@ -616,75 +556,6 @@ class cultrisTool implements ChangeListener {
         return arrayList;
     }
 
-    public static String returnLeetChallengeName() {
-        //System.out.println("returnLeetChallengeName() called " + leetChallengeName);
-        return cultrisTool.leetChallengeName;
-    }
-
-    public static float returnUberLeetPiecesPerSec() {
-        //System.out.println("returnUberLeetPiecesPerSec() called " + leetLinesPerSec);
-        return cultrisTool.leetLinesPerSec;
-    }
-
-    public static int returnUberLeetLines() {
-        //System.out.println("returnUberLeetLines() called " + leetLines);
-        return cultrisTool.leetLines;
-    }
-
-    public static void F9toggleAnimation() {
-        if (animationCheckBox.isSelected()) {
-            animationCheckBox.setSelected(false);
-            //System.out.println("F9toggleAnimation() called " + animationStatus);
-        } else {
-            animationCheckBox.setSelected(true);
-           // System.out.println("F9toggleAnimation() called " + animationStatus);
-
-        }
-    }
-
-    public static void F10toggleBlur() {
-        if (blurCheckBox.isSelected()) {
-            blurCheckBox.setSelected(false);
-           // System.out.println("F10toggleBlur() called " + blurStatus);
-        } else {
-            blurCheckBox.setSelected(true);
-            //System.out.println("F10toggleBlur() called " + blurStatus);
-
-        }
-    }
-
-    public static void F12pressSave() {
-        saveSettingsButton.doClick();
-        //System.out.println("F12pressSave() called " + "saved settings !");
-    }
-
-
-    public static void pgDownSwitchPresetUp() {
-
-        if (colorListIndicatorInt - 1 >= 0) {
-            colorListIndicatorInt--;
-            colorComboList.setSelectedIndex(colorListIndicatorInt);
-        }
-      //  System.out.println("pgDownSwitchPresetUp() called " + colorComboList.getSelectedIndex());
-       // System.out.println("pgDownSwitchPresetUp() called " + colorListIndicatorInt);
-    }
-
-    public static void pgDownSwitchPresetDown() {
-        if (colorListIndicatorInt + 1 <= colorComboList.getItemCount() - 1) {
-            colorListIndicatorInt++;
-            colorComboList.setSelectedIndex(colorListIndicatorInt);
-        }
-       // System.out.println("pgDownSwitchPresetDown() called " + colorComboList.getSelectedIndex());
-        //System.out.println("pgDownSwitchPresetDown() called " + colorListIndicatorInt);
-    }
-
-    public static void colorPresetSelectFirstItemHOME() {
-        colorComboList.setSelectedIndex(0);
-    }
-
-    public static void colorPresetSelectFirstItemEND() {
-        colorComboList.setSelectedIndex(colorComboList.getItemCount() - 1);
-    }
 
     public static void toggleSkipAudio() {
         if (skipBassCheckBox.isSelected()) {
@@ -696,11 +567,6 @@ class cultrisTool implements ChangeListener {
 
         }
     }
-
-    public static void autoBlur() {
-        skipBassCheckBox.setSelected(!skipBassCheckBox.isSelected());
-    }
-
     public static String getScreenRefreshRate() {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice[] gs = ge.getScreenDevices();
