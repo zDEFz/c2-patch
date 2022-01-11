@@ -32,6 +32,7 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 - Adding an **updater** just for the cultris2.jar
 - Added tons of colors to choose from in the presets and a colorpicker. Note: ColorPicker "Pick" will stop working when alt tabbing from full-screen.
 - All piece colors by default unlocked
+- HiDPI fix for better color accuracy. Originally meant to fix colors on Apple Retina Displays.
 - Rebuild the cultrisTool with Java 15 
 - Reorder components to appear properly on MAC and Linux
 - Skip-Audio (performance tweak) does no longer crash as the errors are enclosed in a try catch block.
