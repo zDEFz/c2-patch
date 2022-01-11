@@ -62,6 +62,7 @@ Edits / changes were done with
 - https://github.com/Col-E/Recaf
 - https://github.com/GraxCode/JByteMod-Beta/
 - https://java-decompiler.github.io/
+- https://github.com/java-deobfuscator/deobfuscator
 
 ### Mappings table
 https://github.com/zDEFz/c2-patch/blob/main/mappings.md
