@@ -328,7 +328,8 @@ class cultrisTool implements ChangeListener {
                     colorPresetName = "Empty" + (int) (Math.random() * 999 + 1);
                 }
                 if (colorPresetValues.isEmpty()) {
-                    colorPresetValues = "Empty" + (int) (Math.random() * 999 + 1);
+                    //Steel Blue as default
+                    colorPresetValues ="0.2745098039,0.5098039216,0.7058823529";
                 }
 
                 colorComboList.removeAllItems();
@@ -439,9 +440,6 @@ class cultrisTool implements ChangeListener {
 
         });
         //paint initial default-color
-        this.sliderR.setValue(10);
-        this.sliderG.setValue(35);
-        this.sliderB.setValue(50);
         final int v1 = sliderR.getValue();
         final int v2 = sliderG.getValue();
         final int v3 = sliderB.getValue();
@@ -477,8 +475,6 @@ class cultrisTool implements ChangeListener {
 
         coloredTextField.setFocusable(false);
 
-        //Default selection = Original-Blue
-        colorComboList.setSelectedItem("Original-Blue,0.1,0.35,0.5");
         readSettings();
         this.jFrame.setVisible(true);
 
@@ -560,7 +556,7 @@ class cultrisTool implements ChangeListener {
         return arrayList;
     }
 
-
+/* Code for if we need to toggle Skip audio
     public static void toggleSkipAudio() {
         if (skipBassCheckBox.isSelected()) {
             skipBassCheckBox.setSelected(false);
@@ -571,6 +567,7 @@ class cultrisTool implements ChangeListener {
 
         }
     }
+ */
     public static String getScreenRefreshRate() {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice[] gs = ge.getScreenDevices();
