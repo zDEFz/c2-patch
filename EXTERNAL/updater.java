@@ -16,6 +16,7 @@ public class updater {
     static {
         try {
             currentPath = new File(".").getCanonicalPath();
+            currentPath+=File.separator;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,9 +30,9 @@ public class updater {
         //Use SHA-256 algorithm
         MessageDigest shaDigest = MessageDigest.getInstance("SHA-256");
 
-        System.out.println(currentPath+ "\\cultris2.jar");
+        System.out.println(currentPath+ "cultris2.jar");
         //Create checksum for this file
-        File file = new File(currentPath + "\\cultris2.jar");
+        File file = new File(currentPath + "cultris2.jar");
 
         //SHA-256 checksum
         String shaChecksumResult = getFileChecksum(shaDigest, file);
@@ -46,7 +47,7 @@ public class updater {
 
         String websiteInputLine;
         while ((websiteInputLine = in.readLine()) != null) {
-            System.out.println("Remoted cultris2.jar: " + websiteInputLine);
+            System.out.println("Remote cultris2.jar: " + websiteInputLine);
 
 
             if (websiteInputLine.equals(shaChecksumResult)) {
@@ -60,10 +61,10 @@ public class updater {
 
                     URL website = new URL("https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar");
                     ReadableByteChannel rbc = Channels.newChannel(website.openStream());
-                    File f = new File("cultris2.jar");
+                    File f = new File(currentPath+"cultris2.jar");
                     if(f.canWrite())
                     {
-                        FileOutputStream fos = new FileOutputStream("cultris2.jar");
+                        FileOutputStream fos = new FileOutputStream(currentPath+"cultris2.jar");
                         fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
                         System.out.println("Update successfully done!");
                     }
