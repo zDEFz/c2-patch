@@ -26,14 +26,14 @@ public class updater {
     }
 
     public static void update() throws NoSuchAlgorithmException, IOException, FileNotFoundException {
-        //Use SHA-1 algorithm
+        //Use SHA-256 algorithm
         MessageDigest shaDigest = MessageDigest.getInstance("SHA-256");
 
         System.out.println(currentPath+ "\\cultris2.jar");
         //Create checksum for this file
         File file = new File(currentPath + "\\cultris2.jar");
 
-        //SHA-1 checksum
+        //SHA-256 checksum
         String shaChecksumResult = getFileChecksum(shaDigest, file);
         shaChecksumResult=shaChecksumResult.toUpperCase(Locale.ROOT);
         //see checksum
