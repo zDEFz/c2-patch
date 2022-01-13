@@ -98,7 +98,7 @@ class cultrisTool implements ChangeListener {
         jFrame.setMinimumSize(new Dimension(1024, 130));
         jFrame.setSize(1024, 130);
 
-        UIeventListeners();
+        addUIeventListeners();
 
         //paint initial default-color
         final int v1 = sliderR.getValue();
@@ -141,7 +141,7 @@ class cultrisTool implements ChangeListener {
 
     }
 
-    private void UIeventListeners() {
+    private void addUIeventListeners() {
         final ChangeListener animationStatusListener = changeEvent -> {
             final AbstractButton abstractButton = (AbstractButton) changeEvent.getSource();
             final ButtonModel buttonModel = abstractButton.getModel();
