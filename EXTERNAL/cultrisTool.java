@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,15 +20,6 @@ import static java.nio.file.Files.writeString;
 
 class cultrisTool implements ChangeListener {
     public static String currentPath;
-    static JTextField coloredTextField;
-    static JTextField HzTextField;
-    static JTextField FPSTextField;
-    static JLabel HzLabel;
-    static JComboBox<String> colorComboList;
-    static JCheckBox skipBassCheckBox;
-    static JCheckBox blurCheckBox;
-    static JCheckBox animationCheckBox;
-    static JButton saveSettingsButton;
     public static int state;
     public static int leetLines = 250;
     public static int colorListIndicatorInt = 0;
@@ -46,6 +38,15 @@ class cultrisTool implements ChangeListener {
     public static String leetChallengeName = "Uber l33t";
     public static String colorPresetsPath = "/settings/colorPresets.txt";
     public static String HzPath = "/settings/Hz.txt";
+    static JTextField coloredTextField;
+    static JTextField HzTextField;
+    static JTextField FPSTextField;
+    static JLabel HzLabel;
+    static JComboBox<String> colorComboList;
+    static JCheckBox skipBassCheckBox;
+    static JCheckBox blurCheckBox;
+    static JCheckBox animationCheckBox;
+    static JButton saveSettingsButton;
 
     static {
         try {
@@ -92,61 +93,8 @@ class cultrisTool implements ChangeListener {
             System.err.println("Failed to initialize LaF");
         }
 
-        //TODO extract this part and set into method
-        (FPSTextField = new JTextField("")).setBounds(845, 32, 40, 18);
-        (animationCheckBox = new JCheckBox("Animation")).setBounds(620, 28, 100, 28);
-        (blurCheckBox = new JCheckBox("Blur")).setBounds(730, 28, 80, 28);
-        (coloredTextField = new JTextField()).setBounds(0, 30, 80, 60);
-        (skipBassCheckBox = new JCheckBox("Skip Audio")).setBounds(620, 62, 100, 28);
-        (FPSlabel = new JLabel("FPS")).setBounds(810, 27, 30, 28);
-        (HzLabel = new JLabel("Hz")).setBounds(810, 58, 30, 28);
-        (colorPickerButton = new JButton("Pick")).setBounds(0, 0, 80, 26);
-        (delColorButton = new JButton("Del")).setBounds(450, 0, 70, 38);
-        (detectHzButton = new JButton("Auto")).setBounds(910, 64, 90, 20);
-        (jFrame = new JFrame()).setLayout(null);
-        (newColorButton = new JButton("New")).setBounds(380, 0, 70, 38);
-        (renColorButton = new JButton("Ren")).setBounds(520, 0, 70, 38);
-        (saveSettingsButton = new JButton("Save Settings")).setBounds(621, 0, 260, 26);
-        (sliderB = new JSlider(1, 0, 255, 4)).setBounds(330, 10, 40, 80);
-        (sliderBLabel = new JLabel("B:")).setBounds(279, 0, 40, 80);
-        (sliderBLabelval = new JLabel("" + B)).setBounds(291, 0, 40, 80);
-        (sliderG = new JSlider(1, 0, 255, 4)).setBounds(240, 10, 40, 80);
-        (sliderGlabel = new JLabel("G:")).setBounds(182, 0, 40, 80);
-        (sliderGlabelval = new JLabel("" + G)).setBounds(196, 0, 40, 80);
-        (sliderR = new JSlider(1, 0, 255, 4)).setBounds(140, 10, 40, 80);
-        (sliderRLabel = new JLabel("R:")).setBounds(86, 0, 40, 80);
-        (sliderRlabelval = new JLabel("" + R)).setBounds(98, 0, 40, 80);
-        (slotFiveCheckBox = new JCheckBox("5")).setBounds(440, 58, 30, 28);
-        (slotSixCheckBox = new JCheckBox("6")).setBounds(480, 58, 30, 28);
-        (HzTextField = new JTextField("60")).setBounds(845, 64, 40, 18);
-        colorComboList = new JComboBox<>(readTextFile(currentPath + colorPresetsPath));
-        colorComboList.setSelectedIndex(0);
-        //TODO extract this part and set into method 
-        jFrame.add(FPSTextField);
-        jFrame.add(FPSlabel);
-        jFrame.add(HzLabel);
-        jFrame.add(HzTextField);
-        jFrame.add(animationCheckBox);
-        jFrame.add(blurCheckBox);
-        jFrame.add(colorComboList).setBounds(380, 48, 210, 30);
-        jFrame.add(colorPickerButton);
-        jFrame.add(coloredTextField);
-        jFrame.add(delColorButton);
-        jFrame.add(delColorButton);
-        jFrame.add(newColorButton);
-        jFrame.add(renColorButton);
-        jFrame.add(saveSettingsButton);
-        jFrame.add(skipBassCheckBox);
-        jFrame.add(sliderB);
-        jFrame.add(sliderBLabel);
-        jFrame.add(sliderBLabelval);
-        jFrame.add(sliderG);
-        jFrame.add(sliderGlabel);
-        jFrame.add(sliderGlabelval);
-        jFrame.add(sliderR);
-        jFrame.add(sliderRLabel);
-        jFrame.add(sliderRlabelval);
-        jFrame.add(detectHzButton);
+        defineUIelementsAndPosition();
+        addUIelementsToJFrame();
         //set minimum size to prevent resize after coming from fullscreen mode
         jFrame.setMinimumSize(new Dimension(1024, 130));
         jFrame.setSize(1024, 130);
@@ -194,8 +142,7 @@ class cultrisTool implements ChangeListener {
                 });
                 JDialog dialog = JColorChooser.createDialog(null, "Color Chooser", true, chooser, null, null);
                 dialog.setVisible(true);
-            }
-            else {
+            } else {
                 cultrisTool.blurStatus = 0.0f;
             }
         };
@@ -295,7 +242,7 @@ class cultrisTool implements ChangeListener {
             }
 
         });
-        
+
         HzTextField.addKeyListener(new KeyAdapter() {
 
             @Override
@@ -309,9 +256,9 @@ class cultrisTool implements ChangeListener {
                     eB.printStackTrace();
                 }
             }
-            
+
             public void keyTyped(KeyEvent e) {
-            //only allow numbers
+                //only allow numbers
                 char c = e.getKeyChar();
                 if (((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
                     e.consume(); // if it's not a number, ignore the event
@@ -334,10 +281,10 @@ class cultrisTool implements ChangeListener {
                 }
                 if (colorPresetValues.isEmpty()) {
                     //Steel Blue as default
-                    colorPresetValues ="0.2745098039,0.5098039216,0.7058823529";
+                    colorPresetValues = "0.2745098039,0.5098039216,0.7058823529";
                 }
-                
-                //TODO review this part
+
+
                 //refresh the colorComboList
                 colorComboList.removeAllItems();
 
@@ -350,8 +297,6 @@ class cultrisTool implements ChangeListener {
                 colorsList.add(colorPresetName + "," + colorPresetValues);
                 colorComboList.addItem(colorPresetName + "," + colorPresetValues);
 
-                //TODO end
-                
                 String outString = String.join(System.lineSeparator(), colorsList);
                 writeString(Paths.get(currentPath + colorPresetsPath), outString, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
 
@@ -374,7 +319,6 @@ class cultrisTool implements ChangeListener {
             }
         });
         saveSettingsButton.addActionListener(e -> {
-
             String[] settingsLines = readTextFile(currentPath + settingsPath);
             String[] animationStatus = settingsLines[0].split(",");
             int animationIsSet = Integer.parseInt(animationStatus[1]);
@@ -383,40 +327,21 @@ class cultrisTool implements ChangeListener {
             int skipAudioIsSet;
 
             try {
-
                 Files.writeString(Paths.get(currentPath + HzPath), "" + cultrisTool.Hzvalue, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
 
-            if (animationCheckBox.isSelected()) {
-                animationIsSet = 1;
-            }
-            if (!animationCheckBox.isSelected()) {
-                animationIsSet = 0;
-            }
-
-            if (blurCheckBox.isSelected()) {
-                blurstatusIsSet = 1;
-            } else {
-                blurstatusIsSet = 0;
+            //if X is selected, return 1, else 0
+            animationIsSet = animationCheckBox.isSelected() ? 1 : 0;
+            blurstatusIsSet = blurCheckBox.isSelected() ? 1 : 0;
+            skipAudioIsSet = skipBassCheckBox.isSelected() ? 1 : 0;
+            try {
+                Files.writeString(Paths.get(currentPath + skipAudioPath), "" + skipAudioIsSet, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+            } catch (IOException ex) {
+                ex.printStackTrace();
             }
 
-            if (skipBassCheckBox.isSelected()) {
-                skipAudioIsSet = 1;
-                try {
-                    Files.writeString(Paths.get(currentPath + skipAudioPath), "1", StandardOpenOption.CREATE, StandardOpenOption.WRITE);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            } else {
-                skipAudioIsSet = 0;
-                try {
-                    Files.writeString(Paths.get(currentPath + skipAudioPath), "0", StandardOpenOption.CREATE, StandardOpenOption.WRITE);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
             String animationLine = "Animation," + animationIsSet;
             String blurLine = ("Blur," + blurstatusIsSet);
             String SkipAudioLine = ("Skip-Audio," + skipAudioIsSet);
@@ -424,20 +349,12 @@ class cultrisTool implements ChangeListener {
             String Hzline = ("Hz," + Hzvalue);
             String FPSline = ("FPS," + FPSvalue);
 
-            ArrayList<String> listOfLines = new ArrayList<>();
-
-            listOfLines.add(animationLine);
-            listOfLines.add(blurLine);
-            listOfLines.add(FPSline);
-            listOfLines.add(Hzline);
-            listOfLines.add(PresetLine);
-            listOfLines.add(SkipAudioLine);
-
+            ArrayList<String> listOfLines = new ArrayList<>(Arrays.asList(animationLine, blurLine, FPSline, Hzline, PresetLine, SkipAudioLine));
             String outString = join(System.lineSeparator(), listOfLines);
 
             try {
                 //empty file before writing
-                new FileWriter(currentPath+settingsPath).close();
+                new FileWriter(currentPath + settingsPath).close();
                 //write settings
                 writeString(Paths.get(currentPath + settingsPath), outString + System.lineSeparator(), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
 
@@ -562,18 +479,18 @@ class cultrisTool implements ChangeListener {
         return arrayList;
     }
 
-/* Code for if we need to toggle Skip audio
-    public static void toggleSkipAudio() {
-        if (skipBassCheckBox.isSelected()) {
-            skipBassCheckBox.setSelected(false);
-            //System.out.println("F5toggleSkipAudio() called " + bassStatus);
-        } else {
-            skipBassCheckBox.setSelected(true);
-            //System.out.println("F5toggleSkipAudio() called " + bassStatus);
+    /* Code for if we need to toggle Skip audio
+        public static void toggleSkipAudio() {
+            if (skipBassCheckBox.isSelected()) {
+                skipBassCheckBox.setSelected(false);
+                //System.out.println("F5toggleSkipAudio() called " + bassStatus);
+            } else {
+                skipBassCheckBox.setSelected(true);
+                //System.out.println("F5toggleSkipAudio() called " + bassStatus);
 
+            }
         }
-    }
- */
+     */
     public static String getScreenRefreshRate() {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice[] gs = ge.getScreenDevices();
@@ -591,7 +508,6 @@ class cultrisTool implements ChangeListener {
         return "" + refreshRate;
     }
 
-
     public static void run() {
         if (cultrisTool.state == 0) {
             new cultrisTool();
@@ -601,6 +517,65 @@ class cultrisTool implements ChangeListener {
 
     public static void main(final String[] s) {
         run();
+    }
+
+    private void addUIelementsToJFrame() {
+        jFrame.add(FPSlabel);
+        jFrame.add(HzLabel);
+        jFrame.add(HzTextField);
+        jFrame.add(animationCheckBox);
+        jFrame.add(blurCheckBox);
+        jFrame.add(colorComboList).setBounds(380, 48, 210, 30);
+        jFrame.add(colorPickerButton);
+        jFrame.add(coloredTextField);
+        jFrame.add(delColorButton);
+        jFrame.add(delColorButton);
+        jFrame.add(detectHzButton);
+        jFrame.add(newColorButton);
+        jFrame.add(renColorButton);
+        jFrame.add(saveSettingsButton);
+        jFrame.add(skipBassCheckBox);
+        jFrame.add(sliderB);
+        jFrame.add(sliderBLabel);
+        jFrame.add(sliderBLabelval);
+        jFrame.add(sliderG);
+        jFrame.add(sliderGlabel);
+        jFrame.add(sliderGlabelval);
+        jFrame.add(sliderR);
+        jFrame.add(sliderRLabel);
+        jFrame.add(sliderRlabelval);
+        jFrame.add(FPSTextField);
+    }
+
+    private void defineUIelementsAndPosition() {
+        (FPSTextField = new JTextField("")).setBounds(845, 32, 40, 18);
+        (animationCheckBox = new JCheckBox("Animation")).setBounds(620, 28, 100, 28);
+        (blurCheckBox = new JCheckBox("Blur")).setBounds(730, 28, 80, 28);
+        (coloredTextField = new JTextField()).setBounds(0, 30, 80, 60);
+        (skipBassCheckBox = new JCheckBox("Skip Audio")).setBounds(620, 62, 100, 28);
+        (FPSlabel = new JLabel("FPS")).setBounds(810, 27, 30, 28);
+        (HzLabel = new JLabel("Hz")).setBounds(810, 58, 30, 28);
+        (colorPickerButton = new JButton("Pick")).setBounds(0, 0, 80, 26);
+        (delColorButton = new JButton("Del")).setBounds(450, 0, 70, 38);
+        (detectHzButton = new JButton("Auto")).setBounds(910, 64, 90, 20);
+        (jFrame = new JFrame()).setLayout(null);
+        (newColorButton = new JButton("New")).setBounds(380, 0, 70, 38);
+        (renColorButton = new JButton("Ren")).setBounds(520, 0, 70, 38);
+        (saveSettingsButton = new JButton("Save Settings")).setBounds(621, 0, 260, 26);
+        (sliderB = new JSlider(1, 0, 255, 4)).setBounds(330, 10, 40, 80);
+        (sliderBLabel = new JLabel("B:")).setBounds(279, 0, 40, 80);
+        (sliderBLabelval = new JLabel("" + B)).setBounds(291, 0, 40, 80);
+        (sliderG = new JSlider(1, 0, 255, 4)).setBounds(240, 10, 40, 80);
+        (sliderGlabel = new JLabel("G:")).setBounds(182, 0, 40, 80);
+        (sliderGlabelval = new JLabel("" + G)).setBounds(196, 0, 40, 80);
+        (sliderR = new JSlider(1, 0, 255, 4)).setBounds(140, 10, 40, 80);
+        (sliderRLabel = new JLabel("R:")).setBounds(86, 0, 40, 80);
+        (sliderRlabelval = new JLabel("" + R)).setBounds(98, 0, 40, 80);
+        (slotFiveCheckBox = new JCheckBox("5")).setBounds(440, 58, 30, 28);
+        (slotSixCheckBox = new JCheckBox("6")).setBounds(480, 58, 30, 28);
+        (HzTextField = new JTextField("60")).setBounds(845, 64, 40, 18);
+        colorComboList = new JComboBox<>(readTextFile(currentPath + colorPresetsPath));
+        colorComboList.setSelectedIndex(0);
     }
 
     @Override
