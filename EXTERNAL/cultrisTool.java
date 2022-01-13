@@ -97,28 +97,26 @@ class cultrisTool implements ChangeListener {
         //set minimum size to prevent resize after coming from fullscreen mode
         jFrame.setMinimumSize(new Dimension(1024, 130));
         jFrame.setSize(1024, 130);
-
         addUIeventListeners();
-
         //paint initial default-color
         final int v1 = sliderR.getValue();
         final int v2 = sliderG.getValue();
         final int v3 = sliderB.getValue();
         final Color c = new Color(v1, v2, v3);
         coloredTextField.setBackground(c);
-
-        this.sliderR.addChangeListener(this);
-        this.sliderG.addChangeListener(this);
-        this.sliderB.addChangeListener(this);
-
-        //this.jFrame.setUndecorated(false);
         this.jFrame.setAlwaysOnTop(false);
-
         this.jFrame.setLocationByPlatform(true);
         this.jFrame.setLocationRelativeTo(null);
         this.jFrame.setLocation(this.jFrame.getX(), 0);
         this.jFrame.setResizable(false);
+        setFocusOrderUI();
+        coloredTextField.setFocusable(false);
+        readSettings();
+        this.jFrame.setVisible(true);
 
+    }
+
+    private void setFocusOrderUI() {
         colorPickerButton.setNextFocusableComponent(sliderR);
         sliderR.setNextFocusableComponent(sliderG);
         sliderB.setNextFocusableComponent(newColorButton);
@@ -133,15 +131,14 @@ class cultrisTool implements ChangeListener {
         FPSTextField.setNextFocusableComponent(skipBassCheckBox);
         skipBassCheckBox.setNextFocusableComponent(HzTextField);
         HzTextField.setNextFocusableComponent(detectHzButton);
-
-        coloredTextField.setFocusable(false);
-
-        readSettings();
-        this.jFrame.setVisible(true);
-
     }
 
     private void addUIeventListeners() {
+
+        this.sliderR.addChangeListener(this);
+        this.sliderG.addChangeListener(this);
+        this.sliderB.addChangeListener(this);
+
         final ChangeListener animationStatusListener = changeEvent -> {
             final AbstractButton abstractButton = (AbstractButton) changeEvent.getSource();
             final ButtonModel buttonModel = abstractButton.getModel();
