@@ -92,6 +92,7 @@ class cultrisTool implements ChangeListener {
             System.err.println("Failed to initialize LaF");
         }
 
+        //TODO extract this part and set into method
         (FPSTextField = new JTextField("")).setBounds(845, 32, 40, 18);
         (animationCheckBox = new JCheckBox("Animation")).setBounds(620, 28, 100, 28);
         (blurCheckBox = new JCheckBox("Blur")).setBounds(730, 28, 80, 28);
@@ -118,9 +119,9 @@ class cultrisTool implements ChangeListener {
         (slotFiveCheckBox = new JCheckBox("5")).setBounds(440, 58, 30, 28);
         (slotSixCheckBox = new JCheckBox("6")).setBounds(480, 58, 30, 28);
         (HzTextField = new JTextField("60")).setBounds(845, 64, 40, 18);
-        //Create the combo box, select item at index 4.
         colorComboList = new JComboBox<>(readTextFile(currentPath + colorPresetsPath));
         colorComboList.setSelectedIndex(0);
+        //TODO extract this part and set into method 
         jFrame.add(FPSTextField);
         jFrame.add(FPSlabel);
         jFrame.add(HzLabel);
@@ -146,6 +147,7 @@ class cultrisTool implements ChangeListener {
         jFrame.add(sliderRLabel);
         jFrame.add(sliderRlabelval);
         jFrame.add(detectHzButton);
+        //set minimum size to prevent resize after coming from fullscreen mode
         jFrame.setMinimumSize(new Dimension(1024, 130));
         jFrame.setSize(1024, 130);
 
@@ -154,8 +156,10 @@ class cultrisTool implements ChangeListener {
             final ButtonModel buttonModel = abstractButton.getModel();
             final boolean selected = buttonModel.isSelected();
             if (selected) {
+                //return 74 to enable the standard waves animation
                 cultrisTool.animationStatus = 74;
             } else {
+                //return 0 to disable Animation altogether
                 cultrisTool.animationStatus = 0;
             }
         };
@@ -165,9 +169,11 @@ class cultrisTool implements ChangeListener {
             final ButtonModel buttonModel = abstractButton.getModel();
             final boolean selected = buttonModel.isSelected();
             if (selected) {
+                //push the blurred layer into the (visible) foreground
                 cultrisTool.blurStatus = 20.0f;
 
             } else {
+                //push the blurred layer into the (invisible) background
                 cultrisTool.blurStatus = 0.0f;
             }
         };
@@ -188,9 +194,8 @@ class cultrisTool implements ChangeListener {
                 });
                 JDialog dialog = JColorChooser.createDialog(null, "Color Chooser", true, chooser, null, null);
                 dialog.setVisible(true);
-
-
-            } else {
+            }
+            else {
                 cultrisTool.blurStatus = 0.0f;
             }
         };
@@ -259,7 +264,6 @@ class cultrisTool implements ChangeListener {
                     } catch (FileNotFoundException exec) {
                         exec.printStackTrace();
                     }
-
                     break;
                 case JOptionPane.NO_OPTION:
                     break;
@@ -283,6 +287,7 @@ class cultrisTool implements ChangeListener {
             }
 
             public void keyTyped(KeyEvent e) {
+                //only allow numbers
                 char c = e.getKeyChar();
                 if (((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
                     e.consume(); // if it's not a number, ignore the event
@@ -290,6 +295,7 @@ class cultrisTool implements ChangeListener {
             }
 
         });
+        
         HzTextField.addKeyListener(new KeyAdapter() {
 
             @Override
@@ -297,16 +303,15 @@ class cultrisTool implements ChangeListener {
                 final String Hztext = HzTextField.getText();
 
                 try {
-
                     cultrisTool.Hzvalue = Integer.parseInt(Hztext);
 
                 } catch (NumberFormatException eB) {
                     eB.printStackTrace();
                 }
             }
-
-
+            
             public void keyTyped(KeyEvent e) {
+            //only allow numbers
                 char c = e.getKeyChar();
                 if (((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
                     e.consume(); // if it's not a number, ignore the event
@@ -331,7 +336,9 @@ class cultrisTool implements ChangeListener {
                     //Steel Blue as default
                     colorPresetValues ="0.2745098039,0.5098039216,0.7058823529";
                 }
-
+                
+                //TODO review this part
+                //refresh the colorComboList
                 colorComboList.removeAllItems();
 
                 String[] currentArrColorPresetsFile = readTextFile(currentPath + colorPresetsPath);
@@ -339,13 +346,13 @@ class cultrisTool implements ChangeListener {
                 for (String sample : currentArrColorPresetsFile) {
                     colorComboList.addItem(sample);
                     colorsList.add(sample);
-
                 }
                 colorsList.add(colorPresetName + "," + colorPresetValues);
                 colorComboList.addItem(colorPresetName + "," + colorPresetValues);
 
+                //TODO end
+                
                 String outString = String.join(System.lineSeparator(), colorsList);
-                //System.out.println(outString);
                 writeString(Paths.get(currentPath + colorPresetsPath), outString, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
 
                 colorComboList.setSelectedItem(colorPresetName + "," + colorPresetValues);
@@ -486,7 +493,6 @@ class cultrisTool implements ChangeListener {
         settingsLines = readTextFile(currentPath + settingsPath);
         int animationIsSet, blurstatusIsSet, fpsNumberAmount, HzNumberAmount, skipAudioIsSet;
 
-
         try {
             animationStatus = settingsLines[0].split(",");
             blurStatus = settingsLines[1].split(",");
@@ -612,7 +618,6 @@ class cultrisTool implements ChangeListener {
             if (!Objects.equals(HzTextField.getText(), "")) {
                 cultrisTool.Hzvalue = Integer.parseInt(HzTextField.getText());
             }
-
             cultrisTool.R = (float) v1;
             cultrisTool.R /= 255.0F;
             cultrisTool.G = (float) v2;
