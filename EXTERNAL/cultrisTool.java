@@ -98,6 +98,50 @@ class cultrisTool implements ChangeListener {
         jFrame.setMinimumSize(new Dimension(1024, 130));
         jFrame.setSize(1024, 130);
 
+        UIeventListeners();
+
+        //paint initial default-color
+        final int v1 = sliderR.getValue();
+        final int v2 = sliderG.getValue();
+        final int v3 = sliderB.getValue();
+        final Color c = new Color(v1, v2, v3);
+        coloredTextField.setBackground(c);
+
+        this.sliderR.addChangeListener(this);
+        this.sliderG.addChangeListener(this);
+        this.sliderB.addChangeListener(this);
+
+        //this.jFrame.setUndecorated(false);
+        this.jFrame.setAlwaysOnTop(false);
+
+        this.jFrame.setLocationByPlatform(true);
+        this.jFrame.setLocationRelativeTo(null);
+        this.jFrame.setLocation(this.jFrame.getX(), 0);
+        this.jFrame.setResizable(false);
+
+        colorPickerButton.setNextFocusableComponent(sliderR);
+        sliderR.setNextFocusableComponent(sliderG);
+        sliderB.setNextFocusableComponent(newColorButton);
+        newColorButton.setNextFocusableComponent(delColorButton);
+        renColorButton.setNextFocusableComponent(colorComboList);
+        colorComboList.setNextFocusableComponent(saveSettingsButton);
+        saveSettingsButton.setNextFocusableComponent(animationCheckBox);
+        animationCheckBox.setNextFocusableComponent(blurCheckBox);
+        blurCheckBox.setNextFocusableComponent(FPSTextField);
+        FPSTextField.setNextFocusableComponent(blurCheckBox);
+        blurCheckBox.setNextFocusableComponent(FPSTextField);
+        FPSTextField.setNextFocusableComponent(skipBassCheckBox);
+        skipBassCheckBox.setNextFocusableComponent(HzTextField);
+        HzTextField.setNextFocusableComponent(detectHzButton);
+
+        coloredTextField.setFocusable(false);
+
+        readSettings();
+        this.jFrame.setVisible(true);
+
+    }
+
+    private void UIeventListeners() {
         final ChangeListener animationStatusListener = changeEvent -> {
             final AbstractButton abstractButton = (AbstractButton) changeEvent.getSource();
             final ButtonModel buttonModel = abstractButton.getModel();
@@ -110,7 +154,6 @@ class cultrisTool implements ChangeListener {
                 cultrisTool.animationStatus = 0;
             }
         };
-
         final ChangeListener blurStatusListener = changeEvent -> {
             final AbstractButton abstractButton = (AbstractButton) changeEvent.getSource();
             final ButtonModel buttonModel = abstractButton.getModel();
@@ -124,8 +167,6 @@ class cultrisTool implements ChangeListener {
                 cultrisTool.blurStatus = 0.0f;
             }
         };
-
-
         final ChangeListener colorPickerButtonChangeListener = changeEvent -> {
             final AbstractButton abstractButton = (AbstractButton) changeEvent.getSource();
             final ButtonModel buttonModel = abstractButton.getModel();
@@ -363,45 +404,6 @@ class cultrisTool implements ChangeListener {
             }
 
         });
-        //paint initial default-color
-        final int v1 = sliderR.getValue();
-        final int v2 = sliderG.getValue();
-        final int v3 = sliderB.getValue();
-        final Color c = new Color(v1, v2, v3);
-        coloredTextField.setBackground(c);
-
-        this.sliderR.addChangeListener(this);
-        this.sliderG.addChangeListener(this);
-        this.sliderB.addChangeListener(this);
-
-        //this.jFrame.setUndecorated(false);
-        this.jFrame.setAlwaysOnTop(false);
-
-        this.jFrame.setLocationByPlatform(true);
-        this.jFrame.setLocationRelativeTo(null);
-        this.jFrame.setLocation(this.jFrame.getX(), 0);
-        this.jFrame.setResizable(false);
-
-        colorPickerButton.setNextFocusableComponent(sliderR);
-        sliderR.setNextFocusableComponent(sliderG);
-        sliderB.setNextFocusableComponent(newColorButton);
-        newColorButton.setNextFocusableComponent(delColorButton);
-        renColorButton.setNextFocusableComponent(colorComboList);
-        colorComboList.setNextFocusableComponent(saveSettingsButton);
-        saveSettingsButton.setNextFocusableComponent(animationCheckBox);
-        animationCheckBox.setNextFocusableComponent(blurCheckBox);
-        blurCheckBox.setNextFocusableComponent(FPSTextField);
-        FPSTextField.setNextFocusableComponent(blurCheckBox);
-        blurCheckBox.setNextFocusableComponent(FPSTextField);
-        FPSTextField.setNextFocusableComponent(skipBassCheckBox);
-        skipBassCheckBox.setNextFocusableComponent(HzTextField);
-        HzTextField.setNextFocusableComponent(detectHzButton);
-
-        coloredTextField.setFocusable(false);
-
-        readSettings();
-        this.jFrame.setVisible(true);
-
     }
 
     public static void readSettings() {
