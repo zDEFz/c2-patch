@@ -50,12 +50,7 @@ Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it wit
 - UAC Virtualisation by default + High Priority
 - Unlock all challenges by default
 
-- **MAC Updater**. Essentially redo that, but for MAC. Done. 
-```
-#!/bin/bash
-echo starting update in 10 seconds. Make sure you close Cultris II before updating.
-"./resources/jdk-17.0.1-lin/bin/java" -Djava.library.path=./libs -cp cultris2.jar updater
-```
+- **MAC Updater**. need to pack a JAR, for some awkward reasons...
 
 ## Additional Info
 Edits / changes were done with
