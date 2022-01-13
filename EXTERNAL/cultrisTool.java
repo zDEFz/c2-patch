@@ -4,8 +4,7 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -125,6 +124,7 @@ class cultrisTool implements ChangeListener {
                 cultrisTool.blurStatus = 0.0f;
             }
         };
+
 
         final ChangeListener colorPickerButtonChangeListener = changeEvent -> {
             final AbstractButton abstractButton = (AbstractButton) changeEvent.getSource();
@@ -559,6 +559,13 @@ class cultrisTool implements ChangeListener {
         (delColorButton = new JButton("Del")).setBounds(450, 0, 70, 38);
         (detectHzButton = new JButton("Auto")).setBounds(910, 64, 90, 20);
         (jFrame = new JFrame()).setLayout(null);
+        this.jFrame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                System.exit(0);
+            }
+        });
         (newColorButton = new JButton("New")).setBounds(380, 0, 70, 38);
         (renColorButton = new JButton("Ren")).setBounds(520, 0, 70, 38);
         (saveSettingsButton = new JButton("Save Settings")).setBounds(621, 0, 260, 26);
@@ -578,6 +585,7 @@ class cultrisTool implements ChangeListener {
         colorComboList.setSelectedIndex(0);
     }
 
+    
     @Override
     public void stateChanged(final ChangeEvent e) {
 
