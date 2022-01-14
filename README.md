@@ -8,6 +8,9 @@
 ## C2 AIO Linux
 - **Google Drive** https://drive.google.com/file/d/18GKx8C5THz9H5vOs8W8YLM1F1hQmTV0Z/view?usp=sharing
 - **MEGA.NZ** https://mega.nz/file/h8EyGLKJ#qRHEQKzS-BRavfxpCWS0f6DS9d_wh_CetC5QpBGqcJ0
+
+Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013443895
+
 ## C2 AIO Mac
 Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it with https://github.com/chinatsu/c2lina.
 
