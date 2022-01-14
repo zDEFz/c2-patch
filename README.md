@@ -12,6 +12,7 @@
 Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013443895
 
 ## C2 AIO Mac
+Unknown status!
 Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it with https://github.com/chinatsu/c2lina.
 
 ## How-To
