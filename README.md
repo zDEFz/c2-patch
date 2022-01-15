@@ -12,9 +12,9 @@
 Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013443895
 
 ## C2 AIO Mac
-Unknown status!
-Grab the https://github.com/zDEFz/c2-patch/raw/main/cultris2.jar. And use it with https://github.com/chinatsu/c2lina.
-Temp https://drive.google.com/file/d/1qdcJlzc34Amqo7OM6XxjGC58ATrSxScS/view?usp=sharing
+Unsupported due to MAC-OS requiring GetAWT which is available in JAVA 6 SE, which does not support the GUI.
+Alternatively, grab the old rec2 cultris jar from https://drive.google.com/file/d/1bWxLwj5TIRNfd3m_2izK4ecNIGQ8wdre/view?usp=sharing And use it with https://github.com/chinatsu/c2lina.
+To note: This is less than ideal, as each drawcall, a file is read in, due to the lack of constants version 8 or rather, the lack to use a simpleton.
 
 ## How-To
 
