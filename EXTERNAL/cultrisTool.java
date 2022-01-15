@@ -134,7 +134,6 @@ class cultrisTool implements ChangeListener {
     }
 
     private void addUIeventListeners() {
-
         this.sliderR.addChangeListener(this);
         this.sliderG.addChangeListener(this);
         this.sliderB.addChangeListener(this);
@@ -143,6 +142,7 @@ class cultrisTool implements ChangeListener {
             final AbstractButton abstractButton = (AbstractButton) changeEvent.getSource();
             final ButtonModel buttonModel = abstractButton.getModel();
             final boolean selected = buttonModel.isSelected();
+
             if (selected) {
                 //return 74 to enable the standard waves animation
                 cultrisTool.animationStatus = 74;
@@ -158,7 +158,6 @@ class cultrisTool implements ChangeListener {
             if (selected) {
                 //push the blurred layer into the (visible) foreground
                 cultrisTool.blurStatus = 20.0f;
-
             } else {
                 //push the blurred layer into the (invisible) background
                 cultrisTool.blurStatus = 0.0f;
@@ -171,7 +170,6 @@ class cultrisTool implements ChangeListener {
             if (pressed) {
                 final JColorChooser chooser = new JColorChooser();
                 chooser.setColor(Color.BLUE);
-
                 chooser.getSelectionModel().addChangeListener(arg0 -> {
 
                     sliderR.setValue(chooser.getColor().getRed());
@@ -194,7 +192,7 @@ class cultrisTool implements ChangeListener {
 
                     tmp = Objects.requireNonNull(colorComboList.getSelectedItem()).toString();
 
-                    var RGBandName = tmp.split(",");
+                    String[] RGBandName = tmp.split(",");
 
                     float rColorVal = Float.parseFloat(RGBandName[1]);
                     float gColorVal = Float.parseFloat(RGBandName[2]);
@@ -204,9 +202,9 @@ class cultrisTool implements ChangeListener {
                     cultrisTool.G = gColorVal;
                     cultrisTool.B = bColorVal;
 
-                    var rTmp = R * 255;
-                    var gTmp = G * 255;
-                    var bTmp = B * 255;
+                    float rTmp = R * 255;
+                    float gTmp = G * 255;
+                    float bTmp = B * 255;
                     sliderR.setValue((int) (rTmp));
                     sliderG.setValue((int) (gTmp));
                     sliderB.setValue((int) (bTmp));
@@ -265,7 +263,6 @@ class cultrisTool implements ChangeListener {
                 final String FPStext = textField.getText();
                 try {
                     cultrisTool.FPSvalue = Integer.parseInt(FPStext);
-
                 } catch (NumberFormatException eB) {
                     eB.printStackTrace();
                 }
@@ -275,21 +272,18 @@ class cultrisTool implements ChangeListener {
                 //only allow numbers
                 char c = e.getKeyChar();
                 if (((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
-                    e.consume(); // if it's not a number, ignore the event
+                   e.consume(); // if it's not a number, ignore the event
                 }
             }
 
         });
 
         HzTextField.addKeyListener(new KeyAdapter() {
-
             @Override
             public void keyReleased(final KeyEvent e) {
                 final String Hztext = HzTextField.getText();
-
                 try {
                     cultrisTool.Hzvalue = Integer.parseInt(Hztext);
-
                 } catch (NumberFormatException eB) {
                     eB.printStackTrace();
                 }
@@ -306,22 +300,21 @@ class cultrisTool implements ChangeListener {
         });
         newColorButton.addActionListener(e -> {
             JFrame getNewColorFrame;
-
+            getNewColorFrame = new JFrame();
             List<String> colorsList = new ArrayList<>();
 
-            getNewColorFrame = new JFrame();
             String colorPresetName = JOptionPane.showInputDialog(getNewColorFrame, "Enter name for a new Color preset");
 
             String colorPresetValues = JOptionPane.showInputDialog(getNewColorFrame, "Enter the values for a new Color preset", R + "," + G + "," + B);
             try {
                 if (colorPresetName.isEmpty()) {
+                    //If empty, add random value after "Empty"
                     colorPresetName = "Empty" + (int) (Math.random() * 999 + 1);
                 }
                 if (colorPresetValues.isEmpty()) {
                     //Steel Blue as default
                     colorPresetValues = "0.2745098039,0.5098039216,0.7058823529";
                 }
-
 
                 //refresh the colorComboList
                 colorComboList.removeAllItems();
@@ -359,7 +352,7 @@ class cultrisTool implements ChangeListener {
         saveSettingsButton.addActionListener(e -> {
             String[] settingsLines = readTextFile(currentPath + settingsPath);
             String[] animationStatus = settingsLines[0].split(",");
-            int animationIsSet = Integer.parseInt(animationStatus[1]);
+            int animationIsSet= Integer.parseInt(animationStatus[1]);
             int blurstatusIsSet;
             String selectedPreset = Objects.requireNonNull(colorComboList.getSelectedItem()).toString();
             int skipAudioIsSet;
@@ -395,7 +388,6 @@ class cultrisTool implements ChangeListener {
                 new FileWriter(currentPath + settingsPath).close();
                 //write settings
                 writeString(Paths.get(currentPath + settingsPath), outString + System.lineSeparator(), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
-
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -404,7 +396,6 @@ class cultrisTool implements ChangeListener {
     }
 
     public static void readSettings() {
-
         String[] settingsLines, animationStatus, blurStatus, fpsNumber, HzNumber, skipAudioStatus;
         settingsLines = readTextFile(currentPath + settingsPath);
         int animationIsSet, blurstatusIsSet, fpsNumberAmount, HzNumberAmount, skipAudioIsSet;
@@ -423,12 +414,10 @@ class cultrisTool implements ChangeListener {
             HzNumberAmount = Integer.parseInt(HzNumber[1]);
             skipAudioIsSet = Integer.parseInt(skipAudioStatus[1]);
 
-
             cultrisTool.FPSvalue = fpsNumberAmount;
             cultrisTool.Hzvalue = HzNumberAmount;
             FPSTextField.setText("" + fpsNumberAmount);
             HzTextField.setText("" + HzNumberAmount);
-
 
             if (animationIsSet == 1) {
                 animationCheckBox.setSelected(true);
@@ -478,18 +467,6 @@ class cultrisTool implements ChangeListener {
         return arrayList;
     }
 
-    /* Code for if we need to toggle Skip audio
-        public static void toggleSkipAudio() {
-            if (skipBassCheckBox.isSelected()) {
-                skipBassCheckBox.setSelected(false);
-                //System.out.println("F5toggleSkipAudio() called " + bassStatus);
-            } else {
-                skipBassCheckBox.setSelected(true);
-                //System.out.println("F5toggleSkipAudio() called " + bassStatus);
-
-            }
-        }
-     */
     public static String getScreenRefreshRate() {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice[] gs = ge.getScreenDevices();
@@ -502,7 +479,6 @@ class cultrisTool implements ChangeListener {
             if (refreshRate == DisplayMode.REFRESH_RATE_UNKNOWN) {
                 System.out.println("Unknown refresh Rate");
             }
-
         }
         return "" + refreshRate;
     }
@@ -584,10 +560,8 @@ class cultrisTool implements ChangeListener {
         colorComboList.setSelectedIndex(0);
     }
 
-    
     @Override
     public void stateChanged(final ChangeEvent e) {
-
         final int v1 = this.sliderR.getValue();
         final int v2 = this.sliderG.getValue();
         final int v3 = this.sliderB.getValue();
