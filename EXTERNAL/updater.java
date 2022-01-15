@@ -71,11 +71,7 @@ public class updater {
                     else{
                         System.out.println("Please close Cultris II before updating!");
                     }
-
             }
-
-
-
         }
         in.close();
     }
