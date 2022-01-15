@@ -13,7 +13,7 @@ Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013
 
 ## C2 AIO Mac
 **Currently unsupported due to MAC-OS requiring GetAWT which is available in JAVA 6 SE, but dropped in newer JAVA. The new implemented GUI uses 'too new' functionalities of JAVA**
-1. **Outdated NO-GUI option** rec2 cultris jar from https://drive.google.com/file/d/1bWxLwj5TIRNfd3m_2izK4ecNIGQ8wdre/view?usp=sharing 
+1. Outdated NO-GUI option rec2 cultris jar from https://drive.google.com/file/d/1bWxLwj5TIRNfd3m_2izK4ecNIGQ8wdre/view?usp=sharing 
 2. And use it with https://github.com/chinatsu/c2lina.
 3.  To note: This is less than ideal, as each drawcall, a file is read in, due to the lack of constants version 8 or rather, the lack to use a simpleton.
 
@@ -55,8 +55,6 @@ Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013
 - TODO find out how to keep the "Blur-layer" but without the Blur.
 - UAC Virtualisation by default + High Priority
 - Unlock all challenges by default
-
-- **MAC Updater**. need to pack a JAR, for some awkward reasons...
 
 ## Additional Info
 Edits / changes were done with
