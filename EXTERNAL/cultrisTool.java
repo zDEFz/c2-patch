@@ -4,7 +4,10 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,8 +21,9 @@ import static java.lang.String.join;
 import static java.nio.file.Files.writeString;
 
 class cultrisTool implements ChangeListener {
+
     public static String currentPath;
-    public static int state;
+    public static int state = 0;
     public static int leetLines = 250;
     public static int colorListIndicatorInt = 0;
     public static int bassStatus;
@@ -28,9 +32,9 @@ class cultrisTool implements ChangeListener {
     public static int FPSvalue;
     public static float leetLinesPerSec = 6.5F;
     public static float blurStatus;
-    public static float R;
-    public static float G;
-    public static float B;
+    public static float R = 0.1f;
+    public static float G = 0.35f;
+    public static float B = 0.5f;
     public static String uberleetPath = "/settings/uberleet.txt";
     public static String skipAudioPath = "/settings/BASS-audio.txt";
     public static String settingsPath = "/settings/settings.txt";
@@ -53,13 +57,6 @@ class cultrisTool implements ChangeListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    static {
-        cultrisTool.R = 0.1f;
-        cultrisTool.G = 0.35f;
-        cultrisTool.B = 0.5f;
-        cultrisTool.state = 0;
     }
 
     JButton colorPickerButton;
@@ -94,29 +91,129 @@ class cultrisTool implements ChangeListener {
 
         defineUIelementsAndPosition();
         addUIelementsToJFrame();
-        //set minimum size to prevent resize after coming from fullscreen mode
+        //set the minimum size to prevent resize after coming from fullscreen mode
         jFrame.setMinimumSize(new Dimension(1024, 130));
         jFrame.setSize(1024, 130);
         addUIeventListeners();
-        //paint initial default-color
+
         final int v1 = sliderR.getValue();
         final int v2 = sliderG.getValue();
         final int v3 = sliderB.getValue();
         final Color c = new Color(v1, v2, v3);
+        // paint initial default-color
         coloredTextField.setBackground(c);
         this.jFrame.setAlwaysOnTop(false);
         this.jFrame.setLocationByPlatform(true);
         this.jFrame.setLocationRelativeTo(null);
         this.jFrame.setLocation(this.jFrame.getX(), 0);
         this.jFrame.setResizable(false);
-        setFocusOrderUI();
+        setTabOrderUI();
         coloredTextField.setFocusable(false);
         readSettings();
         this.jFrame.setVisible(true);
+    }
+
+    public static void readSettings() {
+        String[] settingsLines, animationStatus, blurStatus, fpsNumber, HzNumber, skipAudioStatus;
+        settingsLines = readTextFile(currentPath + settingsPath);
+        int animationIsSet, blurstatusIsSet, fpsNumberAmount, HzNumberAmount, skipAudioIsSet;
+
+        try {
+            animationStatus = settingsLines[0].split(",");
+            blurStatus = settingsLines[1].split(",");
+            fpsNumber = settingsLines[2].split(",");
+            HzNumber = settingsLines[3].split(",");
+            String colorPresetLine = settingsLines[4];
+            skipAudioStatus = settingsLines[5].split(",");
+
+            animationIsSet = Integer.parseInt(animationStatus[1]);
+            blurstatusIsSet = Integer.parseInt(blurStatus[1]);
+            fpsNumberAmount = Integer.parseInt(fpsNumber[1]);
+            HzNumberAmount = Integer.parseInt(HzNumber[1]);
+            skipAudioIsSet = Integer.parseInt(skipAudioStatus[1]);
+
+            cultrisTool.FPSvalue = fpsNumberAmount;
+            cultrisTool.Hzvalue = HzNumberAmount;
+            FPSTextField.setText("" + fpsNumberAmount);
+            HzTextField.setText("" + HzNumberAmount);
+
+            if (animationIsSet == 1) {
+                animationCheckBox.setSelected(true);
+            }
+
+            if (blurstatusIsSet == 1) {
+                blurCheckBox.setSelected(true);
+            }
+
+            int sepPos = colorPresetLine.indexOf(",");
+            String colorPresetString = colorPresetLine.substring(sepPos + ",".length());
+            colorComboList.setSelectedItem(colorPresetString);
+
+            if (skipAudioIsSet == 1) {
+                skipBassCheckBox.setSelected(true);
+                bassStatus = 1;
+            }
+
+            if (fpsNumberAmount > 0) {
+                FPSTextField.setText("" + fpsNumberAmount);
+            }
+
+            if (HzNumberAmount > 0) {
+                HzTextField.setText("" + HzNumberAmount);
+            }
+        } catch (ArrayIndexOutOfBoundsException exec) {
+            exec.printStackTrace();
+        }
 
     }
 
-    private void setFocusOrderUI() {
+    public static String[] readTextFile(String fileName) {
+        String[] arrayList = {""};
+        try {
+            BufferedReader bufReader = new BufferedReader(new FileReader(fileName));
+            ArrayList<String> listOfLines = new ArrayList<>();
+
+            String line = bufReader.readLine();
+            while (line != null) {
+                listOfLines.add(line);
+                line = bufReader.readLine();
+            }
+            arrayList = listOfLines.toArray(String[]::new);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+
+    public static String getScreenRefreshRate() {
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[] gs = ge.getScreenDevices();
+        int refreshRate = 60;
+
+        for (GraphicsDevice g : gs) {
+            DisplayMode dm = g.getDisplayMode();
+            refreshRate = dm.getRefreshRate();
+            cultrisTool.Hzvalue = refreshRate;
+            if (refreshRate == DisplayMode.REFRESH_RATE_UNKNOWN) {
+                System.out.println("Unknown refresh Rate");
+            }
+        }
+        return "" + refreshRate;
+    }
+
+    public static void run() {
+        if (cultrisTool.state == 0) {
+            new cultrisTool();
+            cultrisTool.state = 1;
+        }
+    }
+
+    public static void main(final String[] s) {
+        run();
+    }
+
+    private void setTabOrderUI() {
+        //set the tab order for keyboard navigation
         colorPickerButton.setNextFocusableComponent(sliderR);
         sliderR.setNextFocusableComponent(sliderG);
         sliderB.setNextFocusableComponent(newColorButton);
@@ -230,11 +327,11 @@ class cultrisTool implements ChangeListener {
 
                     List<String> colorComboBoxlist = new ArrayList<>();
 
-                    // Get number of items
-                    int num = colorComboList.getItemCount();
+                    //Get itemCount of items
 
-                    // Get items
-                    for (int i = 0; i < num; i++) {
+                    int itemCount = colorComboList.getItemCount();
+
+                    for (int i = 0; i < itemCount; i++) {
                         String tmp = colorComboList.getItemAt(i);
                         colorComboBoxlist.add(tmp);
                     }
@@ -272,7 +369,7 @@ class cultrisTool implements ChangeListener {
                 //only allow numbers
                 char c = e.getKeyChar();
                 if (((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
-                   e.consume(); // if it's not a number, ignore the event
+                    e.consume(); // if it's not a number, ignore the event
                 }
             }
 
@@ -290,7 +387,7 @@ class cultrisTool implements ChangeListener {
             }
 
             public void keyTyped(KeyEvent e) {
-                //only allow numbers
+                // only allow numbers
                 char c = e.getKeyChar();
                 if (((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
                     e.consume(); // if it's not a number, ignore the event
@@ -308,7 +405,8 @@ class cultrisTool implements ChangeListener {
             String colorPresetValues = JOptionPane.showInputDialog(getNewColorFrame, "Enter the values for a new Color preset", R + "," + G + "," + B);
             try {
                 if (colorPresetName.isEmpty()) {
-                    //If empty, add random value after "Empty"
+                    //If empty, add random value, for instance "Empty123"
+
                     colorPresetName = "Empty" + (int) (Math.random() * 999 + 1);
                 }
                 if (colorPresetValues.isEmpty()) {
@@ -352,7 +450,7 @@ class cultrisTool implements ChangeListener {
         saveSettingsButton.addActionListener(e -> {
             String[] settingsLines = readTextFile(currentPath + settingsPath);
             String[] animationStatus = settingsLines[0].split(",");
-            int animationIsSet= Integer.parseInt(animationStatus[1]);
+            int animationIsSet = Integer.parseInt(animationStatus[1]);
             int blurstatusIsSet;
             String selectedPreset = Objects.requireNonNull(colorComboList.getSelectedItem()).toString();
             int skipAudioIsSet;
@@ -363,7 +461,9 @@ class cultrisTool implements ChangeListener {
                 ex.printStackTrace();
             }
 
+
             //if X is selected, return 1, else 0
+
             animationIsSet = animationCheckBox.isSelected() ? 1 : 0;
             blurstatusIsSet = blurCheckBox.isSelected() ? 1 : 0;
             skipAudioIsSet = skipBassCheckBox.isSelected() ? 1 : 0;
@@ -387,111 +487,13 @@ class cultrisTool implements ChangeListener {
                 //empty file before writing
                 new FileWriter(currentPath + settingsPath).close();
                 //write settings
+
                 writeString(Paths.get(currentPath + settingsPath), outString + System.lineSeparator(), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
 
         });
-    }
-
-    public static void readSettings() {
-        String[] settingsLines, animationStatus, blurStatus, fpsNumber, HzNumber, skipAudioStatus;
-        settingsLines = readTextFile(currentPath + settingsPath);
-        int animationIsSet, blurstatusIsSet, fpsNumberAmount, HzNumberAmount, skipAudioIsSet;
-
-        try {
-            animationStatus = settingsLines[0].split(",");
-            blurStatus = settingsLines[1].split(",");
-            fpsNumber = settingsLines[2].split(",");
-            HzNumber = settingsLines[3].split(",");
-            String colorPresetLine = settingsLines[4];
-            skipAudioStatus = settingsLines[5].split(",");
-
-            animationIsSet = Integer.parseInt(animationStatus[1]);
-            blurstatusIsSet = Integer.parseInt(blurStatus[1]);
-            fpsNumberAmount = Integer.parseInt(fpsNumber[1]);
-            HzNumberAmount = Integer.parseInt(HzNumber[1]);
-            skipAudioIsSet = Integer.parseInt(skipAudioStatus[1]);
-
-            cultrisTool.FPSvalue = fpsNumberAmount;
-            cultrisTool.Hzvalue = HzNumberAmount;
-            FPSTextField.setText("" + fpsNumberAmount);
-            HzTextField.setText("" + HzNumberAmount);
-
-            if (animationIsSet == 1) {
-                animationCheckBox.setSelected(true);
-            }
-
-            if (blurstatusIsSet == 1) {
-                blurCheckBox.setSelected(true);
-            }
-
-            int sepPos = colorPresetLine.indexOf(",");
-            String colorPresetString = colorPresetLine.substring(sepPos + ",".length());
-            colorComboList.setSelectedItem(colorPresetString);
-
-            if (skipAudioIsSet == 1) {
-                skipBassCheckBox.setSelected(true);
-                bassStatus = 1;
-            }
-
-            if (fpsNumberAmount > 0) {
-                FPSTextField.setText("" + fpsNumberAmount);
-            }
-
-            if (HzNumberAmount > 0) {
-                HzTextField.setText("" + HzNumberAmount);
-            }
-        } catch (ArrayIndexOutOfBoundsException exec) {
-            exec.printStackTrace();
-        }
-
-    }
-
-    public static String[] readTextFile(String fileName) {
-        String[] arrayList = {""};
-        try {
-            BufferedReader bufReader = new BufferedReader(new FileReader(fileName));
-            ArrayList<String> listOfLines = new ArrayList<>();
-
-            String line = bufReader.readLine();
-            while (line != null) {
-                listOfLines.add(line);
-                line = bufReader.readLine();
-            }
-            arrayList = listOfLines.toArray(String[]::new);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return arrayList;
-    }
-
-    public static String getScreenRefreshRate() {
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice[] gs = ge.getScreenDevices();
-        int refreshRate = 60;
-
-        for (GraphicsDevice g : gs) {
-            DisplayMode dm = g.getDisplayMode();
-            refreshRate = dm.getRefreshRate();
-            cultrisTool.Hzvalue = refreshRate;
-            if (refreshRate == DisplayMode.REFRESH_RATE_UNKNOWN) {
-                System.out.println("Unknown refresh Rate");
-            }
-        }
-        return "" + refreshRate;
-    }
-
-    public static void run() {
-        if (cultrisTool.state == 0) {
-            new cultrisTool();
-            cultrisTool.state = 1;
-        }
-    }
-
-    public static void main(final String[] s) {
-        run();
     }
 
     private void addUIelementsToJFrame() {
