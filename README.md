@@ -55,6 +55,7 @@ Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013
 - TODO find out how to keep the "Blur-layer" but without the Blur.
 - UAC Virtualisation by default + High Priority
 - Unlock all challenges by default
+- Add checkbox "minimize on startup" for the cultrisTool
 
 ## Additional Info
 Edits / changes were done with
