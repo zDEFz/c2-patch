@@ -3,7 +3,7 @@
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.colorPresetSelectFirstItemEND()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.colorPresetSelectFirstItemHOME()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F10toggleBlur()V| NO  | YES   |
-|cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F12pressSave()VNO  | YES   | NO
+|cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F12pressSave()V|NO  | YES   | NO
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.F9toggleAnimation()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.pgDownSwitchPresetDown()V | NO  | YES   |
 |cD-KeyboardShortcuts  | shortcuts()  | returnMethodsC2.pgDownSwitchPresetUp()V | NO  | YES   |
