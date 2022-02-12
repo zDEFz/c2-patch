@@ -30,9 +30,10 @@ Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013
 - F10=Blur on/off
 - F12=Save Settings
 - F9=Animation on/off
-- Home=Colorpreset first
-- PageDown=Colorpreset down
-- PageUp=Colorpreset up
+
+~~Home=Colorpreset first
+PageDown=Colorpreset down
+PageUp=Colorpreset up
 
 ## Recent Fixes and additions
 - Adding an **updater** just for the cultris2.jar
