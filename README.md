@@ -26,10 +26,9 @@ Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013
 5. Report any issues/crashes.
 
 ## Shortcuts ingame:
-- End=Colorpreset last
+- F9=Animation on/off
 - F10=Blur on/off
 - F12=Save Settings
-- F9=Animation on/off
 
 ## Recent Fixes and additions
 - Adding an **updater** just for the cultris2.jar
