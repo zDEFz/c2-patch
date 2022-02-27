@@ -48,9 +48,9 @@ Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013
 - Fix blocking queue. See modified uberleet challenge with X lines each 0.10s
 - See fields after a round end in unblurred
 - TODO find out how to keep the "Blur-layer" but without the Blur.
-- UAC Virtualisation by default + High Priority
+- UAC Virtualisation by default + High Priority 
 - Unlock all challenges by default
-- Add checkbox "minimize on startup" for the cultrisTool
+- ✅ Add checkbox "minimize on startup" for the cultrisTool
 
 ## Additional Info
 Edits / changes were done with
