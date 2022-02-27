@@ -49,6 +49,7 @@ class cultrisTool implements ChangeListener {
     static JCheckBox skipBassCheckBox;
     static JCheckBox blurCheckBox;
     static JCheckBox animationCheckBox;
+    static JCheckBox cultrisToolMinimizeAtStartupCheckBox;
     static JButton saveSettingsButton;
 
     static {
@@ -63,9 +64,7 @@ class cultrisTool implements ChangeListener {
     JButton delColorButton;
     JButton newColorButton;
     JButton renColorButton;
-    JCheckBox slotFiveCheckBox;
-    JCheckBox slotSixCheckBox;
-    JFrame jFrame;
+    static JFrame jFrame;
     JLabel FPSlabel;
     JLabel sliderBLabel;
     JLabel sliderBLabelval;
@@ -93,7 +92,7 @@ class cultrisTool implements ChangeListener {
         addUIelementsToJFrame();
         //set the minimum size to prevent resize after coming from fullscreen mode
         jFrame.setMinimumSize(new Dimension(1024, 130));
-        jFrame.setSize(1024, 130);
+        jFrame.setSize(1100, 130);
         addUIeventListeners();
 
         final int v1 = sliderR.getValue();
@@ -114,9 +113,9 @@ class cultrisTool implements ChangeListener {
     }
 
     public static void readSettings() {
-        String[] settingsLines, animationStatus, blurStatus, fpsNumber, HzNumber, skipAudioStatus;
+        String[] settingsLines, animationStatus, blurStatus, fpsNumber, HzNumber, skipAudioStatus, minimizedStatus;
         settingsLines = readTextFile(currentPath + settingsPath);
-        int animationIsSet, blurstatusIsSet, fpsNumberAmount, HzNumberAmount, skipAudioIsSet;
+        int animationIsSet, blurstatusIsSet, fpsNumberAmount, HzNumberAmount, skipAudioIsSet,minimizedStatusIsSet;
 
         try {
             animationStatus = settingsLines[0].split(",");
@@ -125,12 +124,14 @@ class cultrisTool implements ChangeListener {
             HzNumber = settingsLines[3].split(",");
             String colorPresetLine = settingsLines[4];
             skipAudioStatus = settingsLines[5].split(",");
+            minimizedStatus=settingsLines[6].split(",");
 
             animationIsSet = Integer.parseInt(animationStatus[1]);
             blurstatusIsSet = Integer.parseInt(blurStatus[1]);
             fpsNumberAmount = Integer.parseInt(fpsNumber[1]);
             HzNumberAmount = Integer.parseInt(HzNumber[1]);
             skipAudioIsSet = Integer.parseInt(skipAudioStatus[1]);
+            minimizedStatusIsSet = Integer.parseInt(minimizedStatus[1]);
 
             cultrisTool.FPSvalue = fpsNumberAmount;
             cultrisTool.Hzvalue = HzNumberAmount;
@@ -160,6 +161,11 @@ class cultrisTool implements ChangeListener {
 
             if (HzNumberAmount > 0) {
                 HzTextField.setText("" + HzNumberAmount);
+            }
+
+            if(minimizedStatusIsSet==1)
+            {
+                jFrame.setState(Frame.ICONIFIED);
             }
         } catch (ArrayIndexOutOfBoundsException exec) {
             exec.printStackTrace();
@@ -226,7 +232,8 @@ class cultrisTool implements ChangeListener {
         FPSTextField.setNextFocusableComponent(blurCheckBox);
         blurCheckBox.setNextFocusableComponent(FPSTextField);
         FPSTextField.setNextFocusableComponent(skipBassCheckBox);
-        skipBassCheckBox.setNextFocusableComponent(HzTextField);
+        skipBassCheckBox.setNextFocusableComponent(cultrisToolMinimizeAtStartupCheckBox);
+        cultrisToolMinimizeAtStartupCheckBox.setNextFocusableComponent(HzTextField);
         HzTextField.setNextFocusableComponent(detectHzButton);
     }
 
@@ -268,7 +275,7 @@ class cultrisTool implements ChangeListener {
                 final JColorChooser chooser = new JColorChooser();
                 chooser.setColor(Color.BLUE);
                 chooser.getSelectionModel().addChangeListener(arg0 -> {
-
+ 
                     sliderR.setValue(chooser.getColor().getRed());
                     sliderG.setValue(chooser.getColor().getGreen());
                     sliderB.setValue(chooser.getColor().getBlue());
@@ -279,6 +286,9 @@ class cultrisTool implements ChangeListener {
                 cultrisTool.blurStatus = 0.0f;
             }
         };
+
+        cultrisToolMinimizeAtStartupCheckBox.addChangeListener(this);
+
         animationCheckBox.addChangeListener(animationStatusListener);
         blurCheckBox.addChangeListener(blurStatusListener);
         colorComboList.addActionListener(e -> {
@@ -318,6 +328,7 @@ class cultrisTool implements ChangeListener {
             }
         });
         colorPickerButton.addChangeListener(colorPickerButtonChangeListener);
+
         delColorButton.addActionListener(e -> {
             int res = JOptionPane.showConfirmDialog(null, "Delete item " + Objects.requireNonNull(colorComboList.getSelectedItem()) + " ?", "", JOptionPane.YES_NO_OPTION);
             switch (res) {
@@ -454,6 +465,7 @@ class cultrisTool implements ChangeListener {
             int blurstatusIsSet;
             String selectedPreset = Objects.requireNonNull(colorComboList.getSelectedItem()).toString();
             int skipAudioIsSet;
+            int minimizedToolIsSet;
 
             try {
                 Files.writeString(Paths.get(currentPath + HzPath), "" + cultrisTool.Hzvalue, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
@@ -467,6 +479,7 @@ class cultrisTool implements ChangeListener {
             animationIsSet = animationCheckBox.isSelected() ? 1 : 0;
             blurstatusIsSet = blurCheckBox.isSelected() ? 1 : 0;
             skipAudioIsSet = skipBassCheckBox.isSelected() ? 1 : 0;
+            minimizedToolIsSet = cultrisToolMinimizeAtStartupCheckBox.isSelected() ? 1 : 0;
             try {
                 Files.writeString(Paths.get(currentPath + skipAudioPath), "" + skipAudioIsSet, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
             } catch (IOException ex) {
@@ -475,12 +488,13 @@ class cultrisTool implements ChangeListener {
 
             String animationLine = "Animation," + animationIsSet;
             String blurLine = ("Blur," + blurstatusIsSet);
-            String SkipAudioLine = ("Skip-Audio," + skipAudioIsSet);
-            String PresetLine = ("Preset," + selectedPreset);
-            String Hzline = ("Hz," + Hzvalue);
             String FPSline = ("FPS," + FPSvalue);
+            String Hzline = ("Hz," + Hzvalue);
+            String PresetLine = ("Preset," + selectedPreset);
+            String SkipAudioLine = ("Skip-Audio," + skipAudioIsSet);
+            String minimizedStatusLine= ("minimized," + minimizedToolIsSet);
 
-            ArrayList<String> listOfLines = new ArrayList<>(Arrays.asList(animationLine, blurLine, FPSline, Hzline, PresetLine, SkipAudioLine));
+            ArrayList<String> listOfLines = new ArrayList<>(Arrays.asList(animationLine, blurLine, FPSline, Hzline, PresetLine, SkipAudioLine,minimizedStatusLine));
             String outString = join(System.lineSeparator(), listOfLines);
 
             try {
@@ -505,6 +519,7 @@ class cultrisTool implements ChangeListener {
         jFrame.add(colorComboList).setBounds(380, 48, 210, 30);
         jFrame.add(colorPickerButton);
         jFrame.add(coloredTextField);
+        jFrame.add(cultrisToolMinimizeAtStartupCheckBox);
         jFrame.add(delColorButton);
         jFrame.add(delColorButton);
         jFrame.add(detectHzButton);
@@ -525,16 +540,18 @@ class cultrisTool implements ChangeListener {
     }
 
     private void defineUIelementsAndPosition() {
-        (FPSTextField = new JTextField("")).setBounds(845, 32, 40, 18);
+        (FPSTextField = new JTextField("")).setBounds(925, 32, 40, 24);
         (animationCheckBox = new JCheckBox("Animation")).setBounds(620, 28, 100, 28);
+        (cultrisToolMinimizeAtStartupCheckBox = new JCheckBox("minimize@startup")).setBounds(730, 62, 160, 28);
+        cultrisToolMinimizeAtStartupCheckBox.setToolTipText("Minimize cultrisTool at Startup");
         (blurCheckBox = new JCheckBox("Blur")).setBounds(730, 28, 80, 28);
         (coloredTextField = new JTextField()).setBounds(0, 30, 80, 60);
         (skipBassCheckBox = new JCheckBox("Skip Audio")).setBounds(620, 62, 100, 28);
-        (FPSlabel = new JLabel("FPS")).setBounds(810, 27, 30, 28);
-        (HzLabel = new JLabel("Hz")).setBounds(810, 58, 30, 28);
+        (FPSlabel = new JLabel("FPS")).setBounds(890, 27, 30, 28);
+        (HzLabel = new JLabel("Hz")).setBounds(890, 62, 30, 28);
         (colorPickerButton = new JButton("Pick")).setBounds(0, 0, 80, 26);
         (delColorButton = new JButton("Del")).setBounds(450, 0, 70, 38);
-        (detectHzButton = new JButton("Auto")).setBounds(910, 64, 90, 20);
+        (detectHzButton = new JButton("Detect Hz")).setBounds(975, 62, 100, 24);
         (jFrame = new JFrame()).setLayout(null);
         this.jFrame.addWindowListener(new WindowAdapter() {
             @Override
@@ -545,7 +562,7 @@ class cultrisTool implements ChangeListener {
         });
         (newColorButton = new JButton("New")).setBounds(380, 0, 70, 38);
         (renColorButton = new JButton("Ren")).setBounds(520, 0, 70, 38);
-        (saveSettingsButton = new JButton("Save Settings")).setBounds(621, 0, 260, 26);
+        (saveSettingsButton = new JButton("Save Settings")).setBounds(621, 0, 450, 26);
         (sliderB = new JSlider(1, 0, 255, 4)).setBounds(330, 10, 40, 80);
         (sliderBLabel = new JLabel("B:")).setBounds(279, 0, 40, 80);
         (sliderBLabelval = new JLabel("" + B)).setBounds(291, 0, 40, 80);
@@ -555,9 +572,7 @@ class cultrisTool implements ChangeListener {
         (sliderR = new JSlider(1, 0, 255, 4)).setBounds(140, 10, 40, 80);
         (sliderRLabel = new JLabel("R:")).setBounds(86, 0, 40, 80);
         (sliderRlabelval = new JLabel("" + R)).setBounds(98, 0, 40, 80);
-        (slotFiveCheckBox = new JCheckBox("5")).setBounds(440, 58, 30, 28);
-        (slotSixCheckBox = new JCheckBox("6")).setBounds(480, 58, 30, 28);
-        (HzTextField = new JTextField("60")).setBounds(845, 64, 40, 18);
+        (HzTextField = new JTextField("60")).setBounds(925, 62, 40, 24);
         colorComboList = new JComboBox<>(readTextFile(currentPath + colorPresetsPath));
         colorComboList.setSelectedIndex(0);
     }
