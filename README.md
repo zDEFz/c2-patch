@@ -1,5 +1,5 @@
 # C2-patch
-![C2 Community Client](https://user-images.githubusercontent.com/24463722/155867200-f5fd03ea-6987-4660-bc0c-bb3f049410d5.png)
+![C2 Community Client](https://user-images.githubusercontent.com/24463722/155867221-1469e853-b100-444b-b64d-326d3c928a2b.png)
 
 ## C2 AIO Windows
 - **Google Drive** https://drive.google.com/file/d/1sk13vGKh55rKcII6EyNre4EvQ1fWam8k/view?usp=sharing
