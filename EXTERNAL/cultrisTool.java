@@ -165,6 +165,7 @@ class cultrisTool implements ChangeListener {
 
             if(minimizedStatusIsSet==1)
             {
+                cultrisToolMinimizeAtStartupCheckBox.setSelected(true);
                 jFrame.setState(Frame.ICONIFIED);
             }
         } catch (ArrayIndexOutOfBoundsException exec) {
@@ -275,7 +276,7 @@ class cultrisTool implements ChangeListener {
                 final JColorChooser chooser = new JColorChooser();
                 chooser.setColor(Color.BLUE);
                 chooser.getSelectionModel().addChangeListener(arg0 -> {
- 
+
                     sliderR.setValue(chooser.getColor().getRed());
                     sliderG.setValue(chooser.getColor().getGreen());
                     sliderB.setValue(chooser.getColor().getBlue());
