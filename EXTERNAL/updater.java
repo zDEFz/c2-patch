@@ -50,7 +50,7 @@ public class updater {
             System.out.println("Remote cultris2.jar: " + websiteInputLine);
 
 
-            if (websiteInputLine.equals(shaChecksumResult)) {
+            if (websiteInputLine.equals(shaChecksumResult.toUpperCase())) {
                 System.out.println("You are up-to-date!");
                 break;
             }
@@ -71,7 +71,11 @@ public class updater {
                     else{
                         System.out.println("Please close Cultris II before updating!");
                     }
+
             }
+
+
+
         }
         in.close();
     }
