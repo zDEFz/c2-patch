@@ -47,14 +47,14 @@ public class updater {
 
         String websiteInputLine;
         while ((websiteInputLine = in.readLine()) != null) {
-            System.out.println("Remote cultris2.jar: " + websiteInputLine);
+            websiteInputLine=websiteInputLine.toUpperCase();
+            System.out.println("Remote cultris2.jar: " + websiteInputLine.toUpperCase());
 
-
-            if (websiteInputLine.equals(shaChecksumResult.toUpperCase())) {
+            if (websiteInputLine.equals(shaChecksumResult)) {
                 System.out.println("You are up-to-date!");
                 break;
             }
-
+            
             else {
                 System.out.println("Downloading update!");
 
@@ -73,9 +73,6 @@ public class updater {
                     }
 
             }
-
-
-
         }
         in.close();
     }
