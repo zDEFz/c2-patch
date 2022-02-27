@@ -7,7 +7,7 @@
 - **MEGA.NZ** https://mega.nz/file/ooFWhTKZ#Nw6ihB4eicc1YDJUQENZMo7BwworRfXuMa_Q6N-_v1Q
 ## C2 AIO Linux
 - **Google Drive** https://drive.google.com/file/d/18GKx8C5THz9H5vOs8W8YLM1F1hQmTV0Z/view?usp=sharing
-- **MEGA.NZ** https://mega.nz/file/h8EyGLKJ#qRHEQKzS-BRavfxpCWS0f6DS9d_wh_CetC5QpBGqcJ0
+- **MEGA.NZ** TODO, for the meantime use ^
 
 Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013443895
 
