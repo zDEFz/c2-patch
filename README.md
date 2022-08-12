@@ -10,8 +10,7 @@
 
 Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013443895
 
-I3-WM Note: Center c2, cultrisTool to the scratchpad if minimized is true
-Recommendation for i3-wm
+I3-WM Note: Center c2, cultrisTool to the scratchpad if minimized is true. Recommendation for i3-wm
 ```#set floating for Cultris II / c2
 for_window [title="Cultris II"] floating enable; resize set 1280 1280; move position center;
 #hide cultrisTool if min_hook is active 
