@@ -16,6 +16,7 @@ for_window [title="Cultris II"] floating enable; resize set 1280 1280; move posi
 #hide cultrisTool if min_hook is active 
 for_window [title="min_hook"] move scratchpad
 ```
+Sway Note: run ```export _JAVA_AWT_WM_NONREPARENTING=1```
 
 ## C2 AIO Mac
 **Currently unsupported due to MAC-OS requiring GetAWT which is available in JAVA 6 SE, but dropped in newer JAVA. The new implemented GUI uses 'too new' functionalities of JAVA**
