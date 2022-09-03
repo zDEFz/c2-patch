@@ -1,0 +1,7 @@
+Animation,0
+Blur,0
+FPS,1000
+Hz,120
+Preset,SteelBlue,0.2745098039,0.5098039216,0.7058823529
+Skip-Audio,1
+minimized,0

@@ -109,6 +109,7 @@ class cultrisTool implements ChangeListener {
         setTabOrderUI();
         coloredTextField.setFocusable(false);
         readSettings();
+        this.jFrame.setTitle("cultrisTool");
         this.jFrame.setVisible(true);
     }
 
