@@ -1,4 +1,9 @@
 # C2-patch
+A deobfuscation/patch/modification for the game "Cultris II" https://gewaltig.net/ 
+Fixes most of the performance issues and brings more joy playing the game.
+The patch allows also to play additionally on macOS, Linux.
+For macOS, I had collaborated with chinatsu to provide a compatibility layer https://github.com/chinatsu/c2lina
+
 ![C2 Community Client](https://user-images.githubusercontent.com/24463722/155867221-1469e853-b100-444b-b64d-326d3c928a2b.png)
 
 ## C2 AIO Windows
