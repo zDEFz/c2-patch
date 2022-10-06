@@ -6,12 +6,8 @@ For macOS, I had collaborated with chinatsu to provide a compatibility layer htt
 
 ![C2 Community Client](https://user-images.githubusercontent.com/24463722/155867221-1469e853-b100-444b-b64d-326d3c928a2b.png)
 
-## C2 AIO Windows
-- **Google Drive** https://drive.google.com/file/d/1sk13vGKh55rKcII6EyNre4EvQ1fWam8k/view?usp=sharing
-- **MEGA.NZ** https://mega.nz/file/ooFWhTKZ#Nw6ihB4eicc1YDJUQENZMo7BwworRfXuMa_Q6N-_v1Q
-## C2 AIO Linux
-- **Google Drive** https://drive.google.com/file/d/18GKx8C5THz9H5vOs8W8YLM1F1hQmTV0Z/view?usp=sharing
-- **MEGA.NZ** TODO, for the meantime use ^
+## C2 AIO
+- **filen.io** https://filen.io/f/7e1c423c-5198-4814-a9af-2f8646007a6f#!3If191vhDLUHsuoyUV9CWUS12gqrPoLt
 
 Manjaro Linux Note: https://github.com/zDEFz/c2-patch/issues/2#issuecomment-1013443895
 
