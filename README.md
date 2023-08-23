@@ -19,4 +19,7 @@ You are supposed to git clone this branch.
 
 `git clone --branch stable "https://github.com/zDEFz/c2-patch"`
 
-The UI was only done with aesthetics in mind. If you want to improve it, feel free todo so.
+The c2settings UI was only done with aesthetics in mind. If you want to improve it, feel free todo so.
+Note that you are not supposed to change stuff in the c2settings UI during the game runs. 
+
+![6e9d2110-8cb9-49cc-81f3-31aad9f3019f](https://github.com/zDEFz/c2-patch/assets/24463722/8ee34edc-7941-4401-ad95-cc4647f2973d)
