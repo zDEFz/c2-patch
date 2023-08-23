@@ -1,7 +1,0 @@
-Animation,1
-Blur,0
-FPS,240
-Hz,120
-Preset,Black,0,0,0
-Skip-Audio,1
-minimized,0

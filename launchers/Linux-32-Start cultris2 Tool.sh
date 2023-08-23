@@ -1,2 +1,2 @@
 #!/bin/bash
-"./resources/jdk-19-lin/bin/java" -cp cultris2.jar cultrisTool
+"./resources/adoptium-jdk17-x86/bin/java" c2settings

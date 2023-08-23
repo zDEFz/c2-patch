@@ -1,5 +1,10 @@
 #!/bin/bash
-export DIR=$(pwd)$DIR
+export DIR="$(dirname "$(readlink -f "$0")")"  # Get the script's directory
 
-cd $DIR
-"./resources/jdk-19-lin/bin/java" -Djava.library.path="$DIR/resources/libs/" -jar "$DIR/cultris2.jar"
+cd "$DIR"
+
+if [ -f "$DIR/resources/adoptium-jdk17-x86/bin/java" ]; then
+    "$DIR/resources/adoptium-jdk17-x86/bin/java" -Djava.library.path="$DIR/resources/libs/" -jar "$DIR/cultris2.jar"
+else
+    echo "Java executable not found."
+fi
