@@ -25,7 +25,7 @@ You need to look at launchers/ to see what launcher you may need and pass the JD
 If you need comfort you can run c2settings-ui.sh with any JDK that has AWT in it for adjusting the settings. Note that you require libawt in the JDK for that.
 
 - You are supposed to git clone this entire branch. `git clone --branch stable "https://github.com/zDEFz/c2-patch"`
-- You are supposed to download a recent JDK and change the path according to your required OS under /launchers.
+- You are supposed to download a recent JDK and change the path of the launcher according to your required OS under /launchers and then copy it to the folder containing cultris2.jar
 
 The c2settings UI was only done with aesthetics in mind. If you want to improve it, feel free todo so.
 Note that you are not supposed to change stuff in the c2settings UI during the game runs. 
