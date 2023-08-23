@@ -13,8 +13,8 @@ Game reads from settings/*.txt
 
 If you need comfort you can run `c2settings-ui.sh` with any JDK that has AWT in it for adjusting the settings. Note that you require `libawt` in the JDK for that.
 
-You need to look at launchers/ to see what launcher you may need and pass the JDK path to the Java executable and copy it into the directory cultris2.jar and all the other stuff is.
 
-You are supposed to git clone this branch.
-
+- You are supposed to git clone this branch.
 `git clone --branch stable "https://github.com/zDEFz/c2-patch"`
+- You are supposed to download a recent JDK and change the path according to your required OS under `/launchers`. 
+- You are not supposed to just copy and paste the `cultris2.jar`
