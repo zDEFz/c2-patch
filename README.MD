@@ -14,7 +14,7 @@ Game reads from settings/*.txt
 FPS and Hz expects a value starting at 60.
 Blur and Animation a value from 0 to 1 (off and on)
 
-Audiosamples need to match the exact oggfile in the cultris2.jar in order to play. 
+Audiosamples need to match the exact oggfile in the cultris2.jar in order to play. Do not change the order unless you want to swap sound effects.
 Therefore, if you wanna disable one, just add disabled_ in front of the sample you don't want.
 
 If you need comfort you can run `c2settings-ui.sh` with any JDK that has AWT in it for adjusting the settings. Note that you require `libawt` in the JDK for that.
