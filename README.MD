@@ -20,7 +20,7 @@ Therefore, if you wanna disable one, just add disabled_ in front of the sample y
 You need to look at launchers/ to see what launcher you may need and pass the JDK path to the Java executable and copy it into the directory cultris2.jar and all the other stuff is.
 
 - You are supposed to git clone this entire branch. `git clone --branch stable "https://github.com/zDEFz/c2-patch"`
-- You are supposed to download a recent JDK and change the path of the launcher according to your required OS under /launchers and then copy it to the folder containing cultris2.jar
+- You are supposed to download a recent JDK and e.g https://adoptium.net/ change the path of the launcher according to your required OS under /launchers and then copy it to the folder containing cultris2.jar
 
 If you need comfort you can run `c2settings-ui.sh` with any JDK that has AWT in it for adjusting the settings. Note that you require `libawt` in the JDK for that.
 The c2settings UI was done without aesthetics in mind. If you want to improve it, feel free todo so.
