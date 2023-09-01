@@ -22,7 +22,7 @@ You need to look at launchers/ to see what launcher you may need and copy it to 
 - You are supposed to git clone this entire branch. `git clone --branch stable "https://github.com/zDEFz/c2-patch"`
 - If you don't have git, you can click on Code > Download ZIP
 - In the Setup folder are two jdk downloader scripts. One of them works for linux, the other one only for Windows 10 and above.
--- However you can still install it for Windows 7. Just download https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.8_7.zip and extract it to the resources/ folder.
+- However you can still install it for Windows 7. Just download https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.8_7.zip and extract it to the resources/ folder.
 
 Run the launcher file as usual.
 
