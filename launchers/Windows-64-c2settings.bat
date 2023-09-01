@@ -1,1 +1,1 @@
-".\resources\jdk-19-win\bin\javaw.exe" -cp cultris2.jar c2settings
+".\resources\jdk-17.0.8+7\bin\java" -cp cultris2.jar c2settings
