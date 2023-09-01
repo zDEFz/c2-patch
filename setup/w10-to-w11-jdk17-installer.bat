@@ -9,3 +9,5 @@ powershell -command "Expand-Archive -Path OpenJDK17U-jdk_x64_windows_hotspot_17.
 
 :: Remove the downloaded ZIP file
 del OpenJDK17U-jdk_x64_windows_hotspot_17.0.8_7.zip
+
+cd ..
