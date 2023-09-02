@@ -19,14 +19,15 @@ Therefore, if you wanna disable one, just add disabled_ in front of the sample y
 
 You need to look at launchers/ to see what launcher you may need and copy it to the folder where cultris2.jar is.
 
-- You are supposed to git clone this entire branch. `git clone --branch stable "https://github.com/zDEFz/c2-patch"`
-- If you don't have git, you can click on Code > Download ZIP
-- In the Setup folder are two jdk downloader scripts. One of them works for linux, the other one only for Windows 10 and above.
-- However you can still install it for Windows 7. Just download https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.8_7.zip and extract it to the resources/ folder.
+- For Downloading the patch, you can click on Code > Download ZIP
+- In the Setup folder are two jdk installer scripts. One for Windows and one for Linux. They download the jdk, extract it appropriately and copy the launcher in the folder where the cultris2.jar is
+- If you are on Windows and for whatever reason you do not have Powershell, install the latest Powershell. 
 
 Run the launcher file as usual.
 
-If you need comfort you can run `c2settings-ui.sh` with any JDK that has AWT in it for adjusting the settings. Note that you require `libawt` in the JDK for that.
+Theres a second launcher called 'c2settings'. It's a UI for dealing with making changes to the .txt files under settings/.
+Keep in mind that it is meant to be used without cultris2 is running. Why? Cause otherwise cultris2 might crash.
+
 The c2settings UI was done without aesthetics in mind. If you want to improve it, feel free todo so.
 Note that you are not supposed to change stuff in the c2settings UI during the game runs. 
 
