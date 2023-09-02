@@ -17,8 +17,6 @@ Blur and Animation a value from 0 to 1 (off and on)
 Audiosamples need to match the exact oggfile in the cultris2.jar in order to play. Do not change the order unless you want to swap sound effects.
 Therefore, if you wanna disable one, just add disabled_ in front of the sample you don't want.
 
-You need to look at launchers/ to see what launcher you may need and copy it to the folder where cultris2.jar is.
-
 - For Downloading the patch, you can click on Code > Download ZIP
 - In the Setup folder are two jdk installer scripts. One for Windows and one for Linux. They download the jdk, extract it appropriately and copy the launcher in the folder where the cultris2.jar is
 - If you are on Windows and for whatever reason you do not have Powershell, install the latest Powershell. 
