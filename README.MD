@@ -19,3 +19,4 @@ Therefore, if you wanna disable one, just add disabled_ in front of the sample y
 
 Simplified setup - Win 10 - same goes for linux, just pick the linux setup thingy.
 
+[how to video](https://github.com/zDEFz/c2-patch/blob/stable/how-to-video/c2-setup-win10.mp4)
