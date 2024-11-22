@@ -20,90 +20,90 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    fconst_1
-L11:    ldc 4.5e-1f
-L13:    ldc 3.5e-1f
-L15:    ldc "Red"
-L17:    invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
-L20:    putstatic Field sE field619 LsE;
-L23:    new sE
-L26:    dup
-L27:    ldc "BLUE"
-L29:    iconst_1
-L30:    dup
+L10:    getstatic Field net/gewaltig/cultris/Cultris teamRedR F
+L13:    getstatic Field net/gewaltig/cultris/Cultris teamRedG F
+L16:    getstatic Field net/gewaltig/cultris/Cultris teamRedB F
+L19:    getstatic Field net/gewaltig/cultris/Cultris teamRedName Ljava/lang/String;
+L22:    invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
+L25:    putstatic Field sE field619 LsE;
+L28:    new sE
 L31:    dup
-L32:    pop2
-L33:    ldc 4e-1f
-L35:    ldc 6e-1f
-L37:    fconst_1
-L38:    ldc "Blue"
-L40:    invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
-L43:    putstatic Field sE this LsE;
-L46:    new sE
-L49:    dup
-L50:    ldc "GREEN"
-L52:    iconst_2
-L53:    iconst_1
-L54:    dup
-L55:    pop2
-L56:    fconst_1
-L57:    ldc 3e-1f
-L59:    dup_x1
-L60:    ldc "Green"
-L62:    invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
-L65:    putstatic Field sE field618 LsE;
-L68:    new sE
-L71:    dup
-L72:    ldc "YELLOW"
-L74:    iconst_3
-L75:    iconst_1
-L76:    dup
-L77:    pop2
-L78:    fconst_1
-L79:    dup
-L80:    ldc 5e-1f
-L82:    ldc "Yellow"
-L84:    invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
-L87:    putstatic Field sE field621 LsE;
-L90:    iconst_4
+L32:    ldc "BLUE"
+L34:    iconst_1
+L35:    dup
+L36:    dup
+L37:    pop2
+L38:    getstatic Field net/gewaltig/cultris/Cultris teamBlueR F
+L41:    getstatic Field net/gewaltig/cultris/Cultris teamBlueG F
+L44:    getstatic Field net/gewaltig/cultris/Cultris teamBlueB F
+L47:    getstatic Field net/gewaltig/cultris/Cultris teamBlueName Ljava/lang/String;
+L50:    invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
+L53:    putstatic Field sE this LsE;
+L56:    new sE
+L59:    dup
+L60:    ldc "GREEN"
+L62:    iconst_2
+L63:    iconst_1
+L64:    dup
+L65:    pop2
+L66:    getstatic Field net/gewaltig/cultris/Cultris teamGreenR F
+L69:    getstatic Field net/gewaltig/cultris/Cultris teamGreenG F
+L72:    getstatic Field net/gewaltig/cultris/Cultris teamGreenB F
+L75:    getstatic Field net/gewaltig/cultris/Cultris teamGreenName Ljava/lang/String;
+L78:    invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
+L81:    putstatic Field sE field618 LsE;
+L84:    new sE
+L87:    dup
+L88:    ldc "YELLOW"
+L90:    iconst_3
 L91:    iconst_1
 L92:    dup
 L93:    pop2
-L94:    anewarray sE
-L97:    iconst_1
-L98:    dup
-L99:    pop2
-L100:   dup
-L101:   iconst_0
-L102:   iconst_1
-L103:   dup
-L104:   pop2
-L105:   getstatic Field sE field619 LsE;
-L108:   aastore
-L109:   dup
-L110:   iconst_1
-L111:   dup
-L112:   dup
-L113:   pop2
-L114:   getstatic Field sE this LsE;
-L117:   aastore
-L118:   dup
-L119:   iconst_2
-L120:   iconst_1
-L121:   dup
-L122:   pop2
-L123:   getstatic Field sE field618 LsE;
-L126:   aastore
-L127:   dup
-L128:   iconst_3
-L129:   iconst_1
-L130:   dup
-L131:   pop2
-L132:   getstatic Field sE field621 LsE;
-L135:   aastore
-L136:   putstatic Field sE field617 [LsE;
-L139:   return
-L140:   
+L94:    getstatic Field net/gewaltig/cultris/Cultris teamYellowR F
+L97:    getstatic Field net/gewaltig/cultris/Cultris teamYellowG F
+L100:   getstatic Field net/gewaltig/cultris/Cultris teamYellowB F
+L103:   getstatic Field net/gewaltig/cultris/Cultris teamYellowName Ljava/lang/String;
+L106:   invokespecial Method sE <init> (Ljava/lang/String;IFFFLjava/lang/String;)V
+L109:   putstatic Field sE field621 LsE;
+L112:   iconst_4
+L113:   iconst_1
+L114:   dup
+L115:   pop2
+L116:   anewarray sE
+L119:   iconst_1
+L120:   dup
+L121:   pop2
+L122:   dup
+L123:   iconst_0
+L124:   iconst_1
+L125:   dup
+L126:   pop2
+L127:   getstatic Field sE field619 LsE;
+L130:   aastore
+L131:   dup
+L132:   iconst_1
+L133:   dup
+L134:   dup
+L135:   pop2
+L136:   getstatic Field sE this LsE;
+L139:   aastore
+L140:   dup
+L141:   iconst_2
+L142:   iconst_1
+L143:   dup
+L144:   pop2
+L145:   getstatic Field sE field618 LsE;
+L148:   aastore
+L149:   dup
+L150:   iconst_3
+L151:   iconst_1
+L152:   dup
+L153:   pop2
+L154:   getstatic Field sE field621 LsE;
+L157:   aastore
+L158:   putstatic Field sE field617 [LsE;
+L161:   return
+L162:   
     .end code
 .end method
 
@@ -127,6 +127,15 @@ L23:    putfield Field sE new F
 L26:    putfield Field sE field622 Ljava/lang/String;
 L29:    return
 L30:    
+        .localvariabletable
+            0 is this LsE; from L0 to L30
+            1 is p1 Ljava/lang/String; from L0 to L30
+            2 is p2 I from L0 to L30
+            3 is p3 F from L0 to L30
+            4 is p4 F from L0 to L30
+            5 is p5 F from L0 to L30
+            6 is p6 Ljava/lang/String; from L0 to L30
+        .end localvariabletable
     .end code
 .end method
 
@@ -138,6 +147,9 @@ L3:     invokestatic Method java/lang/Enum valueOf (Ljava/lang/Class;Ljava/lang/
 L6:     checkcast sE
 L9:     areturn
 L10:    
+        .localvariabletable
+            0 is p0 Ljava/lang/String; from L0 to L10
+        .end localvariabletable
     .end code
 .end method
 
