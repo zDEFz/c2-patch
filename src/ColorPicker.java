@@ -149,14 +149,14 @@ class ColorPicker implements ChangeListener {
             String[] parts = selectedColor.split(",");
             if (parts.length == 4) { // Name + 3 RGB values
                 try {
-                    float red = Float.parseFloat(parts[1].trim());
-                    float green = Float.parseFloat(parts[2].trim());
-                    float blue = Float.parseFloat(parts[3].trim());
+	                int red = Integer.parseInt(parts[1].trim());
+	                int green = Integer.parseInt(parts[2].trim());
+	                int blue = Integer.parseInt(parts[3].trim());
 
                     // Convert float values (0-1) to int values (0-255)
-                    sliderR.setValue(Math.round(red * 255));
-                    sliderG.setValue(Math.round(green * 255));
-                    sliderB.setValue(Math.round(blue * 255));
+                    sliderR.setValue(red);
+                    sliderG.setValue(green);
+                    sliderB.setValue(blue);
 
                     updateColor();  // Update the colored text field's background
                 } catch (NumberFormatException e) {
@@ -190,12 +190,12 @@ class ColorPicker implements ChangeListener {
                 java.nio.file.Files.createDirectories(settingsPath);  // Create settings directory if not exists
             }
 
-            float red = sliderR.getValue() / 255.0f;
-            float green = sliderG.getValue() / 255.0f;
-            float blue = sliderB.getValue() / 255.0f;
+            int red = sliderR.getValue();
+            int green = sliderG.getValue();
+            int blue = sliderB.getValue();
 
-            // Use English locale to enforce dot as the decimal separator
-            String colorString = String.format(Locale.ENGLISH, "%.9f, %.9f, %.9f", red, green, blue);
+            // Write RGB values to file in the format "R, G, B"
+            String colorString = String.format("%d, %d, %d", red, green, blue);
 
             java.nio.file.Files.writeString(Paths.get("settings/background-color.txt"), colorString);
             JOptionPane.showMessageDialog(frame, "Color saved successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
