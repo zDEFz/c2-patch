@@ -1,5 +1,6 @@
 Original, 26, 76, 128
 Black(Corrosive and many others), 0, 0, 0
+CharcoalGray(Bluestar), 47, 47, 47
 Olive(oli), 90, 100, 0
 Purple(marissa), 255, 51, 255
 DarkGrey(Discord), 49, 51, 56
