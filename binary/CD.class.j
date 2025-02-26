@@ -38,7 +38,11 @@ L58:    aload_2
 L59:    invokespecial Method Ub method5 (Led;Ljava/lang/String;)V
 L62:    return
 L63:    
-        .attribute StackMap b'\x00\x05\x00\x0D\x00\x00\x00\x01\x07\x00\x18\x00\x0E\x00\x03\x07\x00\x02\x07\x00\x1A\x07\x00\x1C\x00\x00\x00\x1E\x00\x03\x07\x00\x02\x07\x00\x1A\x07\x00\x1C\x00\x00\x00\x37\x00\x00\x00\x01\x07\x00\x18\x00\x38\x00\x03\x07\x00\x02\x07\x00\x1A\x07\x00\x1C\x00\x00'
+        .localvariabletable
+            0 is this LCD; from L0 to L63
+            1 is v1 Led; from L0 to L63
+            2 is v2 Ljava/lang/String; from L0 to L63
+        .end localvariabletable
     .end code
 .end method
 
@@ -86,7 +90,10 @@ L43:    aload_1
 L44:    invokespecial Method Ub method7 (Ljava/lang/String;)V
 L47:    return
 L48:    
-        .attribute StackMap b'\x00\x03\x00\x10\x00\x02\x07\x00\x02\x07\x00\x1C\x00\x00\x00\x29\x00\x00\x00\x01\x07\x00\x18\x00\x2A\x00\x02\x07\x00\x02\x07\x00\x1C\x00\x00'
+        .localvariabletable
+            0 is this LCD; from L0 to L48
+            1 is v1 Ljava/lang/String; from L0 to L48
+        .end localvariabletable
     .end code
 .end method
 
@@ -103,6 +110,9 @@ L4:
 L0:     aconst_null
 L1:     areturn
 L2:     
+        .localvariabletable
+            0 is this LCD; from L0 to L2
+        .end localvariabletable
     .end code
 .end method
 
@@ -111,6 +121,10 @@ L2:
 L0:     aconst_null
 L1:     areturn
 L2:     
+        .localvariabletable
+            0 is this LCD; from L0 to L2
+            1 is v1 Led; from L0 to L2
+        .end localvariabletable
     .end code
 .end method
 
@@ -124,6 +138,10 @@ L6:     getfield Field CD this I
 L9:     putstatic Field CD field62 I
 L12:    return
 L13:    
+        .localvariabletable
+            0 is this LCD; from L0 to L13
+            1 is i1 I from L0 to L13
+        .end localvariabletable
     .end code
 .end method
 
@@ -138,6 +156,11 @@ L9:     invokespecial Method Ge <init> (Led;Ljava/lang/String;)V
 L12:    invokevirtual Method Kc method846 (LD;)V
 L15:    return
 L16:    
+        .localvariabletable
+            0 is this LCD; from L0 to L16
+            1 is v1 Led; from L0 to L16
+            2 is v2 Ljava/lang/String; from L0 to L16
+        .end localvariabletable
     .end code
 .end method
 
@@ -150,6 +173,9 @@ L7:     aload_0
 L8:     invokevirtual Method Kc method849 (LG;)V
 L11:    return
 L12:    
+        .localvariabletable
+            0 is this LCD; from L0 to L12
+        .end localvariabletable
     .end code
 .end method
 
@@ -157,7 +183,7 @@ L12:
     .code stack 4 locals 3
 L0:     aload_1
 L1:     instanceof pc
-L4:     ifeq L73
+L4:     ifeq L136
 L7:     aload_1
 L8:     checkcast pc
 L11:    astore_2
@@ -166,12 +192,12 @@ L13:    getfield Field CD field56 Ljava/util/Set;
 L16:    aload_2
 L17:    getfield Field pc field943 Led;
 L20:    invokeinterface InterfaceMethod java/util/Set add (Ljava/lang/Object;)Z 2
-L25:    ifeq L73
+L25:    ifeq L136
 L28:    getstatic Field Kc field1931 LKc;
 L31:    aload_2
 L32:    getfield Field pc field943 Led;
 L35:    invokevirtual Method Kc method860 (Led;)Z
-L38:    ifne L73
+L38:    ifne L136
 L41:    new java/lang/StringBuilder
 L44:    aload_0
 L45:    dup_x1
@@ -187,12 +213,41 @@ L62:    ldc " joined"
 L64:    invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
 L67:    invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
 L70:    invokevirtual Method CD method7 (Ljava/lang/String;)V
-L73:    aload_0
-L74:    aload_1
-L75:    invokespecial Method Ub method8 (LD;)V
-L78:    return
-L79:    
-        .attribute StackMap b'\x00\x01\x00\x49\x00\x02\x07\x00\x02\x07\x00\x8E\x00\x00'
+L73:    aload_2
+L74:    getfield Field pc field943 Led;
+L77:    invokevirtual Method ed method94 ()Z
+L80:    ifeq L106
+L83:    aload_2
+L84:    getfield Field pc field943 Led;
+L87:    getfield Field ed field701 Ljava/lang/String;
+L90:    invokestatic Method BlockListManager containsName (Ljava/lang/String;)Z
+L93:    ifeq L106
+L96:    aload_2
+L97:    getfield Field pc field943 Led;
+L100:   invokestatic Method Ub method11 (Led;)V
+L103:   goto L136
+L106:   aload_2
+L107:   getfield Field pc field943 Led;
+L110:   invokevirtual Method ed is_guest ()Z
+L113:   ifne L136
+L116:   aload_2
+L117:   getfield Field pc field943 Led;
+L120:   getfield Field ed field712 I
+L123:   invokestatic Method BlockListManager containsNumber (I)Z
+L126:   ifeq L136
+L129:   aload_2
+L130:   getfield Field pc field943 Led;
+L133:   invokestatic Method Ub method11 (Led;)V
+L136:   aload_0
+L137:   aload_1
+L138:   invokespecial Method Ub method8 (LD;)V
+L141:   return
+L142:   
+        .localvariabletable
+            0 is this LCD; from L0 to L142
+            1 is p1 LD; from L0 to L142
+            2 is v2 Lpc; from L0 to L142
+        .end localvariabletable
     .end code
 .end method
 
@@ -245,7 +300,11 @@ L100:   getstatic Field CD field61 Ljava/lang/String;
 L103:   invokevirtual Method CD method12 (Ljava/lang/String;)V
 L106:   return
 L107:   
-        .attribute StackMap b'\x00\x04\x00\x28\x00\x02\x07\x00\x02\x07\x00\xA2\x00\x01\x07\x00\xA2\x00\x55\x00\x00\x00\x01\x07\x00\x18\x00\x56\x00\x02\x07\x00\x02\x07\x00\xA2\x00\x00\x00\x6A\x00\x02\x07\x00\x02\x07\x00\xA2\x00\x00'
+        .localvariabletable
+            0 is this LCD; from L0 to L107
+            1 is v1 Ljava/util/Iterator; from L0 to L107
+            2 is v2 LDc; from L0 to L107
+        .end localvariabletable
     .end code
 .end method
 
@@ -254,6 +313,9 @@ L107:
 L0:     getstatic Field CD field63 Ljava/util/LinkedList;
 L3:     areturn
 L4:     
+        .localvariabletable
+            0 is this LCD; from L0 to L4
+        .end localvariabletable
     .end code
 .end method
 
@@ -264,6 +326,9 @@ L1:     dup
 L2:     putstatic Field CD field62 I
 L5:     ireturn
 L6:     
+        .localvariabletable
+            0 is i0 I from L0 to L6
+        .end localvariabletable
     .end code
 .end method
 .innerclasses

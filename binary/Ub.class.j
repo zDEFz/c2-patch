@@ -87,7 +87,7 @@ L142:   invokeinterface InterfaceMethod java/util/Set iterator ()Ljava/util/Iter
 L147:   astore_3
 L148:   aload_3
 L149:   invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
-L154:   ifeq L1010
+L154:   ifeq L1007
 L157:   aload_3
 L158:   invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
 L163:   checkcast java/util/Map$Entry
@@ -182,18 +182,18 @@ L358:   dup
 L359:   astore_2
 L360:   getfield Field ag try LqE;
 L363:   getstatic Field qE try LqE;
-L366:   if_acmpeq L1010
+L366:   if_acmpeq L1007
 L369:   aload_0
 L370:   getfield Field Ub field56 Ljava/util/Set;
 L373:   aload_2
 L374:   getfield Field ag field720 Led;
 L377:   invokeinterface InterfaceMethod java/util/Set add (Ljava/lang/Object;)Z 2
-L382:   ifeq L1010
+L382:   ifeq L1007
 L385:   getstatic Field Kc field1931 LKc;
 L388:   aload_2
 L389:   getfield Field ag field720 Led;
 L392:   invokevirtual Method Kc method860 (Led;)Z
-L395:   ifne L1010
+L395:   ifne L1007
 L398:   new java/lang/StringBuilder
 L401:   aload_0
 L402:   dup_x1
@@ -221,7 +221,7 @@ L444:   getfield Field Ub field56 Ljava/util/Set;
 L447:   aload_2
 L448:   getfield Field gC field872 Led;
 L451:   invokeinterface InterfaceMethod java/util/Set remove (Ljava/lang/Object;)Z 2
-L456:   ifeq L1010
+L456:   ifeq L1007
 L459:   new java/lang/StringBuilder
 L462:   aload_0
 L463:   dup_x1
@@ -240,7 +240,7 @@ L488:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
 L491:   return
 L492:   aload_1
 L493:   instanceof Xd
-L496:   ifeq L709
+L496:   ifeq L706
 L499:   aload_1
 L500:   checkcast Xd
 L503:   astore_2
@@ -260,12 +260,12 @@ L515:   tableswitch 1
             L576
             L576
             L576
-            L622
-            L667
-            default : L708
+            L621
+            L665
+            default : L705
 L576:   aload_0
 L577:   iconst_0
-L578:   ifne L664
+L578:   ifne L662
 L581:   new java/lang/StringBuilder
 L584:   dup
 L585:   invokespecial Method java/lang/StringBuilder <init> ()V
@@ -274,200 +274,207 @@ L589:   aload_2
 L590:   getfield Field Xd field663 Led;
 L593:   getfield Field ed field701 Ljava/lang/String;
 L596:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
-L599:   ldc_w " was banned by "
-L602:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L605:   aload_2
-L606:   getfield Field Xd field666 Led;
-L609:   getfield Field ed field701 Ljava/lang/String;
-L612:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L615:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L618:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
-L621:   return
-L622:   aload_0
-L623:   new java/lang/StringBuilder
-L626:   dup
-L627:   invokespecial Method java/lang/StringBuilder <init> ()V
-L630:   iconst_0
-L631:   aload_2
-L632:   getfield Field Xd field663 Led;
-L635:   getfield Field ed field701 Ljava/lang/String;
-L638:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
-L641:   ldc_w " was kicked by "
-L644:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L647:   aload_2
-L648:   getfield Field Xd field666 Led;
-L651:   getfield Field ed field701 Ljava/lang/String;
-L654:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L657:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L660:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
-L663:   return
-L664:   goto L577
-L667:   aload_0
-L668:   new java/lang/StringBuilder
-L671:   dup
-L672:   invokespecial Method java/lang/StringBuilder <init> ()V
-L675:   iconst_0
-L676:   aload_2
-L677:   getfield Field Xd field663 Led;
-L680:   getfield Field ed field701 Ljava/lang/String;
-L683:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
-L686:   ldc_w " was warned by "
-L689:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L692:   aload_2
-L693:   getfield Field Xd field666 Led;
-L696:   getfield Field ed field701 Ljava/lang/String;
-L699:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L702:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L705:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
-L708:   return
-L709:   aload_1
-L710:   instanceof JC
-L713:   ifeq L769
-L716:   aload_1
-L717:   checkcast JC
-L720:   astore_2
-L721:   aload_0
-L722:   aload_2
-L723:   dup_x1
-L724:   getfield Field JC field867 Ljava/lang/String;
-L727:   invokevirtual Method Ub method12 (Ljava/lang/String;)V
-L730:   getfield Field JC field867 Ljava/lang/String;
-L733:   ldc_w "lmotd"
-L736:   invokestatic Method JB method822 (Ljava/lang/String;)Ljava/lang/String;
-L739:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
-L742:   ifne L758
-L745:   aload_0
-L746:   dup
-L747:   getfield Field Ub this I
-L750:   iconst_1
-L751:   dup
-L752:   dup
-L753:   pop2
-L754:   iadd
-L755:   invokevirtual Method Ub method14 (I)V
-L758:   ldc_w "lmotd"
-L761:   aload_2
-L762:   getfield Field JC field867 Ljava/lang/String;
-L765:   invokestatic Method JB method826 (Ljava/lang/String;Ljava/lang/String;)V
-L768:   return
-L769:   aload_1
-L770:   instanceof lc
-L773:   ifeq L846
-L776:   aload_1
-L777:   checkcast lc
-L780:   dup
-L781:   astore_2
-L782:   getfield Field lc field950 LKD;
-L785:   getstatic Field KD this LKD;
-L788:   if_acmpne L1010
-L791:   aload_2
-L792:   getfield Field lc field949 Ljava/lang/String;
-L795:   ifnull L835
-L798:   aload_0
-L799:   aload_2
-L800:   dup_x1
-L801:   getfield Field lc field949 Ljava/lang/String;
-L804:   invokevirtual Method Ub method12 (Ljava/lang/String;)V
-L807:   getfield Field lc field949 Ljava/lang/String;
-L810:   ldc_w "lmotd"
-L813:   invokestatic Method JB method822 (Ljava/lang/String;)Ljava/lang/String;
-L816:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
-L819:   ifne L835
-L822:   aload_0
-L823:   dup
-L824:   getfield Field Ub this I
-L827:   iconst_1
-L828:   dup
-L829:   dup
-L830:   pop2
-L831:   iadd
-L832:   invokevirtual Method Ub method14 (I)V
-L835:   ldc_w "lmotd"
-L838:   aload_2
-L839:   getfield Field lc field949 Ljava/lang/String;
-L842:   invokestatic Method JB method826 (Ljava/lang/String;Ljava/lang/String;)V
-L845:   return
-L846:   aload_1
-L847:   instanceof Ge
-L850:   ifeq L919
-L853:   aload_1
-L854:   checkcast Ge
-L857:   astore_2
-L858:   aload_0
-L859:   aload_2
-L860:   getfield Field Ge field961 Led;
-L863:   aload_2
-L864:   dup_x2
-L865:   getfield Field Ge field960 Ljava/lang/String;
-L868:   invokevirtual Method Ub method5 (Led;Ljava/lang/String;)V
-L871:   getfield Field Ge field961 Led;
-L874:   ifnull L890
-L877:   getstatic Field Kc field1931 LKc;
-L880:   aload_2
-L881:   getfield Field Ge field961 Led;
-L884:   invokevirtual Method Kc method860 (Led;)Z
-L887:   ifne L1010
-L890:   getstatic Field Ub field59 Ljava/util/Set;
-L893:   aload_2
-L894:   getfield Field Ge field961 Led;
-L897:   invokeinterface InterfaceMethod java/util/Set contains (Ljava/lang/Object;)Z 2
-L902:   ifne L1010
-L905:   aload_0
-L906:   dup
-L907:   getfield Field Ub this I
-L910:   iconst_1
-L911:   dup
-L912:   dup
-L913:   pop2
-L914:   iadd
-L915:   invokevirtual Method Ub method14 (I)V
-L918:   return
-L919:   aload_1
-L920:   instanceof LB
-L923:   aload_1
-L924:   swap
-L925:   ifeq L966
-L928:   checkcast LB
-L931:   astore_2
-L932:   new java/lang/StringBuilder
-L935:   aload_0
-L936:   dup_x1
-L937:   dup
-L938:   pop2
-L939:   dup
-L940:   invokespecial Method java/lang/StringBuilder <init> ()V
-L943:   ldc_w "Created room "
-L946:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L949:   aload_2
-L950:   getfield Field LB field947 LRC;
-L953:   getfield Field RC this Ljava/lang/String;
-L956:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L959:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L962:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
-L965:   return
-L966:   instanceof tc
-L969:   ifeq L1010
-L972:   aload_1
-L973:   checkcast tc
-L976:   astore_2
-L977:   new java/lang/StringBuilder
-L980:   aload_0
-L981:   dup_x1
-L982:   dup
-L983:   pop2
-L984:   dup
-L985:   invokespecial Method java/lang/StringBuilder <init> ()V
-L988:   ldc_w "Closed room "
-L991:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L994:   aload_2
-L995:   getfield Field tc field938 LRC;
-L998:   getfield Field RC this Ljava/lang/String;
-L1001:  invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L1004:  invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L1007:  invokevirtual Method Ub method7 (Ljava/lang/String;)V
-L1010:  return
-L1011:  
-        .attribute StackMap b'\x00\x20\x00\x4B\x00\x00\x00\x01\x07\x00\x6E\x00\x4C\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x00\x7C\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x72\x00\x00\x00\x7D\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x72\x00\x01\x07\x00\x02\x00\x94\x00\x04\x07\x00\x02\x07\x00\x70\x07\x00\x72\x07\x00\x90\x00\x00\x01\x0D\x00\x00\x00\x01\x07\x00\x6E\x01\x0E\x00\x06\x07\x00\x02\x07\x00\x70\x07\x00\x72\x07\x00\x90\x07\x00\x48\x07\x00\x18\x00\x00\x01\x1A\x00\x05\x07\x00\x02\x07\x00\x70\x07\x00\x72\x07\x00\x90\x07\x00\xCD\x00\x01\x07\x00\x3D\x01\x1F\x00\x00\x00\x01\x07\x00\x6E\x01\x20\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x72\x00\x01\x07\x00\x02\x01\x23\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x72\x00\x00\x01\x35\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x72\x00\x01\x07\x00\x02\x01\x55\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x72\x00\x01\x07\x00\x02\x01\x5A\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x72\x00\x00\x01\x5B\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x01\xAF\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x01\xEC\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x02\x40\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x0A\x00\x00\x02\x41\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x0A\x00\x01\x07\x00\x02\x02\x6E\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x0A\x00\x00\x02\x98\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x0A\x00\x01\x07\x00\x02\x02\x9B\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x0A\x00\x00\x02\xC4\x00\x03\x07\x00\x02\x07\x00\x70\x07\x00\x0A\x00\x00\x02\xC5\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x02\xF6\x00\x03\x07\x00\x02\x07\x00\x70\x07\x01\x0E\x00\x00\x03\x01\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x03\x43\x00\x03\x07\x00\x02\x07\x00\x70\x07\x01\x2B\x00\x00\x03\x4E\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x03\x7A\x00\x03\x07\x00\x02\x07\x00\x70\x07\x01\x36\x00\x00\x03\x97\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x03\xC6\x00\x02\x07\x00\x02\x07\x00\x70\x00\x01\x07\x00\x70\x03\xF2\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00'
+L599:   ldc " was banned by "
+L601:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L604:   aload_2
+L605:   getfield Field Xd field666 Led;
+L608:   getfield Field ed field701 Ljava/lang/String;
+L611:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L614:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L617:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
+L620:   return
+L621:   aload_0
+L622:   new java/lang/StringBuilder
+L625:   dup
+L626:   invokespecial Method java/lang/StringBuilder <init> ()V
+L629:   iconst_0
+L630:   aload_2
+L631:   getfield Field Xd field663 Led;
+L634:   getfield Field ed field701 Ljava/lang/String;
+L637:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
+L640:   ldc " was kicked by "
+L642:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L645:   aload_2
+L646:   getfield Field Xd field666 Led;
+L649:   getfield Field ed field701 Ljava/lang/String;
+L652:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L655:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L658:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
+L661:   return
+L662:   goto L577
+L665:   aload_0
+L666:   new java/lang/StringBuilder
+L669:   dup
+L670:   invokespecial Method java/lang/StringBuilder <init> ()V
+L673:   iconst_0
+L674:   aload_2
+L675:   getfield Field Xd field663 Led;
+L678:   getfield Field ed field701 Ljava/lang/String;
+L681:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
+L684:   ldc " was warned by "
+L686:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L689:   aload_2
+L690:   getfield Field Xd field666 Led;
+L693:   getfield Field ed field701 Ljava/lang/String;
+L696:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L699:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L702:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
+L705:   return
+L706:   aload_1
+L707:   instanceof JC
+L710:   ifeq L766
+L713:   aload_1
+L714:   checkcast JC
+L717:   astore_2
+L718:   aload_0
+L719:   aload_2
+L720:   dup_x1
+L721:   getfield Field JC field867 Ljava/lang/String;
+L724:   invokevirtual Method Ub method12 (Ljava/lang/String;)V
+L727:   getfield Field JC field867 Ljava/lang/String;
+L730:   ldc_w "lmotd"
+L733:   invokestatic Method JB method822 (Ljava/lang/String;)Ljava/lang/String;
+L736:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
+L739:   ifne L755
+L742:   aload_0
+L743:   dup
+L744:   getfield Field Ub this I
+L747:   iconst_1
+L748:   dup
+L749:   dup
+L750:   pop2
+L751:   iadd
+L752:   invokevirtual Method Ub method14 (I)V
+L755:   ldc_w "lmotd"
+L758:   aload_2
+L759:   getfield Field JC field867 Ljava/lang/String;
+L762:   invokestatic Method JB method826 (Ljava/lang/String;Ljava/lang/String;)V
+L765:   return
+L766:   aload_1
+L767:   instanceof lc
+L770:   ifeq L843
+L773:   aload_1
+L774:   checkcast lc
+L777:   dup
+L778:   astore_2
+L779:   getfield Field lc field950 LKD;
+L782:   getstatic Field KD this LKD;
+L785:   if_acmpne L1007
+L788:   aload_2
+L789:   getfield Field lc field949 Ljava/lang/String;
+L792:   ifnull L832
+L795:   aload_0
+L796:   aload_2
+L797:   dup_x1
+L798:   getfield Field lc field949 Ljava/lang/String;
+L801:   invokevirtual Method Ub method12 (Ljava/lang/String;)V
+L804:   getfield Field lc field949 Ljava/lang/String;
+L807:   ldc_w "lmotd"
+L810:   invokestatic Method JB method822 (Ljava/lang/String;)Ljava/lang/String;
+L813:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
+L816:   ifne L832
+L819:   aload_0
+L820:   dup
+L821:   getfield Field Ub this I
+L824:   iconst_1
+L825:   dup
+L826:   dup
+L827:   pop2
+L828:   iadd
+L829:   invokevirtual Method Ub method14 (I)V
+L832:   ldc_w "lmotd"
+L835:   aload_2
+L836:   getfield Field lc field949 Ljava/lang/String;
+L839:   invokestatic Method JB method826 (Ljava/lang/String;Ljava/lang/String;)V
+L842:   return
+L843:   aload_1
+L844:   instanceof Ge
+L847:   ifeq L916
+L850:   aload_1
+L851:   checkcast Ge
+L854:   astore_2
+L855:   aload_0
+L856:   aload_2
+L857:   getfield Field Ge field961 Led;
+L860:   aload_2
+L861:   dup_x2
+L862:   getfield Field Ge field960 Ljava/lang/String;
+L865:   invokevirtual Method Ub method5 (Led;Ljava/lang/String;)V
+L868:   getfield Field Ge field961 Led;
+L871:   ifnull L887
+L874:   getstatic Field Kc field1931 LKc;
+L877:   aload_2
+L878:   getfield Field Ge field961 Led;
+L881:   invokevirtual Method Kc method860 (Led;)Z
+L884:   ifne L1007
+L887:   getstatic Field Ub field59 Ljava/util/Set;
+L890:   aload_2
+L891:   getfield Field Ge field961 Led;
+L894:   invokeinterface InterfaceMethod java/util/Set contains (Ljava/lang/Object;)Z 2
+L899:   ifne L1007
+L902:   aload_0
+L903:   dup
+L904:   getfield Field Ub this I
+L907:   iconst_1
+L908:   dup
+L909:   dup
+L910:   pop2
+L911:   iadd
+L912:   invokevirtual Method Ub method14 (I)V
+L915:   return
+L916:   aload_1
+L917:   instanceof LB
+L920:   aload_1
+L921:   swap
+L922:   ifeq L963
+L925:   checkcast LB
+L928:   astore_2
+L929:   new java/lang/StringBuilder
+L932:   aload_0
+L933:   dup_x1
+L934:   dup
+L935:   pop2
+L936:   dup
+L937:   invokespecial Method java/lang/StringBuilder <init> ()V
+L940:   ldc_w "Created room "
+L943:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L946:   aload_2
+L947:   getfield Field LB field947 LRC;
+L950:   getfield Field RC this Ljava/lang/String;
+L953:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L956:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L959:   invokevirtual Method Ub method7 (Ljava/lang/String;)V
+L962:   return
+L963:   instanceof tc
+L966:   ifeq L1007
+L969:   aload_1
+L970:   checkcast tc
+L973:   astore_2
+L974:   new java/lang/StringBuilder
+L977:   aload_0
+L978:   dup_x1
+L979:   dup
+L980:   pop2
+L981:   dup
+L982:   invokespecial Method java/lang/StringBuilder <init> ()V
+L985:   ldc_w "Closed room "
+L988:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L991:   aload_2
+L992:   getfield Field tc field938 LRC;
+L995:   getfield Field RC this Ljava/lang/String;
+L998:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L1001:  invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L1004:  invokevirtual Method Ub method7 (Ljava/lang/String;)V
+L1007:  return
+L1008:  
+        .localvariabletable
+            0 is this LUb; from L0 to L1008
+            1 is v1 LD; from L0 to L1008
+            2 is v2 LD; from L0 to L1008
+            3 is v3 Ljava/util/Iterator; from L0 to L1008
+            4 is v4 Ljava/lang/Object; from L0 to L1008
+            5 is v5 Ljava/lang/Object; from L0 to L1008
+        .end localvariabletable
     .end code
 .end method
 
@@ -556,6 +563,10 @@ L141:   getstatic Field VD field148 Ljava/lang/Object;
 L144:   invokevirtual Method Ub method31 (LgB;Ljava/lang/Object;)V
 L147:   return
 L148:   
+        .localvariabletable
+            0 is this LUb; from L0 to L148
+            1 is v1 Ljava/lang/String; from L0 to L148
+        .end localvariabletable
     .end code
 .end method
 
@@ -570,6 +581,10 @@ L7:     aload_1
 L8:     invokevirtual Method tD method96 (Led;Lqd;LsE;Ljava/lang/String;)V
 L11:    return
 L12:    
+        .localvariabletable
+            0 is this LUb; from L0 to L12
+            1 is v1 Ljava/lang/String; from L0 to L12
+        .end localvariabletable
     .end code
 .end method
 
@@ -582,6 +597,9 @@ L0:     aload_0
 L1:     getfield Field Ub field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LUb; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -770,7 +788,12 @@ L406:   aload_2
 L407:   invokevirtual Method tD method96 (Led;Lqd;LsE;Ljava/lang/String;)V
 L410:   return
 L411:   
-        .attribute StackMap b'\x00\x03\x00\x0D\x00\x00\x00\x01\x07\x00\x6E\x00\x0E\x00\x03\x07\x00\x02\x07\x00\x48\x07\x01\x1C\x00\x00\x01\x88\x00\x04\x07\x00\x02\x07\x00\x48\x07\x01\x1C\x01\x00\x00'
+        .localvariabletable
+            0 is this LUb; from L0 to L411
+            1 is v1 Led; from L0 to L411
+            2 is v2 Ljava/lang/String; from L0 to L411
+            3 is i3 I from L0 to L411
+        .end localvariabletable
     .end code
 .end method
 
@@ -795,18 +818,33 @@ L29:    pop2
 L30:    invokevirtual Method Ub method14 (I)V
 L33:    return
 L34:    
-        .attribute StackMap b'\x00\x02\x00\x12\x00\x01\x07\x00\x02\x00\x00\x00\x21\x00\x01\x07\x00\x02\x00\x00'
+        .localvariabletable
+            0 is this LUb; from L0 to L34
+        .end localvariabletable
     .end code
 .end method
 
 .method public static method11 : (Led;)V
     .code stack 2 locals 1
-L0:     getstatic Field Ub field59 Ljava/util/Set;
-L3:     aload_0
-L4:     invokeinterface InterfaceMethod java/util/Set add (Ljava/lang/Object;)Z 2
-L9:     pop
-L10:    return
-L11:    
+L0:     aload_0
+L1:     invokevirtual Method ed method94 ()Z
+L4:     ifne L17
+L7:     aload_0
+L8:     getfield Field ed field712 I
+L11:    invokestatic Method BlockListManager addNumber (I)V
+L14:    goto L24
+L17:    aload_0
+L18:    getfield Field ed field701 Ljava/lang/String;
+L21:    invokestatic Method BlockListManager addName (Ljava/lang/String;)V
+L24:    getstatic Field Ub field59 Ljava/util/Set;
+L27:    aload_0
+L28:    invokeinterface InterfaceMethod java/util/Set add (Ljava/lang/Object;)Z 2
+L33:    pop
+L34:    return
+L35:    
+        .localvariabletable
+            0 is p0 Led; from L0 to L35
+        .end localvariabletable
     .end code
 .end method
 
@@ -888,7 +926,12 @@ L123:   getstatic Field VD field150 Ljava/lang/Object;
 L126:   invokevirtual Method Ub method31 (LgB;Ljava/lang/Object;)V
 L129:   return
 L130:   
-        .attribute StackMap b'\x00\x02\x00\x13\x00\x02\x07\x00\x02\x07\x01\x1C\x00\x00\x00\x67\x00\x04\x07\x00\x02\x07\x01\x1C\x07\x01\xD2\x07\x00\x48\x00\x00'
+        .localvariabletable
+            0 is this LUb; from L0 to L130
+            1 is v1 Ljava/lang/String; from L0 to L130
+            2 is v2 LDF; from L0 to L130
+            3 is v3 Led; from L0 to L130
+        .end localvariabletable
     .end code
 .end method
 
@@ -925,7 +968,9 @@ L48:    invokevirtual Method java/lang/StringBuilder append (C)Ljava/lang/String
 L51:    invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
 L54:    areturn
 L55:    
-        .attribute StackMap b'\x00\x02\x00\x0C\x00\x00\x00\x01\x07\x00\x6E\x00\x0D\x00\x01\x07\x00\x02\x00\x00'
+        .localvariabletable
+            0 is this LUb; from L0 to L55
+        .end localvariabletable
     .end code
 .end method
 
@@ -1024,7 +1069,13 @@ L170:   invokevirtual Method Ub method13 ()Ljava/lang/String;
 L173:   invokevirtual Method Yd method185 (LgB;Ljava/lang/String;)V
 L176:   return
 L177:   
-        .attribute StackMap b'\x00\x10\x00\x06\x00\x03\x07\x00\x02\x01\x07\x00\x04\x00\x01\x07\x00\x04\x00\x1A\x00\x00\x00\x01\x07\x00\x6E\x00\x1B\x00\x03\x07\x00\x02\x01\x07\x00\x04\x00\x00\x00\x24\x00\x00\x00\x01\x07\x00\x6E\x00\x25\x00\x03\x07\x00\x02\x01\x07\x00\x04\x00\x00\x00\x3B\x00\x04\x07\x00\x02\x01\x07\x00\x04\x05\x00\x01\x07\x00\x04\x00\x4E\x00\x04\x07\x00\x02\x01\x07\x00\x04\x05\x00\x01\x07\x00\x04\x00\x59\x00\x04\x07\x00\x02\x01\x07\x00\x04\x05\x00\x00\x00\x5A\x00\x04\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x00\x01\x07\x00\x02\x00\x5E\x00\x05\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x07\x02\x1C\x00\x01\x07\x02\x1C\x00\x70\x00\x05\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x07\x02\x1C\x00\x00\x00\x7B\x00\x05\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x07\x02\x1C\x00\x00\x00\x7C\x00\x05\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x07\x02\x1C\x00\x01\x07\x00\x02\x00\x84\x00\x05\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x07\x02\x1C\x00\x00\x00\x9E\x00\x05\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x07\x02\x1C\x00\x01\x07\x00\x04\x00\xB0\x00\x05\x07\x00\x02\x01\x07\x00\x04\x07\x02\x1C\x07\x02\x1C\x00\x00'
+        .localvariabletable
+            0 is this LUb; from L0 to L177
+            1 is i1 I from L0 to L177
+            2 is v2 Lqc; from L0 to L177
+            3 is v3 LgB; from L0 to L177
+            4 is v4 Lqc; from L0 to L177
+        .end localvariabletable
     .end code
 .end method
 
@@ -1035,17 +1086,33 @@ L3:     aload_0
 L4:     invokeinterface InterfaceMethod java/util/Set contains (Ljava/lang/Object;)Z 2
 L9:     ireturn
 L10:    
+        .localvariabletable
+            0 is v0 Led; from L0 to L10
+        .end localvariabletable
     .end code
 .end method
 
 .method public static method16 : (Led;)V
     .code stack 2 locals 1
-L0:     getstatic Field Ub field59 Ljava/util/Set;
-L3:     aload_0
-L4:     invokeinterface InterfaceMethod java/util/Set remove (Ljava/lang/Object;)Z 2
-L9:     pop
-L10:    return
-L11:    
+L0:     aload_0
+L1:     invokevirtual Method ed method94 ()Z
+L4:     ifne L17
+L7:     aload_0
+L8:     getfield Field ed field712 I
+L11:    invokestatic Method BlockListManager removeNumber (I)V
+L14:    goto L24
+L17:    aload_0
+L18:    getfield Field ed field701 Ljava/lang/String;
+L21:    invokestatic Method BlockListManager removeName (Ljava/lang/String;)V
+L24:    getstatic Field Ub field59 Ljava/util/Set;
+L27:    aload_0
+L28:    invokeinterface InterfaceMethod java/util/Set remove (Ljava/lang/Object;)Z 2
+L33:    pop
+L34:    return
+L35:    
+        .localvariabletable
+            0 is p0 Led; from L0 to L35
+        .end localvariabletable
     .end code
 .end method
 
@@ -1055,6 +1122,9 @@ L0:     aload_0
 L1:     getfield Field Ub field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LUb; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 

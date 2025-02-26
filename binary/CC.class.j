@@ -30,6 +30,10 @@ L1:     aload_1
 L2:     invokespecial Method CC method145 (LTe;)V
 L5:     return
 L6:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L6
+            1 is v1 LTe; from L0 to L6
+        .end localvariabletable
     .end code
 .end method
 
@@ -39,6 +43,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -87,7 +94,10 @@ L76:    invokespecial Method Dg <init> (Led;LTe;)V
 L79:    invokevirtual Method FE method455 (LbC;LbC;)V
 L82:    return
 L83:    
-        .attribute StackMap b'\x00\x02\x00\x28\x00\x00\x00\x01\x07\x00\xBB\x00\x29\x00\x02\x07\x00\x02\x07\x00\xBD\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L83
+            1 is v1 LTe; from L0 to L83
+        .end localvariabletable
     .end code
 .end method
 
@@ -97,6 +107,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -147,7 +160,11 @@ L69:    pop2
 L70:    invokevirtual Method CC method72 (Ljava/lang/String;Z)V
 L73:    return
 L74:    
-        .attribute StackMap b'\x00\x02\x00\x2F\x00\x00\x00\x01\x07\x00\xBB\x00\x30\x00\x03\x07\x00\x02\x07\x00\xE9\x07\x00\xAC\x00\x01\x07\x00\xD8'
+        .localvariabletable
+            0 is this LCC; from L0 to L74
+            1 is v1 Lqd; from L0 to L74
+            2 is v2 LjC; from L0 to L74
+        .end localvariabletable
     .end code
 .end method
 
@@ -157,6 +174,9 @@ L0:     aload_0
 L1:     getfield Field CC field172 Lnf;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -166,6 +186,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -273,12 +296,16 @@ L200:   aload_0
 L201:   invokespecial Method CC try ()V
 L204:   return
 L205:   
-        .attribute StackMap b'\x00\x09\x00\x18\x00\x00\x00\x01\x07\x00\xBB\x00\x19\x00\x02\x07\x00\x02\x07\x01\x1A\x00\x00\x00\x31\x00\x00\x00\x01\x07\x00\xBB\x00\x32\x00\x02\x07\x00\x02\x07\x01\x1A\x00\x00\x00\x4B\x00\x02\x07\x00\x02\x07\x01\x1A\x00\x01\x07\x01\x1A\x00\x7A\x00\x02\x07\x00\x02\x07\x01\x1A\x00\x00\x00\xB5\x00\x02\x07\x00\x02\x07\x01\x1A\x00\x00\x00\xC1\x00\x02\x07\x00\x02\x07\x01\x1A\x00\x00\x00\xCC\x00\x02\x07\x00\x02\x07\x01\x1A\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L205
+            1 is v1 LD; from L0 to L205
+            2 is v2 LD; from L0 to L205
+        .end localvariabletable
     .end code
 .end method
 
 .method private new : ()Lqc;
-    .code stack 11 locals 6
+    .code stack 11 locals 7
 L0:     new qc
 L3:     dup
 L4:     new og
@@ -639,127 +666,135 @@ L673:   aastore
 L674:   iconst_1
 L675:   dup
 L676:   pop2
-L677:   istore_2
-L678:   getfield Field CC new Ljava/util/HashMap;
-L681:   invokevirtual Method java/util/HashMap values ()Ljava/util/Collection;
-L684:   invokeinterface InterfaceMethod java/util/Collection iterator ()Ljava/util/Iterator; 1
-L689:   dup
-L690:   astore_3
-L691:   invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
-L696:   ifeq L733
-L699:   aload_3
-L700:   invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
-L705:   checkcast Tg
-L708:   astore 5
-L710:   aload_3
-L711:   aload 4
-L713:   iconst_1
-L714:   dup
+L677:   istore 5
+L679:   getfield Field CC new Ljava/util/HashMap;
+L682:   invokevirtual Method java/util/HashMap values ()Ljava/util/Collection;
+L685:   invokeinterface InterfaceMethod java/util/Collection iterator ()Ljava/util/Iterator; 1
+L690:   dup
+L691:   astore_3
+L692:   invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
+L697:   ifeq L735
+L700:   aload_3
+L701:   invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
+L706:   checkcast Tg
+L709:   astore 6
+L711:   aload_3
+L712:   aload 4
+L714:   iconst_1
 L715:   dup
-L716:   pop2
-L717:   iload_2
-L718:   iadd
-L719:   aaload
-L720:   iconst_0
-L721:   iconst_1
-L722:   dup
-L723:   pop2
-L724:   aload 5
-L726:   iinc 2 1
-L729:   aastore
-L730:   goto L691
-L733:   aload 4
-L735:   iconst_4
-L736:   aload 4
-L738:   dup_x1
-L739:   iconst_3
-L740:   iconst_2
-L741:   aload 4
-L743:   dup_x1
-L744:   iconst_1
-L745:   dup
-L746:   dup
-L747:   pop2
-L748:   aload_0
-L749:   getfield Field CC new Ljava/util/HashMap;
-L752:   invokevirtual Method java/util/HashMap size ()I
-L755:   iadd
-L756:   aaload
-L757:   iconst_0
-L758:   iconst_1
-L759:   dup
-L760:   pop2
-L761:   aload_0
-L762:   getfield Field CC field178 LzD;
-L765:   aastore
-L766:   iconst_1
-L767:   dup
-L768:   pop2
-L769:   aload_0
-L770:   getfield Field CC new Ljava/util/HashMap;
-L773:   invokevirtual Method java/util/HashMap size ()I
-L776:   iadd
-L777:   aaload
-L778:   iconst_0
-L779:   iconst_1
-L780:   dup
-L781:   pop2
-L782:   aload_0
-L783:   getfield Field CC field179 LPg;
-L786:   aastore
-L787:   iconst_1
-L788:   dup
-L789:   pop2
-L790:   aload_0
-L791:   getfield Field CC new Ljava/util/HashMap;
-L794:   invokevirtual Method java/util/HashMap size ()I
-L797:   iadd
-L798:   aaload
-L799:   iconst_0
-L800:   iconst_1
-L801:   dup
-L802:   pop2
-L803:   aload_0
-L804:   getfield Field CC field184 LYg;
-L807:   aastore
-L808:   iconst_1
-L809:   dup
-L810:   pop2
-L811:   aload_0
-L812:   getfield Field CC new Ljava/util/HashMap;
-L815:   invokevirtual Method java/util/HashMap size ()I
-L818:   iadd
-L819:   aaload
-L820:   iconst_0
-L821:   iconst_1
-L822:   dup
-L823:   pop2
-L824:   aload_0
-L825:   getfield Field CC field172 Lnf;
-L828:   aastore
-L829:   invokestatic Method mC method1702 ([[LgB;)V
-L832:   new qc
-L835:   dup
-L836:   new VD
-L839:   dup
-L840:   invokespecial Method VD <init> ()V
-L843:   invokespecial Method qc <init> (Ld;)V
-L846:   astore_3
-L847:   new SB
-L850:   aload_3
-L851:   dup_x1
-L852:   dup_x2
-L853:   dup
-L854:   pop2
+L716:   dup
+L717:   pop2
+L718:   iload 5
+L720:   iadd
+L721:   aaload
+L722:   iconst_0
+L723:   iconst_1
+L724:   dup
+L725:   pop2
+L726:   aload 6
+L728:   iinc 5 1
+L731:   aastore
+L732:   goto L692
+L735:   aload 4
+L737:   iconst_4
+L738:   aload 4
+L740:   dup_x1
+L741:   iconst_3
+L742:   iconst_2
+L743:   aload 4
+L745:   dup_x1
+L746:   iconst_1
+L747:   dup
+L748:   dup
+L749:   pop2
+L750:   aload_0
+L751:   getfield Field CC new Ljava/util/HashMap;
+L754:   invokevirtual Method java/util/HashMap size ()I
+L757:   iadd
+L758:   aaload
+L759:   iconst_0
+L760:   iconst_1
+L761:   dup
+L762:   pop2
+L763:   aload_0
+L764:   getfield Field CC field178 LzD;
+L767:   aastore
+L768:   iconst_1
+L769:   dup
+L770:   pop2
+L771:   aload_0
+L772:   getfield Field CC new Ljava/util/HashMap;
+L775:   invokevirtual Method java/util/HashMap size ()I
+L778:   iadd
+L779:   aaload
+L780:   iconst_0
+L781:   iconst_1
+L782:   dup
+L783:   pop2
+L784:   aload_0
+L785:   getfield Field CC field179 LPg;
+L788:   aastore
+L789:   iconst_1
+L790:   dup
+L791:   pop2
+L792:   aload_0
+L793:   getfield Field CC new Ljava/util/HashMap;
+L796:   invokevirtual Method java/util/HashMap size ()I
+L799:   iadd
+L800:   aaload
+L801:   iconst_0
+L802:   iconst_1
+L803:   dup
+L804:   pop2
+L805:   aload_0
+L806:   getfield Field CC field184 LYg;
+L809:   aastore
+L810:   iconst_1
+L811:   dup
+L812:   pop2
+L813:   aload_0
+L814:   getfield Field CC new Ljava/util/HashMap;
+L817:   invokevirtual Method java/util/HashMap size ()I
+L820:   iadd
+L821:   aaload
+L822:   iconst_0
+L823:   iconst_1
+L824:   dup
+L825:   pop2
+L826:   aload_0
+L827:   getfield Field CC field172 Lnf;
+L830:   aastore
+L831:   invokestatic Method mC method1702 ([[LgB;)V
+L834:   new qc
+L837:   dup
+L838:   new VD
+L841:   dup
+L842:   invokespecial Method VD <init> ()V
+L845:   invokespecial Method qc <init> (Ld;)V
+L848:   astore_3
+L849:   new SB
+L852:   aload_3
+L853:   dup_x1
+L854:   dup_x2
 L855:   dup
-L856:   aload_1
-L857:   ldc_w 1.5e-1f
-L860:   invokespecial Method SB <init> (LgB;F)V
-L863:   getstatic Field VD field150 Ljava/lang/Object;
-L866:   invokevirtual Method qc method31 (LgB;Ljava/lang/Object;)V
-L869:   areturn
-L870:   
-        .attribute StackMap b'\x00\x0C\x00\xA1\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x01\xA1\x00\x01\x07\x01\xA1\x00\xEE\x00\x00\x00\x01\x07\x00\xBB\x00\xEF\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x01\xA1\x00\x00\x01\x09\x00\x00\x00\x01\x07\x00\xBB\x01\x0A\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x01\xA1\x00\x01\x07\x01\x57\x01\x23\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x01\xC9\x00\x01\x07\x01\x59\x01\xA4\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x00\x5D\x00\x00\x01\xBE\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x00\x5D\x00\x01\x07\x01\x59\x02\x03\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x00\x5D\x00\x04\x07\x00\x02\x08\x01\xE8\x08\x01\xE8\x07\x01\x01\x02\x07\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x00\x5D\x00\x05\x07\x00\x02\x08\x01\xE8\x08\x01\xE8\x07\x01\x01\x01\x02\xB3\x00\x05\x07\x00\x02\x07\x01\x59\x01\x07\x01\xA1\x07\x02\x0D\x00\x01\x07\x01\xA1\x02\xDD\x00\x05\x07\x00\x02\x07\x01\x59\x01\x07\x01\xA1\x07\x02\x0D\x00\x00'
+L856:   pop2
+L857:   dup
+L858:   aload_1
+L859:   ldc_w 1.5e-1f
+L862:   invokespecial Method SB <init> (LgB;F)V
+L865:   getstatic Field VD field150 Ljava/lang/Object;
+L868:   invokevirtual Method qc method31 (LgB;Ljava/lang/Object;)V
+L871:   areturn
+L872:   
+        .localvariabletable
+            0 is this LCC; from L0 to L872
+            5 is i2 I from L0 to L872
+            1 is v1 Lqc; from L0 to L872
+            2 is v2 Lqc; from L0 to L872
+            3 is v3 Ljava/lang/Object; from L0 to L872
+            4 is v4 Ljava/lang/Object; from L0 to L872
+            6 is v5 LTg; from L0 to L872
+        .end localvariabletable
     .end code
 .end method
 
@@ -769,6 +804,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -787,7 +825,7 @@ L21:    invokeinterface InterfaceMethod java/util/Collection iterator ()Ljava/ut
 L26:    dup
 L27:    astore_2
 L28:    invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
-L33:    ifeq L101
+L33:    ifeq L148
 L36:    aload_2
 L37:    invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
 L42:    checkcast ed
@@ -822,23 +860,49 @@ L84:    dup
 L85:    dup
 L86:    pop2
 L87:    aload_3
-L88:    getfield Field ed field701 Ljava/lang/String;
-L91:    aastore
-L92:    invokevirtual Method Ie method635 (Ljava/lang/Object;[Ljava/lang/Object;)LDG;
-L95:    pop
-L96:    aload_2
-L97:    goto L28
-L100:   athrow
-L101:   aload_0
-L102:   dup
-L103:   getfield Field CC try LIe;
-L106:   aload_1
-L107:   invokevirtual Method Ie method668 (Ljava/lang/Object;)V
-L110:   getfield Field CC try LIe;
-L113:   invokevirtual Method Ie method71 ()V
-L116:   return
-L117:   
-        .attribute StackMap b'\x00\x03\x00\x1C\x00\x03\x07\x00\x02\x07\x01\xC9\x07\x01\xA1\x00\x01\x07\x01\xA1\x00\x64\x00\x00\x00\x01\x07\x00\xBB\x00\x65\x00\x03\x07\x00\x02\x07\x01\xC9\x07\x01\xA1\x00\x00'
+L88:    dup
+L89:    getfield Field ed field712 I
+L92:    iconst_m1
+L93:    if_icmpne L113
+L96:    aload_3
+L97:    getfield Field ed field701 Ljava/lang/String;
+L100:   invokestatic Method BlockListManager containsName (Ljava/lang/String;)Z
+L103:   ifeq L113
+L106:   aload_3
+L107:   invokestatic Method Ub method11 (Led;)V
+L110:   goto L135
+L113:   aload_3
+L114:   getfield Field ed field712 I
+L117:   iconst_m1
+L118:   if_icmpeq L135
+L121:   aload_3
+L122:   getfield Field ed field712 I
+L125:   invokestatic Method BlockListManager containsNumber (I)Z
+L128:   ifeq L135
+L131:   aload_3
+L132:   invokestatic Method Ub method11 (Led;)V
+L135:   getfield Field ed field701 Ljava/lang/String;
+L138:   aastore
+L139:   invokevirtual Method Ie method635 (Ljava/lang/Object;[Ljava/lang/Object;)LDG;
+L142:   pop
+L143:   aload_2
+L144:   goto L28
+L147:   athrow
+L148:   aload_0
+L149:   dup
+L150:   getfield Field CC try LIe;
+L153:   aload_1
+L154:   invokevirtual Method Ie method668 (Ljava/lang/Object;)V
+L157:   getfield Field CC try LIe;
+L160:   invokevirtual Method Ie method71 ()V
+L163:   return
+L164:   
+        .localvariabletable
+            0 is this LCC; from L0 to L164
+            1 is v1 Ljava/lang/Object; from L0 to L164
+            2 is v2 Ljava/util/Iterator; from L0 to L164
+            3 is v3 Led; from L0 to L164
+        .end localvariabletable
     .end code
 .end method
 
@@ -848,6 +912,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -857,6 +924,9 @@ L0:     aload_0
 L1:     getfield Field CC field175 LuF;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -866,6 +936,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -875,6 +948,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -884,6 +960,9 @@ L0:     aload_0
 L1:     getfield Field CC field185 LUb;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -896,7 +975,7 @@ L4:
 .end method
 
 .method public method2 : ()V
-    .code stack 4 locals 3
+    .code stack 4 locals 4
 L0:     aload_0
 L1:     dup
 L2:     invokevirtual Method CC method69 ()V
@@ -958,15 +1037,15 @@ L133:   aload_0
 L134:   getfield Field CC field178 LzD;
 L137:   invokevirtual Method zD method183 ()I
 L140:   dup
-L141:   istore_1
+L141:   istore_3
 L142:   aload_0
 L143:   getfield Field CC field178 LzD;
 L146:   invokevirtual Method zD method247 ()I
 L149:   if_icmpne L159
 L152:   ldc_w 2147483647
-L155:   istore_1
+L155:   istore_3
 L156:   goto L173
-L159:   iload_1
+L159:   iload_3
 L160:   bipush 10
 L162:   iconst_1
 L163:   dup
@@ -977,13 +1056,18 @@ L168:   iconst_1
 L169:   dup
 L170:   pop2
 L171:   iadd
-L172:   istore_1
+L172:   istore_3
 L173:   ldc_w "rmsl"
-L176:   iload_1
+L176:   iload_3
 L177:   invokestatic Method JB method827 (Ljava/lang/String;I)V
 L180:   return
 L181:   
-        .attribute StackMap b'\x00\x0A\x00\x23\x00\x02\x07\x00\x02\x07\x01\xA1\x00\x00\x00\x5A\x00\x00\x00\x01\x07\x00\xBB\x00\x5B\x00\x01\x07\x00\x02\x00\x00\x00\x76\x00\x00\x00\x01\x07\x00\xBB\x00\x77\x00\x01\x07\x00\x02\x00\x01\x07\x01\x01\x00\x7B\x00\x01\x07\x00\x02\x00\x02\x07\x01\x01\x01\x00\x7E\x00\x01\x07\x00\x02\x00\x00\x00\x9F\x00\x02\x07\x00\x02\x01\x00\x00\x00\xAD\x00\x02\x07\x00\x02\x01\x00\x00\x00\xB4\x00\x01\x07\x00\x02\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L181
+            3 is i1 I from L0 to L181
+            1 is v1 Ljava/util/Iterator; from L0 to L181
+            2 is v2 Ljava/util/Map$Entry; from L0 to L181
+        .end localvariabletable
     .end code
 .end method
 
@@ -994,6 +1078,10 @@ L1:     iload_1
 L2:     invokespecial Method CC method161 (I)LYg;
 L5:     areturn
 L6:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L6
+            1 is i1 I from L0 to L6
+        .end localvariabletable
     .end code
 .end method
 
@@ -1208,6 +1296,11 @@ L381:   pop2
 L382:   aload_2
 L383:   areturn
 L384:   
+        .localvariabletable
+            0 is this LCC; from L0 to L384
+            1 is v1 Lqc; from L0 to L384
+            2 is v2 Lqc; from L0 to L384
+        .end localvariabletable
     .end code
 .end method
 
@@ -1219,6 +1312,10 @@ L2:     dup_x1
 L3:     putfield Field CC field186 LTe;
 L6:     areturn
 L7:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L7
+            1 is v1 LTe; from L0 to L7
+        .end localvariabletable
     .end code
 .end method
 
@@ -1228,6 +1325,9 @@ L0:     aload_0
 L1:     getfield Field CC field178 LzD;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1237,6 +1337,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1246,6 +1349,9 @@ L0:     aload_0
 L1:     getfield Field CC this Lqc;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1284,7 +1390,10 @@ L47:    putfield Field CC field180 Lqd;
 L50:    invokevirtual Method CC method146 (Lqd;)V
 L53:    return
 L54:    
-        .attribute StackMap b'\x00\x04\x00\x11\x00\x00\x00\x01\x07\x00\xBB\x00\x12\x00\x02\x07\x00\x02\x07\x00\xE9\x00\x00\x00\x2A\x00\x00\x00\x01\x07\x00\xBB\x00\x2B\x00\x02\x07\x00\x02\x07\x00\xE9\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L54
+            1 is v1 Lqd; from L0 to L54
+        .end localvariabletable
     .end code
 .end method
 
@@ -1345,7 +1454,11 @@ L117:   invokespecial Method Ze <init> (Led;LTe;)V
 L120:   invokevirtual Method Kc method846 (LD;)V
 L123:   return
 L124:   
-        .attribute StackMap b'\x00\x04\x00\x1A\x00\x02\x07\x00\x02\x07\x00\xA0\x00\x00\x00\x2E\x00\x02\x07\x00\x02\x07\x01\xA1\x00\x01\x07\x01\xA1\x00\x4C\x00\x00\x00\x01\x07\x00\xBB\x00\x4D\x00\x02\x07\x00\x02\x07\x01\xA1\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L124
+            1 is v1 Led; from L0 to L124
+            2 is v2 LRC; from L0 to L124
+        .end localvariabletable
     .end code
 .end method
 
@@ -1357,6 +1470,11 @@ L2:     fload_2
 L3:     invokespecial Method Yd method32 (FF)V
 L6:     return
 L7:     
+        .localvariabletable
+            0 is this LCC; from L0 to L7
+            1 is f1 F from L0 to L7
+            2 is f2 F from L0 to L7
+        .end localvariabletable
     .end code
 .end method
 
@@ -1367,6 +1485,10 @@ L1:     aload_1
 L2:     invokespecial Method CC method16 (Led;)V
 L5:     return
 L6:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L6
+            1 is v1 Led; from L0 to L6
+        .end localvariabletable
     .end code
 .end method
 
@@ -1410,7 +1532,11 @@ L58:    ldc_w 2.5e-1f
 L61:    invokevirtual Method Yg method32 (FF)V
 L64:    areturn
 L65:    
-        .attribute StackMap b'\x00\x02\x00\x06\x00\x00\x00\x01\x07\x00\xBB\x00\x07\x00\x02\x07\x00\x02\x01\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L65
+            1 is i1 I from L0 to L65
+            2 is v2 LYg; from L0 to L65
+        .end localvariabletable
     .end code
 .end method
 
@@ -1420,6 +1546,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1429,6 +1558,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1500,7 +1632,16 @@ L133:   invokespecial Method Jd <init> (LCC;LjC;Ljava/lang/String;)V
 L136:   invokevirtual Method Kc method855 (Ljava/lang/String;Ljava/lang/String;Leb;ZZIILed;LK;)V
 L139:   return
 L140:   
-        .attribute StackMap b'\x00\x05\x00\x11\x00\x07\x07\x00\x02\x07\x01\x01\x07\x03\x05\x01\x01\x01\x01\x00\x00\x00\x2B\x00\x00\x00\x01\x07\x00\xBB\x00\x2C\x00\x07\x07\x00\x02\x07\x01\x01\x07\x03\x05\x01\x01\x01\x01\x00\x00\x00\x54\x00\x00\x00\x01\x07\x00\xBB\x00\x55\x00\x07\x07\x00\x02\x07\x01\x01\x07\x03\x05\x01\x01\x01\x01\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L140
+            1 is v1 Ljava/lang/String; from L0 to L140
+            2 is v2 Leb; from L0 to L140
+            3 is i3 Z from L0 to L140
+            4 is i4 Z from L0 to L140
+            5 is i5 I from L0 to L140
+            6 is i6 I from L0 to L140
+            7 is v7 LjC; from L0 to L140
+        .end localvariabletable
     .end code
 .end method
 
@@ -1510,6 +1651,9 @@ L0:     aload_0
 L1:     getfield Field CC field187 LmB;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1548,7 +1692,10 @@ L84:    dup
 L85:    invokespecial Method java/lang/RuntimeException <init> ()V
 L88:    athrow
 L89:    
-        .attribute StackMap b'\x00\x0A\x00\x34\x00\x02\x07\x00\x02\x07\x03\x31\x00\x00\x00\x37\x00\x02\x07\x00\x02\x07\x03\x31\x00\x01\x07\x01\x01\x00\x3C\x00\x00\x00\x01\x07\x00\xBB\x00\x3D\x00\x02\x07\x00\x02\x07\x03\x31\x00\x00\x00\x41\x00\x00\x00\x01\x07\x00\xBB\x00\x42\x00\x02\x07\x00\x02\x07\x03\x31\x00\x00\x00\x46\x00\x02\x07\x00\x02\x07\x03\x31\x00\x00\x00\x4A\x00\x02\x07\x00\x02\x07\x03\x31\x00\x01\x07\x01\x01\x00\x4D\x00\x02\x07\x00\x02\x07\x03\x31\x00\x00\x00\x51\x00\x02\x07\x00\x02\x07\x03\x31\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L89
+            1 is v1 LfE; from L0 to L89
+        .end localvariabletable
     .end code
 .end method
 
@@ -1729,7 +1876,10 @@ L310:   invokevirtual Method md method853 (LPc;)Led;
 L313:   invokespecial Method CC method16 (Led;)V
 L316:   return
 L317:   
-        .attribute StackMap b'\x00\x02\x01\x21\x00\x00\x00\x01\x07\x00\xBB\x01\x22\x00\x01\x07\x00\x02\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L317
+            1 is v1 LGD; from L0 to L317
+        .end localvariabletable
     .end code
 .end method
 
@@ -1750,6 +1900,9 @@ L19:    invokespecial Method mB <init> (Lxc;Lqc;)V
 L22:    putfield Field CC field187 LmB;
 L25:    return
 L26:    
+        .localvariabletable
+            0 is this LCC; from L0 to L26
+        .end localvariabletable
     .end code
 .end method
 
@@ -1759,6 +1912,9 @@ L0:     aload_0
 L1:     getfield Field CC field179 LPg;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1768,6 +1924,9 @@ L0:     aload_0
 L1:     getfield Field CC try LIe;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1777,6 +1936,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -1786,11 +1948,14 @@ L0:     aload_0
 L1:     getfield Field CC field176 Led;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
 .method private method169 : ()Lqc;
-    .code stack 14 locals 12
+    .code stack 14 locals 13
 L0:     new DF
 L3:     dup
 L4:     ldc_w ""
@@ -2049,9 +2214,9 @@ L466:   getstatic Field LE field634 LLE;
 L469:   ldc_w 1e-1f
 L472:   invokespecial Method fG <init> (LLE;F)V
 L475:   invokespecial Method qc <init> (Ld;)V
-L478:   astore 7
+L478:   astore 12
 L480:   aload_2
-L481:   aload 7
+L481:   aload 12
 L483:   dup_x1
 L484:   aload_1
 L485:   getstatic Field dg field337 Ldg;
@@ -2068,7 +2233,7 @@ L511:   astore 8
 L513:   aconst_null
 L514:   aload 8
 L516:   dup_x1
-L517:   aload 7
+L517:   aload 12
 L519:   getstatic Field VD field147 Ljava/lang/Object;
 L522:   invokevirtual Method qc method31 (LgB;Ljava/lang/Object;)V
 L525:   aconst_null
@@ -2136,7 +2301,21 @@ L641:   getstatic Field VD this Ljava/lang/Object;
 L644:   invokevirtual Method qc method31 (LgB;Ljava/lang/Object;)V
 L647:   areturn
 L648:   
-        .attribute StackMap b'\x00\x07\x01\x23\x00\x09\x07\x00\x02\x07\x00\x5D\x07\x00\x5D\x07\x00\x57\x07\x00\x0A\x07\x01\x59\x07\x01\xFE\x01\x07\x01\xA1\x00\x01\x07\x01\xA1\x01\x6D\x00\x00\x00\x01\x07\x00\xBB\x01\x6E\x00\x09\x07\x00\x02\x07\x00\x5D\x07\x00\x5D\x07\x00\x57\x07\x00\x0A\x07\x01\x59\x07\x01\xFE\x01\x07\x01\xA1\x00\x00\x01\x75\x00\x09\x07\x00\x02\x07\x00\x5D\x07\x00\x5D\x07\x00\x57\x07\x00\x0A\x07\x01\x59\x07\x01\xFE\x01\x07\x01\xA1\x00\x01\x01\x01\xAD\x00\x09\x07\x00\x02\x07\x00\x5D\x07\x00\x5D\x07\x00\x57\x07\x00\x0A\x07\x01\x59\x07\x01\xFE\x01\x07\x01\xA1\x00\x00\x01\xC9\x00\x00\x00\x01\x07\x00\xBB\x01\xCA\x00\x09\x07\x00\x02\x07\x00\x5D\x07\x00\x5D\x07\x00\x57\x07\x00\x0A\x07\x01\x59\x07\x01\xFE\x01\x07\x01\xA1\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L648
+            6 is v6 LYg; from L0 to L648
+            12 is v7 Lqc; from L0 to L648
+            8 is v8 Ljava/lang/Object; from L0 to L648
+            9 is v9 Ljava/lang/Object; from L0 to L648
+            10 is v10 LTe; from L0 to L648
+            11 is i11 I from L0 to L648
+            1 is v1 LDF; from L0 to L648
+            2 is v2 LDF; from L0 to L648
+            3 is v3 LIe; from L0 to L648
+            7 is i7 I from L0 to L648
+            4 is v4 Lig; from L0 to L648
+            5 is v5 Lqc; from L0 to L648
+        .end localvariabletable
     .end code
 .end method
 
@@ -2175,7 +2354,11 @@ L49:    dup
 L50:    pop2
 L51:    ireturn
 L52:    
-        .attribute StackMap b'\x00\x05\x00\x20\x00\x00\x00\x01\x07\x00\xBB\x00\x21\x00\x03\x07\x00\x02\x07\x01\xB7\x01\x00\x00\x00\x29\x00\x03\x07\x00\x02\x07\x01\xB7\x01\x00\x00\x00\x2E\x00\x00\x00\x01\x07\x00\xBB\x00\x2F\x00\x03\x07\x00\x02\x07\x01\xB7\x01\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L52
+            1 is v1 LgB; from L0 to L52
+            2 is i2 I from L0 to L52
+        .end localvariabletable
     .end code
 .end method
 
@@ -2185,6 +2368,9 @@ L0:     aload_0
 L1:     getfield Field CC new Ljava/util/HashMap;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2194,6 +2380,9 @@ L0:     aload_0
 L1:     getfield Field CC field182 LYg;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2248,7 +2437,11 @@ L77:    pop2
 L78:    invokevirtual Method CC method72 (Ljava/lang/String;Z)V
 L81:    return
 L82:    
-        .attribute StackMap b'\x00\x02\x00\x2F\x00\x00\x00\x01\x07\x00\xBB\x00\x30\x00\x03\x07\x00\x02\x07\x00\xE9\x07\x00\xAC\x00\x01\x07\x00\xD8'
+        .localvariabletable
+            0 is this LCC; from L0 to L82
+            1 is v1 Lqd; from L0 to L82
+            2 is v2 LjC; from L0 to L82
+        .end localvariabletable
     .end code
 .end method
 
@@ -2258,6 +2451,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2300,7 +2496,12 @@ L117:   dup
 L118:   pop2
 L119:   ireturn
 L120:   
-        .attribute StackMap b'\x00\x06\x00\x0F\x00\x00\x00\x01\x07\x00\xBB\x00\x10\x00\x04\x07\x00\x02\x07\x01\xB7\x01\x01\x00\x00\x00\x68\x00\x04\x07\x00\x02\x07\x01\xB7\x01\x01\x00\x00\x00\x6B\x00\x00\x00\x01\x07\x00\xBB\x00\x6C\x00\x04\x07\x00\x02\x07\x01\xB7\x01\x01\x00\x00\x00\x73\x00\x04\x07\x00\x02\x07\x01\xB7\x01\x01\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L120
+            1 is v1 LgB; from L0 to L120
+            2 is i2 I from L0 to L120
+            3 is i3 C from L0 to L120
+        .end localvariabletable
     .end code
 .end method
 
@@ -2329,7 +2530,10 @@ L31:    pop2
 L32:    invokevirtual Method sb method95 (Z)V
 L35:    return
 L36:    
-        .attribute StackMap b'\x00\x04\x00\x1B\x00\x00\x00\x01\x07\x00\xBB\x00\x1C\x00\x02\x07\x00\x02\x01\x00\x01\x07\x00\x24\x00\x20\x00\x02\x07\x00\x02\x01\x00\x02\x07\x00\x24\x01\x00\x23\x00\x02\x07\x00\x02\x01\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L36
+            1 is i1 I from L0 to L36
+        .end localvariabletable
     .end code
 .end method
 
@@ -2339,6 +2543,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2348,6 +2555,9 @@ L0:     aload_0
 L1:     getfield Field CC field186 LTe;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2357,6 +2567,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2367,6 +2580,10 @@ L1:     aload_1
 L2:     invokespecial Method CC method166 (LfE;)Ljava/lang/String;
 L5:     areturn
 L6:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L6
+            1 is v1 LfE; from L0 to L6
+        .end localvariabletable
     .end code
 .end method
 
@@ -2376,6 +2593,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2402,7 +2622,10 @@ L37:    ldc_w ""
 L40:    invokevirtual Method DF method12 (Ljava/lang/String;)V
 L43:    return
 L44:    
-        .attribute StackMap b'\x00\x05\x00\x15\x00\x00\x00\x01\x07\x00\xBB\x00\x16\x00\x02\x07\x00\x02\x01\x00\x00\x00\x24\x00\x00\x00\x01\x07\x00\xBB\x00\x25\x00\x02\x07\x00\x02\x01\x00\x01\x07\x00\x5D\x00\x28\x00\x02\x07\x00\x02\x01\x00\x02\x07\x00\x5D\x07\x01\x01'
+        .localvariabletable
+            0 is this LCC; from L0 to L44
+            1 is i1 I from L0 to L44
+        .end localvariabletable
     .end code
 .end method
 
@@ -2424,6 +2647,9 @@ L30:    invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/Strin
 L33:    invokevirtual Method nf method12 (Ljava/lang/String;)V
 L36:    return
 L37:    
+        .localvariabletable
+            0 is this LCC; from L0 to L37
+        .end localvariabletable
     .end code
 .end method
 
@@ -2601,7 +2827,15 @@ L386:   aload_1
 L387:   invokespecial Method Cd <init> (LgB;)V
 L390:   areturn
 L391:   
-        .attribute StackMap b'\x00\x08\x00\x2D\x00\x04\x07\x00\x02\x07\x01\x59\x07\x02\xDA\x07\x01\xA1\x00\x00\x00\x66\x00\x00\x00\x01\x07\x00\xBB\x00\x67\x00\x04\x07\x00\x02\x07\x01\x59\x07\x02\xDA\x07\x01\xA1\x00\x00\x00\x7B\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\xC9\x07\x01\xA1\x00\x01\x07\x01\xA1\x01\x14\x00\x00\x00\x01\x07\x00\xBB\x01\x15\x00\x06\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x01\xA1\x07\x04\x2D\x07\x01\x59\x00\x03\x07\x01\x59\x08\x00\xDF\x08\x00\xDF\x01\x18\x00\x06\x07\x00\x02\x07\x01\x59\x07\x01\x59\x07\x01\xA1\x07\x04\x2D\x07\x01\x59\x00\x04\x07\x01\x59\x08\x00\xDF\x08\x00\xDF\x07\x01\x01\x01\x7E\x00\x04\x07\x00\x02\x07\x01\x59\x07\x01\xC9\x07\x01\xA1\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L391
+            6 is v6 Lqc; from L0 to L391
+            1 is v1 Lqc; from L0 to L391
+            2 is v2 Ljava/lang/Object; from L0 to L391
+            3 is v3 Ljava/util/Iterator; from L0 to L391
+            4 is v4 LUf; from L0 to L391
+            5 is v5 Lqc; from L0 to L391
+        .end localvariabletable
     .end code
 .end method
 
@@ -2621,6 +2855,11 @@ L20:    invokevirtual Method FE method446 (LAe;Ljava/lang/String;[Ljava/lang/Str
 L23:    pop
 L24:    return
 L25:    
+        .localvariabletable
+            0 is this LCC; from L0 to L25
+            1 is v1 Ljava/lang/String; from L0 to L25
+            2 is i2 Z from L0 to L25
+        .end localvariabletable
     .end code
 .end method
 
@@ -2630,6 +2869,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2663,7 +2905,9 @@ L42:    invokespecial Method cb <init> ()V
 L45:    invokevirtual Method FE method455 (LbC;LbC;)V
 L48:    return
 L49:    
-        .attribute StackMap b'\x00\x01\x00\x1E\x00\x01\x07\x00\x02\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L49
+        .end localvariabletable
     .end code
 .end method
 
@@ -2673,6 +2917,9 @@ L0:     aload_0
 L1:     getfield Field CC field1136 LFE;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2682,6 +2929,9 @@ L0:     aload_0
 L1:     getfield Field CC field177 Lsb;
 L4:     areturn
 L5:     
+        .localvariabletable
+            0 is v0 LCC; from L0 to L5
+        .end localvariabletable
     .end code
 .end method
 
@@ -2692,6 +2942,9 @@ L1:     ldc Class CC
 L3:     invokespecial Method Yd <init> (Ljava/lang/Class;)V
 L6:     return
 L7:     
+        .localvariabletable
+            0 is this LCC; from L0 to L7
+        .end localvariabletable
     .end code
 .end method
 
@@ -2735,7 +2988,9 @@ L66:    pop2
 L67:    invokevirtual Method Yg method238 (Z)V
 L70:    return
 L71:    
-        .attribute StackMap b'\x00\x02\x00\x34\x00\x01\x07\x00\x02\x00\x00\x00\x46\x00\x01\x07\x00\x02\x00\x00'
+        .localvariabletable
+            0 is this LCC; from L0 to L71
+        .end localvariabletable
     .end code
 .end method
 
@@ -2746,6 +3001,9 @@ L1:     dup
 L2:     putstatic Field CC field181 I
 L5:     ireturn
 L6:     
+        .localvariabletable
+            0 is i0 I from L0 to L6
+        .end localvariabletable
     .end code
 .end method
 .innerclasses
