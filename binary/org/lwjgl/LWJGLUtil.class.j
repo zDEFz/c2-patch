@@ -17,10 +17,10 @@
 
 .method public static getPrivilegedInteger : (Ljava/lang/String;)Ljava/lang/Integer;
     .code stack 3 locals 1
-L0:     new org/lwjgl/a
+L0:     new org/lwjgl/a_688
 L3:     dup
 L4:     aload_0
-L5:     invokespecial Method org/lwjgl/a <init> (Ljava/lang/String;)V
+L5:     invokespecial Method org/lwjgl/a_688 <init> (Ljava/lang/String;)V
 L8:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L11:    checkcast java/lang/Integer
 L14:    areturn
@@ -48,10 +48,10 @@ L27:
 
 .method public static getPrivilegedBoolean : (Ljava/lang/String;)Z
     .code stack 3 locals 1
-L0:     new org/lwjgl/A
+L0:     new org/lwjgl/A_678
 L3:     dup
 L4:     aload_0
-L5:     invokespecial Method org/lwjgl/A <init> (Ljava/lang/String;)V
+L5:     invokespecial Method org/lwjgl/A_678 <init> (Ljava/lang/String;)V
 L8:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L11:    checkcast java/lang/Boolean
 L14:    invokevirtual Method java/lang/Boolean booleanValue ()Z
@@ -63,10 +63,10 @@ L18:
 .method static execPrivileged : ([Ljava/lang/String;)V
     .code stack 3 locals 2
         .catch java/security/PrivilegedActionException from L0 to L36 using L38
-L0:     new org/lwjgl/g
+L0:     new org/lwjgl/g_694
 L3:     dup
 L4:     aload_0
-L5:     invokespecial Method org/lwjgl/g <init> ([Ljava/lang/String;)V
+L5:     invokespecial Method org/lwjgl/g_694 <init> ([Ljava/lang/String;)V
 L8:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L11:    checkcast java/lang/Process
 L14:    dup
@@ -159,13 +159,13 @@ L99:
     .end code
 .end method
 
-.method public static varargs getClassTokens : (Lorg/lwjgl/m;Ljava/util/Map;[Ljava/lang/Class;)Ljava/util/Map;
+.method public static varargs getClassTokens : (Lorg/lwjgl/m_713;Ljava/util/Map;[Ljava/lang/Class;)Ljava/util/Map;
     .code stack 3 locals 3
 L0:     aload_0
 L1:     aload_1
 L2:     aload_2
 L3:     invokestatic Method java/util/Arrays asList ([Ljava/lang/Object;)Ljava/util/List;
-L6:     invokestatic Method org/lwjgl/LWJGLUtil getClassTokens (Lorg/lwjgl/m;Ljava/util/Map;Ljava/lang/Iterable;)Ljava/util/Map;
+L6:     invokestatic Method org/lwjgl/LWJGLUtil getClassTokens (Lorg/lwjgl/m_713;Ljava/util/Map;Ljava/lang/Iterable;)Ljava/util/Map;
 L9:     areturn
 L10:    
     .end code
@@ -211,11 +211,11 @@ L4:
 
 .method public static getPrivilegedInteger : (Ljava/lang/String;I)Ljava/lang/Integer;
     .code stack 4 locals 2
-L0:     new org/lwjgl/b
+L0:     new org/lwjgl/b_689
 L3:     dup
 L4:     aload_0
 L5:     iload_1
-L6:     invokespecial Method org/lwjgl/b <init> (Ljava/lang/String;I)V
+L6:     invokespecial Method org/lwjgl/b_689 <init> (Ljava/lang/String;I)V
 L9:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L12:    checkcast java/lang/Integer
 L15:    areturn
@@ -244,12 +244,12 @@ L32:    aload_2
 L33:    astore_3
         .catch java/security/PrivilegedActionException from L34 to L50 using L52
         .catch java/lang/Exception from L0 to L50 using L91
-L34:    new org/lwjgl/L
+L34:    new org/lwjgl/L_686
 L37:    dup
 L38:    aload_3
 L39:    aload_1
 L40:    aload_0
-L41:    invokespecial Method org/lwjgl/L <init> (Ljava/lang/Class;Ljava/lang/ClassLoader;Ljava/lang/String;)V
+L41:    invokespecial Method org/lwjgl/L_686 <init> (Ljava/lang/Class;Ljava/lang/ClassLoader;Ljava/lang/String;)V
 L44:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L47:    checkcast java/lang/String
 L50:    areturn
@@ -437,7 +437,7 @@ L45:
     .end code
 .end method
 
-.method public static getClassTokens : (Lorg/lwjgl/m;Ljava/util/Map;Ljava/lang/Iterable;)Ljava/util/Map;
+.method public static getClassTokens : (Lorg/lwjgl/m_713;Ljava/util/Map;Ljava/lang/Iterable;)Ljava/util/Map;
     .code stack 4 locals 8
 L0:     aload_1
 L1:     ifnonnull L12
@@ -502,7 +502,7 @@ L107:   ifnull L127
 L110:   aload_0
 L111:   aload 6
 L113:   iload 7
-L115:   invokeinterface InterfaceMethod org/lwjgl/m method2061 (Ljava/lang/reflect/Field;I)Z 3
+L115:   invokeinterface InterfaceMethod org/lwjgl/m_713 method2061 (Ljava/lang/reflect/Field;I)Z 3
 L120:   ifne L127
 L123:   goto L184
 L126:   athrow
@@ -540,7 +540,7 @@ L194:   athrow
 L195:   aload_1
 L196:   areturn
 L197:   
-        .attribute StackMap b'\x00\x0B\x00\x0C\x00\x03\x07\x00\x12\x07\x01\x38\x07\x01\x3A\x00\x00\x00\x19\x00\x03\x07\x00\x12\x07\x01\x38\x07\x01\x40\x00\x00\x00\x3A\x00\x06\x07\x00\x12\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x00\x01\x01\x00\x7E\x00\x00\x00\x01\x07\x00\x7B\x00\x7F\x00\x08\x07\x00\x12\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x01\x00\x00\x00\xA1\x00\x00\x00\x01\x07\x00\x7B\x00\xA2\x00\x08\x07\x00\x12\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x01\x00\x00\x00\xB6\x00\x07\x07\x00\x12\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x00\x01\x07\x01\x33\x00\xB8\x00\x07\x07\x00\x12\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x00\x00\x00\xC0\x00\x00\x00\x01\x07\x00\x7B\x00\xC3\x00\x03\x07\x00\x12\x07\x01\x38\x07\x01\x40\x00\x00'
+        .attribute StackMap b'\x00\x0B\x00\x0C\x00\x03\x07\x01\xBB\x07\x01\x38\x07\x01\x3A\x00\x00\x00\x19\x00\x03\x07\x01\xBB\x07\x01\x38\x07\x01\x40\x00\x00\x00\x3A\x00\x06\x07\x01\xBB\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x00\x01\x01\x00\x7E\x00\x00\x00\x01\x07\x00\x7B\x00\x7F\x00\x08\x07\x01\xBB\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x01\x00\x00\x00\xA1\x00\x00\x00\x01\x07\x00\x7B\x00\xA2\x00\x08\x07\x01\xBB\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x01\x00\x00\x00\xB6\x00\x07\x07\x01\xBB\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x00\x01\x07\x01\x33\x00\xB8\x00\x07\x07\x01\xBB\x07\x01\x38\x07\x01\x40\x07\x01\x4D\x01\x01\x07\x01\x4F\x00\x00\x00\xC0\x00\x00\x00\x01\x07\x00\x7B\x00\xC3\x00\x03\x07\x01\xBB\x07\x01\x38\x07\x01\x40\x00\x00'
     .end code
 .end method
 
@@ -750,10 +750,10 @@ L373:
 
 .method private static getPrivilegedProperty : (Ljava/lang/String;)Ljava/lang/String;
     .code stack 3 locals 1
-L0:     new org/lwjgl/J
+L0:     new org/lwjgl/J_684
 L3:     dup
 L4:     aload_0
-L5:     invokespecial Method org/lwjgl/J <init> (Ljava/lang/String;)V
+L5:     invokespecial Method org/lwjgl/J_684 <init> (Ljava/lang/String;)V
 L8:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L11:    checkcast java/lang/String
 L14:    areturn
@@ -786,13 +786,13 @@ L23:
     .end code
 .end method
 .innerclasses
-    org/lwjgl/A [0] [0] static
-    org/lwjgl/J [0] [0] static
-    org/lwjgl/L [0] [0] static
-    org/lwjgl/a [0] [0] static
-    org/lwjgl/b [0] [0] static
-    org/lwjgl/g [0] [0] static
-    org/lwjgl/m org/lwjgl/LWJGLUtil [0] public static interface abstract
+    org/lwjgl/A_678 [0] [0] static
+    org/lwjgl/J_684 [0] [0] static
+    org/lwjgl/L_686 [0] [0] static
+    org/lwjgl/a_688 [0] [0] static
+    org/lwjgl/b_689 [0] [0] static
+    org/lwjgl/g_694 [0] [0] static
+    org/lwjgl/m_713 org/lwjgl/LWJGLUtil [0] public static interface abstract
 .end innerclasses
 .const [_236] = String [_235]
 .const [_240] = String [_239]

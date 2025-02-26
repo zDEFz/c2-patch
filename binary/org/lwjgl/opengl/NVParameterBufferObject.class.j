@@ -9,14 +9,14 @@
 
 .method public static method5069 : (IIILjava/nio/FloatBuffer;)V
     .code stack 8 locals 6
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb yD J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 yD J
 L6:     dup2
 L7:     lstore 4
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    aload_3
-L14:    invokestatic Method org/lwjgl/l method2048 (Ljava/nio/FloatBuffer;)V
+L14:    invokestatic Method org/lwjgl/l_712 method2048 (Ljava/nio/FloatBuffer;)V
 L17:    iload_1
 L18:    iload_2
 L19:    aload_3
@@ -52,14 +52,14 @@ L5:
 
 .method public static method5070 : (IIILjava/nio/IntBuffer;)V
     .code stack 8 locals 6
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb wA J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 wA J
 L6:     dup2
 L7:     lstore 4
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    aload_3
-L14:    invokestatic Method org/lwjgl/l method2043 (Ljava/nio/IntBuffer;)V
+L14:    invokestatic Method org/lwjgl/l_712 method2043 (Ljava/nio/IntBuffer;)V
 L17:    iload_1
 L18:    iload_2
 L19:    aload_3
@@ -83,14 +83,14 @@ L38:
 
 .method public static method5071 : (IIILjava/nio/IntBuffer;)V
     .code stack 8 locals 6
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Yt J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Yt J
 L6:     dup2
 L7:     lstore 4
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    aload_3
-L14:    invokestatic Method org/lwjgl/l method2043 (Ljava/nio/IntBuffer;)V
+L14:    invokestatic Method org/lwjgl/l_712 method2043 (Ljava/nio/IntBuffer;)V
 L17:    iload_1
 L18:    iload_2
 L19:    aload_3

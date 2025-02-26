@@ -39,11 +39,11 @@
 
 .method public static method5000 : (IIJJ)V
     .code stack 8 locals 8
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb YO J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 YO J
 L6:     dup2
 L7:     lstore 6
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -57,11 +57,11 @@ L23:
 
 .method public static method5001 : (IIJJJJ)V
     .code stack 12 locals 12
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Mo J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Mo J
 L6:     dup2
 L7:     lstore 10
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -89,18 +89,18 @@ L27:
 
 .method public static this : (IILjava/nio/LongBuffer;)V
     .code stack 6 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Dq J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Dq J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
 L13:    iconst_1
 L14:    dup
 L15:    dup
 L16:    pop2
-L17:    invokestatic Method org/lwjgl/l method2032 (Ljava/nio/LongBuffer;I)V
+L17:    invokestatic Method org/lwjgl/l_712 method2032 (Ljava/nio/LongBuffer;I)V
 L20:    iload_1
 L21:    aload_2
 L22:    invokestatic Method org/lwjgl/MemoryUtil method1860 (Ljava/nio/LongBuffer;)J
@@ -122,14 +122,14 @@ L30:
 
 .method public static method5002 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb tS J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 tS J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    iconst_3
@@ -148,14 +148,14 @@ L34:
 
 .method public static method5003 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Q J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Q J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -175,11 +175,11 @@ L35:
 
 .method public static method5004 : (IJJJ)V
     .code stack 9 locals 9
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Nk J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Nk J
 L6:     dup2
 L7:     lstore 7
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    lload_1
 L14:    lload_3
@@ -193,14 +193,14 @@ L23:
 
 .method public static method5005 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb wH J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 wH J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -220,14 +220,14 @@ L35:
 
 .method public static method5006 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb DC J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 DC J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    iconst_1
@@ -252,11 +252,11 @@ L34:
 
 .method public static method5007 : (IJ)V
     .code stack 5 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Vc J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Vc J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    lload_1
 L13:    lload_3
@@ -268,14 +268,14 @@ L18:
 
 .method public static method5008 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb zc J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 zc J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -307,14 +307,14 @@ L35:
 
 .method public static method5009 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb FT J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 FT J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    aload_1
@@ -328,11 +328,11 @@ L29:
 
 .method public static method5010 : (IJJJJ)V
     .code stack 11 locals 11
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb L J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 L J
 L6:     dup2
 L7:     lstore 9
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    lload_1
 L14:    lload_3
@@ -350,14 +350,14 @@ L25:
 
 .method public static method5011 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb eQ J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 eQ J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    iconst_2
@@ -376,11 +376,11 @@ L34:
 
 .method public static method5012 : (IJJJJ)V
     .code stack 11 locals 11
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb dB J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 dB J
 L6:     dup2
 L7:     lstore 9
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    lload_1
 L14:    lload_3
@@ -395,14 +395,14 @@ L25:
 
 .method public static method5013 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb EN J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 EN J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    aload_1
@@ -416,14 +416,14 @@ L29:
 
 .method public static method5014 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb TR J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 TR J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    iconst_2
@@ -442,11 +442,11 @@ L34:
 
 .method public static method5015 : (IIJJJJ)V
     .code stack 12 locals 12
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb bc J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 bc J
 L6:     dup2
 L7:     lstore 10
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -465,14 +465,14 @@ L27:
 
 .method public static method5016 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Md J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Md J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    iconst_3
@@ -500,14 +500,14 @@ L34:
 
 .method public static method5017 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Br J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Br J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -527,14 +527,14 @@ L35:
 
 .method public static method5018 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb c J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 c J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -552,11 +552,11 @@ L30:
 
 .method public static method5019 : (IJJ)V
     .code stack 7 locals 7
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb br J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 br J
 L6:     dup2
 L7:     lstore 5
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    lload_1
 L14:    lload_3
@@ -569,11 +569,11 @@ L21:
 
 .method public static method5020 : (IJ)V
     .code stack 5 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb TK J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 TK J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    lload_1
 L13:    lload_3
@@ -585,18 +585,18 @@ L18:
 
 .method public static method5021 : (IILjava/nio/LongBuffer;)V
     .code stack 6 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb zf J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 zf J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
 L13:    iconst_1
 L14:    dup
 L15:    dup
 L16:    pop2
-L17:    invokestatic Method org/lwjgl/l method2032 (Ljava/nio/LongBuffer;I)V
+L17:    invokestatic Method org/lwjgl/l_712 method2032 (Ljava/nio/LongBuffer;I)V
 L20:    iload_1
 L21:    aload_2
 L22:    invokestatic Method org/lwjgl/MemoryUtil method1860 (Ljava/nio/LongBuffer;)J
@@ -612,11 +612,11 @@ L30:
 
 .method public static method5022 : (IIJ)V
     .code stack 6 locals 6
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb MC J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 MC J
 L6:     dup2
 L7:     lstore 4
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -641,14 +641,14 @@ L21:
 
 .method public static method5023 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Eg J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Eg J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -671,11 +671,11 @@ L35:
 
 .method public static method5024 : (IIJJJ)V
     .code stack 10 locals 10
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb nn J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 nn J
 L6:     dup2
 L7:     lstore 8
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -693,11 +693,11 @@ L25:
 
 .method public static method5025 : (IIJJJ)V
     .code stack 10 locals 10
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb cE J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 cE J
 L6:     dup2
 L7:     lstore 8
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -712,11 +712,11 @@ L25:
 
 .method public static method5026 : (IIJJ)V
     .code stack 8 locals 8
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb vt J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 vt J
 L6:     dup2
 L7:     lstore 6
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -730,14 +730,14 @@ L23:
 
 .method public static method5027 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb PB J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 PB J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -757,14 +757,14 @@ L35:
 
 .method public static method5028 : (ILjava/nio/LongBuffer;)V
     .code stack 6 locals 4
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb GP J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 GP J
 L6:     dup2
 L7:     lstore_2
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_1
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    aload_1
 L17:    invokevirtual Method java/nio/LongBuffer remaining ()I
 L20:    iconst_1
@@ -783,11 +783,11 @@ L34:
 
 .method public static method5029 : (IIJ)V
     .code stack 6 locals 6
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb lC J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 lC J
 L6:     dup2
 L7:     lstore 4
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    iload_1
 L14:    lload_2
@@ -803,11 +803,11 @@ L21:
 
 .method public static method5030 : (IJJ)V
     .code stack 7 locals 7
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb Ho J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 Ho J
 L6:     dup2
 L7:     lstore 5
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    lload_1
 L14:    lload_3
@@ -829,14 +829,14 @@ L21:
 
 .method public static method5031 : (IILjava/nio/LongBuffer;)V
     .code stack 7 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb US J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 US J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L11:    iload_0
 L12:    aload_2
-L13:    invokestatic Method org/lwjgl/l method2058 (Ljava/nio/LongBuffer;)V
+L13:    invokestatic Method org/lwjgl/l_712 method2058 (Ljava/nio/LongBuffer;)V
 L16:    iload_1
 L17:    aload_2
 L18:    invokevirtual Method java/nio/LongBuffer remaining ()I
@@ -863,11 +863,11 @@ L5:
 
 .method public static method5032 : (IJJJ)V
     .code stack 9 locals 9
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb fk J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 fk J
 L6:     dup2
 L7:     lstore 7
-L9:     invokestatic Method org/lwjgl/l method2052 (J)V
+L9:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
 L12:    iload_0
 L13:    lload_1
 L14:    lload_3

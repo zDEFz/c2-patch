@@ -1,7 +1,7 @@
 .version 49 0
 .class super abstract org/lwjgl/DefaultSysImplementation
 .super java/lang/Object
-.implements org/lwjgl/i
+.implements org/lwjgl/i_696
 
 .method <init> : ()V
     .code stack 1 locals 1

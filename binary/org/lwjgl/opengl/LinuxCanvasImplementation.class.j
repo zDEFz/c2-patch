@@ -1,15 +1,15 @@
 .version 49 0
 .class final super org/lwjgl/opengl/LinuxCanvasImplementation
 .super java/lang/Object
-.implements org/lwjgl/opengl/e
+.implements org/lwjgl/opengl/e_857
 
 .method static method4621 : (Ljava/awt/GraphicsDevice;)I
     .code stack 5 locals 2
         .catch java/lang/Exception from L0 to L36 using L38
-L0:     new org/lwjgl/opengl/yA
+L0:     new org/lwjgl/opengl/yA_960
 L3:     dup
 L4:     aload_0
-L5:     invokespecial Method org/lwjgl/opengl/yA <init> (Ljava/awt/GraphicsDevice;)V
+L5:     invokespecial Method org/lwjgl/opengl/yA_960 <init> (Ljava/awt/GraphicsDevice;)V
 L8:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L11:    checkcast java/lang/reflect/Method
 L14:    dup
@@ -83,10 +83,10 @@ L50:
 .method private static method4623 : (Ljava/awt/GraphicsConfiguration;)I
     .code stack 5 locals 2
         .catch java/lang/Exception from L0 to L36 using L38
-L0:     new org/lwjgl/opengl/rA
+L0:     new org/lwjgl/opengl/rA_923
 L3:     dup
 L4:     aload_0
-L5:     invokespecial Method org/lwjgl/opengl/rA <init> (Ljava/awt/GraphicsConfiguration;)V
+L5:     invokespecial Method org/lwjgl/opengl/rA_923 <init> (Ljava/awt/GraphicsConfiguration;)V
 L8:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L11:    checkcast java/lang/reflect/Method
 L14:    dup
@@ -126,7 +126,7 @@ L5:
     .end code
 .end method
 
-.method public method4620 : (Ljava/awt/Canvas;Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)Lorg/lwjgl/opengl/a;
+.method public method4620 : (Ljava/awt/Canvas;Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)Lorg/lwjgl/opengl/a_835;
     .code stack 3 locals 4
 L0:     new org/lwjgl/opengl/LinuxAWTGLCanvasPeerInfo
 L3:     dup
@@ -203,7 +203,7 @@ L87:
     .exceptions org/lwjgl/LWJGLException
 .end method
 .innerclasses
-    org/lwjgl/opengl/rA [0] [0] static
-    org/lwjgl/opengl/yA [0] [0] static
+    org/lwjgl/opengl/rA_923 [0] [0] static
+    org/lwjgl/opengl/yA_960 [0] [0] static
 .end innerclasses
 .end class

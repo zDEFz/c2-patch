@@ -431,12 +431,12 @@ L8:
     .end code
 .end method
 
-.method public static method1856 : (Lorg/lwjgl/h;)J
+.method public static method1856 : (Lorg/lwjgl/h_695;)J
     .code stack 2 locals 1
 L0:     aload_0
 L1:     dup
-L2:     invokevirtual Method org/lwjgl/h true ()I
-L5:     invokestatic Method org/lwjgl/MemoryUtil method1879 (Lorg/lwjgl/h;I)J
+L2:     invokevirtual Method org/lwjgl/h_695 true ()I
+L5:     invokestatic Method org/lwjgl/MemoryUtil method1879 (Lorg/lwjgl/h_695;I)J
 L8:     lreturn
 L9:     
     .end code
@@ -459,7 +459,7 @@ L13:
     .end code
 .end method
 
-.method public static method1858 : (Lorg/lwjgl/h;I)J
+.method public static method1858 : (Lorg/lwjgl/h_695;I)J
     .code stack 2 locals 2
 L0:     aload_0
 L1:     ifnonnull L7
@@ -468,10 +468,10 @@ L5:     lreturn
 L6:     athrow
 L7:     aload_0
 L8:     iload_1
-L9:     invokestatic Method org/lwjgl/MemoryUtil method1879 (Lorg/lwjgl/h;I)J
+L9:     invokestatic Method org/lwjgl/MemoryUtil method1879 (Lorg/lwjgl/h_695;I)J
 L12:    lreturn
 L13:    
-        .attribute StackMap b'\x00\x02\x00\x06\x00\x00\x00\x01\x07\x00\x22\x00\x07\x00\x02\x07\x00\xDD\x01\x00\x00'
+        .attribute StackMap b'\x00\x02\x00\x06\x00\x00\x00\x01\x07\x00\x22\x00\x07\x00\x02\x07\x01\x8B\x01\x00\x00'
     .end code
 .end method
 
@@ -697,7 +697,7 @@ L23:
     .end code
 .end method
 
-.method public static method1872 : (Lorg/lwjgl/h;)J
+.method public static method1872 : (Lorg/lwjgl/h_695;)J
     .code stack 2 locals 1
 L0:     aload_0
 L1:     ifnonnull L7
@@ -706,11 +706,11 @@ L5:     lreturn
 L6:     athrow
 L7:     getstatic Field org/lwjgl/MemoryUtil field2537 Lorg/lwjgl/MemoryUtil$Accessor;
 L10:    aload_0
-L11:    invokevirtual Method org/lwjgl/h method281 ()Ljava/nio/ByteBuffer;
+L11:    invokevirtual Method org/lwjgl/h_695 method281 ()Ljava/nio/ByteBuffer;
 L14:    invokeinterface InterfaceMethod org/lwjgl/MemoryUtil$Accessor method1887 (Ljava/nio/Buffer;)J 2
 L19:    lreturn
 L20:    
-        .attribute StackMap b'\x00\x02\x00\x06\x00\x00\x00\x01\x07\x00\x22\x00\x07\x00\x01\x07\x00\xDD\x00\x00'
+        .attribute StackMap b'\x00\x02\x00\x06\x00\x00\x00\x01\x07\x00\x22\x00\x07\x00\x01\x07\x01\x8B\x00\x00'
     .end code
 .end method
 
@@ -773,11 +773,11 @@ L13:
     .end code
 .end method
 
-.method public static method1877 : (Lorg/lwjgl/h;)J
+.method public static method1877 : (Lorg/lwjgl/h_695;)J
     .code stack 2 locals 1
 L0:     getstatic Field org/lwjgl/MemoryUtil field2537 Lorg/lwjgl/MemoryUtil$Accessor;
 L3:     aload_0
-L4:     invokevirtual Method org/lwjgl/h method281 ()Ljava/nio/ByteBuffer;
+L4:     invokevirtual Method org/lwjgl/h_695 method281 ()Ljava/nio/ByteBuffer;
 L7:     invokeinterface InterfaceMethod org/lwjgl/MemoryUtil$Accessor method1887 (Ljava/nio/Buffer;)J 2
 L12:    lreturn
 L13:    
@@ -795,12 +795,12 @@ L9:
     .end code
 .end method
 
-.method public static method1879 : (Lorg/lwjgl/h;I)J
+.method public static method1879 : (Lorg/lwjgl/h_695;I)J
     .code stack 4 locals 2
 L0:     aload_0
-L1:     invokestatic Method org/lwjgl/MemoryUtil method1877 (Lorg/lwjgl/h;)J
+L1:     invokestatic Method org/lwjgl/MemoryUtil method1877 (Lorg/lwjgl/h_695;)J
 L4:     iload_1
-L5:     invokestatic Method org/lwjgl/h method275 ()I
+L5:     invokestatic Method org/lwjgl/h_695 method275 ()I
 L8:     imul
 L9:     i2l
 L10:    ladd
@@ -947,7 +947,7 @@ L13:
     .end code
 .end method
 
-.method public static method1886 : (Lorg/lwjgl/h;)J
+.method public static method1886 : (Lorg/lwjgl/h_695;)J
     .code stack 2 locals 1
 L0:     aload_0
 L1:     ifnonnull L7
@@ -955,10 +955,10 @@ L4:     lconst_0
 L5:     lreturn
 L6:     athrow
 L7:     aload_0
-L8:     invokestatic Method org/lwjgl/MemoryUtil method1856 (Lorg/lwjgl/h;)J
+L8:     invokestatic Method org/lwjgl/MemoryUtil method1856 (Lorg/lwjgl/h_695;)J
 L11:    lreturn
 L12:    
-        .attribute StackMap b'\x00\x02\x00\x06\x00\x00\x00\x01\x07\x00\x22\x00\x07\x00\x01\x07\x00\xDD\x00\x00'
+        .attribute StackMap b'\x00\x02\x00\x06\x00\x00\x00\x01\x07\x00\x22\x00\x07\x00\x01\x07\x01\x8B\x00\x00'
     .end code
 .end method
 .innerclasses

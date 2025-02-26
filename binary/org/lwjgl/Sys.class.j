@@ -4,10 +4,10 @@
 .field private static final this Ljava/lang/String;
 .field private static final field2546 Ljava/lang/String;
 .field private static final field2547 Z
-.field private static final field2548 Lorg/lwjgl/i;
+.field private static final field2548 Lorg/lwjgl/i_696;
 .field private static final field2549 Ljava/lang/String;
 
-.method private static method1889 : ()Lorg/lwjgl/i;
+.method private static method1889 : ()Lorg/lwjgl/i_696;
     .code stack 3 locals 0
 L0:     invokestatic Method org/lwjgl/LWJGLUtil getPlatform ()I
 L3:     tableswitch 1
@@ -15,11 +15,11 @@ L3:     tableswitch 1
             L50
             L41
             default : L58
-L28:    new org/lwjgl/f
+L28:    new org/lwjgl/f_693
 L31:    iconst_0
 L32:    ifne L31
 L35:    dup
-L36:    invokespecial Method org/lwjgl/f <init> ()V
+L36:    invokespecial Method org/lwjgl/f_693 <init> ()V
 L39:    areturn
 L40:    athrow
 L41:    new org/lwjgl/WindowsSysImplementation
@@ -27,9 +27,9 @@ L44:    dup
 L45:    invokespecial Method org/lwjgl/WindowsSysImplementation <init> ()V
 L48:    areturn
 L49:    athrow
-L50:    new org/lwjgl/E
+L50:    new org/lwjgl/E_681
 L53:    dup
-L54:    invokespecial Method org/lwjgl/E <init> ()V
+L54:    invokespecial Method org/lwjgl/E_681 <init> ()V
 L57:    areturn
 L58:    new java/lang/IllegalStateException
 L61:    dup
@@ -51,7 +51,7 @@ L4:
 
 .method public static method1890 : (Ljava/lang/String;Ljava/lang/String;)V
     .code stack 3 locals 3
-L0:     invokestatic Method org/lwjgl/input/k method2015 ()Z
+L0:     invokestatic Method org/lwjgl/input/k_708 method2015 ()Z
 L3:     dup
 L4:     istore_2
 L5:     ifeq L15
@@ -59,7 +59,7 @@ L8:     iconst_0
 L9:     iconst_1
 L10:    dup
 L11:    pop2
-L12:    invokestatic Method org/lwjgl/input/k method2012 (Z)V
+L12:    invokestatic Method org/lwjgl/input/k_708 method2012 (Z)V
 L15:    aload_0
 L16:    ifnonnull L22
 L19:    ldc ""
@@ -68,17 +68,17 @@ L22:    aload_1
 L23:    ifnonnull L29
 L26:    ldc ""
 L28:    astore_1
-L29:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
+L29:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
 L32:    aload_0
 L33:    aload_1
-L34:    invokeinterface InterfaceMethod org/lwjgl/i method1767 (Ljava/lang/String;Ljava/lang/String;)V 3
+L34:    invokeinterface InterfaceMethod org/lwjgl/i_696 method1767 (Ljava/lang/String;Ljava/lang/String;)V 3
 L39:    iload_2
 L40:    ifeq L50
 L43:    iconst_1
 L44:    dup
 L45:    dup
 L46:    pop2
-L47:    invokestatic Method org/lwjgl/input/k method2012 (Z)V
+L47:    invokestatic Method org/lwjgl/input/k_708 method2012 (Z)V
 L50:    return
 L51:    
         .attribute StackMap b'\x00\x04\x00\x0F\x00\x03\x07\x00\x40\x07\x00\x40\x01\x00\x00\x00\x16\x00\x03\x07\x00\x40\x07\x00\x40\x01\x00\x00\x00\x1D\x00\x03\x07\x00\x40\x07\x00\x40\x01\x00\x00\x00\x32\x00\x03\x07\x00\x40\x07\x00\x40\x01\x00\x00'
@@ -87,8 +87,8 @@ L51:
 
 .method public static method1891 : ()J
     .code stack 2 locals 0
-L0:     getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
-L3:     invokeinterface InterfaceMethod org/lwjgl/i method1768 ()J 1
+L0:     getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
+L3:     invokeinterface InterfaceMethod org/lwjgl/i_696 method1768 ()J 1
 L8:     lreturn
 L9:     
     .end code
@@ -99,10 +99,10 @@ L9:
 L0:     ldc "javax.jnlp.ServiceManager"
 L2:     invokestatic Method java/lang/Class forName (Ljava/lang/String;)Ljava/lang/Class;
 L5:     astore_1
-L6:     new org/lwjgl/k
+L6:     new org/lwjgl/k_711
 L9:     dup
 L10:    aload_1
-L11:    invokespecial Method org/lwjgl/k <init> (Ljava/lang/Class;)V
+L11:    invokespecial Method org/lwjgl/k_711 <init> (Ljava/lang/Class;)V
 L14:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L17:    checkcast java/lang/reflect/Method
 L20:    aload_1
@@ -126,10 +126,10 @@ L42:    astore_2
 L43:    ldc "javax.jnlp.BasicService"
 L45:    invokestatic Method java/lang/Class forName (Ljava/lang/String;)Ljava/lang/Class;
 L48:    astore_3
-L49:    new org/lwjgl/e
+L49:    new org/lwjgl/e_692
 L52:    dup
 L53:    aload_3
-L54:    invokespecial Method org/lwjgl/e <init> (Ljava/lang/Class;)V
+L54:    invokespecial Method org/lwjgl/e_692 <init> (Ljava/lang/Class;)V
 L57:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L60:    checkcast java/lang/reflect/Method
 L63:    astore_3
@@ -174,9 +174,9 @@ L114:   pop2
 L115:   ireturn
 L116:   athrow
 L117:   astore_1
-L118:   getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
+L118:   getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
 L121:   aload_0
-L122:   invokeinterface InterfaceMethod org/lwjgl/i method1773 (Ljava/lang/String;)Z 2
+L122:   invokeinterface InterfaceMethod org/lwjgl/i_696 method1773 (Ljava/lang/String;)Z 2
 L127:   ireturn
 L128:   
         .attribute StackMap b'\x00\x04\x00\x66\x00\x00\x00\x01\x07\x00\x22\x00\x67\x00\x04\x07\x00\x40\x07\x00\x58\x07\x00\x04\x07\x00\x67\x00\x01\x07\x00\x52\x00\x74\x00\x00\x00\x01\x07\x00\x22\x00\x75\x00\x01\x07\x00\x40\x00\x01\x07\x00\x54'
@@ -194,10 +194,10 @@ L5:
 
 .method private static method1893 : (Ljava/lang/String;)V
     .code stack 3 locals 1
-L0:     new org/lwjgl/C
+L0:     new org/lwjgl/C_679
 L3:     dup
 L4:     aload_0
-L5:     invokespecial Method org/lwjgl/C <init> (Ljava/lang/String;)V
+L5:     invokespecial Method org/lwjgl/C_679 <init> (Ljava/lang/String;)V
 L8:     invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L11:    pop
 L12:    return
@@ -261,8 +261,8 @@ L93:    aload_0
 L94:    invokestatic Method org/lwjgl/Sys method1893 (Ljava/lang/String;)V
 L97:    return
 L98:    astore_3
-L99:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
-L102:   invokeinterface InterfaceMethod org/lwjgl/i method1770 ()Z 1
+L99:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
+L102:   invokeinterface InterfaceMethod org/lwjgl/i_696 method1770 ()Z 1
 L107:   ifeq L161
         .catch java/lang/UnsatisfiedLinkError from L110 to L133 using L134
 L110:   new java/lang/StringBuilder
@@ -305,8 +305,8 @@ L1:
 
 .method public static method1896 : ()Ljava/lang/String;
     .code stack 1 locals 0
-L0:     getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
-L3:     invokeinterface InterfaceMethod org/lwjgl/i method1766 ()Ljava/lang/String; 1
+L0:     getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
+L3:     invokeinterface InterfaceMethod org/lwjgl/i_696 method1766 ()Ljava/lang/String; 1
 L8:     areturn
 L9:     
     .end code
@@ -328,12 +328,12 @@ L5:     ldc "2.8.5"
 L7:     putstatic Field org/lwjgl/Sys this Ljava/lang/String;
 L10:    ldc "64"
 L12:    putstatic Field org/lwjgl/Sys field2549 Ljava/lang/String;
-L15:    invokestatic Method org/lwjgl/Sys method1889 ()Lorg/lwjgl/i;
-L18:    putstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
+L15:    invokestatic Method org/lwjgl/Sys method1889 ()Lorg/lwjgl/i_696;
+L18:    putstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
 L21:    ldc "lwjgl"
 L23:    invokestatic Method org/lwjgl/Sys method1894 (Ljava/lang/String;)V
-L26:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
-L29:    invokeinterface InterfaceMethod org/lwjgl/i getPointerSize ()I 1
+L26:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
+L29:    invokeinterface InterfaceMethod org/lwjgl/i_696 getPointerSize ()I 1
 L34:    bipush 8
 L36:    iconst_1
 L37:    dup
@@ -350,11 +350,11 @@ L51:    iconst_1
 L52:    dup
 L53:    pop2
 L54:    putstatic Field org/lwjgl/Sys field2547 Z
-L57:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
-L60:    invokeinterface InterfaceMethod org/lwjgl/i getJNIVersion ()I 1
+L57:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
+L60:    invokeinterface InterfaceMethod org/lwjgl/i_696 getJNIVersion ()I 1
 L65:    istore_0
-L66:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
-L69:    invokeinterface InterfaceMethod org/lwjgl/i method1772 ()I 1
+L66:    getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
+L69:    invokeinterface InterfaceMethod org/lwjgl/i_696 method1772 ()I 1
 L74:    istore_1
 L75:    iload_0
 L76:    iload_1
@@ -378,9 +378,9 @@ L112:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)
 L115:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
 L118:   invokespecial Method java/lang/LinkageError <init> (Ljava/lang/String;)V
 L121:   athrow
-L122:   getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
+L122:   getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
 L125:   getstatic Field org/lwjgl/LWJGLUtil DEBUG Z
-L128:   invokeinterface InterfaceMethod org/lwjgl/i setDebug (Z)V 2
+L128:   invokeinterface InterfaceMethod org/lwjgl/i_696 setDebug (Z)V 2
 L133:   return
 L134:   
         .attribute StackMap b'\x00\x04\x00\x31\x00\x00\x00\x01\x07\x00\x22\x00\x32\x00\x00\x00\x00\x00\x36\x00\x00\x00\x01\x01\x00\x7A\x00\x02\x01\x01\x00\x00'
@@ -389,8 +389,8 @@ L134:
 
 .method public static method1898 : ()J
     .code stack 4 locals 0
-L0:     getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i;
-L3:     invokeinterface InterfaceMethod org/lwjgl/i method1769 ()J 1
+L0:     getstatic Field org/lwjgl/Sys field2548 Lorg/lwjgl/i_696;
+L3:     invokeinterface InterfaceMethod org/lwjgl/i_696 method1769 ()J 1
 L8:     ldc2_w 9223372036854775807L
 L11:    land
 L12:    lreturn
@@ -398,8 +398,8 @@ L13:
     .end code
 .end method
 .innerclasses
-    org/lwjgl/C [0] [0] static
-    org/lwjgl/e [0] [0] static
-    org/lwjgl/k [0] [0] static
+    org/lwjgl/C_679 [0] [0] static
+    org/lwjgl/e_692 [0] [0] static
+    org/lwjgl/k_711 [0] [0] static
 .end innerclasses
 .end class

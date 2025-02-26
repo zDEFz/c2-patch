@@ -120,7 +120,7 @@ L3:     ifnull L12
 L6:     invokestatic Method org/lwjgl/opengl/Display throw ()Z
 L9:     ifeq L19
 L12:    aload_1
-L13:    instanceof org/lwjgl/opengl/aB
+L13:    instanceof org/lwjgl/opengl/aB_837
 L16:    ifeq L51
 L19:    aload_0
 L20:    aload_1
@@ -159,12 +159,12 @@ L72:    ireturn
 L73:    athrow
         .catch java/security/PrivilegedActionException from L74 to L101 using L102
 L74:    aload_0
-L75:    new org/lwjgl/opengl/zb
+L75:    new org/lwjgl/opengl/zb_968
 L78:    dup
 L79:    aload_0
 L80:    aload_1
 L81:    iload_2
-L82:    invokespecial Method org/lwjgl/opengl/zb <init> (Lorg/lwjgl/opengl/AWTSurfaceLock;Ljava/awt/Canvas;Z)V
+L82:    invokespecial Method org/lwjgl/opengl/zb_968 <init> (Lorg/lwjgl/opengl/AWTSurfaceLock;Ljava/awt/Canvas;Z)V
 L85:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L88:    checkcast java/lang/Boolean
 L91:    invokevirtual Method java/lang/Boolean booleanValue ()Z
@@ -199,6 +199,6 @@ L12:
     .end code
 .end method
 .innerclasses
-    org/lwjgl/opengl/zb [0] [0]
+    org/lwjgl/opengl/zb_968 [0] [0]
 .end innerclasses
 .end class

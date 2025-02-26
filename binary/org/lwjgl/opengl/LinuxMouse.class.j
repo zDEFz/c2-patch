@@ -21,7 +21,7 @@
 .field private static final field4569 I = 7
 .field private static final field4570 I = 5
 .field private final try J
-.field private field4571 Lorg/lwjgl/opengl/aA;
+.field private field4571 Lorg/lwjgl/opengl/aA_836;
 .field private static final new I = 120
 .field private field4572 I
 .field private final this J
@@ -235,10 +235,10 @@ L39:    getfield Field org/lwjgl/opengl/LinuxMouse false Ljava/nio/ByteBuffer;
 L42:    invokevirtual Method java/nio/ByteBuffer flip ()Ljava/nio/Buffer;
 L45:    aload_0
 L46:    dup
-L47:    getfield Field org/lwjgl/opengl/LinuxMouse field4571 Lorg/lwjgl/opengl/aA;
+L47:    getfield Field org/lwjgl/opengl/LinuxMouse field4571 Lorg/lwjgl/opengl/aA_836;
 L50:    swap
 L51:    getfield Field org/lwjgl/opengl/LinuxMouse false Ljava/nio/ByteBuffer;
-L54:    invokevirtual Method org/lwjgl/opengl/aA method368 (Ljava/nio/ByteBuffer;)Z
+L54:    invokevirtual Method org/lwjgl/opengl/aA_836 method368 (Ljava/nio/ByteBuffer;)Z
 L57:    aload_0
 L58:    lload 6
 L60:    putfield Field org/lwjgl/opengl/LinuxMouse field4563 J
@@ -252,9 +252,9 @@ L66:
 .method public method4857 : (Ljava/nio/ByteBuffer;)V
     .code stack 2 locals 2
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/LinuxMouse field4571 Lorg/lwjgl/opengl/aA;
+L1:     getfield Field org/lwjgl/opengl/LinuxMouse field4571 Lorg/lwjgl/opengl/aA_836;
 L4:     aload_1
-L5:     invokevirtual Method org/lwjgl/opengl/aA method285 (Ljava/nio/ByteBuffer;)V
+L5:     invokevirtual Method org/lwjgl/opengl/aA_836 method285 (Ljava/nio/ByteBuffer;)V
 L8:     return
 L9:     
     .end code
@@ -957,7 +957,7 @@ L0:     iconst_0
 L1:     aload_0
 L2:     dup_x1
 L3:     dup_x2
-L4:     new org/lwjgl/opengl/aA
+L4:     new org/lwjgl/opengl/aA_836
 L7:     aload_0
 L8:     dup
 L9:     pop2
@@ -965,8 +965,8 @@ L10:    dup
 L11:    aload_0
 L12:    getfield Field org/lwjgl/opengl/LinuxMouse false Ljava/nio/ByteBuffer;
 L15:    invokevirtual Method java/nio/ByteBuffer capacity ()I
-L18:    invokespecial Method org/lwjgl/opengl/aA <init> (I)V
-L21:    putfield Field org/lwjgl/opengl/LinuxMouse field4571 Lorg/lwjgl/opengl/aA;
+L18:    invokespecial Method org/lwjgl/opengl/aA_836 <init> (I)V
+L21:    putfield Field org/lwjgl/opengl/LinuxMouse field4571 Lorg/lwjgl/opengl/aA_836;
 L24:    iconst_1
 L25:    dup
 L26:    pop2

@@ -10,7 +10,7 @@ L3:     ifnull L12
 L6:     invokestatic Method org/lwjgl/opengl/Display throw ()Z
 L9:     ifeq L19
 L12:    aload_1
-L13:    instanceof org/lwjgl/opengl/aB
+L13:    instanceof org/lwjgl/opengl/aB_837
 L16:    ifeq L54
 L19:    aload_0
 L20:    getfield Field org/lwjgl/opengl/MacOSXCanvasPeerInfo field4424 Lorg/lwjgl/opengl/AWTSurfaceLock;
@@ -68,7 +68,7 @@ L8:
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method protected <init> : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;Z)V
+.method protected <init> : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;Z)V
     .code stack 9 locals 4
 L0:     aload_0
 L1:     aload_1
@@ -86,7 +86,7 @@ L12:    dup_x2
 L13:    iconst_1
 L14:    dup
 L15:    pop2
-L16:    invokespecial Method org/lwjgl/opengl/MacOSXPeerInfo <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;ZZZZ)V
+L16:    invokespecial Method org/lwjgl/opengl/MacOSXPeerInfo <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;ZZZZ)V
 L19:    new org/lwjgl/opengl/AWTSurfaceLock
 L22:    aload_0
 L23:    dup_x1

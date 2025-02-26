@@ -133,10 +133,10 @@ L23:
 .method static native getBufferAddress : (Ljava/nio/Buffer;)J
 .end method
 
-.method public static createPointerBuffer : (I)Lorg/lwjgl/h;
+.method public static createPointerBuffer : (I)Lorg/lwjgl/h_695;
     .code stack 1 locals 1
 L0:     iload_0
-L1:     invokestatic Method org/lwjgl/h method272 (I)Lorg/lwjgl/h;
+L1:     invokestatic Method org/lwjgl/h_695 method272 (I)Lorg/lwjgl/h_695;
 L4:     areturn
 L5:     
     .end code

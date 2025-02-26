@@ -1,6 +1,6 @@
 .version 49 0
 .class super abstract org/lwjgl/opengl/LinuxPeerInfo
-.super org/lwjgl/opengl/a
+.super org/lwjgl/opengl/a_835
 
 .method public final method4673 : ()J
     .code stack 2 locals 1
@@ -16,7 +16,7 @@ L8:
     .code stack 2 locals 1
 L0:     aload_0
 L1:     invokestatic Method org/lwjgl/opengl/LinuxPeerInfo createHandle ()Ljava/nio/ByteBuffer;
-L4:     invokespecial Method org/lwjgl/opengl/a <init> (Ljava/nio/ByteBuffer;)V
+L4:     invokespecial Method org/lwjgl/opengl/a_835 <init> (Ljava/nio/ByteBuffer;)V
 L7:     return
 L8:     
     .end code

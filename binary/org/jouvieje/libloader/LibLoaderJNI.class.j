@@ -16,7 +16,7 @@ L5:
 
 .method static <clinit> : ()V
     .code stack 3 locals 0
-L0:     invokestatic Method org/jouvieje/libloader/G method1736 ()Z
+L0:     invokestatic Method org/jouvieje/libloader/G_669 method1736 ()Z
 L3:     ifne L16
 L6:     new java/lang/UnsatisfiedLinkError
 L9:     dup

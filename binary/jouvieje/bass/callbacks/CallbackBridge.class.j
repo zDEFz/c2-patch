@@ -1,6 +1,6 @@
 .version 46 0
 .class final super jouvieje/bass/callbacks/CallbackBridge
-.super jouvieje/bass/utils/m
+.super jouvieje/bass/utils/m_589
 .field protected static final field2318 I = 17
 
 .method public static BPMPROC_BRIDGE : (IFJ)V
@@ -15,8 +15,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/f
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/f_507
 L16:    astore 4
         .catch java/lang/Throwable from L18 to L32 using L44
 L18:    aload 4
@@ -31,8 +31,8 @@ L29:    goto L37
 L32:    athrow
         .catch java/lang/Throwable from L33 to L42 using L44
 L33:    lload_2
-L34:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L37:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/f method1637 (IFLjouvieje/bass/utils/m;)V 4
+L34:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L37:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/f_507 method1637 (IFLjouvieje/bass/utils/m_589;)V 4
 L42:    return
 L43:    athrow
 L44:    astore_1
@@ -40,7 +40,7 @@ L45:    aload_1
 L46:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L49:    return
 L50:    
-        .attribute StackMap b'\x00\x05\x00\x20\x00\x00\x00\x01\x07\x00\x0B\x00\x21\x00\x04\x01\x02\x04\x07\x00\x13\x00\x03\x07\x00\x13\x01\x02\x00\x25\x00\x04\x01\x02\x04\x07\x00\x13\x00\x04\x07\x00\x13\x01\x02\x07\x00\x04\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x04\x01\x02\x04\x07\x00\x13\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x05\x00\x20\x00\x00\x00\x01\x07\x00\x0B\x00\x21\x00\x04\x01\x02\x04\x07\x01\x0E\x00\x03\x07\x01\x0E\x01\x02\x00\x25\x00\x04\x01\x02\x04\x07\x01\x0E\x00\x04\x07\x01\x0E\x01\x02\x07\x01\x09\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x04\x01\x02\x04\x07\x01\x0E\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -56,8 +56,8 @@ L7:     iconst_0
 L8:     iconst_1
 L9:     dup
 L10:    pop2
-L11:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L14:    checkcast jouvieje/bass/callbacks/D
+L11:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L14:    checkcast jouvieje/bass/callbacks/D_496
 L17:    astore 8
         .catch java/lang/Throwable from L19 to L35 using L65
 L19:    aload 8
@@ -73,7 +73,7 @@ L32:    goto L42
 L35:    athrow
         .catch java/lang/Throwable from L36 to L53 using L65
 L36:    lload_3
-L37:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
+L37:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
 L40:    iload 5
 L42:    lload 6
 L44:    lconst_0
@@ -84,15 +84,15 @@ L50:    goto L59
 L53:    athrow
         .catch java/lang/Throwable from L54 to L64 using L65
 L54:    lload 6
-L56:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L59:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/D method1620 (IDLjouvieje/bass/utils/m;ILjouvieje/bass/utils/m;)V 7
+L56:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L59:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/D_496 method1620 (IDLjouvieje/bass/utils/m_589;ILjouvieje/bass/utils/m_589;)V 7
 L64:    return
 L65:    astore 5
 L67:    aload 5
 L69:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L72:    return
 L73:    
-        .attribute StackMap b'\x00\x07\x00\x23\x00\x00\x00\x01\x07\x00\x0B\x00\x24\x00\x06\x01\x03\x04\x01\x04\x07\x00\x23\x00\x03\x07\x00\x23\x01\x03\x00\x2A\x00\x06\x01\x03\x04\x01\x04\x07\x00\x23\x00\x05\x07\x00\x23\x01\x03\x07\x00\x04\x01\x00\x35\x00\x00\x00\x01\x07\x00\x0B\x00\x36\x00\x06\x01\x03\x04\x01\x04\x07\x00\x23\x00\x05\x07\x00\x23\x01\x03\x07\x00\x04\x01\x00\x3B\x00\x06\x01\x03\x04\x01\x04\x07\x00\x23\x00\x06\x07\x00\x23\x01\x03\x07\x00\x04\x01\x07\x00\x04\x00\x41\x00\x06\x01\x03\x04\x01\x04\x07\x00\x23\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x07\x00\x23\x00\x00\x00\x01\x07\x00\x0B\x00\x24\x00\x06\x01\x03\x04\x01\x04\x07\x01\x16\x00\x03\x07\x01\x16\x01\x03\x00\x2A\x00\x06\x01\x03\x04\x01\x04\x07\x01\x16\x00\x05\x07\x01\x16\x01\x03\x07\x01\x09\x01\x00\x35\x00\x00\x00\x01\x07\x00\x0B\x00\x36\x00\x06\x01\x03\x04\x01\x04\x07\x01\x16\x00\x05\x07\x01\x16\x01\x03\x07\x01\x09\x01\x00\x3B\x00\x06\x01\x03\x04\x01\x04\x07\x01\x16\x00\x06\x07\x01\x16\x01\x03\x07\x01\x09\x01\x07\x01\x09\x00\x41\x00\x06\x01\x03\x04\x01\x04\x07\x01\x16\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -107,8 +107,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/d
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/d_505
 L16:    astore 10
         .catch java/lang/Throwable from L18 to L31 using L83
 L18:    aload 10
@@ -122,8 +122,8 @@ L28:    goto L40
 L31:    athrow
         .catch java/lang/Throwable from L32 to L52 using L83
 L32:    lload_0
-L33:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L36:    invokestatic Method jouvieje/bass/structures/A method1397 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/A;
+L33:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L36:    invokestatic Method jouvieje/bass/structures/A_529 method1397 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/A_529;
 L39:    iload_2
 L40:    lload_3
 L41:    lconst_0
@@ -135,7 +135,7 @@ L49:    goto L59
 L52:    athrow
         .catch java/lang/Throwable from L53 to L82 using L83
 L53:    lload_3
-L54:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
+L54:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
 L57:    iload 5
 L59:    lload 6
 L61:    lload 8
@@ -145,15 +145,15 @@ L65:    ifne L72
 L68:    aconst_null
 L69:    goto L77
 L72:    lload 8
-L74:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L77:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/d method1635 (Ljouvieje/bass/structures/A;ILjouvieje/bass/utils/m;IJLjouvieje/bass/utils/m;)V 8
+L74:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L77:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/d_505 method1635 (Ljouvieje/bass/structures/A_529;ILjouvieje/bass/utils/m_589;IJLjouvieje/bass/utils/m_589;)V 8
 L82:    return
 L83:    astore_2
 L84:    aload_2
 L85:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L88:    return
 L89:    
-        .attribute StackMap b'\x00\x09\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x07\x04\x01\x04\x01\x04\x04\x07\x00\x2B\x00\x01\x07\x00\x2B\x00\x28\x00\x07\x04\x01\x04\x01\x04\x04\x07\x00\x2B\x00\x03\x07\x00\x2B\x07\x00\x2D\x01\x00\x34\x00\x00\x00\x01\x07\x00\x0B\x00\x35\x00\x07\x04\x01\x04\x01\x04\x04\x07\x00\x2B\x00\x03\x07\x00\x2B\x07\x00\x2D\x01\x00\x3B\x00\x07\x04\x01\x04\x01\x04\x04\x07\x00\x2B\x00\x05\x07\x00\x2B\x07\x00\x2D\x01\x07\x00\x04\x01\x00\x48\x00\x07\x04\x01\x04\x01\x04\x04\x07\x00\x2B\x00\x06\x07\x00\x2B\x07\x00\x2D\x01\x07\x00\x04\x01\x04\x00\x4D\x00\x07\x04\x01\x04\x01\x04\x04\x07\x00\x2B\x00\x07\x07\x00\x2B\x07\x00\x2D\x01\x07\x00\x04\x01\x04\x07\x00\x04\x00\x53\x00\x07\x04\x01\x04\x01\x04\x04\x07\x00\x2B\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x09\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x07\x04\x01\x04\x01\x04\x04\x07\x01\x1B\x00\x01\x07\x01\x1B\x00\x28\x00\x07\x04\x01\x04\x01\x04\x04\x07\x01\x1B\x00\x03\x07\x01\x1B\x07\x01\x1D\x01\x00\x34\x00\x00\x00\x01\x07\x00\x0B\x00\x35\x00\x07\x04\x01\x04\x01\x04\x04\x07\x01\x1B\x00\x03\x07\x01\x1B\x07\x01\x1D\x01\x00\x3B\x00\x07\x04\x01\x04\x01\x04\x04\x07\x01\x1B\x00\x05\x07\x01\x1B\x07\x01\x1D\x01\x07\x01\x09\x01\x00\x48\x00\x07\x04\x01\x04\x01\x04\x04\x07\x01\x1B\x00\x06\x07\x01\x1B\x07\x01\x1D\x01\x07\x01\x09\x01\x04\x00\x4D\x00\x07\x04\x01\x04\x01\x04\x04\x07\x01\x1B\x00\x07\x07\x01\x1B\x07\x01\x1D\x01\x07\x01\x09\x01\x04\x07\x01\x09\x00\x53\x00\x07\x04\x01\x04\x01\x04\x04\x07\x01\x1B\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -242,8 +242,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/h
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/h_508
 L16:    astore_2
         .catch java/lang/Throwable from L17 to L28 using L40
 L17:    aload_2
@@ -256,8 +256,8 @@ L25:    goto L33
 L28:    athrow
         .catch java/lang/Throwable from L29 to L38 using L40
 L29:    lload_0
-L30:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L33:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/h method1638 (Ljouvieje/bass/utils/m;)V 2
+L30:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L33:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/h_508 method1638 (Ljouvieje/bass/utils/m_589;)V 2
 L38:    return
 L39:    athrow
 L40:    astore_2
@@ -265,7 +265,7 @@ L41:    aload_2
 L42:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L45:    return
 L46:    
-        .attribute StackMap b'\x00\x05\x00\x1C\x00\x00\x00\x01\x07\x00\x0B\x00\x1D\x00\x02\x04\x07\x00\x6F\x00\x01\x07\x00\x6F\x00\x21\x00\x02\x04\x07\x00\x6F\x00\x02\x07\x00\x6F\x07\x00\x04\x00\x27\x00\x00\x00\x01\x07\x00\x0B\x00\x28\x00\x02\x04\x07\x00\x6F\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x05\x00\x1C\x00\x00\x00\x01\x07\x00\x0B\x00\x1D\x00\x02\x04\x07\x01\x25\x00\x01\x07\x01\x25\x00\x21\x00\x02\x04\x07\x01\x25\x00\x02\x07\x01\x25\x07\x01\x09\x00\x27\x00\x00\x00\x01\x07\x00\x0B\x00\x28\x00\x02\x04\x07\x01\x25\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -281,8 +281,8 @@ L6:     dup_x2
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/b
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/b_503
 L16:    astore 5
         .catch java/lang/Throwable from L18 to L32 using L44
 L18:    aload 5
@@ -297,8 +297,8 @@ L29:    goto L37
 L32:    athrow
         .catch java/lang/Throwable from L33 to L42 using L44
 L33:    lload_3
-L34:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L37:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/b method1633 (IDLjouvieje/bass/utils/m;)V 5
+L34:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L37:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/b_503 method1633 (IDLjouvieje/bass/utils/m_589;)V 5
 L42:    return
 L43:    athrow
 L44:    astore 5
@@ -306,7 +306,7 @@ L46:    aload 5
 L48:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L51:    return
 L52:    
-        .attribute StackMap b'\x00\x05\x00\x20\x00\x00\x00\x01\x07\x00\x0B\x00\x21\x00\x04\x01\x03\x04\x07\x00\x77\x00\x03\x07\x00\x77\x01\x03\x00\x25\x00\x04\x01\x03\x04\x07\x00\x77\x00\x04\x07\x00\x77\x01\x03\x07\x00\x04\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x04\x01\x03\x04\x07\x00\x77\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x05\x00\x20\x00\x00\x00\x01\x07\x00\x0B\x00\x21\x00\x04\x01\x03\x04\x07\x01\x2A\x00\x03\x07\x01\x2A\x01\x03\x00\x25\x00\x04\x01\x03\x04\x07\x01\x2A\x00\x04\x07\x01\x2A\x01\x03\x07\x01\x09\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x04\x01\x03\x04\x07\x01\x2A\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -321,8 +321,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/K
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/K_500
 L16:    astore 5
         .catch java/lang/Throwable from L18 to L31 using L61
 L18:    aload 5
@@ -336,8 +336,8 @@ L28:    goto L40
 L31:    athrow
         .catch java/lang/Throwable from L32 to L50 using L61
 L32:    lload_0
-L33:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L36:    invokestatic Method jouvieje/bass/structures/A method1397 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/A;
+L33:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L36:    invokestatic Method jouvieje/bass/structures/A_529 method1397 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/A_529;
 L39:    iload_2
 L40:    lload_3
 L41:    lconst_0
@@ -348,15 +348,15 @@ L47:    goto L55
 L50:    athrow
         .catch java/lang/Throwable from L51 to L60 using L61
 L51:    lload_3
-L52:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L55:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/K method1624 (Ljouvieje/bass/structures/A;ILjouvieje/bass/utils/m;)V 4
+L52:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L55:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/K_500 method1624 (Ljouvieje/bass/structures/A_529;ILjouvieje/bass/utils/m_589;)V 4
 L60:    return
 L61:    astore_2
 L62:    aload_2
 L63:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L66:    return
 L67:    
-        .attribute StackMap b'\x00\x07\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x04\x04\x01\x04\x07\x00\x7F\x00\x01\x07\x00\x7F\x00\x28\x00\x04\x04\x01\x04\x07\x00\x7F\x00\x03\x07\x00\x7F\x07\x00\x2D\x01\x00\x32\x00\x00\x00\x01\x07\x00\x0B\x00\x33\x00\x04\x04\x01\x04\x07\x00\x7F\x00\x03\x07\x00\x7F\x07\x00\x2D\x01\x00\x37\x00\x04\x04\x01\x04\x07\x00\x7F\x00\x04\x07\x00\x7F\x07\x00\x2D\x01\x07\x00\x04\x00\x3D\x00\x04\x04\x01\x04\x07\x00\x7F\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x07\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x04\x04\x01\x04\x07\x01\x2F\x00\x01\x07\x01\x2F\x00\x28\x00\x04\x04\x01\x04\x07\x01\x2F\x00\x03\x07\x01\x2F\x07\x01\x1D\x01\x00\x32\x00\x00\x00\x01\x07\x00\x0B\x00\x33\x00\x04\x04\x01\x04\x07\x01\x2F\x00\x03\x07\x01\x2F\x07\x01\x1D\x01\x00\x37\x00\x04\x04\x01\x04\x07\x01\x2F\x00\x04\x07\x01\x2F\x07\x01\x1D\x01\x07\x01\x09\x00\x3D\x00\x04\x04\x01\x04\x07\x01\x2F\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -371,8 +371,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/e
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/e_506
 L16:    astore 4
         .catch java/lang/Throwable from L18 to L31 using L47
 L18:    aload 4
@@ -386,8 +386,8 @@ L28:    goto L36
 L31:    athrow
         .catch java/lang/Throwable from L32 to L45 using L47
 L32:    lload_2
-L33:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L36:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/e method1636 (JLjouvieje/bass/utils/m;)Z 4
+L33:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L36:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/e_506 method1636 (JLjouvieje/bass/utils/m_589;)Z 4
 L41:    istore 4
 L43:    iload 4
 L45:    ireturn
@@ -401,7 +401,7 @@ L56:    dup
 L57:    pop2
 L58:    ireturn
 L59:    
-        .attribute StackMap b'\x00\x05\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x03\x04\x04\x07\x00\x87\x00\x02\x07\x00\x87\x04\x00\x24\x00\x03\x04\x04\x07\x00\x87\x00\x03\x07\x00\x87\x04\x07\x00\x04\x00\x2E\x00\x00\x00\x01\x07\x00\x0B\x00\x2F\x00\x02\x04\x04\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x05\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x03\x04\x04\x07\x01\x34\x00\x02\x07\x01\x34\x04\x00\x24\x00\x03\x04\x04\x07\x01\x34\x00\x03\x07\x01\x34\x04\x07\x01\x09\x00\x2E\x00\x00\x00\x01\x07\x00\x0B\x00\x2F\x00\x02\x04\x04\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -416,8 +416,8 @@ L5:     iconst_0
 L6:     iconst_1
 L7:     dup
 L8:     pop2
-L9:     invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L12:    checkcast jouvieje/bass/callbacks/G
+L9:     invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L12:    checkcast jouvieje/bass/callbacks/G_499
 L15:    astore 7
         .catch java/lang/Throwable from L17 to L30 using L67
 L17:    aload 7
@@ -431,8 +431,8 @@ L27:    goto L39
 L30:    athrow
         .catch java/lang/Throwable from L31 to L53 using L67
 L31:    lload_0
-L32:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L35:    invokestatic Method jouvieje/bass/structures/A method1397 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/A;
+L32:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L35:    invokestatic Method jouvieje/bass/structures/A_529 method1397 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/A_529;
 L38:    iload_2
 L39:    aload_3
 L40:    aload 4
@@ -445,8 +445,8 @@ L50:    goto L59
 L53:    athrow
         .catch java/lang/Throwable from L54 to L66 using L67
 L54:    lload 5
-L56:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L59:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/G method1623 (Ljouvieje/bass/structures/A;ZLjava/lang/String;Ljava/lang/String;Ljouvieje/bass/utils/m;)Z 6
+L56:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L59:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/G_499 method1623 (Ljouvieje/bass/structures/A_529;ZLjava/lang/String;Ljava/lang/String;Ljouvieje/bass/utils/m_589;)Z 6
 L64:    istore_2
 L65:    iload_2
 L66:    ireturn
@@ -459,7 +459,7 @@ L74:    dup
 L75:    pop2
 L76:    ireturn
 L77:    
-        .attribute StackMap b'\x00\x07\x00\x1E\x00\x00\x00\x01\x07\x00\x0B\x00\x1F\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x00\x8F\x00\x01\x07\x00\x8F\x00\x27\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x00\x8F\x00\x03\x07\x00\x8F\x07\x00\x2D\x01\x00\x35\x00\x00\x00\x01\x07\x00\x0B\x00\x36\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x00\x8F\x00\x05\x07\x00\x8F\x07\x00\x2D\x01\x07\x00\x3B\x07\x00\x3B\x00\x3B\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x00\x8F\x00\x06\x07\x00\x8F\x07\x00\x2D\x01\x07\x00\x3B\x07\x00\x3B\x07\x00\x04\x00\x43\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x00\x8F\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x07\x00\x1E\x00\x00\x00\x01\x07\x00\x0B\x00\x1F\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x01\x39\x00\x01\x07\x01\x39\x00\x27\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x01\x39\x00\x03\x07\x01\x39\x07\x01\x1D\x01\x00\x35\x00\x00\x00\x01\x07\x00\x0B\x00\x36\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x01\x39\x00\x05\x07\x01\x39\x07\x01\x1D\x01\x07\x00\x3B\x07\x00\x3B\x00\x3B\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x01\x39\x00\x06\x07\x01\x39\x07\x01\x1D\x01\x07\x00\x3B\x07\x00\x3B\x07\x01\x09\x00\x43\x00\x06\x04\x01\x07\x00\x3B\x07\x00\x3B\x04\x07\x01\x39\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -474,8 +474,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/m
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/m_512
 L16:    astore 6
 L18:    aload_2
 L19:    ifnull L30
@@ -495,8 +495,8 @@ L40:    goto L52
 L43:    athrow
         .catch java/lang/Throwable from L44 to L64 using L78
 L44:    lload_0
-L45:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L48:    invokestatic Method jouvieje/bass/structures/G method1599 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/G;
+L45:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L48:    invokestatic Method jouvieje/bass/structures/G_536 method1599 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/G_536;
 L51:    aload_2
 L52:    iload_3
 L53:    lload 4
@@ -508,8 +508,8 @@ L61:    goto L70
 L64:    athrow
         .catch java/lang/Throwable from L65 to L77 using L78
 L65:    lload 4
-L67:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L70:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/m method1642 (Ljouvieje/bass/structures/G;Ljava/nio/ByteBuffer;ILjouvieje/bass/utils/m;)I 5
+L67:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L70:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/m_512 method1642 (Ljouvieje/bass/structures/G_536;Ljava/nio/ByteBuffer;ILjouvieje/bass/utils/m_589;)I 5
 L75:    istore_2
 L76:    iload_2
 L77:    ireturn
@@ -522,7 +522,7 @@ L85:    dup
 L86:    pop2
 L87:    ireturn
 L88:    
-        .attribute StackMap b'\x00\x08\x00\x1E\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\x97\x00\x00\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\x97\x00\x01\x07\x00\x97\x00\x34\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\x97\x00\x03\x07\x00\x97\x07\x00\xA5\x07\x00\x9F\x00\x40\x00\x00\x00\x01\x07\x00\x0B\x00\x41\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\x97\x00\x04\x07\x00\x97\x07\x00\xA5\x07\x00\x9F\x01\x00\x46\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\x97\x00\x05\x07\x00\x97\x07\x00\xA5\x07\x00\x9F\x01\x07\x00\x04\x00\x4E\x00\x05\x04\x00\x01\x04\x07\x00\x97\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x08\x00\x1E\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x3E\x00\x00\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x3E\x00\x01\x07\x01\x3E\x00\x34\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x3E\x00\x03\x07\x01\x3E\x07\x01\x40\x07\x00\x9F\x00\x40\x00\x00\x00\x01\x07\x00\x0B\x00\x41\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x3E\x00\x04\x07\x01\x3E\x07\x01\x40\x07\x00\x9F\x01\x00\x46\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x3E\x00\x05\x07\x01\x3E\x07\x01\x40\x07\x00\x9F\x01\x07\x01\x09\x00\x4E\x00\x05\x04\x00\x01\x04\x07\x01\x3E\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -537,8 +537,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/i
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/i_509
 L16:    astore 6
         .catch java/lang/Throwable from L18 to L31 using L64
 L18:    aload 6
@@ -552,8 +552,8 @@ L28:    goto L40
 L31:    athrow
         .catch java/lang/Throwable from L32 to L52 using L64
 L32:    lload_0
-L33:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L36:    invokestatic Method jouvieje/bass/structures/K method1606 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/K;
+L33:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L36:    invokestatic Method jouvieje/bass/structures/K_540 method1606 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/K_540;
 L39:    iload_2
 L40:    iload_3
 L41:    lload 4
@@ -565,15 +565,15 @@ L49:    goto L58
 L52:    athrow
         .catch java/lang/Throwable from L53 to L63 using L64
 L53:    lload 4
-L55:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L58:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/i method1639 (Ljouvieje/bass/structures/K;IILjouvieje/bass/utils/m;)V 5
+L55:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L58:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/i_509 method1639 (Ljouvieje/bass/structures/K_540;IILjouvieje/bass/utils/m_589;)V 5
 L63:    return
 L64:    astore_2
 L65:    aload_2
 L66:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L69:    return
 L70:    
-        .attribute StackMap b'\x00\x07\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x05\x04\x01\x01\x04\x07\x00\xB1\x00\x01\x07\x00\xB1\x00\x28\x00\x05\x04\x01\x01\x04\x07\x00\xB1\x00\x03\x07\x00\xB1\x07\x00\xB3\x01\x00\x34\x00\x00\x00\x01\x07\x00\x0B\x00\x35\x00\x05\x04\x01\x01\x04\x07\x00\xB1\x00\x04\x07\x00\xB1\x07\x00\xB3\x01\x01\x00\x3A\x00\x05\x04\x01\x01\x04\x07\x00\xB1\x00\x05\x07\x00\xB1\x07\x00\xB3\x01\x01\x07\x00\x04\x00\x40\x00\x05\x04\x01\x01\x04\x07\x00\xB1\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x07\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x05\x04\x01\x01\x04\x07\x01\x48\x00\x01\x07\x01\x48\x00\x28\x00\x05\x04\x01\x01\x04\x07\x01\x48\x00\x03\x07\x01\x48\x07\x01\x4A\x01\x00\x34\x00\x00\x00\x01\x07\x00\x0B\x00\x35\x00\x05\x04\x01\x01\x04\x07\x01\x48\x00\x04\x07\x01\x48\x07\x01\x4A\x01\x01\x00\x3A\x00\x05\x04\x01\x01\x04\x07\x01\x48\x00\x05\x07\x01\x48\x07\x01\x4A\x01\x01\x07\x01\x09\x00\x40\x00\x05\x04\x01\x01\x04\x07\x01\x48\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -583,8 +583,8 @@ L0:     iconst_3
 L1:     iconst_1
 L2:     dup
 L3:     pop2
-L4:     invokestatic Method jouvieje/bass/callbacks/a method1626 (I)Ljava/lang/Object;
-L7:     checkcast jouvieje/bass/callbacks/E
+L4:     invokestatic Method jouvieje/bass/callbacks/a_502 method1626 (I)Ljava/lang/Object;
+L7:     checkcast jouvieje/bass/callbacks/E_497
 L10:    astore 4
 L12:    aload_0
 L13:    ifnull L24
@@ -605,8 +605,8 @@ L35:    goto L43
 L38:    athrow
         .catch java/lang/Throwable from L39 to L48 using L50
 L39:    lload_2
-L40:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L43:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/E method1621 (Ljava/nio/ByteBuffer;ILjouvieje/bass/utils/m;)V 4
+L40:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L43:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/E_497 method1621 (Ljava/nio/ByteBuffer;ILjouvieje/bass/utils/m_589;)V 4
 L48:    return
 L49:    athrow
 L50:    astore_1
@@ -614,14 +614,14 @@ L51:    aload_1
 L52:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L55:    return
 L56:    
-        .attribute StackMap b'\x00\x06\x00\x18\x00\x04\x07\x00\x9F\x01\x04\x07\x00\xC3\x00\x00\x00\x26\x00\x00\x00\x01\x07\x00\x0B\x00\x27\x00\x04\x07\x00\x9F\x01\x04\x07\x00\xC3\x00\x03\x07\x00\xC3\x07\x00\x9F\x01\x00\x2B\x00\x04\x07\x00\x9F\x01\x04\x07\x00\xC3\x00\x04\x07\x00\xC3\x07\x00\x9F\x01\x07\x00\x04\x00\x31\x00\x00\x00\x01\x07\x00\x0B\x00\x32\x00\x04\x07\x00\x9F\x01\x04\x07\x00\xC3\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x06\x00\x18\x00\x04\x07\x00\x9F\x01\x04\x07\x01\x53\x00\x00\x00\x26\x00\x00\x00\x01\x07\x00\x0B\x00\x27\x00\x04\x07\x00\x9F\x01\x04\x07\x01\x53\x00\x03\x07\x01\x53\x07\x00\x9F\x01\x00\x2B\x00\x04\x07\x00\x9F\x01\x04\x07\x01\x53\x00\x04\x07\x01\x53\x07\x00\x9F\x01\x07\x01\x09\x00\x31\x00\x00\x00\x01\x07\x00\x0B\x00\x32\x00\x04\x07\x00\x9F\x01\x04\x07\x01\x53\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
 .method <init> : ()V
     .code stack 1 locals 1
 L0:     aload_0
-L1:     invokespecial Method jouvieje/bass/utils/m <init> ()V
+L1:     invokespecial Method jouvieje/bass/utils/m_589 <init> ()V
 L4:     return
 L5:     
     .end code
@@ -638,8 +638,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/k
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/k_511
 L16:    astore 5
         .catch java/lang/Throwable from L18 to L31 using L60
 L18:    aload 5
@@ -653,7 +653,7 @@ L28:    goto L37
 L31:    athrow
         .catch java/lang/Throwable from L32 to L47 using L60
 L32:    lload_0
-L33:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
+L33:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
 L36:    iload_2
 L37:    lload_3
 L38:    lconst_0
@@ -664,8 +664,8 @@ L44:    goto L52
 L47:    athrow
         .catch java/lang/Throwable from L48 to L59 using L60
 L48:    lload_3
-L49:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L52:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/k method1641 (Ljouvieje/bass/utils/m;ILjouvieje/bass/utils/m;)I 4
+L49:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L52:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/k_511 method1641 (Ljouvieje/bass/utils/m_589;ILjouvieje/bass/utils/m_589;)I 4
 L57:    istore_2
 L58:    iload_2
 L59:    ireturn
@@ -678,7 +678,7 @@ L67:    dup
 L68:    pop2
 L69:    ireturn
 L70:    
-        .attribute StackMap b'\x00\x07\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x04\x04\x01\x04\x07\x00\xCD\x00\x01\x07\x00\xCD\x00\x25\x00\x04\x04\x01\x04\x07\x00\xCD\x00\x03\x07\x00\xCD\x07\x00\x04\x01\x00\x2F\x00\x00\x00\x01\x07\x00\x0B\x00\x30\x00\x04\x04\x01\x04\x07\x00\xCD\x00\x03\x07\x00\xCD\x07\x00\x04\x01\x00\x34\x00\x04\x04\x01\x04\x07\x00\xCD\x00\x04\x07\x00\xCD\x07\x00\x04\x01\x07\x00\x04\x00\x3C\x00\x04\x04\x01\x04\x07\x00\xCD\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x07\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x04\x04\x01\x04\x07\x01\x59\x00\x01\x07\x01\x59\x00\x25\x00\x04\x04\x01\x04\x07\x01\x59\x00\x03\x07\x01\x59\x07\x01\x09\x01\x00\x2F\x00\x00\x00\x01\x07\x00\x0B\x00\x30\x00\x04\x04\x01\x04\x07\x01\x59\x00\x03\x07\x01\x59\x07\x01\x09\x01\x00\x34\x00\x04\x04\x01\x04\x07\x01\x59\x00\x04\x07\x01\x59\x07\x01\x09\x01\x07\x01\x09\x00\x3C\x00\x04\x04\x01\x04\x07\x01\x59\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -693,8 +693,8 @@ L5:     iconst_0
 L6:     iconst_1
 L7:     dup
 L8:     pop2
-L9:     invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L12:    checkcast jouvieje/bass/callbacks/c
+L9:     invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L12:    checkcast jouvieje/bass/callbacks/c_504
 L15:    astore 7
 L17:    aload_3
 L18:    ifnull L29
@@ -714,8 +714,8 @@ L39:    goto L51
 L42:    athrow
         .catch java/lang/Throwable from L43 to L65 using L77
 L43:    lload_0
-L44:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L47:    invokestatic Method jouvieje/bass/structures/L method1605 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/L;
+L44:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L47:    invokestatic Method jouvieje/bass/structures/L_541 method1605 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/L_541;
 L50:    iload_2
 L51:    aload_3
 L52:    iload 4
@@ -728,15 +728,15 @@ L62:    goto L71
 L65:    athrow
         .catch java/lang/Throwable from L66 to L76 using L77
 L66:    lload 5
-L68:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L71:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/c method1634 (Ljouvieje/bass/structures/L;ILjava/nio/ByteBuffer;ILjouvieje/bass/utils/m;)V 6
+L68:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L71:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/c_504 method1634 (Ljouvieje/bass/structures/L_541;ILjava/nio/ByteBuffer;ILjouvieje/bass/utils/m_589;)V 6
 L76:    return
 L77:    astore_2
 L78:    aload_2
 L79:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L82:    return
 L83:    
-        .attribute StackMap b'\x00\x08\x00\x1D\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x00\xD5\x00\x00\x00\x2A\x00\x00\x00\x01\x07\x00\x0B\x00\x2B\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x00\xD5\x00\x01\x07\x00\xD5\x00\x33\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x00\xD5\x00\x03\x07\x00\xD5\x07\x00\xD7\x01\x00\x41\x00\x00\x00\x01\x07\x00\x0B\x00\x42\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x00\xD5\x00\x05\x07\x00\xD5\x07\x00\xD7\x01\x07\x00\x9F\x01\x00\x47\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x00\xD5\x00\x06\x07\x00\xD5\x07\x00\xD7\x01\x07\x00\x9F\x01\x07\x00\x04\x00\x4D\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x00\xD5\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x08\x00\x1D\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x01\x5E\x00\x00\x00\x2A\x00\x00\x00\x01\x07\x00\x0B\x00\x2B\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x01\x5E\x00\x01\x07\x01\x5E\x00\x33\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x01\x5E\x00\x03\x07\x01\x5E\x07\x01\x60\x01\x00\x41\x00\x00\x00\x01\x07\x00\x0B\x00\x42\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x01\x5E\x00\x05\x07\x01\x5E\x07\x01\x60\x01\x07\x00\x9F\x01\x00\x47\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x01\x5E\x00\x06\x07\x01\x5E\x07\x01\x60\x01\x07\x00\x9F\x01\x07\x01\x09\x00\x4D\x00\x06\x04\x01\x07\x00\x9F\x01\x04\x07\x01\x5E\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -751,8 +751,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/M
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/M_501
 L16:    astore 6
 L18:    aload_2
 L19:    ifnull L30
@@ -772,8 +772,8 @@ L40:    goto L52
 L43:    athrow
         .catch java/lang/Throwable from L44 to L64 using L78
 L44:    lload_0
-L45:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L48:    invokestatic Method jouvieje/bass/structures/j method1337 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/j;
+L45:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L48:    invokestatic Method jouvieje/bass/structures/j_568 method1337 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/j_568;
 L51:    aload_2
 L52:    iload_3
 L53:    lload 4
@@ -785,8 +785,8 @@ L61:    goto L70
 L64:    athrow
         .catch java/lang/Throwable from L65 to L77 using L78
 L65:    lload 4
-L67:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L70:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/M method1625 (Ljouvieje/bass/structures/j;Ljava/nio/ByteBuffer;ILjouvieje/bass/utils/m;)Z 5
+L67:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L70:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/M_501 method1625 (Ljouvieje/bass/structures/j_568;Ljava/nio/ByteBuffer;ILjouvieje/bass/utils/m_589;)Z 5
 L75:    istore_2
 L76:    iload_2
 L77:    ireturn
@@ -799,7 +799,7 @@ L85:    dup
 L86:    pop2
 L87:    ireturn
 L88:    
-        .attribute StackMap b'\x00\x08\x00\x1E\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\xE3\x00\x00\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\xE3\x00\x01\x07\x00\xE3\x00\x34\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\xE3\x00\x03\x07\x00\xE3\x07\x00\xE5\x07\x00\x9F\x00\x40\x00\x00\x00\x01\x07\x00\x0B\x00\x41\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\xE3\x00\x04\x07\x00\xE3\x07\x00\xE5\x07\x00\x9F\x01\x00\x46\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x00\xE3\x00\x05\x07\x00\xE3\x07\x00\xE5\x07\x00\x9F\x01\x07\x00\x04\x00\x4E\x00\x05\x04\x00\x01\x04\x07\x00\xE3\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x08\x00\x1E\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x68\x00\x00\x00\x2B\x00\x00\x00\x01\x07\x00\x0B\x00\x2C\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x68\x00\x01\x07\x01\x68\x00\x34\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x68\x00\x03\x07\x01\x68\x07\x01\x6A\x07\x00\x9F\x00\x40\x00\x00\x00\x01\x07\x00\x0B\x00\x41\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x68\x00\x04\x07\x01\x68\x07\x01\x6A\x07\x00\x9F\x01\x00\x46\x00\x05\x04\x07\x00\x9F\x01\x04\x07\x01\x68\x00\x05\x07\x01\x68\x07\x01\x6A\x07\x00\x9F\x01\x07\x01\x09\x00\x4E\x00\x05\x04\x00\x01\x04\x07\x01\x68\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -815,14 +815,14 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/j
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/j_510
 L16:    astore_2
         .catch java/lang/Throwable from L17 to L25 using L27
 L17:    aload_2
 L18:    iload_0
 L19:    fload_1
-L20:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/j method1640 (IF)V 3
+L20:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/j_510 method1640 (IF)V 3
 L25:    return
 L26:    athrow
 L27:    astore_1
@@ -830,7 +830,7 @@ L28:    aload_1
 L29:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L32:    return
 L33:    
-        .attribute StackMap b'\x00\x02\x00\x1A\x00\x00\x00\x01\x07\x00\x0B\x00\x1B\x00\x03\x01\x02\x07\x00\xF1\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x02\x00\x1A\x00\x00\x00\x01\x07\x00\x0B\x00\x1B\x00\x03\x01\x02\x07\x01\x72\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -845,8 +845,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/C
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/C_495
 L16:    astore_2
         .catch java/lang/Throwable from L17 to L28 using L42
 L17:    aload_2
@@ -859,8 +859,8 @@ L25:    goto L33
 L28:    athrow
         .catch java/lang/Throwable from L29 to L40 using L42
 L29:    lload_0
-L30:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L33:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/C method1174 (Ljouvieje/bass/utils/m;)J 2
+L30:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L33:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/C_495 method1174 (Ljouvieje/bass/utils/m_589;)J 2
 L38:    lstore_3
 L39:    lload_3
 L40:    lreturn
@@ -871,7 +871,7 @@ L44:    aload_3
 L45:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L48:    lreturn
 L49:    
-        .attribute StackMap b'\x00\x05\x00\x1C\x00\x00\x00\x01\x07\x00\x0B\x00\x1D\x00\x02\x04\x07\x00\xF8\x00\x01\x07\x00\xF8\x00\x21\x00\x02\x04\x07\x00\xF8\x00\x02\x07\x00\xF8\x07\x00\x04\x00\x29\x00\x00\x00\x01\x07\x00\x0B\x00\x2A\x00\x02\x04\x07\x00\xF8\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x05\x00\x1C\x00\x00\x00\x01\x07\x00\x0B\x00\x1D\x00\x02\x04\x07\x01\x75\x00\x01\x07\x01\x75\x00\x21\x00\x02\x04\x07\x01\x75\x00\x02\x07\x01\x75\x07\x01\x09\x00\x29\x00\x00\x00\x01\x07\x00\x0B\x00\x2A\x00\x02\x04\x07\x01\x75\x00\x01\x07\x00\x0B'
     .end code
 .end method
 
@@ -886,8 +886,8 @@ L6:     iconst_0
 L7:     iconst_1
 L8:     dup
 L9:     pop2
-L10:    invokestatic Method jouvieje/bass/callbacks/a method1629 (IJZ)Ljava/lang/Object;
-L13:    checkcast jouvieje/bass/callbacks/F
+L10:    invokestatic Method jouvieje/bass/callbacks/a_502 method1629 (IJZ)Ljava/lang/Object;
+L13:    checkcast jouvieje/bass/callbacks/F_498
 L16:    astore 8
         .catch java/lang/Throwable from L18 to L31 using L81
 L18:    aload 8
@@ -901,8 +901,8 @@ L28:    goto L40
 L31:    athrow
         .catch java/lang/Throwable from L32 to L52 using L81
 L32:    lload_0
-L33:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L36:    invokestatic Method jouvieje/bass/structures/A method1397 (Ljouvieje/bass/utils/m;)Ljouvieje/bass/structures/A;
+L33:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L36:    invokestatic Method jouvieje/bass/structures/A_529 method1397 (Ljouvieje/bass/utils/m_589;)Ljouvieje/bass/structures/A_529;
 L39:    iload_2
 L40:    lload_3
 L41:    lconst_0
@@ -914,7 +914,7 @@ L49:    goto L59
 L52:    athrow
         .catch java/lang/Throwable from L53 to L80 using L81
 L53:    lload_3
-L54:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
+L54:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
 L57:    iload 5
 L59:    lload 6
 L61:    lconst_0
@@ -923,15 +923,15 @@ L63:    ifne L70
 L66:    aconst_null
 L67:    goto L75
 L70:    lload 6
-L72:    invokestatic Method jouvieje/bass/utils/m method1177 (J)Ljouvieje/bass/utils/m;
-L75:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/F method1622 (Ljouvieje/bass/structures/A;ILjouvieje/bass/utils/m;ILjouvieje/bass/utils/m;)V 6
+L72:    invokestatic Method jouvieje/bass/utils/m_589 method1177 (J)Ljouvieje/bass/utils/m_589;
+L75:    invokeinterface InterfaceMethod jouvieje/bass/callbacks/F_498 method1622 (Ljouvieje/bass/structures/A_529;ILjouvieje/bass/utils/m_589;ILjouvieje/bass/utils/m_589;)V 6
 L80:    return
 L81:    astore_2
 L82:    aload_2
 L83:    invokevirtual Method java/lang/Throwable printStackTrace ()V
 L86:    return
 L87:    
-        .attribute StackMap b'\x00\x09\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x06\x04\x01\x04\x01\x04\x07\x01\x00\x00\x01\x07\x01\x00\x00\x28\x00\x06\x04\x01\x04\x01\x04\x07\x01\x00\x00\x03\x07\x01\x00\x07\x00\x2D\x01\x00\x34\x00\x00\x00\x01\x07\x00\x0B\x00\x35\x00\x06\x04\x01\x04\x01\x04\x07\x01\x00\x00\x03\x07\x01\x00\x07\x00\x2D\x01\x00\x3B\x00\x06\x04\x01\x04\x01\x04\x07\x01\x00\x00\x05\x07\x01\x00\x07\x00\x2D\x01\x07\x00\x04\x01\x00\x46\x00\x06\x04\x01\x04\x01\x04\x07\x01\x00\x00\x05\x07\x01\x00\x07\x00\x2D\x01\x07\x00\x04\x01\x00\x4B\x00\x06\x04\x01\x04\x01\x04\x07\x01\x00\x00\x06\x07\x01\x00\x07\x00\x2D\x01\x07\x00\x04\x01\x07\x00\x04\x00\x51\x00\x06\x04\x01\x04\x01\x04\x07\x01\x00\x00\x01\x07\x00\x0B'
+        .attribute StackMap b'\x00\x09\x00\x1F\x00\x00\x00\x01\x07\x00\x0B\x00\x20\x00\x06\x04\x01\x04\x01\x04\x07\x01\x7A\x00\x01\x07\x01\x7A\x00\x28\x00\x06\x04\x01\x04\x01\x04\x07\x01\x7A\x00\x03\x07\x01\x7A\x07\x01\x1D\x01\x00\x34\x00\x00\x00\x01\x07\x00\x0B\x00\x35\x00\x06\x04\x01\x04\x01\x04\x07\x01\x7A\x00\x03\x07\x01\x7A\x07\x01\x1D\x01\x00\x3B\x00\x06\x04\x01\x04\x01\x04\x07\x01\x7A\x00\x05\x07\x01\x7A\x07\x01\x1D\x01\x07\x01\x09\x01\x00\x46\x00\x06\x04\x01\x04\x01\x04\x07\x01\x7A\x00\x05\x07\x01\x7A\x07\x01\x1D\x01\x07\x01\x09\x01\x00\x4B\x00\x06\x04\x01\x04\x01\x04\x07\x01\x7A\x00\x06\x07\x01\x7A\x07\x01\x1D\x01\x07\x01\x09\x01\x07\x01\x09\x00\x51\x00\x06\x04\x01\x04\x01\x04\x07\x01\x7A\x00\x01\x07\x00\x0B'
     .end code
 .end method
 .end class

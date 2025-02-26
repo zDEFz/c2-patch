@@ -32,7 +32,7 @@
 .field public static final KEY_BACK I = 14
 .field public static final KEY_RMETA I = 220
 .field public static final KEY_1 I = 2
-.field private static field2569 Lorg/lwjgl/opengl/i;
+.field private static field2569 Lorg/lwjgl/opengl/i_875;
 .field public static final KEY_LCONTROL I = 29
 .field public static final KEY_HOME I = 199
 .field public static final KEY_NUMPADENTER I = 156
@@ -41,7 +41,7 @@
 .field public static final KEY_NUMPAD3 I = 81
 .field public static final KEY_5 I = 6
 .field public static final KEY_EQUALS I = 13
-.field private static field2570 Lorg/lwjgl/input/C;
+.field private static field2570 Lorg/lwjgl/input/C_697;
 .field public static final KEY_COLON I = 146
 .field public static final KEY_NUMPAD0 I = 82
 .field public static final KEY_S I = 31
@@ -139,7 +139,7 @@
     .deprecated
 .end fieldattributes
 .field public static final KEY_CAPITAL I = 58
-.field private static field2576 Lorg/lwjgl/input/C;
+.field private static field2576 Lorg/lwjgl/input/C_697;
 .field public static final KEY_A I = 30
 .field public static final KEY_8 I = 9
 .field public static final KEY_P I = 25
@@ -150,13 +150,13 @@
 
 .method public static method1940 : ()Z
     .code stack 2 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
         .catch [0] from L6 to L14 using L16
-L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L9:     invokestatic Method org/lwjgl/input/C method1910 (Lorg/lwjgl/input/C;)Z
+L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L9:     invokestatic Method org/lwjgl/input/C_697 method1910 (Lorg/lwjgl/input/C_697;)Z
 L12:    aload_0
 L13:    monitorexit
 L14:    ireturn
@@ -192,7 +192,7 @@ L19:
 
 .method public static method1942 : ()Z
     .code stack 2 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
@@ -215,7 +215,7 @@ L18:
 
 .method public static method1943 : (Z)V
     .code stack 2 locals 3
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_1
 L5:     monitorenter
@@ -268,8 +268,8 @@ L40:    pop
 L41:    iload_0
 L42:    goto L17
 L45:    athrow
-L46:    getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L49:    invokestatic Method org/lwjgl/input/C method1904 (Lorg/lwjgl/input/C;)V
+L46:    getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L49:    invokestatic Method org/lwjgl/input/C_697 method1904 (Lorg/lwjgl/input/C_697;)V
 L52:    return
 L53:    
         .attribute StackMap b'\x00\x03\x00\x11\x00\x01\x01\x00\x01\x01\x00\x2D\x00\x00\x00\x01\x07\x01\x2A\x00\x2E\x00\x01\x01\x00\x00'
@@ -278,13 +278,13 @@ L53:
 
 .method public static new : ()C
     .code stack 2 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
         .catch [0] from L6 to L15 using L17
-L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L9:     invokestatic Method org/lwjgl/input/C method1907 (Lorg/lwjgl/input/C;)I
+L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L9:     invokestatic Method org/lwjgl/input/C_697 method1907 (Lorg/lwjgl/input/C_697;)I
 L12:    i2c
 L13:    aload_0
 L14:    monitorexit
@@ -303,7 +303,7 @@ L22:
 
 .method public static try : ()Z
     .code stack 2 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
@@ -349,13 +349,13 @@ L28:
 
 .method public static this : ()J
     .code stack 3 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
         .catch [0] from L6 to L14 using L16
-L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L9:     invokestatic Method org/lwjgl/input/C method1905 (Lorg/lwjgl/input/C;)J
+L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L9:     invokestatic Method org/lwjgl/input/C_697 method1905 (Lorg/lwjgl/input/C_697;)J
 L12:    aload_0
 L13:    monitorexit
 L14:    lreturn
@@ -371,7 +371,7 @@ L21:
     .end code
 .end method
 
-.method private static method1946 : (Lorg/lwjgl/input/C;)Z
+.method private static method1946 : (Lorg/lwjgl/input/C_697;)Z
     .code stack 6 locals 1
 L0:     getstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
 L3:     invokevirtual Method java/nio/ByteBuffer hasRemaining ()Z
@@ -385,7 +385,7 @@ L20:    iconst_1
 L21:    dup
 L22:    pop2
 L23:    iand
-L24:    invokestatic Method org/lwjgl/input/C method1902 (Lorg/lwjgl/input/C;I)I
+L24:    invokestatic Method org/lwjgl/input/C_697 method1902 (Lorg/lwjgl/input/C_697;I)I
 L27:    pop
 L28:    getstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
 L31:    invokevirtual Method java/nio/ByteBuffer get ()B
@@ -400,15 +400,15 @@ L45:    iconst_0
 L46:    iconst_1
 L47:    dup
 L48:    pop2
-L49:    invokestatic Method org/lwjgl/input/C method1901 (Lorg/lwjgl/input/C;Z)Z
+L49:    invokestatic Method org/lwjgl/input/C_697 method1901 (Lorg/lwjgl/input/C_697;Z)Z
 L52:    aload_0
 L53:    getstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
 L56:    invokevirtual Method java/nio/ByteBuffer getInt ()I
-L59:    invokestatic Method org/lwjgl/input/C method1906 (Lorg/lwjgl/input/C;I)I
+L59:    invokestatic Method org/lwjgl/input/C_697 method1906 (Lorg/lwjgl/input/C_697;I)I
 L62:    aload_0
 L63:    getstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
 L66:    invokevirtual Method java/nio/ByteBuffer getLong ()J
-L69:    invokestatic Method org/lwjgl/input/C method1899 (Lorg/lwjgl/input/C;J)J
+L69:    invokestatic Method org/lwjgl/input/C_697 method1899 (Lorg/lwjgl/input/C_697;J)J
 L72:    pop2
 L73:    pop2
 L74:    aload_0
@@ -429,7 +429,7 @@ L96:    iconst_0
 L97:    iconst_1
 L98:    dup
 L99:    pop2
-L100:   invokestatic Method org/lwjgl/input/C method1908 (Lorg/lwjgl/input/C;Z)Z
+L100:   invokestatic Method org/lwjgl/input/C_697 method1908 (Lorg/lwjgl/input/C_697;Z)Z
 L103:   pop
 L104:   iconst_1
 L105:   dup
@@ -442,19 +442,19 @@ L111:   dup
 L112:   pop2
 L113:   ireturn
 L114:   
-        .attribute StackMap b'\x00\x07\x00\x2C\x00\x00\x00\x01\x07\x01\x2A\x00\x2D\x00\x01\x07\x00\x06\x00\x01\x07\x00\x06\x00\x31\x00\x01\x07\x00\x06\x00\x02\x07\x00\x06\x01\x00\x5F\x00\x00\x00\x01\x07\x01\x2A\x00\x60\x00\x01\x07\x00\x06\x00\x01\x07\x00\x06\x00\x64\x00\x01\x07\x00\x06\x00\x02\x07\x00\x06\x01\x00\x6D\x00\x01\x07\x00\x06\x00\x00'
+        .attribute StackMap b'\x00\x07\x00\x2C\x00\x00\x00\x01\x07\x01\x2A\x00\x2D\x00\x01\x07\x02\x45\x00\x01\x07\x02\x45\x00\x31\x00\x01\x07\x02\x45\x00\x02\x07\x02\x45\x01\x00\x5F\x00\x00\x00\x01\x07\x01\x2A\x00\x60\x00\x01\x07\x02\x45\x00\x01\x07\x02\x45\x00\x64\x00\x01\x07\x02\x45\x00\x02\x07\x02\x45\x01\x00\x6D\x00\x01\x07\x02\x45\x00\x00'
     .end code
 .end method
 
 .method public static method1947 : ()I
     .code stack 2 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
         .catch [0] from L6 to L14 using L16
-L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L9:     invokestatic Method org/lwjgl/input/C method1909 (Lorg/lwjgl/input/C;)I
+L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L9:     invokestatic Method org/lwjgl/input/C_697 method1909 (Lorg/lwjgl/input/C_697;)I
 L12:    aload_0
 L13:    monitorexit
 L14:    ireturn
@@ -472,7 +472,7 @@ L21:
 
 .method public static method1948 : ()Z
     .code stack 3 locals 3
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
@@ -484,13 +484,13 @@ L15:    dup
 L16:    ldc_w "Keyboard must be created before you can read events"
 L19:    invokespecial Method java/lang/IllegalStateException <init> (Ljava/lang/String;)V
 L22:    athrow
-L23:    getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L26:    invokestatic Method org/lwjgl/input/Keyboard method1946 (Lorg/lwjgl/input/C;)Z
+L23:    getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L26:    invokestatic Method org/lwjgl/input/Keyboard method1946 (Lorg/lwjgl/input/C_697;)Z
 L29:    dup
 L30:    istore_1
 L31:    ifeq L53
-L34:    getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L37:    invokestatic Method org/lwjgl/input/C method1903 (Lorg/lwjgl/input/C;)Z
+L34:    getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L37:    invokestatic Method org/lwjgl/input/C_697 method1903 (Lorg/lwjgl/input/C_697;)Z
 L40:    ifeq L53
 L43:    getstatic Field org/lwjgl/input/Keyboard field2567 Z
 L46:    ifne L53
@@ -515,7 +515,7 @@ L63:
 
 .method public static method1949 : ()I
     .code stack 3 locals 4
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
@@ -535,11 +535,11 @@ L31:    iconst_1
 L32:    dup
 L33:    pop2
 L34:    istore_2
-L35:    getstatic Field org/lwjgl/input/Keyboard field2576 Lorg/lwjgl/input/C;
-L38:    invokestatic Method org/lwjgl/input/Keyboard method1946 (Lorg/lwjgl/input/C;)Z
+L35:    getstatic Field org/lwjgl/input/Keyboard field2576 Lorg/lwjgl/input/C_697;
+L38:    invokestatic Method org/lwjgl/input/Keyboard method1946 (Lorg/lwjgl/input/C_697;)Z
 L41:    ifeq L66
-L44:    getstatic Field org/lwjgl/input/Keyboard field2576 Lorg/lwjgl/input/C;
-L47:    invokestatic Method org/lwjgl/input/C method1903 (Lorg/lwjgl/input/C;)Z
+L44:    getstatic Field org/lwjgl/input/Keyboard field2576 Lorg/lwjgl/input/C_697;
+L47:    invokestatic Method org/lwjgl/input/C_697 method1903 (Lorg/lwjgl/input/C_697;)Z
 L50:    ifeq L59
 L53:    getstatic Field org/lwjgl/input/Keyboard field2567 Z
 L56:    ifeq L66
@@ -589,9 +589,9 @@ L6:
     .code stack 3 locals 0
 L0:     getstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
 L3:     invokevirtual Method java/nio/ByteBuffer compact ()Ljava/nio/ByteBuffer;
-L6:     getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i;
+L6:     getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i_875;
 L9:     getstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
-L12:    invokeinterface InterfaceMethod org/lwjgl/opengl/i method4777 (Ljava/nio/ByteBuffer;)V 2
+L12:    invokeinterface InterfaceMethod org/lwjgl/opengl/i_875 method4777 (Ljava/nio/ByteBuffer;)V 2
 L17:    getstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
 L20:    invokevirtual Method java/nio/ByteBuffer flip ()Ljava/nio/Buffer;
 L23:    pop2
@@ -602,7 +602,7 @@ L25:
 
 .method public static method1953 : ()V
     .code stack 3 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
@@ -619,8 +619,8 @@ L17:    iconst_1
 L18:    dup
 L19:    pop2
 L20:    putstatic Field org/lwjgl/input/Keyboard field2574 Z
-L23:    getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i;
-L26:    invokeinterface InterfaceMethod org/lwjgl/opengl/i method4724 ()V 1
+L23:    getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i_875;
+L26:    invokeinterface InterfaceMethod org/lwjgl/opengl/i_875 method4724 ()V 1
 L31:    invokestatic Method org/lwjgl/input/Keyboard method1944 ()V
 L34:    aload_0
 L35:    monitorexit
@@ -640,13 +640,13 @@ L44:
 
 .method public static method1954 : ()Z
     .code stack 2 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
         .catch [0] from L6 to L14 using L16
-L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L9:     invokestatic Method org/lwjgl/input/C method1903 (Lorg/lwjgl/input/C;)Z
+L6:     getstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L9:     invokestatic Method org/lwjgl/input/C_697 method1903 (Lorg/lwjgl/input/C_697;)Z
 L12:    aload_0
 L13:    monitorexit
 L14:    ireturn
@@ -664,7 +664,7 @@ L21:
 
 .method public static method1955 : ()V
     .code stack 3 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
@@ -676,9 +676,9 @@ L15:    dup
 L16:    ldc_w "Keyboard must be created before you can poll the device"
 L19:    invokespecial Method java/lang/IllegalStateException <init> (Ljava/lang/String;)V
 L22:    athrow
-L23:    getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i;
+L23:    getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i_875;
 L26:    getstatic Field org/lwjgl/input/Keyboard new Ljava/nio/ByteBuffer;
-L29:    invokeinterface InterfaceMethod org/lwjgl/opengl/i method4710 (Ljava/nio/ByteBuffer;)V 2
+L29:    invokeinterface InterfaceMethod org/lwjgl/opengl/i_875 method4710 (Ljava/nio/ByteBuffer;)V 2
 L34:    invokestatic Method org/lwjgl/input/Keyboard method1952 ()V
 L37:    aload_0
 L38:    monitorexit
@@ -803,23 +803,23 @@ L195:   dup
 L196:   pop2
 L197:   invokestatic Method org/lwjgl/BufferUtils createByteBuffer (I)Ljava/nio/ByteBuffer;
 L200:   putstatic Field org/lwjgl/input/Keyboard new Ljava/nio/ByteBuffer;
-L203:   new org/lwjgl/input/C
+L203:   new org/lwjgl/input/C_697
 L206:   dup
 L207:   aconst_null
-L208:   invokespecial Method org/lwjgl/input/C <init> (Lorg/lwjgl/input/h;)V
-L211:   putstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C;
-L214:   new org/lwjgl/input/C
+L208:   invokespecial Method org/lwjgl/input/C_697 <init> (Lorg/lwjgl/input/h_706;)V
+L211:   putstatic Field org/lwjgl/input/Keyboard field2570 Lorg/lwjgl/input/C_697;
+L214:   new org/lwjgl/input/C_697
 L217:   dup
 L218:   aconst_null
-L219:   invokespecial Method org/lwjgl/input/C <init> (Lorg/lwjgl/input/h;)V
-L222:   putstatic Field org/lwjgl/input/Keyboard field2576 Lorg/lwjgl/input/C;
+L219:   invokespecial Method org/lwjgl/input/C_697 <init> (Lorg/lwjgl/input/h_706;)V
+L222:   putstatic Field org/lwjgl/input/Keyboard field2576 Lorg/lwjgl/input/C_697;
 L225:   return
 L226:   
         .attribute StackMap b'\x00\x06\x00\x2F\x00\x04\x07\x01\xDC\x07\x01\xDC\x01\x01\x00\x00\x00\xAD\x00\x04\x07\x01\xDC\x07\x01\xDC\x01\x01\x00\x00\x00\xB3\x00\x00\x00\x01\x07\x01\x2A\x00\xB7\x00\x00\x00\x01\x07\x01\x2A\x00\xB8\x00\x01\x07\x01\xDC\x00\x01\x07\x01\xCF\x00\xB9\x00\x02\x07\x01\xDC\x07\x00\x04\x00\x00'
     .end code
 .end method
 
-.method private static method1956 : (Lorg/lwjgl/opengl/i;)V
+.method private static method1956 : (Lorg/lwjgl/opengl/i_875;)V
     .code stack 3 locals 1
 L0:     getstatic Field org/lwjgl/input/Keyboard field2574 Z
 L3:     ifeq L8
@@ -829,9 +829,9 @@ L8:     getstatic Field org/lwjgl/input/Keyboard field2572 Z
 L11:    ifne L17
 L14:    invokestatic Method org/lwjgl/input/Keyboard method1941 ()V
 L17:    aload_0
-L18:    putstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i;
-L21:    getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i;
-L24:    invokeinterface InterfaceMethod org/lwjgl/opengl/i method4707 ()V 1
+L18:    putstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i_875;
+L21:    getstatic Field org/lwjgl/input/Keyboard field2569 Lorg/lwjgl/opengl/i_875;
+L24:    invokeinterface InterfaceMethod org/lwjgl/opengl/i_875 method4707 ()V 1
 L29:    iconst_1
 L30:    dup
 L31:    dup
@@ -846,7 +846,7 @@ L45:    putstatic Field org/lwjgl/input/Keyboard field2575 Ljava/nio/ByteBuffer;
 L48:    invokestatic Method org/lwjgl/input/Keyboard method1944 ()V
 L51:    return
 L52:    
-        .attribute StackMap b'\x00\x03\x00\x07\x00\x00\x00\x01\x07\x01\x2A\x00\x08\x00\x01\x07\x01\xB5\x00\x00\x00\x11\x00\x01\x07\x01\xB5\x00\x00'
+        .attribute StackMap b'\x00\x03\x00\x07\x00\x00\x00\x01\x07\x01\x2A\x00\x08\x00\x01\x07\x02\x73\x00\x00\x00\x11\x00\x01\x07\x02\x73\x00\x00'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -862,7 +862,7 @@ L5:
 
 .method public static method1957 : (I)Z
     .code stack 3 locals 3
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_1
 L5:     monitorenter
@@ -907,7 +907,7 @@ L55:
 
 .method public static method1958 : ()V
     .code stack 3 locals 2
-L0:     getstatic Field org/lwjgl/input/D field2554 Ljava/lang/Object;
+L0:     getstatic Field org/lwjgl/input/D_698 field2554 Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
@@ -919,8 +919,8 @@ L15:    dup
 L16:    ldc_w "Display must be created."
 L19:    invokespecial Method java/lang/IllegalStateException <init> (Ljava/lang/String;)V
 L22:    athrow
-L23:    invokestatic Method org/lwjgl/input/D method1911 ()Lorg/lwjgl/opengl/i;
-L26:    invokestatic Method org/lwjgl/input/Keyboard method1956 (Lorg/lwjgl/opengl/i;)V
+L23:    invokestatic Method org/lwjgl/input/D_698 method1911 ()Lorg/lwjgl/opengl/i_875;
+L26:    invokestatic Method org/lwjgl/input/Keyboard method1956 (Lorg/lwjgl/opengl/i_875;)V
 L29:    aload_0
 L30:    monitorexit
 L31:    return
@@ -938,7 +938,7 @@ L39:
     .exceptions org/lwjgl/LWJGLException
 .end method
 .innerclasses
-    org/lwjgl/input/C org/lwjgl/input/Keyboard [0] private static final
-    org/lwjgl/input/h org/lwjgl/input/Keyboard [0] static synthetic
+    org/lwjgl/input/C_697 org/lwjgl/input/Keyboard [0] private static final
+    org/lwjgl/input/h_706 org/lwjgl/input/Keyboard [0] static synthetic
 .end innerclasses
 .end class

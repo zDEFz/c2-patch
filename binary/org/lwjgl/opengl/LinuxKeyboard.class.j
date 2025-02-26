@@ -2,7 +2,7 @@
 .class final super org/lwjgl/opengl/LinuxKeyboard
 .super java/lang/Object
 .field private final field4533 Ljava/nio/charset/CharsetDecoder;
-.field private final field4534 Lorg/lwjgl/opengl/aA;
+.field private final field4534 Lorg/lwjgl/opengl/aA_836;
 .field private final field4535 [B
 .field private final false Ljava/nio/CharBuffer;
 .field private final field4536 I
@@ -588,7 +588,7 @@ L2:     iload_3
 L3:     invokespecial Method org/lwjgl/opengl/LinuxKeyboard method4838 (JI)J
 L6:     dup2
 L7:     lstore 4
-L9:     invokestatic Method org/lwjgl/opengl/QA method5332 (J)I
+L9:     invokestatic Method org/lwjgl/opengl/QA_787 method5332 (J)I
 L12:    dup
 L13:    istore_3
 L14:    ifne L32
@@ -600,7 +600,7 @@ L21:    pop2
 L22:    invokestatic Method org/lwjgl/opengl/LinuxKeyboard lookupKeysym (JI)J
 L25:    dup2
 L26:    lstore 4
-L28:    invokestatic Method org/lwjgl/opengl/QA method5332 (J)I
+L28:    invokestatic Method org/lwjgl/opengl/QA_787 method5332 (J)I
 L31:    istore_3
 L32:    iload_3
 L33:    ireturn
@@ -695,9 +695,9 @@ L71:
 L0:     aload_0
 L1:     dup
 L2:     invokespecial Method org/lwjgl/opengl/LinuxKeyboard method4833 ()V
-L5:     getfield Field org/lwjgl/opengl/LinuxKeyboard field4534 Lorg/lwjgl/opengl/aA;
+L5:     getfield Field org/lwjgl/opengl/LinuxKeyboard field4534 Lorg/lwjgl/opengl/aA_836;
 L8:     aload_1
-L9:     invokevirtual Method org/lwjgl/opengl/aA method285 (Ljava/nio/ByteBuffer;)V
+L9:     invokevirtual Method org/lwjgl/opengl/aA_836 method285 (Ljava/nio/ByteBuffer;)V
 L12:    return
 L13:    
     .end code
@@ -822,7 +822,7 @@ L31:    iconst_1
 L32:    dup
 L33:    pop2
 L34:    putfield Field org/lwjgl/opengl/LinuxKeyboard field4535 [B
-L37:    new org/lwjgl/opengl/aA
+L37:    new org/lwjgl/opengl/aA_836
 L40:    aload_0
 L41:    dup
 L42:    pop2
@@ -831,8 +831,8 @@ L44:    bipush 18
 L46:    iconst_1
 L47:    dup
 L48:    pop2
-L49:    invokespecial Method org/lwjgl/opengl/aA <init> (I)V
-L52:    putfield Field org/lwjgl/opengl/LinuxKeyboard field4534 Lorg/lwjgl/opengl/aA;
+L49:    invokespecial Method org/lwjgl/opengl/aA_836 <init> (I)V
+L52:    putfield Field org/lwjgl/opengl/LinuxKeyboard field4534 Lorg/lwjgl/opengl/aA_836;
 L55:    iconst_1
 L56:    dup
 L57:    pop2
@@ -1078,10 +1078,10 @@ L50:    getfield Field org/lwjgl/opengl/LinuxKeyboard field4546 Ljava/nio/ByteBu
 L53:    invokevirtual Method java/nio/ByteBuffer flip ()Ljava/nio/Buffer;
 L56:    aload_0
 L57:    dup
-L58:    getfield Field org/lwjgl/opengl/LinuxKeyboard field4534 Lorg/lwjgl/opengl/aA;
+L58:    getfield Field org/lwjgl/opengl/LinuxKeyboard field4534 Lorg/lwjgl/opengl/aA_836;
 L61:    swap
 L62:    getfield Field org/lwjgl/opengl/LinuxKeyboard field4546 Ljava/nio/ByteBuffer;
-L65:    invokevirtual Method org/lwjgl/opengl/aA method368 (Ljava/nio/ByteBuffer;)Z
+L65:    invokevirtual Method org/lwjgl/opengl/aA_836 method368 (Ljava/nio/ByteBuffer;)Z
 L68:    pop
 L69:    pop2
 L70:    return

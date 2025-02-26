@@ -58,7 +58,7 @@ L8:
 
 .method private static method2973 : (JLjava/util/Map;)V
     .code stack 4 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
 L3:     dup
 L4:     astore_3
 L5:     ifnonnull L22
@@ -91,7 +91,7 @@ L58:    invokeinterface InterfaceMethod java/util/Map put (Ljava/lang/Object;Lja
 L63:    pop
 L64:    return
 L65:    
-        .attribute StackMap b'\x00\x03\x00\x16\x00\x03\x04\x07\x00\x33\x07\x00\x35\x00\x00\x00\x2E\x00\x04\x04\x07\x00\x33\x07\x00\x35\x07\x00\x3B\x00\x00\x00\x40\x00\x04\x04\x07\x00\x33\x07\x00\x35\x07\x00\x3B\x00\x00'
+        .attribute StackMap b'\x00\x03\x00\x16\x00\x03\x04\x07\x00\x33\x07\x00\x5B\x00\x00\x00\x2E\x00\x04\x04\x07\x00\x33\x07\x00\x5B\x07\x00\x3B\x00\x00\x00\x40\x00\x04\x04\x07\x00\x33\x07\x00\x5B\x07\x00\x3B\x00\x00'
     .end code
 .end method
 
@@ -135,7 +135,7 @@ L12:
 .method static method2976 : (Ljava/lang/Object;)V
     .code stack 2 locals 3
 L0:     aload_0
-L1:     invokestatic Method org/lwjgl/opengl/GLContext method4605 (Ljava/lang/Object;)Lorg/lwjgl/opengl/kb;
+L1:     invokestatic Method org/lwjgl/opengl/GLContext method4605 (Ljava/lang/Object;)Lorg/lwjgl/opengl/kb_888;
 L4:     astore_1
 L5:     getstatic Field org/lwjgl/opengl/CallbackUtil field3269 Ljava/util/Map;
 L8:     aload_1
@@ -169,7 +169,7 @@ L71:    invokevirtual Method java/lang/Long longValue ()J
 L74:    invokestatic Method org/lwjgl/opengl/CallbackUtil deleteGlobalRef (J)V
 L77:    return
 L78:    
-        .attribute StackMap b'\x00\x03\x00\x1D\x00\x03\x07\x00\x04\x07\x00\x35\x07\x00\x3B\x00\x00\x00\x35\x00\x03\x07\x00\x04\x07\x00\x35\x07\x00\x3B\x00\x00\x00\x4D\x00\x03\x07\x00\x04\x07\x00\x35\x07\x00\x3B\x00\x00'
+        .attribute StackMap b'\x00\x03\x00\x1D\x00\x03\x07\x00\x04\x07\x00\x5B\x07\x00\x3B\x00\x00\x00\x35\x00\x03\x07\x00\x04\x07\x00\x5B\x07\x00\x3B\x00\x00\x00\x4D\x00\x03\x07\x00\x04\x07\x00\x5B\x07\x00\x3B\x00\x00'
     .end code
 .end method
 .end class

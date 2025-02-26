@@ -20,9 +20,9 @@ L6:     lconst_0
 L7:     lreturn
 L8:     athrow
         .catch java/security/PrivilegedActionException from L9 to L25 using L27
-L9:     new org/lwjgl/D
+L9:     new org/lwjgl/D_680
 L12:    dup
-L13:    invokespecial Method org/lwjgl/D <init> ()V
+L13:    invokespecial Method org/lwjgl/D_680 <init> ()V
 L16:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L19:    checkcast java/lang/Long
 L22:    invokevirtual Method java/lang/Long longValue ()J
@@ -218,6 +218,6 @@ L83:
     .end code
 .end method
 .innerclasses
-    org/lwjgl/D [0] [0] static
+    org/lwjgl/D_680 [0] [0] static
 .end innerclasses
 .end class

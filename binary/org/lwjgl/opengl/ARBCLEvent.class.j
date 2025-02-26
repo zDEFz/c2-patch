@@ -4,14 +4,14 @@
 .field public static final field2743 I = 33344
 .field public static final field2744 I = 33345
 
-.method public static method2191 : (Lorg/lwjgl/opencl/CLContext;Lorg/lwjgl/opencl/CLEvent;I)Lorg/lwjgl/opengl/zc;
+.method public static method2191 : (Lorg/lwjgl/opencl/CLContext;Lorg/lwjgl/opencl/CLEvent;I)Lorg/lwjgl/opengl/zc_969;
     .code stack 9 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L3:     getfield Field org/lwjgl/opengl/kb YJ J
+L0:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L3:     getfield Field org/lwjgl/opengl/kb_888 YJ J
 L6:     dup2
 L7:     lstore_3
-L8:     invokestatic Method org/lwjgl/l method2052 (J)V
-L11:    new org/lwjgl/opengl/zc
+L8:     invokestatic Method org/lwjgl/l_712 method2052 (J)V
+L11:    new org/lwjgl/opengl/zc_969
 L14:    dup
 L15:    aload_0
 L16:    invokevirtual Method org/lwjgl/opencl/CLContext getPointer ()J
@@ -20,7 +20,7 @@ L20:    invokevirtual Method org/lwjgl/opencl/CLEvent getPointer ()J
 L23:    iload_2
 L24:    lload_3
 L25:    invokestatic Method org/lwjgl/opengl/ARBCLEvent nglCreateSyncFromCLeventARB (JJIJ)J
-L28:    invokespecial Method org/lwjgl/opengl/zc <init> (J)V
+L28:    invokespecial Method org/lwjgl/opengl/zc_969 <init> (J)V
 L31:    areturn
 L32:    
     .end code

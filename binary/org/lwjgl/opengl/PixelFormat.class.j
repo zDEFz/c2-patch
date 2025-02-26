@@ -1,7 +1,7 @@
 .version 49 0
 .class public final super org/lwjgl/opengl/PixelFormat
 .super java/lang/Object
-.implements org/lwjgl/opengl/h
+.implements org/lwjgl/opengl/h_871
 .field private samples I
 .field private bpp I
 .field private accum_alpha I

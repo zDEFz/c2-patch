@@ -12,7 +12,7 @@
 .field private static final field5144 I = 0
 .field private this I
 .field private field5145 B
-.field private final field5146 Lorg/lwjgl/opengl/aA;
+.field private final field5146 Lorg/lwjgl/opengl/aA_836;
 .field private final field5147 Ljava/nio/ByteBuffer;
 .field private final field5148 [B
 
@@ -81,7 +81,7 @@ L34:    iconst_1
 L35:    dup
 L36:    pop2
 L37:    putfield Field org/lwjgl/opengl/WindowsKeyboard field5139 [B
-L40:    new org/lwjgl/opengl/aA
+L40:    new org/lwjgl/opengl/aA_836
 L43:    aload_0
 L44:    dup
 L45:    pop2
@@ -90,8 +90,8 @@ L47:    bipush 18
 L49:    iconst_1
 L50:    dup
 L51:    pop2
-L52:    invokespecial Method org/lwjgl/opengl/aA <init> (I)V
-L55:    putfield Field org/lwjgl/opengl/WindowsKeyboard field5146 Lorg/lwjgl/opengl/aA;
+L52:    invokespecial Method org/lwjgl/opengl/aA_836 <init> (I)V
+L55:    putfield Field org/lwjgl/opengl/WindowsKeyboard field5146 Lorg/lwjgl/opengl/aA_836;
 L58:    iconst_1
 L59:    dup
 L60:    pop2
@@ -234,7 +234,7 @@ L13:    pop2
 L14:    iand
 L15:    istore_3
 L16:    iload_1
-L17:    invokestatic Method org/lwjgl/opengl/L method4657 (I)I
+L17:    invokestatic Method org/lwjgl/opengl/L_764 method4657 (I)I
 L20:    istore_1
 L21:    aload_0
 L22:    getfield Field org/lwjgl/opengl/WindowsKeyboard field5148 [B
@@ -334,10 +334,10 @@ L54:    getfield Field org/lwjgl/opengl/WindowsKeyboard field5147 Ljava/nio/Byte
 L57:    invokevirtual Method java/nio/ByteBuffer flip ()Ljava/nio/Buffer;
 L60:    aload_0
 L61:    dup
-L62:    getfield Field org/lwjgl/opengl/WindowsKeyboard field5146 Lorg/lwjgl/opengl/aA;
+L62:    getfield Field org/lwjgl/opengl/WindowsKeyboard field5146 Lorg/lwjgl/opengl/aA_836;
 L65:    swap
 L66:    getfield Field org/lwjgl/opengl/WindowsKeyboard field5147 Ljava/nio/ByteBuffer;
-L69:    invokevirtual Method org/lwjgl/opengl/aA method368 (Ljava/nio/ByteBuffer;)Z
+L69:    invokevirtual Method org/lwjgl/opengl/aA_836 method368 (Ljava/nio/ByteBuffer;)Z
 L72:    pop
 L73:    pop2
 L74:    return
@@ -413,7 +413,7 @@ L41:    dup
 L42:    pop2
 L43:    putfield Field org/lwjgl/opengl/WindowsKeyboard new Z
 L46:    iload_1
-L47:    invokestatic Method org/lwjgl/opengl/L method4657 (I)I
+L47:    invokestatic Method org/lwjgl/opengl/L_764 method4657 (I)I
 L50:    dup
 L51:    istore_2
 L52:    aload_0
@@ -546,9 +546,9 @@ L1:
 L0:     aload_0
 L1:     dup
 L2:     invokespecial Method org/lwjgl/opengl/WindowsKeyboard method5400 ()V
-L5:     getfield Field org/lwjgl/opengl/WindowsKeyboard field5146 Lorg/lwjgl/opengl/aA;
+L5:     getfield Field org/lwjgl/opengl/WindowsKeyboard field5146 Lorg/lwjgl/opengl/aA_836;
 L8:     aload_1
-L9:     invokevirtual Method org/lwjgl/opengl/aA method285 (Ljava/nio/ByteBuffer;)V
+L9:     invokevirtual Method org/lwjgl/opengl/aA_836 method285 (Ljava/nio/ByteBuffer;)V
 L12:    return
 L13:    
     .end code

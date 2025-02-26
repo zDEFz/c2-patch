@@ -238,7 +238,7 @@ L44:    pop2
 L45:    bastore
 L46:    astore_1
 L47:    getstatic Field jouvieje/bass/BassInit field2317 Z
-L50:    putstatic Field org/jouvieje/libloader/G field2453 Z
+L50:    putstatic Field org/jouvieje/libloader/G_669 field2453 Z
 L53:    iconst_0
 L54:    iconst_1
 L55:    dup
@@ -272,15 +272,15 @@ L94:    ldc ".dylib"
 L96:    goto L101
 L99:    ldc ".jnilib"
 L101:   astore 6
-L103:   new org/jouvieje/libloader/M
+L103:   new org/jouvieje/libloader/M_671
 L106:   dup
-L107:   invokespecial Method org/jouvieje/libloader/M <init> ()V
+L107:   invokespecial Method org/jouvieje/libloader/M_671 <init> ()V
 L110:   astore 7
 L112:   iload 4
 L114:   aload 7
 L116:   dup
 L117:   dup_x2
-L118:   new org/jouvieje/libloader/m
+L118:   new org/jouvieje/libloader/m_677
 L121:   aload 7
 L123:   dup_x1
 L124:   dup_x1
@@ -299,9 +299,9 @@ L140:   invokespecial Method java/lang/StringBuffer <init> (Ljava/lang/String;)V
 L143:   ldc ".dll"
 L145:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L148:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L151:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L154:   putfield Field org/jouvieje/libloader/M field2457 Lorg/jouvieje/libloader/m;
-L157:   new org/jouvieje/libloader/m
+L151:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L154:   putfield Field org/jouvieje/libloader/M_671 field2457 Lorg/jouvieje/libloader/m_677;
+L157:   new org/jouvieje/libloader/m_677
 L160:   aload 7
 L162:   dup_x2
 L163:   dup
@@ -325,9 +325,9 @@ L198:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L201:   ldc ".dll"
 L203:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L206:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L209:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L212:   putfield Field org/jouvieje/libloader/M this Lorg/jouvieje/libloader/m;
-L215:   new org/jouvieje/libloader/m
+L209:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L212:   putfield Field org/jouvieje/libloader/M_671 this Lorg/jouvieje/libloader/m_677;
+L215:   new org/jouvieje/libloader/m_677
 L218:   aload 7
 L220:   dup
 L221:   pop2
@@ -345,9 +345,9 @@ L237:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L240:   ldc ".so"
 L242:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L245:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L248:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L251:   putfield Field org/jouvieje/libloader/M field2456 Lorg/jouvieje/libloader/m;
-L254:   new org/jouvieje/libloader/m
+L248:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L251:   putfield Field org/jouvieje/libloader/M_671 field2456 Lorg/jouvieje/libloader/m_677;
+L254:   new org/jouvieje/libloader/m_677
 L257:   aload 7
 L259:   dup
 L260:   pop2
@@ -371,9 +371,9 @@ L296:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L299:   ldc ".so"
 L301:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L304:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L307:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L310:   putfield Field org/jouvieje/libloader/M field2455 Lorg/jouvieje/libloader/m;
-L313:   new org/jouvieje/libloader/m
+L307:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L310:   putfield Field org/jouvieje/libloader/M_671 field2455 Lorg/jouvieje/libloader/m_677;
+L313:   new org/jouvieje/libloader/m_677
 L316:   aload 7
 L318:   dup
 L319:   pop2
@@ -391,11 +391,11 @@ L335:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L338:   aload 6
 L340:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L343:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L346:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L349:   putfield Field org/jouvieje/libloader/M field2458 Lorg/jouvieje/libloader/m;
-L352:   invokestatic Method org/jouvieje/libloader/G method1742 (Lorg/jouvieje/libloader/M;Z)Z
+L346:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L349:   putfield Field org/jouvieje/libloader/M_671 field2458 Lorg/jouvieje/libloader/m_677;
+L352:   invokestatic Method org/jouvieje/libloader/G_669 method1742 (Lorg/jouvieje/libloader/M_671;Z)Z
 L355:   ifne L387
-L358:   new Uj
+L358:   new Uj_289
 L361:   dup
 L362:   new java/lang/StringBuffer
 L365:   dup
@@ -406,7 +406,7 @@ L372:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L375:   ldc " in java.library.path or org.lwjgl.librarypath"
 L377:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L380:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L383:   invokespecial Method Uj <init> (Ljava/lang/String;)V
+L383:   invokespecial Method Uj_289 <init> (Ljava/lang/String;)V
 L386:   athrow
 L387:   new java/lang/StringBuffer
 L390:   dup
@@ -424,10 +424,10 @@ L414:   arraylength
 L415:   if_icmplt L63
 L418:   invokestatic Method jouvieje/bass/BassInit attachJavaVM ()Z
 L421:   ifne L434
-L424:   new Uj
+L424:   new Uj_289
 L427:   dup
 L428:   ldc "JVM not attached"
-L430:   invokespecial Method Uj <init> (Ljava/lang/String;)V
+L430:   invokespecial Method Uj_289 <init> (Ljava/lang/String;)V
 L433:   athrow
 L434:   bipush 11
 L436:   iconst_1
@@ -526,15 +526,15 @@ L548:   aload_2
 L549:   iload_3
 L550:   aaload
 L551:   astore 4
-L553:   new org/jouvieje/libloader/M
+L553:   new org/jouvieje/libloader/M_671
 L556:   dup
-L557:   invokespecial Method org/jouvieje/libloader/M <init> ()V
+L557:   invokespecial Method org/jouvieje/libloader/M_671 <init> ()V
 L560:   astore 5
 L562:   iconst_1
 L563:   aload 5
 L565:   dup
 L566:   dup_x2
-L567:   new org/jouvieje/libloader/m
+L567:   new org/jouvieje/libloader/m_677
 L570:   aload 5
 L572:   dup_x1
 L573:   dup_x1
@@ -553,9 +553,9 @@ L591:   invokespecial Method java/lang/StringBuffer <init> (Ljava/lang/String;)V
 L594:   ldc ".dll"
 L596:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L599:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L602:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L605:   putfield Field org/jouvieje/libloader/M field2457 Lorg/jouvieje/libloader/m;
-L608:   new org/jouvieje/libloader/m
+L602:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L605:   putfield Field org/jouvieje/libloader/M_671 field2457 Lorg/jouvieje/libloader/m_677;
+L608:   new org/jouvieje/libloader/m_677
 L611:   aload 5
 L613:   dup_x2
 L614:   dup
@@ -573,9 +573,9 @@ L631:   invokespecial Method java/lang/StringBuffer <init> (Ljava/lang/String;)V
 L634:   ldc ".dll"
 L636:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L639:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L642:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L645:   putfield Field org/jouvieje/libloader/M this Lorg/jouvieje/libloader/m;
-L648:   new org/jouvieje/libloader/m
+L642:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L645:   putfield Field org/jouvieje/libloader/M_671 this Lorg/jouvieje/libloader/m_677;
+L648:   new org/jouvieje/libloader/m_677
 L651:   aload 5
 L653:   dup
 L654:   pop2
@@ -593,9 +593,9 @@ L672:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L675:   ldc ".so"
 L677:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L680:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L683:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L686:   putfield Field org/jouvieje/libloader/M field2456 Lorg/jouvieje/libloader/m;
-L689:   new org/jouvieje/libloader/m
+L683:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L686:   putfield Field org/jouvieje/libloader/M_671 field2456 Lorg/jouvieje/libloader/m_677;
+L689:   new org/jouvieje/libloader/m_677
 L692:   aload 5
 L694:   dup
 L695:   pop2
@@ -613,9 +613,9 @@ L713:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L716:   ldc ".so"
 L718:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L721:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L724:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L727:   putfield Field org/jouvieje/libloader/M field2455 Lorg/jouvieje/libloader/m;
-L730:   new org/jouvieje/libloader/m
+L724:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L727:   putfield Field org/jouvieje/libloader/M_671 field2455 Lorg/jouvieje/libloader/m_677;
+L730:   new org/jouvieje/libloader/m_677
 L733:   aload 5
 L735:   dup
 L736:   pop2
@@ -633,12 +633,12 @@ L754:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)L
 L757:   ldc ".dylib"
 L759:   invokevirtual Method java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;
 L762:   invokevirtual Method java/lang/StringBuffer toString ()Ljava/lang/String;
-L765:   invokespecial Method org/jouvieje/libloader/m <init> (Ljava/lang/String;Ljava/lang/String;)V
-L768:   putfield Field org/jouvieje/libloader/M field2458 Lorg/jouvieje/libloader/m;
+L765:   invokespecial Method org/jouvieje/libloader/m_677 <init> (Ljava/lang/String;Ljava/lang/String;)V
+L768:   putfield Field org/jouvieje/libloader/M_671 field2458 Lorg/jouvieje/libloader/m_677;
 L771:   iconst_1
 L772:   dup
 L773:   pop2
-L774:   invokestatic Method org/jouvieje/libloader/G method1742 (Lorg/jouvieje/libloader/M;Z)Z
+L774:   invokestatic Method org/jouvieje/libloader/G_669 method1742 (Lorg/jouvieje/libloader/M_671;Z)Z
 L777:   istore 6
 L779:   getstatic Field jouvieje/bass/BassInit field2316 [Z
 L782:   iload_3
@@ -677,9 +677,9 @@ L850:   pop2
 L851:   putstatic Field jouvieje/bass/BassInit field2315 Z
 L854:   return
 L855:   
-        .attribute StackMap b'\x00\x0E\x00\x3E\x00\x00\x00\x01\x07\x00\x41\x00\x3F\x00\x03\x07\x00\x43\x07\x00\x44\x01\x00\x00\x00\x55\x00\x00\x00\x01\x07\x00\x41\x00\x56\x00\x05\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x00\x00\x00\x58\x00\x05\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x00\x01\x07\x00\x34\x00\x63\x00\x06\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x07\x00\x34\x00\x00\x00\x65\x00\x06\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x07\x00\x34\x00\x01\x07\x00\x34\x01\x83\x00\x08\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x07\x00\x34\x07\x00\x34\x07\x00\x4E\x00\x00\x01\x9D\x00\x03\x07\x00\x43\x07\x00\x44\x01\x00\x01\x01\x01\xB2\x00\x03\x07\x00\x43\x07\x00\x44\x01\x00\x00\x02\x24\x00\x04\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x00\x00\x03\x32\x00\x07\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x07\x00\x34\x07\x00\x4E\x01\x00\x01\x08\x03\x14\x03\x46\x00\x07\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x07\x00\x34\x07\x00\x4E\x01\x00\x00\x03\x4A\x00\x04\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x00\x01\x01'
+        .attribute StackMap b'\x00\x0E\x00\x3E\x00\x00\x00\x01\x07\x00\x41\x00\x3F\x00\x03\x07\x00\x43\x07\x00\x44\x01\x00\x00\x00\x55\x00\x00\x00\x01\x07\x00\x41\x00\x56\x00\x05\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x00\x00\x00\x58\x00\x05\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x00\x01\x07\x00\x34\x00\x63\x00\x06\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x07\x00\x34\x00\x00\x00\x65\x00\x06\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x07\x00\x34\x00\x01\x07\x00\x34\x01\x83\x00\x08\x07\x00\x43\x07\x00\x44\x01\x07\x00\x34\x01\x07\x00\x34\x07\x00\x34\x07\x00\xC2\x00\x00\x01\x9D\x00\x03\x07\x00\x43\x07\x00\x44\x01\x00\x01\x01\x01\xB2\x00\x03\x07\x00\x43\x07\x00\x44\x01\x00\x00\x02\x24\x00\x04\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x00\x00\x03\x32\x00\x07\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x07\x00\x34\x07\x00\xC2\x01\x00\x01\x08\x03\x14\x03\x46\x00\x07\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x07\x00\x34\x07\x00\xC2\x01\x00\x00\x03\x4A\x00\x04\x07\x00\x43\x07\x00\x44\x07\x00\x43\x01\x00\x01\x01'
     .end code
-    .exceptions Uj
+    .exceptions Uj_289
 .end method
 
 .method protected static final native get_NATIVEBASS_VERSION : ()I

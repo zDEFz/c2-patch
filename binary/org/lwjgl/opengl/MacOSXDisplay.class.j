@@ -1,20 +1,20 @@
 .version 49 0
 .class final super org/lwjgl/opengl/MacOSXDisplay
 .super java/lang/Object
-.implements org/lwjgl/opengl/m
+.implements org/lwjgl/opengl/m_893
 .field private static final field4513 Ljava/nio/IntBuffer;
 .field private field4514 Ljava/awt/Robot;
-.field private try Lorg/lwjgl/opengl/TA;
+.field private try Lorg/lwjgl/opengl/TA_802;
 .field private static final field4515 I = 24
-.field private new Lorg/lwjgl/opengl/NA;
+.field private new Lorg/lwjgl/opengl/NA_774;
 .field private field4516 Ljava/awt/Canvas;
 .field private this Ljava/awt/DisplayMode;
 .field private field4517 Z
 .field private field4518 Lorg/lwjgl/opengl/MacOSXMouseEventQueue;
 .field private static final field4519 I = 256
-.field private field4520 Lorg/lwjgl/opengl/bA;
+.field private field4520 Lorg/lwjgl/opengl/bA_842;
 
-.method public method4705 : (Lorg/lwjgl/opengl/a;)Z
+.method public method4705 : (Lorg/lwjgl/opengl/a_835;)Z
     .code stack 3 locals 2
 L0:     iconst_0
 L1:     iconst_1
@@ -25,7 +25,7 @@ L5:
     .end code
 .end method
 
-.method public method4731 : (Lorg/lwjgl/opengl/a;I)V
+.method public method4731 : (Lorg/lwjgl/opengl/a_835;I)V
     .code stack 2 locals 3
 L0:     new java/lang/UnsupportedOperationException
 L3:     dup
@@ -124,7 +124,7 @@ L55:
 
 .method public method4730 : (Lorg/lwjgl/opengl/DisplayMode;)V
     .code stack 4 locals 6
-L0:     invokestatic Method org/lwjgl/opengl/bA method326 ()Ljava/awt/GraphicsDevice;
+L0:     invokestatic Method org/lwjgl/opengl/bA_842 method326 ()Ljava/awt/GraphicsDevice;
 L3:     invokevirtual Method java/awt/GraphicsDevice getDisplayModes ()[Ljava/awt/DisplayMode;
 L6:     dup
 L7:     astore_2
@@ -184,10 +184,10 @@ L9:
     .end code
 .end method
 
-.method public method4717 : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)Lorg/lwjgl/opengl/a;
+.method public method4717 : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)Lorg/lwjgl/opengl/a_835;
     .code stack 7 locals 4
         .catch org/lwjgl/LWJGLException from L0 to L13 using L15
-L0:     new org/lwjgl/opengl/mA
+L0:     new org/lwjgl/opengl/mA_894
 L3:     dup
 L4:     aload_1
 L5:     aload_2
@@ -195,11 +195,11 @@ L6:     iconst_1
 L7:     dup
 L8:     dup
 L9:     pop2
-L10:    invokespecial Method org/lwjgl/opengl/mA <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;Z)V
+L10:    invokespecial Method org/lwjgl/opengl/mA_894 <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;Z)V
 L13:    areturn
 L14:    athrow
 L15:    astore_3
-L16:    new org/lwjgl/opengl/mA
+L16:    new org/lwjgl/opengl/mA_894
 L19:    dup
 L20:    aload_1
 L21:    aload_2
@@ -207,10 +207,10 @@ L22:    iconst_0
 L23:    iconst_1
 L24:    dup
 L25:    pop2
-L26:    invokespecial Method org/lwjgl/opengl/mA <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;Z)V
+L26:    invokespecial Method org/lwjgl/opengl/mA_894 <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;Z)V
 L29:    areturn
 L30:    
-        .attribute StackMap b'\x00\x02\x00\x0E\x00\x00\x00\x01\x07\x00\x43\x00\x0F\x00\x03\x07\x00\x02\x07\x00\x96\x07\x00\x98\x00\x01\x07\x00\x2D'
+        .attribute StackMap b'\x00\x02\x00\x0E\x00\x00\x00\x01\x07\x00\x43\x00\x0F\x00\x03\x07\x00\x02\x07\x00\x96\x07\x01\xFF\x00\x01\x07\x00\x2D'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -218,12 +218,12 @@ L30:
 .method public method4714 : ()Z
     .code stack 3 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L4:     ifnull L26
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L11:    invokevirtual Method org/lwjgl/opengl/bA method324 ()Lorg/lwjgl/opengl/DA;
-L14:    invokevirtual Method org/lwjgl/opengl/DA method94 ()Z
+L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L11:    invokevirtual Method org/lwjgl/opengl/bA_842 method324 ()Lorg/lwjgl/opengl/DA_729;
+L14:    invokevirtual Method org/lwjgl/opengl/DA_729 method94 ()Z
 L17:    ifeq L26
 L20:    iconst_1
 L21:    dup
@@ -244,9 +244,9 @@ L31:
 .method public method4710 : (Ljava/nio/ByteBuffer;)V
     .code stack 2 locals 2
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA_774;
 L4:     aload_1
-L5:     invokevirtual Method org/lwjgl/opengl/NA method367 (Ljava/nio/ByteBuffer;)V
+L5:     invokevirtual Method org/lwjgl/opengl/NA_774 method367 (Ljava/nio/ByteBuffer;)V
 L8:     return
 L9:     
     .end code
@@ -254,7 +254,7 @@ L9:
 
 .method public new : ()I
     .code stack 1 locals 1
-L0:     invokestatic Method org/lwjgl/opengl/SC method5362 ()I
+L0:     invokestatic Method org/lwjgl/opengl/SC_796 method5362 ()I
 L3:     ireturn
 L4:     
     .end code
@@ -263,14 +263,14 @@ L4:
 .method public method4724 : ()V
     .code stack 2 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA_774;
 L4:     ifnull L14
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA;
-L11:    invokevirtual Method org/lwjgl/opengl/NA method71 ()V
+L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA_774;
+L11:    invokevirtual Method org/lwjgl/opengl/NA_774 method71 ()V
 L14:    aload_0
 L15:    aconst_null
-L16:    putfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA;
+L16:    putfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA_774;
 L19:    return
 L20:    
         .attribute StackMap b'\x00\x01\x00\x0E\x00\x01\x07\x00\x02\x00\x00'
@@ -280,19 +280,19 @@ L20:
 .method public method4736 : (Ljava/lang/String;)V
     .code stack 2 locals 2
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L4:     ifnull L15
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L11:    aload_1
-L12:    invokevirtual Method org/lwjgl/opengl/bA setTitle (Ljava/lang/String;)V
+L12:    invokevirtual Method org/lwjgl/opengl/bA_842 setTitle (Ljava/lang/String;)V
 L15:    return
 L16:    
         .attribute StackMap b'\x00\x01\x00\x0F\x00\x02\x07\x00\x02\x07\x00\xBC\x00\x00'
     .end code
 .end method
 
-.method public method4701 : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Lorg/lwjgl/opengl/a;
+.method public method4701 : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Lorg/lwjgl/opengl/a_835;
     .code stack 6 locals 7
 L0:     new org/lwjgl/opengl/MacOSXPbufferPeerInfo
 L3:     dup
@@ -300,14 +300,14 @@ L4:     iload_1
 L5:     iload_2
 L6:     aload_3
 L7:     aload 4
-L9:     invokespecial Method org/lwjgl/opengl/MacOSXPbufferPeerInfo <init> (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)V
+L9:     invokespecial Method org/lwjgl/opengl/MacOSXPbufferPeerInfo <init> (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)V
 L12:    areturn
 L13:    
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method public method4738 : (Lorg/lwjgl/opengl/a;II)V
+.method public method4738 : (Lorg/lwjgl/opengl/a_835;II)V
     .code stack 2 locals 4
 L0:     new java/lang/UnsupportedOperationException
 L3:     dup
@@ -332,33 +332,33 @@ L5:
 .method public method4718 : ()V
     .code stack 4 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA_802;
 L4:     ifnull L19
 L7:     aconst_null
 L8:     aload_0
 L9:     dup_x1
-L10:    getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA;
-L13:    invokevirtual Method org/lwjgl/opengl/TA method71 ()V
-L16:    putfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA;
+L10:    getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA_802;
+L13:    invokevirtual Method org/lwjgl/opengl/TA_802 method71 ()V
+L16:    putfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA_802;
 L19:    aload_0
-L20:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L20:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L23:    ifnull L60
-L26:    new org/lwjgl/opengl/EA
+L26:    new org/lwjgl/opengl/EA_734
 L29:    dup
 L30:    aload_0
-L31:    invokespecial Method org/lwjgl/opengl/EA <init> (Lorg/lwjgl/opengl/MacOSXDisplay;)V
+L31:    invokespecial Method org/lwjgl/opengl/EA_734 <init> (Lorg/lwjgl/opengl/MacOSXDisplay;)V
 L34:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L37:    pop
 L38:    aload_0
-L39:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L42:    invokevirtual Method org/lwjgl/opengl/bA isDisplayable ()Z
+L39:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L42:    invokevirtual Method org/lwjgl/opengl/bA_842 isDisplayable ()Z
 L45:    ifeq L55
 L48:    aload_0
-L49:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L52:    invokevirtual Method org/lwjgl/opengl/bA dispose ()V
+L49:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L52:    invokevirtual Method org/lwjgl/opengl/bA_842 dispose ()V
 L55:    aload_0
 L56:    aconst_null
-L57:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L57:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L60:    aload_0
 L61:    iconst_0
 L62:    iconst_1
@@ -371,10 +371,10 @@ L69:
     .end code
 .end method
 
-.method static synthetic method4805 : (Lorg/lwjgl/opengl/MacOSXDisplay;)Lorg/lwjgl/opengl/bA;
+.method static synthetic method4805 : (Lorg/lwjgl/opengl/MacOSXDisplay;)Lorg/lwjgl/opengl/bA_842;
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L4:     areturn
 L5:     
     .end code
@@ -383,8 +383,8 @@ L5:
 .method public true : ()I
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L4:     invokevirtual Method org/lwjgl/opengl/bA getY ()I
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L4:     invokevirtual Method org/lwjgl/opengl/bA_842 getY ()I
 L7:     ireturn
 L8:     
     .end code
@@ -392,7 +392,7 @@ L8:
 
 .method public method4707 : ()V
     .code stack 5 locals 1
-L0:     new org/lwjgl/opengl/NA
+L0:     new org/lwjgl/opengl/NA_774
 L3:     aload_0
 L4:     dup_x1
 L5:     dup_x2
@@ -401,10 +401,10 @@ L7:     pop2
 L8:     dup
 L9:     aload_0
 L10:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4516 Ljava/awt/Canvas;
-L13:    invokespecial Method org/lwjgl/opengl/NA <init> (Ljava/awt/Component;)V
-L16:    putfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA;
-L19:    getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA;
-L22:    invokevirtual Method org/lwjgl/opengl/NA method56 ()V
+L13:    invokespecial Method org/lwjgl/opengl/NA_774 <init> (Ljava/awt/Component;)V
+L16:    putfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA_774;
+L19:    getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA_774;
+L22:    invokevirtual Method org/lwjgl/opengl/NA_774 method56 ()V
 L25:    return
 L26:    
     .end code
@@ -423,8 +423,8 @@ L5:
 .method public method4747 : ()I
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L4:     invokevirtual Method org/lwjgl/opengl/bA getWidth ()I
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L4:     invokevirtual Method org/lwjgl/opengl/bA_842 getWidth ()I
 L7:     ireturn
 L8:     
     .end code
@@ -442,13 +442,13 @@ L8:
 
 .method public method4762 : ()Z
     .code stack 1 locals 1
-L0:     invokestatic Method org/lwjgl/opengl/SC method5358 ()Z
+L0:     invokestatic Method org/lwjgl/opengl/SC_796 method5358 ()Z
 L3:     ireturn
 L4:     
     .end code
 .end method
 
-.method public method4776 : (Lorg/lwjgl/opengl/a;I)V
+.method public method4776 : (Lorg/lwjgl/opengl/a_835;I)V
     .code stack 2 locals 3
 L0:     new java/lang/UnsupportedOperationException
 L3:     dup
@@ -465,8 +465,8 @@ L8:
 .method public method4704 : ()I
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L4:     invokevirtual Method org/lwjgl/opengl/bA getX ()I
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L4:     invokevirtual Method org/lwjgl/opengl/bA_842 getX ()I
 L7:     ireturn
 L8:     
     .end code
@@ -474,10 +474,10 @@ L8:
 
 .method public method4733 : ()V
     .code stack 3 locals 1
-L0:     invokestatic Method org/lwjgl/opengl/bA method326 ()Ljava/awt/GraphicsDevice;
+L0:     invokestatic Method org/lwjgl/opengl/bA_842 method326 ()Ljava/awt/GraphicsDevice;
 L3:     invokevirtual Method java/awt/GraphicsDevice getFullScreenWindow ()Ljava/awt/Window;
 L6:     ifnull L16
-L9:     invokestatic Method org/lwjgl/opengl/bA method326 ()Ljava/awt/GraphicsDevice;
+L9:     invokestatic Method org/lwjgl/opengl/bA_842 method326 ()Ljava/awt/GraphicsDevice;
 L12:    aconst_null
 L13:    invokevirtual Method java/awt/GraphicsDevice setFullScreenWindow (Ljava/awt/Window;)V
 L16:    aload_0
@@ -494,8 +494,8 @@ L26:
 .method public method4751 : ()Z
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA;
-L4:     invokevirtual Method org/lwjgl/opengl/TA method263 ()Z
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA_802;
+L4:     invokevirtual Method org/lwjgl/opengl/TA_802 method263 ()Z
 L7:     ireturn
 L8:     
     .end code
@@ -521,7 +521,7 @@ L5:     swap
 L6:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4514 Ljava/awt/Robot;
 L9:     iload_1
 L10:    iload_2
-L11:    invokestatic Method org/lwjgl/opengl/SC method5360 (Ljava/awt/Component;Ljava/awt/Robot;II)V
+L11:    invokestatic Method org/lwjgl/opengl/SC_796 method5360 (Ljava/awt/Component;Ljava/awt/Robot;II)V
 L14:    return
 L15:    
     .end code
@@ -530,9 +530,9 @@ L15:
 .method public method4721 : (Z)V
     .code stack 2 locals 2
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L4:     iload_1
-L5:     invokevirtual Method org/lwjgl/opengl/bA setResizable (Z)V
+L5:     invokevirtual Method org/lwjgl/opengl/bA_842 setResizable (Z)V
 L8:     return
 L9:     
     .end code
@@ -567,7 +567,7 @@ L2:
 
 .method public method4698 : ()Lorg/lwjgl/opengl/DisplayMode;
     .code stack 1 locals 1
-L0:     invokestatic Method org/lwjgl/opengl/bA method326 ()Ljava/awt/GraphicsDevice;
+L0:     invokestatic Method org/lwjgl/opengl/bA_842 method326 ()Ljava/awt/GraphicsDevice;
 L3:     invokevirtual Method java/awt/GraphicsDevice getDisplayMode ()Ljava/awt/DisplayMode;
 L6:     invokestatic Method org/lwjgl/opengl/MacOSXDisplay method4808 (Ljava/awt/DisplayMode;)Lorg/lwjgl/opengl/DisplayMode;
 L9:     areturn
@@ -611,12 +611,12 @@ L0:     aload_1
 L1:     checkcast java/awt/Cursor
 L4:     astore_1
 L5:     aload_0
-L6:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L6:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L9:     ifnull L20
 L12:    aload_0
-L13:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L13:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L16:    aload_1
-L17:    invokevirtual Method org/lwjgl/opengl/bA setCursor (Ljava/awt/Cursor;)V
+L17:    invokevirtual Method org/lwjgl/opengl/bA_842 setCursor (Ljava/awt/Cursor;)V
 L20:    return
 L21:    
         .attribute StackMap b'\x00\x01\x00\x14\x00\x02\x07\x00\x02\x07\x01\x34\x00\x00'
@@ -626,7 +626,7 @@ L21:
 
 .method public try : ()I
     .code stack 1 locals 1
-L0:     invokestatic Method org/lwjgl/opengl/SC method5354 ()I
+L0:     invokestatic Method org/lwjgl/opengl/SC_796 method5354 ()I
 L3:     ireturn
 L4:     
     .end code
@@ -649,9 +649,9 @@ L5:
 .method public method4777 : (Ljava/nio/ByteBuffer;)V
     .code stack 2 locals 2
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay new Lorg/lwjgl/opengl/NA_774;
 L4:     aload_1
-L5:     invokevirtual Method org/lwjgl/opengl/NA method285 (Ljava/nio/ByteBuffer;)V
+L5:     invokevirtual Method org/lwjgl/opengl/NA_774 method285 (Ljava/nio/ByteBuffer;)V
 L8:     return
 L9:     
     .end code
@@ -705,7 +705,7 @@ L12:
 
 .method public method4763 : ()I
     .code stack 1 locals 1
-L0:     invokestatic Method org/lwjgl/opengl/SC method5359 ()I
+L0:     invokestatic Method org/lwjgl/opengl/SC_796 method5359 ()I
 L3:     ireturn
 L4:     
     .end code
@@ -772,11 +772,11 @@ L4:     aload_0
 L5:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4517 Z
 L8:     ifne L28
 L11:    aload_0
-L12:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L12:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L15:    ifnull L36
 L18:    aload_0
-L19:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L22:    invokevirtual Method org/lwjgl/opengl/bA method94 ()Z
+L19:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L22:    invokevirtual Method org/lwjgl/opengl/bA_842 method94 ()Z
 L25:    ifeq L36
 L28:    iconst_1
 L29:    dup
@@ -817,11 +817,11 @@ L61:
 .method public method4775 : ()Z
     .code stack 3 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L4:     ifnull L17
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L11:    invokevirtual Method org/lwjgl/opengl/bA method263 ()Z
+L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L11:    invokevirtual Method org/lwjgl/opengl/bA_842 method263 ()Z
 L14:    ifeq L23
 L17:    iconst_1
 L18:    dup
@@ -842,8 +842,8 @@ L28:
 .method public method4780 : ()I
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L4:     invokevirtual Method org/lwjgl/opengl/bA getHeight ()I
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L4:     invokevirtual Method org/lwjgl/opengl/bA_842 getHeight ()I
 L7:     ireturn
 L8:     
     .end code
@@ -852,15 +852,15 @@ L8:
 .method public method4734 : (IIII)V
     .code stack 5 locals 5
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L4:     ifnull L19
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L8:     getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L11:    iload_1
 L12:    iload_2
 L13:    iload_3
 L14:    iload 4
-L16:    invokevirtual Method org/lwjgl/opengl/bA method328 (IIII)V
+L16:    invokevirtual Method org/lwjgl/opengl/bA_842 method328 (IIII)V
 L19:    return
 L20:    
         .attribute StackMap b'\x00\x01\x00\x13\x00\x05\x07\x00\x02\x01\x01\x01\x01\x00\x00'
@@ -870,31 +870,31 @@ L20:
 .method public method4702 : ()V
     .code stack 7 locals 4
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA;
-L4:     invokevirtual Method org/lwjgl/opengl/TA method227 ()Z
+L1:     getfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA_802;
+L4:     invokevirtual Method org/lwjgl/opengl/TA_802 method227 ()Z
 L7:     istore_1
-L8:     invokestatic Method org/lwjgl/opengl/Display method2999 ()Lorg/lwjgl/opengl/k;
-L11:    checkcast org/lwjgl/opengl/q
+L8:     invokestatic Method org/lwjgl/opengl/Display method2999 ()Lorg/lwjgl/opengl/k_886;
+L11:    checkcast org/lwjgl/opengl/q_915
 L14:    astore_2
 L15:    invokestatic Method org/lwjgl/opengl/Display throw ()Z
 L18:    ifeq L87
 L21:    aload_0
-L22:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L22:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L25:    ifnull L41
 L28:    aload_0
-L29:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L32:    invokevirtual Method org/lwjgl/opengl/bA method324 ()Lorg/lwjgl/opengl/DA;
-L35:    invokevirtual Method org/lwjgl/opengl/DA method227 ()Z
+L29:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L32:    invokevirtual Method org/lwjgl/opengl/bA_842 method324 ()Lorg/lwjgl/opengl/DA_729;
+L35:    invokevirtual Method org/lwjgl/opengl/DA_729 method227 ()Z
 L38:    ifne L45
 L41:    iload_1
 L42:    ifeq L87
         .catch org/lwjgl/LWJGLException from L45 to L57 using L62
 L45:    aload_2
 L46:    dup
-L47:    getfield Field org/lwjgl/opengl/q field510 Lorg/lwjgl/opengl/a;
+L47:    getfield Field org/lwjgl/opengl/q_915 field510 Lorg/lwjgl/opengl/a_835;
 L50:    swap
-L51:    getfield Field org/lwjgl/opengl/q field509 Lorg/lwjgl/opengl/Jb;
-L54:    invokestatic Method org/lwjgl/opengl/MacOSXContextImplementation method4697 (Lorg/lwjgl/opengl/a;Lorg/lwjgl/opengl/Jb;)V
+L51:    getfield Field org/lwjgl/opengl/q_915 field509 Lorg/lwjgl/opengl/Jb_756;
+L54:    invokestatic Method org/lwjgl/opengl/MacOSXContextImplementation method4697 (Lorg/lwjgl/opengl/a_835;Lorg/lwjgl/opengl/Jb_756;)V
 L57:    iload_1
 L58:    goto L88
 L61:    athrow
@@ -913,8 +913,8 @@ L87:    iload_1
 L88:    ifeq L153
 L91:    sipush 2978
 L94:    aload_2
-L95:    getfield Field org/lwjgl/opengl/q field509 Lorg/lwjgl/opengl/Jb;
-L98:    invokevirtual Method org/lwjgl/opengl/Jb method3627 ()V
+L95:    getfield Field org/lwjgl/opengl/q_915 field509 Lorg/lwjgl/opengl/Jb_756;
+L98:    invokevirtual Method org/lwjgl/opengl/Jb_756 method3627 ()V
 L101:   iconst_1
 L102:   dup
 L103:   pop2
@@ -946,14 +946,14 @@ L146:   pop2
 L147:   invokevirtual Method java/nio/IntBuffer get (I)I
 L150:   invokestatic Method org/lwjgl/opengl/GL11 method3865 (IIII)V
 L153:   aload_0
-L154:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L154:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L157:   ifnull L201
 L160:   aload_0
 L161:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4518 Lorg/lwjgl/opengl/MacOSXMouseEventQueue;
 L164:   ifnull L201
 L167:   aload_0
-L168:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L171:   invokevirtual Method org/lwjgl/opengl/bA method92 ()Z
+L168:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L171:   invokevirtual Method org/lwjgl/opengl/bA_842 method92 ()Z
 L174:   ifeq L184
 L177:   iconst_0
 L178:   iconst_1
@@ -961,19 +961,19 @@ L179:   dup
 L180:   pop2
 L181:   invokestatic Method org/lwjgl/opengl/MacOSXMouseEventQueue nGrabMouse (Z)V
 L184:   aload_0
-L185:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L188:   invokevirtual Method org/lwjgl/opengl/bA method325 ()Z
+L185:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L188:   invokevirtual Method org/lwjgl/opengl/bA_842 method325 ()Z
 L191:   ifeq L201
 L194:   aload_0
 L195:   getfield Field org/lwjgl/opengl/MacOSXDisplay field4518 Lorg/lwjgl/opengl/MacOSXMouseEventQueue;
 L198:   invokevirtual Method org/lwjgl/opengl/MacOSXMouseEventQueue method61 ()V
 L201:   return
 L202:   
-        .attribute StackMap b'\x00\x09\x00\x29\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x00\x00\x2D\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x00\x00\x3D\x00\x00\x00\x01\x07\x00\x43\x00\x3E\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x01\x07\x00\x2D\x00\x57\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x00\x00\x58\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x01\x01\x00\x99\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x00\x00\xB8\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x00\x00\xC9\x00\x03\x07\x00\x02\x01\x07\x01\x6E\x00\x00'
+        .attribute StackMap b'\x00\x09\x00\x29\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x00\x00\x2D\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x00\x00\x3D\x00\x00\x00\x01\x07\x00\x43\x00\x3E\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x01\x07\x00\x2D\x00\x57\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x00\x00\x58\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x01\x01\x00\x99\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x00\x00\xB8\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x00\x00\xC9\x00\x03\x07\x00\x02\x01\x07\x02\x36\x00\x00'
     .end code
 .end method
 
-.method public method4708 : (Lorg/lwjgl/opengl/C;Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/Canvas;II)V
+.method public method4708 : (Lorg/lwjgl/opengl/C_724;Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/Canvas;II)V
     .code stack 11 locals 6
 L0:     invokestatic Method org/lwjgl/opengl/Display throw ()Z
 L3:     istore_1
@@ -992,7 +992,7 @@ L18:    ifnonnull L61
 L21:    aload_0
 L22:    dup
 L23:    dup_x1
-L24:    new org/lwjgl/opengl/bA
+L24:    new org/lwjgl/opengl/bA_842
 L27:    aload_0
 L28:    dup_x2
 L29:    dup
@@ -1004,10 +1004,10 @@ L34:    getfield Field org/lwjgl/opengl/MacOSXDisplay this Ljava/awt/DisplayMode
 L37:    iload_1
 L38:    iload 4
 L40:    iload 5
-L42:    invokespecial Method org/lwjgl/opengl/bA <init> (Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/DisplayMode;ZII)V
-L45:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L48:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
-L51:    invokevirtual Method org/lwjgl/opengl/bA method324 ()Lorg/lwjgl/opengl/DA;
+L42:    invokespecial Method org/lwjgl/opengl/bA_842 <init> (Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/DisplayMode;ZII)V
+L45:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L48:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
+L51:    invokevirtual Method org/lwjgl/opengl/bA_842 method324 ()Lorg/lwjgl/opengl/DA_729;
 L54:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4516 Ljava/awt/Canvas;
 L57:    goto L72
 L60:    athrow
@@ -1017,18 +1017,18 @@ L62:    aload_3
 L63:    aload_0
 L64:    dup_x1
 L65:    aconst_null
-L66:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA;
+L66:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4520 Lorg/lwjgl/opengl/bA_842;
 L69:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4516 Ljava/awt/Canvas;
-L72:    new org/lwjgl/opengl/TA
+L72:    new org/lwjgl/opengl/TA_802
 L75:    dup
 L76:    aload_0
 L77:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4516 Ljava/awt/Canvas;
-L80:    invokespecial Method org/lwjgl/opengl/TA <init> (Ljava/awt/Canvas;)V
-L83:    putfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA;
+L80:    invokespecial Method org/lwjgl/opengl/TA_802 <init> (Ljava/awt/Canvas;)V
+L83:    putfield Field org/lwjgl/opengl/MacOSXDisplay try Lorg/lwjgl/opengl/TA_802;
 L86:    aload_0
 L87:    dup
 L88:    getfield Field org/lwjgl/opengl/MacOSXDisplay field4516 Ljava/awt/Canvas;
-L91:    invokestatic Method org/lwjgl/opengl/SC method5361 (Ljava/awt/Component;)Ljava/awt/Robot;
+L91:    invokestatic Method org/lwjgl/opengl/SC_796 method5361 (Ljava/awt/Component;)Ljava/awt/Robot;
 L94:    putfield Field org/lwjgl/opengl/MacOSXDisplay field4514 Ljava/awt/Robot;
 L97:    return
 L98:    athrow
@@ -1065,7 +1065,7 @@ L2:
 
 .method public method4744 : ()I
     .code stack 1 locals 1
-L0:     invokestatic Method org/lwjgl/opengl/SC method5355 ()I
+L0:     invokestatic Method org/lwjgl/opengl/SC_796 method5355 ()I
 L3:     ireturn
 L4:     
     .end code
@@ -1073,7 +1073,7 @@ L4:
 
 .method public getAvailableDisplayModes : ()[Lorg/lwjgl/opengl/DisplayMode;
     .code stack 4 locals 6
-L0:     invokestatic Method org/lwjgl/opengl/bA method326 ()Ljava/awt/GraphicsDevice;
+L0:     invokestatic Method org/lwjgl/opengl/bA_842 method326 ()Ljava/awt/GraphicsDevice;
 L3:     invokevirtual Method java/awt/GraphicsDevice getDisplayModes ()[Ljava/awt/DisplayMode;
 L6:     astore_1
 L7:     new java/util/ArrayList
@@ -1138,7 +1138,7 @@ L3:     iload 4
 L5:     iload 5
 L7:     aload 6
 L9:     aload 7
-L11:    invokestatic Method org/lwjgl/opengl/SC method5356 (IIIIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)Ljava/awt/Cursor;
+L11:    invokestatic Method org/lwjgl/opengl/SC_796 method5356 (IIIIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)Ljava/awt/Cursor;
 L14:    areturn
 L15:    
     .end code
@@ -1171,10 +1171,10 @@ L21:
 L0:     aload_0
 L1:     invokespecial Method java/lang/Object <init> ()V
         .catch java/lang/Throwable from L4 to L16 using L18
-L4:     new org/lwjgl/opengl/UA
+L4:     new org/lwjgl/opengl/UA_808
 L7:     dup
 L8:     aload_0
-L9:     invokespecial Method org/lwjgl/opengl/UA <init> (Lorg/lwjgl/opengl/MacOSXDisplay;)V
+L9:     invokespecial Method org/lwjgl/opengl/UA_808 <init> (Lorg/lwjgl/opengl/MacOSXDisplay;)V
 L12:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 L15:    pop
 L16:    return
@@ -1197,7 +1197,7 @@ L47:
     .end code
 .end method
 .innerclasses
-    org/lwjgl/opengl/EA [0] [0]
-    org/lwjgl/opengl/UA [0] [0]
+    org/lwjgl/opengl/EA_734 [0] [0]
+    org/lwjgl/opengl/UA_808 [0] [0]
 .end innerclasses
 .end class

@@ -35,7 +35,7 @@ L8:
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method <init> : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)V
+.method <init> : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)V
     .code stack 10 locals 5
 L0:     aload_0
 L1:     dup
@@ -57,7 +57,7 @@ L17:    dup_x2
 L18:    iconst_1
 L19:    dup
 L20:    pop2
-L21:    invokespecial Method org/lwjgl/opengl/MacOSXPeerInfo <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;ZZZZ)V
+L21:    invokespecial Method org/lwjgl/opengl/MacOSXPeerInfo <init> (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;ZZZZ)V
 L24:    invokevirtual Method org/lwjgl/opengl/MacOSXPbufferPeerInfo method4677 ()Ljava/nio/ByteBuffer;
 L27:    iload_1
 L28:    iload_2

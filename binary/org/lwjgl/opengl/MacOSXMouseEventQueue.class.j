@@ -1,6 +1,6 @@
 .version 49 0
 .class final super org/lwjgl/opengl/MacOSXMouseEventQueue
-.super org/lwjgl/opengl/MA
+.super org/lwjgl/opengl/MA_769
 .field private field605 Z
 .field private static field606 Z
 .field private final field607 Ljava/nio/IntBuffer;
@@ -9,7 +9,7 @@
     .code stack 2 locals 1
 L0:     aload_0
 L1:     dup
-L2:     invokespecial Method org/lwjgl/opengl/MA method69 ()V
+L2:     invokespecial Method org/lwjgl/opengl/MA_769 method69 ()V
 L5:     getfield Field org/lwjgl/opengl/MacOSXMouseEventQueue field607 Ljava/nio/IntBuffer;
 L8:     invokestatic Method org/lwjgl/opengl/MacOSXMouseEventQueue getMouseDeltas (Ljava/nio/IntBuffer;)V
 L11:    return
@@ -23,7 +23,7 @@ L0:     iconst_2
 L1:     aload_0
 L2:     dup_x1
 L3:     aload_1
-L4:     invokespecial Method org/lwjgl/opengl/MA <init> (Ljava/awt/Component;)V
+L4:     invokespecial Method org/lwjgl/opengl/MA_769 <init> (Ljava/awt/Component;)V
 L7:     iconst_1
 L8:     dup
 L9:     pop2
@@ -45,7 +45,7 @@ L17:
 L0:     aload_0
 L1:     dup
 L2:     lload_1
-L3:     invokespecial Method org/lwjgl/opengl/MA method234 (J)V
+L3:     invokespecial Method org/lwjgl/opengl/MA_769 method234 (J)V
 L6:     dup
 L7:     astore_3
 L8:     monitorenter
@@ -180,7 +180,7 @@ L7:     aload_0
 L8:     dup
 L9:     iload_1
 L10:    dup_x2
-L11:    invokespecial Method org/lwjgl/opengl/MA method238 (Z)V
+L11:    invokespecial Method org/lwjgl/opengl/MA_769 method238 (Z)V
 L14:    invokevirtual Method org/lwjgl/opengl/MacOSXMouseEventQueue method61 ()V
 L17:    invokestatic Method org/lwjgl/opengl/MacOSXMouseEventQueue method95 (Z)V
 L20:    return

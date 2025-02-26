@@ -1,9 +1,9 @@
 .version 49 0
 .class final super org/lwjgl/opengl/LinuxDisplay
 .super java/lang/Object
-.implements org/lwjgl/opengl/m
+.implements org/lwjgl/opengl/m_893
 .field private static final K I = 1
-.field private G Lorg/lwjgl/opengl/a;
+.field private G Lorg/lwjgl/opengl/a_835;
 .field private B Z
 .field private c J
 .field private static final field4427 I = 1
@@ -26,7 +26,7 @@
 .field private field4432 J
 .field private static final field4433 I = 3
 .field private static final field4434 I = 10
-.field private field4435 [Lorg/lwjgl/opengl/j;
+.field private field4435 [Lorg/lwjgl/opengl/j_881;
 .field private static final field4436 I = 12
 .field private static final field4437 I = 7
 .field private field4438 Lorg/lwjgl/opengl/LinuxMouse;
@@ -95,7 +95,7 @@ L28:
     .code stack 7 locals 3
 L0:     invokestatic Method org/lwjgl/opengl/LinuxDisplay method4723 ()V
         .catch [0] from L3 to L137 using L216
-L3:     invokestatic Method org/lwjgl/opengl/sA method5732 ()V
+L3:     invokestatic Method org/lwjgl/opengl/sA_927 method5732 ()V
 L6:     aload_0
 L7:     dup
 L8:     dup_x1
@@ -141,13 +141,13 @@ L76:    lookupswitch
 L104:   aload_0
 L105:   iconst_0
 L106:   ifne L105
-L109:   new org/lwjgl/opengl/xA
+L109:   new org/lwjgl/opengl/xA_954
 L112:   dup
 L113:   aload_0
-L114:   invokespecial Method org/lwjgl/opengl/xA <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
+L114:   invokespecial Method org/lwjgl/opengl/xA_954 <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
 L117:   invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
-L120:   checkcast [Lorg/lwjgl/opengl/j;
-L123:   putfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j;
+L120:   checkcast [Lorg/lwjgl/opengl/j_881;
+L123:   putfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j_881;
 L126:   aload_0
 L127:   dup
 L128:   invokestatic Method org/lwjgl/opengl/LinuxDisplay method4760 ()Lorg/lwjgl/opengl/DisplayMode;
@@ -307,7 +307,7 @@ L32:
     .end code
 .end method
 
-.method public method4701 : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Lorg/lwjgl/opengl/a;
+.method public method4701 : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Lorg/lwjgl/opengl/a_835;
     .code stack 5 locals 7
 L0:     new org/lwjgl/opengl/LinuxPbufferPeerInfo
 L3:     dup
@@ -393,7 +393,7 @@ L5:
     .end code
 .end method
 
-.method public method4705 : (Lorg/lwjgl/opengl/a;)Z
+.method public method4705 : (Lorg/lwjgl/opengl/a_835;)Z
     .code stack 3 locals 2
 L0:     iconst_0
 L1:     iconst_1
@@ -519,12 +519,12 @@ L32:
 .method private static native nGetY : (JJ)I
 .end method
 
-.method public method4708 : (Lorg/lwjgl/opengl/C;Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/Canvas;II)V
+.method public method4708 : (Lorg/lwjgl/opengl/C_724;Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/Canvas;II)V
     .code stack 23 locals 9
 L0:     invokestatic Method org/lwjgl/opengl/LinuxDisplay method4723 ()V
 L3:     invokestatic Method org/lwjgl/opengl/LinuxDisplay method4712 ()V
 L6:     aload_1
-L7:     instanceof org/lwjgl/opengl/vC
+L7:     instanceof org/lwjgl/opengl/vC_944
 L10:    ifeq L27
 L13:    new org/lwjgl/opengl/LinuxDisplayPeerInfo
 L16:    aload_0
@@ -533,10 +533,10 @@ L18:    dup
 L19:    pop2
 L20:    dup
 L21:    invokespecial Method org/lwjgl/opengl/LinuxDisplayPeerInfo <init> ()V
-L24:    putfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a;
+L24:    putfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a_835;
 L27:    aload_0
-L28:    getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a;
-L31:    invokevirtual Method org/lwjgl/opengl/a method4679 ()Ljava/nio/ByteBuffer;
+L28:    getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a_835;
+L31:    invokevirtual Method org/lwjgl/opengl/a_835 method4679 ()Ljava/nio/ByteBuffer;
 L34:    astore 6
         .catch [0] from L36 to L98 using L394
 L36:    aload_0
@@ -553,7 +553,7 @@ L56:    iconst_1
 L57:    dup
 L58:    dup
 L59:    pop2
-L60:    invokestatic Method org/lwjgl/opengl/sA method5734 (Z)V
+L60:    invokestatic Method org/lwjgl/opengl/sA_927 method5734 (Z)V
 L63:    ldc_w "org.lwjgl.opengl.Window.undecorated"
 L66:    invokestatic Method org/lwjgl/opengl/Display method3044 (Ljava/lang/String;)Z
 L69:    ifne L91
@@ -704,10 +704,10 @@ L318:   iconst_1
 L319:   dup
 L320:   pop2
 L321:   putfield Field org/lwjgl/opengl/LinuxDisplay field4452 Z
-L324:   instanceof org/lwjgl/opengl/vC
+L324:   instanceof org/lwjgl/opengl/vC_944
 L327:   ifeq L356
 L330:   aload_1
-L331:   checkcast org/lwjgl/opengl/vC
+L331:   checkcast org/lwjgl/opengl/vC_944
 L334:   getstatic Field org/lwjgl/opengl/LinuxDisplay field4464 J
 L337:   invokestatic Method org/lwjgl/opengl/LinuxDisplay method4757 ()J
 L340:   iconst_4
@@ -715,9 +715,9 @@ L341:   iconst_1
 L342:   dup
 L343:   pop2
 L344:   aload_1
-L345:   invokeinterface InterfaceMethod org/lwjgl/opengl/C method310 ()Lorg/lwjgl/opengl/h; 1
+L345:   invokeinterface InterfaceMethod org/lwjgl/opengl/C_724 method310 ()Lorg/lwjgl/opengl/h_871; 1
 L350:   checkcast org/lwjgl/opengles/PixelFormat
-L353:   invokevirtual Method org/lwjgl/opengl/vC method323 (JJILorg/lwjgl/opengles/PixelFormat;)V
+L353:   invokevirtual Method org/lwjgl/opengl/vC_944 method323 (JJILorg/lwjgl/opengles/PixelFormat;)V
 L356:   aload_3
 L357:   ifnull L384
 L360:   aload_3
@@ -735,8 +735,8 @@ L379:   dup
 L380:   pop2
 L381:   putfield Field org/lwjgl/opengl/LinuxDisplay field4439 Z
 L384:   aload_0
-L385:   getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a;
-L388:   invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L385:   getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a_835;
+L388:   invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L391:   goto L415
         .catch [0] from L394 to L395 using L394
         .catch org/lwjgl/LWJGLException from L6 to L98 using L407
@@ -748,8 +748,8 @@ L391:   goto L415
 L394:   astore_1
 L395:   aload_1
 L396:   aload_0
-L397:   getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a;
-L400:   invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L397:   getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a_835;
+L400:   invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L403:   athrow
 L404:   nop
 L405:   nop
@@ -768,7 +768,7 @@ L424:   aload 8
 L426:   athrow
 L427:   athrow
 L428:   
-        .attribute StackMap b'\x00\x13\x00\x1B\x00\x06\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x00\x00\x00\x3F\x00\x07\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x00\x00\x5B\x00\x07\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x00\x00\x62\x00\x00\x00\x01\x07\x00\xB5\x00\x63\x00\x07\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x00\x00\x67\x00\x07\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x01\x01\x00\x7A\x00\x00\x00\x01\x07\x00\xB5\x00\x7B\x00\x08\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x01\x07\x00\x02\x00\x84\x00\x08\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x02\x07\x00\x02\x04\x00\xF0\x00\x08\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x00\xF4\x00\x08\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x01\x01\x01\x64\x00\x08\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x01\x80\x00\x08\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x01\x8A\x00\x07\x07\x00\x02\x07\x00\x04\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x01\x07\x00\xB5\x01\x94\x00\x00\x00\x01\x07\x00\xB5\x01\x97\x00\x06\x07\x00\x02\x07\x00\x04\x07\x01\x45\x07\x01\x47\x01\x01\x00\x01\x07\x00\x80\x01\x9F\x00\x08\x07\x00\x02\x07\x01\x43\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x01\xA3\x00\x06\x07\x00\x02\x07\x00\x04\x07\x01\x45\x07\x01\x47\x01\x01\x00\x01\x07\x00\xB5\x01\xAB\x00\x00\x00\x01\x07\x00\xB5'
+        .attribute StackMap b'\x00\x13\x00\x1B\x00\x06\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x00\x00\x00\x3F\x00\x07\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x00\x00\x5B\x00\x07\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x00\x00\x62\x00\x00\x00\x01\x07\x00\xB5\x00\x63\x00\x07\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x00\x00\x67\x00\x07\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x01\x01\x00\x7A\x00\x00\x00\x01\x07\x00\xB5\x00\x7B\x00\x08\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x01\x07\x00\x02\x00\x84\x00\x08\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x02\x07\x00\x02\x04\x00\xF0\x00\x08\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x00\xF4\x00\x08\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x01\x01\x01\x64\x00\x08\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x01\x80\x00\x08\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x01\x8A\x00\x07\x07\x00\x02\x07\x00\x04\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x00\x01\x07\x00\xB5\x01\x94\x00\x00\x00\x01\x07\x00\xB5\x01\x97\x00\x06\x07\x00\x02\x07\x00\x04\x07\x01\x45\x07\x01\x47\x01\x01\x00\x01\x07\x00\x80\x01\x9F\x00\x08\x07\x00\x02\x07\x04\x01\x07\x01\x45\x07\x01\x47\x01\x01\x07\x00\xEF\x01\x00\x00\x01\xA3\x00\x06\x07\x00\x02\x07\x00\x04\x07\x01\x45\x07\x01\x47\x01\x01\x00\x01\x07\x00\xB5\x01\xAB\x00\x00\x00\x01\x07\x00\xB5'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -1057,7 +1057,7 @@ L2:
     .end code
 .end method
 
-.method public method4717 : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)Lorg/lwjgl/opengl/a;
+.method public method4717 : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)Lorg/lwjgl/opengl/a_835;
     .code stack 5 locals 3
 L0:     new org/lwjgl/opengl/LinuxDisplayPeerInfo
 L3:     aload_0
@@ -1068,8 +1068,8 @@ L7:     pop2
 L8:     dup
 L9:     aload_1
 L10:    invokespecial Method org/lwjgl/opengl/LinuxDisplayPeerInfo <init> (Lorg/lwjgl/opengl/PixelFormat;)V
-L13:    putfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a;
-L16:    getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a;
+L13:    putfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a_835;
+L16:    getfield Field org/lwjgl/opengl/LinuxDisplay G Lorg/lwjgl/opengl/a_835;
 L19:    areturn
 L20:    
     .end code
@@ -1131,7 +1131,7 @@ L100:   iconst_0
 L101:   iconst_1
 L102:   dup
 L103:   pop2
-L104:   invokestatic Method org/lwjgl/opengl/sA method5734 (Z)V
+L104:   invokestatic Method org/lwjgl/opengl/sA_927 method5734 (Z)V
 L107:   invokestatic Method org/lwjgl/opengl/LinuxDisplay while ()V
 L110:   return
 L111:   athrow
@@ -1146,10 +1146,10 @@ L119:
     .end code
 .end method
 
-.method static synthetic method4719 : (Lorg/lwjgl/opengl/LinuxDisplay;)[Lorg/lwjgl/opengl/j;
+.method static synthetic method4719 : (Lorg/lwjgl/opengl/LinuxDisplay;)[Lorg/lwjgl/opengl/j_881;
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j;
+L1:     getfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j_881;
 L4:     areturn
 L5:     
     .end code
@@ -1910,14 +1910,14 @@ L46:    dup
 L47:    pop2
 L48:    putfield Field org/lwjgl/opengl/LinuxDisplay field4444 Z
 L51:    putfield Field org/lwjgl/opengl/LinuxDisplay field4448 J
-L54:    new org/lwjgl/opengl/RA
+L54:    new org/lwjgl/opengl/RA_791
 L57:    aload_0
 L58:    dup
 L59:    pop2
 L60:    dup
 L61:    aload_0
 L62:    dup_x2
-L63:    invokespecial Method org/lwjgl/opengl/RA <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
+L63:    invokespecial Method org/lwjgl/opengl/RA_791 <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
 L66:    putfield Field org/lwjgl/opengl/LinuxDisplay while Ljava/awt/event/FocusListener;
 L69:    return
 L70:    
@@ -1927,7 +1927,7 @@ L70:
 .method private static native nDefineCursor : (JJJ)V
 .end method
 
-.method public method4731 : (Lorg/lwjgl/opengl/a;I)V
+.method public method4731 : (Lorg/lwjgl/opengl/a_835;I)V
     .code stack 2 locals 3
 L0:     new java/lang/UnsupportedOperationException
 L3:     dup
@@ -1973,13 +1973,13 @@ L56:    dup
 L57:    pop2
 L58:    if_icmpne L86
 L61:    aload_0
-L62:    getfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j;
+L62:    getfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j_881;
 L65:    arraylength
 L66:    ifle L86
-L69:    new org/lwjgl/opengl/vA
+L69:    new org/lwjgl/opengl/vA_943
 L72:    dup
 L73:    aload_0
-L74:    invokespecial Method org/lwjgl/opengl/vA <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
+L74:    invokespecial Method org/lwjgl/opengl/vA_943 <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
 L77:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L80:    pop
 L81:    aload_0
@@ -2024,13 +2024,13 @@ L10:    dup
 L11:    pop2
 L12:    if_icmpne L39
 L15:    aload_0
-L16:    getfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j;
+L16:    getfield Field org/lwjgl/opengl/LinuxDisplay field4435 [Lorg/lwjgl/opengl/j_881;
 L19:    arraylength
 L20:    ifle L39
-L23:    new org/lwjgl/opengl/pA
+L23:    new org/lwjgl/opengl/pA_909
 L26:    dup
 L27:    aload_0
-L28:    invokespecial Method org/lwjgl/opengl/pA <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
+L28:    invokespecial Method org/lwjgl/opengl/pA_909 <init> (Lorg/lwjgl/opengl/LinuxDisplay;)V
 L31:    invokestatic Method java/security/AccessController doPrivileged (Ljava/security/PrivilegedAction;)Ljava/lang/Object;
 L34:    pop
 L35:    goto L47
@@ -2052,7 +2052,7 @@ L61:    iconst_0
 L62:    iconst_1
 L63:    dup
 L64:    pop2
-L65:    invokestatic Method org/lwjgl/opengl/sA method5734 (Z)V
+L65:    invokestatic Method org/lwjgl/opengl/sA_927 method5734 (Z)V
 L68:    invokestatic Method org/lwjgl/opengl/LinuxDisplay while ()V
 L71:    return
 L72:    athrow
@@ -2256,7 +2256,7 @@ L32:
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method public method4738 : (Lorg/lwjgl/opengl/a;II)V
+.method public method4738 : (Lorg/lwjgl/opengl/a_835;II)V
     .code stack 2 locals 4
 L0:     new java/lang/UnsupportedOperationException
 L3:     dup
@@ -3605,11 +3605,11 @@ L128:
 
 .method private static method4766 : (Ljava/awt/Canvas;)J
     .code stack 4 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/aB this ()Lorg/lwjgl/opengl/e;
+L0:     invokestatic Method org/lwjgl/opengl/aB_837 this ()Lorg/lwjgl/opengl/e_857;
 L3:     aload_0
 L4:     aconst_null
 L5:     dup
-L6:     invokeinterface InterfaceMethod org/lwjgl/opengl/e method4620 (Ljava/awt/Canvas;Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)Lorg/lwjgl/opengl/a; 4
+L6:     invokeinterface InterfaceMethod org/lwjgl/opengl/e_857 method4620 (Ljava/awt/Canvas;Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)Lorg/lwjgl/opengl/a_835; 4
 L11:    checkcast org/lwjgl/opengl/LinuxPeerInfo
 L14:    dup
 L15:    astore_1
@@ -3967,7 +3967,7 @@ L18:
     .end code
 .end method
 
-.method public method4776 : (Lorg/lwjgl/opengl/a;I)V
+.method public method4776 : (Lorg/lwjgl/opengl/a_835;I)V
     .code stack 2 locals 3
 L0:     new java/lang/UnsupportedOperationException
 L3:     dup
@@ -4048,11 +4048,11 @@ L5:
     .end code
 .end method
 .innerclasses
-    org/lwjgl/opengl/RA [0] [0]
-    org/lwjgl/opengl/pA [0] [0]
-    org/lwjgl/opengl/sA org/lwjgl/opengl/LinuxDisplay [0] private static final
-    org/lwjgl/opengl/vA [0] [0]
-    org/lwjgl/opengl/xA [0] [0]
-    org/lwjgl/opengl/j org/lwjgl/opengl/b [0] public static
+    org/lwjgl/opengl/RA_791 [0] [0]
+    org/lwjgl/opengl/pA_909 [0] [0]
+    org/lwjgl/opengl/sA_927 org/lwjgl/opengl/LinuxDisplay [0] private static final
+    org/lwjgl/opengl/vA_943 [0] [0]
+    org/lwjgl/opengl/xA_954 [0] [0]
+    org/lwjgl/opengl/j_881 org/lwjgl/opengl/b_841 [0] public static
 .end innerclasses
 .end class

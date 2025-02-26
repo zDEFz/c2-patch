@@ -1,7 +1,7 @@
 .version 49 0
 .class final super org/lwjgl/opengl/WindowsContextImplementation
 .super java/lang/Object
-.implements org/lwjgl/opengl/M
+.implements org/lwjgl/opengl/M_768
 
 .method public method4694 : (Ljava/nio/ByteBuffer;)V
     .code stack 0 locals 2
@@ -10,7 +10,7 @@ L1:
     .end code
 .end method
 
-.method public method4689 : (Lorg/lwjgl/opengl/a;Ljava/nio/ByteBuffer;)V
+.method public method4689 : (Lorg/lwjgl/opengl/a_835;Ljava/nio/ByteBuffer;)V
     .code stack 1 locals 3
 L0:     aload_2
 L1:     invokestatic Method org/lwjgl/opengl/WindowsContextImplementation nDestroy (Ljava/nio/ByteBuffer;)V
@@ -31,28 +31,28 @@ L5:
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method public method4692 : (Lorg/lwjgl/opengl/a;Ljava/nio/ByteBuffer;)V
+.method public method4692 : (Lorg/lwjgl/opengl/a_835;Ljava/nio/ByteBuffer;)V
     .code stack 2 locals 4
 L0:     aload_1
-L1:     invokevirtual Method org/lwjgl/opengl/a method4679 ()Ljava/nio/ByteBuffer;
+L1:     invokevirtual Method org/lwjgl/opengl/a_835 method4679 ()Ljava/nio/ByteBuffer;
 L4:     astore_3
         .catch [0] from L5 to L10 using L16
 L5:     aload_3
 L6:     aload_2
 L7:     invokestatic Method org/lwjgl/opengl/WindowsContextImplementation nMakeCurrent (Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
 L10:    aload_1
-L11:    invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L11:    invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L14:    return
 L15:    athrow
         .catch [0] from L16 to L17 using L16
 L16:    astore_2
 L17:    aload_2
 L18:    aload_1
-L19:    invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L19:    invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L22:    athrow
 L23:    athrow
 L24:    
-        .attribute StackMap b'\x00\x03\x00\x0F\x00\x00\x00\x01\x07\x00\x24\x00\x10\x00\x04\x07\x00\x02\x07\x00\x17\x07\x00\x04\x07\x00\x26\x00\x01\x07\x00\x24\x00\x17\x00\x00\x00\x01\x07\x00\x24'
+        .attribute StackMap b'\x00\x03\x00\x0F\x00\x00\x00\x01\x07\x00\x24\x00\x10\x00\x04\x07\x00\x02\x07\x00\x68\x07\x00\x04\x07\x00\x26\x00\x01\x07\x00\x24\x00\x17\x00\x00\x00\x01\x07\x00\x24'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -84,7 +84,7 @@ L1:     invokestatic Method org/lwjgl/opengl/WindowsContextImplementation nSetSw
 L4:     ifne L12
 L7:     ldc "Failed to set swap interval"
 L9:     invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
-L12:    invokestatic Method org/lwjgl/opengl/n method5630 ()V
+L12:    invokestatic Method org/lwjgl/opengl/n_900 method5630 ()V
 L15:    return
 L16:    
         .attribute StackMap b'\x00\x01\x00\x0C\x00\x02\x07\x00\x02\x01\x00\x00'
@@ -116,10 +116,10 @@ L5:
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method public method4696 : (Lorg/lwjgl/opengl/a;Ljava/nio/IntBuffer;Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+.method public method4696 : (Lorg/lwjgl/opengl/a_835;Ljava/nio/IntBuffer;Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .code stack 3 locals 5
 L0:     aload_1
-L1:     invokevirtual Method org/lwjgl/opengl/a method4679 ()Ljava/nio/ByteBuffer;
+L1:     invokevirtual Method org/lwjgl/opengl/a_835 method4679 ()Ljava/nio/ByteBuffer;
 L4:     astore 4
         .catch [0] from L6 to L14 using L21
 L6:     aload 4
@@ -129,24 +129,24 @@ L10:    invokestatic Method org/lwjgl/opengl/WindowsContextImplementation nCreat
 L13:    astore_2
 L14:    aload_2
 L15:    aload_1
-L16:    invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L16:    invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L19:    areturn
 L20:    athrow
         .catch [0] from L21 to L22 using L21
 L21:    astore_2
 L22:    aload_2
 L23:    aload_1
-L24:    invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L24:    invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L27:    athrow
 L28:    
-        .attribute StackMap b'\x00\x02\x00\x14\x00\x00\x00\x01\x07\x00\x24\x00\x15\x00\x05\x07\x00\x02\x07\x00\x17\x07\x00\x04\x07\x00\x26\x07\x00\x26\x00\x01\x07\x00\x24'
+        .attribute StackMap b'\x00\x02\x00\x14\x00\x00\x00\x01\x07\x00\x24\x00\x15\x00\x05\x07\x00\x02\x07\x00\x68\x07\x00\x04\x07\x00\x26\x07\x00\x26\x00\x01\x07\x00\x24'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
 
 .method public method4690 : ()V
     .code stack 3 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/Jb method3632 ()Lorg/lwjgl/opengl/Jb;
+L0:     invokestatic Method org/lwjgl/opengl/Jb_756 method3632 ()Lorg/lwjgl/opengl/Jb_756;
 L3:     dup
 L4:     astore_1
 L5:     ifnonnull L18
@@ -160,17 +160,17 @@ L19:    dup
 L20:    astore_2
 L21:    monitorenter
 L22:    aload_1
-L23:    invokevirtual Method org/lwjgl/opengl/Jb method3635 ()Lorg/lwjgl/opengl/a;
+L23:    invokevirtual Method org/lwjgl/opengl/Jb_756 method3635 ()Lorg/lwjgl/opengl/a_835;
 L26:    dup
 L27:    astore_1
-L28:    invokevirtual Method org/lwjgl/opengl/a method4679 ()Ljava/nio/ByteBuffer;
+L28:    invokevirtual Method org/lwjgl/opengl/a_835 method4679 ()Ljava/nio/ByteBuffer;
 L31:    astore_3
         .catch [0] from L32 to L36 using L45
 L32:    aload_3
 L33:    invokestatic Method org/lwjgl/opengl/WindowsContextImplementation nSwapBuffers (Ljava/nio/ByteBuffer;)V
 L36:    aload_2
 L37:    aload_1
-L38:    invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L38:    invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L41:    goto L53
 L44:    athrow
         .catch [0] from L45 to L46 using L45
@@ -179,7 +179,7 @@ L44:    athrow
 L45:    astore_3
 L46:    aload_3
 L47:    aload_1
-L48:    invokevirtual Method org/lwjgl/opengl/a method4676 ()V
+L48:    invokevirtual Method org/lwjgl/opengl/a_835 method4676 ()V
 L51:    athrow
 L52:    athrow
         .catch [0] from L53 to L54 using L56
@@ -194,7 +194,7 @@ L60:    aload 4
 L62:    athrow
 L63:    athrow
 L64:    
-        .attribute StackMap b'\x00\x08\x00\x12\x00\x02\x07\x00\x02\x07\x00\x4C\x00\x00\x00\x2C\x00\x00\x00\x01\x07\x00\x24\x00\x2D\x00\x04\x07\x00\x02\x07\x00\x17\x07\x00\x4C\x07\x00\x04\x00\x01\x07\x00\x24\x00\x34\x00\x00\x00\x01\x07\x00\x24\x00\x35\x00\x04\x07\x00\x02\x07\x00\x17\x07\x00\x4C\x07\x00\x26\x00\x01\x07\x00\x4C\x00\x37\x00\x00\x00\x01\x07\x00\x24\x00\x38\x00\x03\x07\x00\x02\x07\x00\x04\x07\x00\x4C\x00\x01\x07\x00\x24\x00\x3F\x00\x00\x00\x01\x07\x00\x24'
+        .attribute StackMap b'\x00\x08\x00\x12\x00\x02\x07\x00\x02\x07\x00\x70\x00\x00\x00\x2C\x00\x00\x00\x01\x07\x00\x24\x00\x2D\x00\x04\x07\x00\x02\x07\x00\x68\x07\x00\x70\x07\x00\x04\x00\x01\x07\x00\x24\x00\x34\x00\x00\x00\x01\x07\x00\x24\x00\x35\x00\x04\x07\x00\x02\x07\x00\x68\x07\x00\x70\x07\x00\x26\x00\x01\x07\x00\x70\x00\x37\x00\x00\x00\x01\x07\x00\x24\x00\x38\x00\x03\x07\x00\x02\x07\x00\x04\x07\x00\x70\x00\x01\x07\x00\x24\x00\x3F\x00\x00\x00\x01\x07\x00\x24'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method

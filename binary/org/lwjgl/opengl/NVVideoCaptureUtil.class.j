@@ -10,7 +10,7 @@ L4:     iconst_1
 L5:     dup
 L6:     dup
 L7:     pop2
-L8:     invokestatic Method org/lwjgl/l method2041 (Ljava/nio/IntBuffer;I)V
+L8:     invokestatic Method org/lwjgl/l_712 method2041 (Ljava/nio/IntBuffer;I)V
 L11:    invokestatic Method org/lwjgl/opengl/NVVideoCaptureUtil method5284 ()Ljava/nio/ByteBuffer;
 L14:    lload_0
 L15:    iload_2
@@ -30,8 +30,8 @@ L25:
     .code stack 3 locals 0
 L0:     getstatic Field org/lwjgl/LWJGLUtil CHECKS Z
 L3:     ifeq L25
-L6:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb;
-L9:     getfield Field org/lwjgl/opengl/kb YQ Z
+L6:     invokestatic Method org/lwjgl/opengl/GLContext method4611 ()Lorg/lwjgl/opengl/kb_888;
+L9:     getfield Field org/lwjgl/opengl/kb_888 YQ Z
 L12:    ifne L25
 L15:    new java/lang/IllegalStateException
 L18:    dup
@@ -54,7 +54,7 @@ L8:     iconst_1
 L9:     dup
 L10:    dup
 L11:    pop2
-L12:    invokestatic Method org/lwjgl/l method2032 (Ljava/nio/LongBuffer;I)V
+L12:    invokestatic Method org/lwjgl/l_712 method2032 (Ljava/nio/LongBuffer;I)V
 L15:    invokestatic Method org/lwjgl/opengl/NVVideoCaptureUtil method5284 ()Ljava/nio/ByteBuffer;
 L18:    aload_0
 L19:    dup
@@ -117,9 +117,9 @@ L5:
 
 .method private static method5284 : ()Ljava/nio/ByteBuffer;
     .code stack 1 locals 0
-L0:     invokestatic Method org/lwjgl/opengl/Jb method3632 ()Lorg/lwjgl/opengl/Jb;
-L3:     invokevirtual Method org/lwjgl/opengl/Jb method3635 ()Lorg/lwjgl/opengl/a;
-L6:     invokevirtual Method org/lwjgl/opengl/a method4677 ()Ljava/nio/ByteBuffer;
+L0:     invokestatic Method org/lwjgl/opengl/Jb_756 method3632 ()Lorg/lwjgl/opengl/Jb_756;
+L3:     invokevirtual Method org/lwjgl/opengl/Jb_756 method3635 ()Lorg/lwjgl/opengl/a_835;
+L6:     invokevirtual Method org/lwjgl/opengl/a_835 method4677 ()Ljava/nio/ByteBuffer;
 L9:     areturn
 L10:    
     .end code

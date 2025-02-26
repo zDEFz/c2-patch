@@ -1,7 +1,7 @@
 .version 49 0
 .class final super org/lwjgl/opengl/WindowsDisplay
 .super java/lang/Object
-.implements org/lwjgl/opengl/m
+.implements org/lwjgl/opengl/m_893
 .field private static final bc I = 515
 .field private static final Hc I = 513
 .field private static final PC J = -1L
@@ -69,7 +69,7 @@
 .field private i J
 .field static final m I = 14
 .field private static final h I = 256
-.field private static final J Lorg/lwjgl/opengl/g;
+.field private static final J Lorg/lwjgl/opengl/g_866;
 .field private l Z
 .field private static final D I = 61568
 .field private static final f I = 514
@@ -109,7 +109,7 @@
 .field private static final field4495 J = -2L
 .field private static final field4496 I = 561
 .field private static final true I = 61472
-.field private field4497 Lorg/lwjgl/opengl/A;
+.field private field4497 Lorg/lwjgl/opengl/A_714;
 .field private field4498 Z
 .field private static final field4499 Ljava/nio/IntBuffer;
 .field private static final field4500 I = 0
@@ -129,7 +129,7 @@
 .field private static final field4511 I = 262
 .field private static final field4512 I = 262144
 
-.method public method4731 : (Lorg/lwjgl/opengl/a;I)V
+.method public method4731 : (Lorg/lwjgl/opengl/a_835;I)V
     .code stack 2 locals 3
 L0:     aload_1
 L1:     checkcast org/lwjgl/opengl/WindowsPbufferPeerInfo
@@ -147,7 +147,7 @@ L9:
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method public method4717 : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)Lorg/lwjgl/opengl/a;
+.method public method4717 : (Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)Lorg/lwjgl/opengl/a_835;
     .code stack 7 locals 3
 L0:     new org/lwjgl/opengl/WindowsDisplayPeerInfo
 L3:     aload_0
@@ -175,14 +175,14 @@ L23:
 .method public method4769 : ()V
     .code stack 2 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     ifnull L14
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
-L11:    invokevirtual Method org/lwjgl/opengl/A method2064 ()V
+L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
+L11:    invokevirtual Method org/lwjgl/opengl/A_714 method2064 ()V
 L14:    aload_0
 L15:    aconst_null
-L16:    putfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L16:    putfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L19:    return
 L20:    
         .attribute StackMap b'\x00\x01\x00\x0E\x00\x01\x07\x00\x02\x00\x00'
@@ -203,7 +203,7 @@ L7:
     .end code
 .end method
 
-.method public method4701 : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Lorg/lwjgl/opengl/a;
+.method public method4701 : (IILorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Lorg/lwjgl/opengl/a_835;
     .code stack 7 locals 7
 L0:     new org/lwjgl/opengl/WindowsPbufferPeerInfo
 L3:     dup
@@ -270,13 +270,13 @@ L17:
 L0:     lload_0
 L1:     getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
 L4:     invokestatic Method org/lwjgl/opengl/WindowsDisplay getClientRect (JLjava/nio/IntBuffer;)V
-L7:     getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
+L7:     getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
 L10:    getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L13:    invokevirtual Method org/lwjgl/opengl/g method5511 (Ljava/nio/IntBuffer;)V
-L16:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L19:    getfield Field org/lwjgl/opengl/g field5296 I
-L22:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L25:    getfield Field org/lwjgl/opengl/g field5298 I
+L13:    invokevirtual Method org/lwjgl/opengl/g_866 method5511 (Ljava/nio/IntBuffer;)V
+L16:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L19:    getfield Field org/lwjgl/opengl/g_866 field5296 I
+L22:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L25:    getfield Field org/lwjgl/opengl/g_866 field5298 I
 L28:    isub
 L29:    iconst_1
 L30:    dup
@@ -459,11 +459,11 @@ L2:     dup
 L3:     pop2
 L4:     putstatic Field org/lwjgl/opengl/WindowsDisplay field4491 Z
 L7:     lload_0
-L8:     getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L11:    invokestatic Method org/lwjgl/opengl/WindowsDisplay method4799 (JLorg/lwjgl/opengl/g;)V
-L14:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
+L8:     getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L11:    invokestatic Method org/lwjgl/opengl/WindowsDisplay method4799 (JLorg/lwjgl/opengl/g_866;)V
+L14:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
 L17:    getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L20:    invokevirtual Method org/lwjgl/opengl/g method5513 (Ljava/nio/IntBuffer;)V
+L20:    invokevirtual Method org/lwjgl/opengl/g_866 method5513 (Ljava/nio/IntBuffer;)V
 L23:    getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
 L26:    invokestatic Method org/lwjgl/opengl/WindowsDisplay clipCursor (Ljava/nio/IntBuffer;)V
 L29:    return
@@ -486,11 +486,11 @@ L5:
 
 .method private static getHwnd : (Ljava/awt/Canvas;)J
     .code stack 4 locals 5
-L0:     invokestatic Method org/lwjgl/opengl/aB this ()Lorg/lwjgl/opengl/e;
+L0:     invokestatic Method org/lwjgl/opengl/aB_837 this ()Lorg/lwjgl/opengl/e_857;
 L3:     aload_0
 L4:     aconst_null
 L5:     dup
-L6:     invokeinterface InterfaceMethod org/lwjgl/opengl/e method4620 (Ljava/awt/Canvas;Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB;)Lorg/lwjgl/opengl/a; 4
+L6:     invokeinterface InterfaceMethod org/lwjgl/opengl/e_857 method4620 (Ljava/awt/Canvas;Lorg/lwjgl/opengl/PixelFormat;Lorg/lwjgl/opengl/CB_726;)Lorg/lwjgl/opengl/a_835; 4
 L11:    checkcast org/lwjgl/opengl/WindowsPeerInfo
 L14:    dup
 L15:    astore_1
@@ -588,9 +588,9 @@ L90:    pop2
 L91:    getfield Field org/lwjgl/opengl/WindowsDisplay L J
 L94:    getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
 L97:    invokestatic Method org/lwjgl/opengl/WindowsDisplay getClientRect (JLjava/nio/IntBuffer;)V
-L100:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
+L100:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
 L103:   getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L106:   invokevirtual Method org/lwjgl/opengl/g method5511 (Ljava/nio/IntBuffer;)V
+L106:   invokevirtual Method org/lwjgl/opengl/g_866 method5511 (Ljava/nio/IntBuffer;)V
 L109:   aload_0
 L110:   getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
 L113:   lload_2
@@ -600,9 +600,9 @@ L116:   dup
 L117:   pop2
 L118:   lload 4
 L120:   invokespecial Method org/lwjgl/opengl/WindowsDisplay adjustWindowRectEx (Ljava/nio/IntBuffer;JZJ)Z
-L123:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
+L123:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
 L126:   getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L129:   invokevirtual Method org/lwjgl/opengl/g method5511 (Ljava/nio/IntBuffer;)V
+L129:   invokevirtual Method org/lwjgl/opengl/g_866 method5511 (Ljava/nio/IntBuffer;)V
 L132:   aload_0
 L133:   getfield Field org/lwjgl/opengl/WindowsDisplay L J
 L136:   lconst_0
@@ -614,15 +614,15 @@ L141:   iconst_0
 L142:   iconst_1
 L143:   dup
 L144:   pop2
-L145:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L148:   getfield Field org/lwjgl/opengl/g field5295 I
-L151:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L154:   getfield Field org/lwjgl/opengl/g field5297 I
+L145:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L148:   getfield Field org/lwjgl/opengl/g_866 field5295 I
+L151:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L154:   getfield Field org/lwjgl/opengl/g_866 field5297 I
 L157:   isub
-L158:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L161:   getfield Field org/lwjgl/opengl/g field5296 I
-L164:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L167:   getfield Field org/lwjgl/opengl/g field5298 I
+L158:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L161:   getfield Field org/lwjgl/opengl/g_866 field5296 I
+L164:   getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L167:   getfield Field org/lwjgl/opengl/g_866 field5298 I
 L170:   isub
 L171:   ldc2_w 38L
 L174:   invokestatic Method org/lwjgl/opengl/WindowsDisplay setWindowPos (JJIIIIJ)Z
@@ -665,7 +665,7 @@ L5:
     .end code
 .end method
 
-.method public method4738 : (Lorg/lwjgl/opengl/a;II)V
+.method public method4738 : (Lorg/lwjgl/opengl/a_835;II)V
     .code stack 3 locals 4
 L0:     aload_1
 L1:     checkcast org/lwjgl/opengl/WindowsPbufferPeerInfo
@@ -681,7 +681,7 @@ L10:
     .exceptions org/lwjgl/LWJGLException
 .end method
 
-.method public method4776 : (Lorg/lwjgl/opengl/a;I)V
+.method public method4776 : (Lorg/lwjgl/opengl/a_835;I)V
     .code stack 2 locals 3
 L0:     aload_1
 L1:     checkcast org/lwjgl/opengl/WindowsPbufferPeerInfo
@@ -804,13 +804,13 @@ L47:
 .method private method4786 : (II)V
     .code stack 3 locals 3
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     ifnull L16
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L11:    iload_1
 L12:    iload_2
-L13:    invokevirtual Method org/lwjgl/opengl/A method2076 (II)V
+L13:    invokevirtual Method org/lwjgl/opengl/A_714 method2076 (II)V
 L16:    return
 L17:    
         .attribute StackMap b'\x00\x01\x00\x10\x00\x03\x07\x00\x02\x01\x01\x00\x00'
@@ -1040,12 +1040,12 @@ L39:    invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)
 L42:    ldc_w ".dll"
 L45:    invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
 L48:    invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L51:    invokespecial Method org/lwjgl/opengl/WindowsDisplay nGetVersion (Ljava/lang/String;)Lorg/lwjgl/opengl/J;
+L51:    invokespecial Method org/lwjgl/opengl/WindowsDisplay nGetVersion (Ljava/lang/String;)Lorg/lwjgl/opengl/J_752;
 L54:    dup
 L55:    astore_1
 L56:    ifnull L65
 L59:    aload_1
-L60:    invokevirtual Method org/lwjgl/opengl/J toString ()Ljava/lang/String;
+L60:    invokevirtual Method org/lwjgl/opengl/J_752 toString ()Ljava/lang/String;
 L63:    areturn
 L64:    athrow
 L65:    aconst_null
@@ -1076,7 +1076,7 @@ L4:     ifne L26
 L7:     aload_0
 L8:     getfield Field org/lwjgl/opengl/WindowsDisplay A Z
 L11:    ifeq L26
-L14:    invokestatic Method org/lwjgl/input/k method2015 ()Z
+L14:    invokestatic Method org/lwjgl/input/k_708 method2015 ()Z
 L17:    ifeq L26
 L20:    iconst_1
 L21:    dup
@@ -1189,16 +1189,16 @@ L117:
 .method private method4792 : (IIJ)V
     .code stack 6 locals 5
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     ifnull L21
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L11:    iload_1
 L12:    iload_2
 L13:    lload_3
 L14:    aload_0
 L15:    invokespecial Method org/lwjgl/opengl/WindowsDisplay method4790 ()Z
-L18:    invokevirtual Method org/lwjgl/opengl/A method2072 (IIJZ)V
+L18:    invokevirtual Method org/lwjgl/opengl/A_714 method2072 (IIJZ)V
 L21:    return
 L22:    
         .attribute StackMap b'\x00\x01\x00\x15\x00\x04\x07\x00\x02\x01\x01\x04\x00\x00'
@@ -1210,15 +1210,15 @@ L22:
 L0:     aload_0
 L1:     dup
 L2:     invokespecial Method org/lwjgl/opengl/WindowsDisplay getHwnd ()J
-L5:     getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L8:     invokestatic Method org/lwjgl/opengl/WindowsDisplay method4799 (JLorg/lwjgl/opengl/g;)V
-L11:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L14:    getfield Field org/lwjgl/opengl/g field5297 I
+L5:     getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L8:     invokestatic Method org/lwjgl/opengl/WindowsDisplay method4799 (JLorg/lwjgl/opengl/g_866;)V
+L11:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L14:    getfield Field org/lwjgl/opengl/g_866 field5297 I
 L17:    iload_1
 L18:    iadd
 L19:    istore_3
-L20:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L23:    getfield Field org/lwjgl/opengl/g field5296 I
+L20:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L23:    getfield Field org/lwjgl/opengl/g_866 field5296 I
 L26:    iconst_1
 L27:    dup
 L28:    dup
@@ -1992,17 +1992,17 @@ L1129:  lload_1
 L1130:  getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
 L1133:  invokespecial Method org/lwjgl/opengl/WindowsDisplay getWindowRect (JLjava/nio/IntBuffer;)Z
 L1136:  ifeq L1172
-L1139:  getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
+L1139:  getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
 L1142:  getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L1145:  invokevirtual Method org/lwjgl/opengl/g method5511 (Ljava/nio/IntBuffer;)V
+L1145:  invokevirtual Method org/lwjgl/opengl/g_866 method5511 (Ljava/nio/IntBuffer;)V
 L1148:  lload_1
 L1149:  aload_0
 L1150:  dup
-L1151:  getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L1154:  getfield Field org/lwjgl/opengl/g field5298 I
+L1151:  getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L1154:  getfield Field org/lwjgl/opengl/g_866 field5298 I
 L1157:  putfield Field org/lwjgl/opengl/WindowsDisplay package I
-L1160:  getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L1163:  getfield Field org/lwjgl/opengl/g field5296 I
+L1160:  getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L1163:  getfield Field org/lwjgl/opengl/g_866 field5296 I
 L1166:  putfield Field org/lwjgl/opengl/WindowsDisplay field4472 I
 L1169:  goto L1179
 L1172:  ldc_w "WM_WINDOWPOSCHANGED: Unable to get window rect"
@@ -2059,17 +2059,17 @@ L17:
 .method private method4794 : (IIJ)V
     .code stack 6 locals 5
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     ifnull L94
 L7:     aload_0
 L8:     dup
-L9:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L9:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L12:    iload_1
 L13:    i2b
 L14:    iload_2
 L15:    i2b
 L16:    lload_3
-L17:    invokevirtual Method org/lwjgl/opengl/A method2068 (BBJ)V
+L17:    invokevirtual Method org/lwjgl/opengl/A_714 method2068 (BBJ)V
 L20:    getfield Field org/lwjgl/opengl/WindowsDisplay field4475 I
 L23:    iconst_m1
 L24:    iconst_1
@@ -2160,8 +2160,8 @@ L18:
 .method public method4744 : ()I
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
-L4:     invokevirtual Method org/lwjgl/opengl/A method2073 ()I
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
+L4:     invokevirtual Method org/lwjgl/opengl/A_714 method2073 ()I
 L7:     ireturn
 L8:     
     .end code
@@ -2175,11 +2175,11 @@ L2:     dup
 L3:     pop2
 L4:     invokestatic Method org/lwjgl/BufferUtils createIntBuffer (I)Ljava/nio/IntBuffer;
 L7:     putstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L10:    new org/lwjgl/opengl/g
+L10:    new org/lwjgl/opengl/g_866
 L13:    dup
 L14:    aconst_null
-L15:    invokespecial Method org/lwjgl/opengl/g <init> (Lorg/lwjgl/opengl/l;)V
-L18:    putstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
+L15:    invokespecial Method org/lwjgl/opengl/g_866 <init> (Lorg/lwjgl/opengl/l_889;)V
+L18:    putstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
 L21:    return
 L22:    
     .end code
@@ -2212,7 +2212,7 @@ L10:
 
 .method public this : ()V
     .code stack 5 locals 1
-L0:     new org/lwjgl/opengl/A
+L0:     new org/lwjgl/opengl/A_714
 L3:     aload_0
 L4:     dup
 L5:     pop2
@@ -2220,8 +2220,8 @@ L6:     dup
 L7:     aload_0
 L8:     dup_x2
 L9:     invokespecial Method org/lwjgl/opengl/WindowsDisplay getHwnd ()J
-L12:    invokespecial Method org/lwjgl/opengl/A <init> (J)V
-L15:    putfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L12:    invokespecial Method org/lwjgl/opengl/A_714 <init> (J)V
+L15:    putfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L18:    return
 L19:    
     .end code
@@ -2246,8 +2246,8 @@ L5:
 .method public method4762 : ()Z
     .code stack 1 locals 1
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
-L4:     invokevirtual Method org/lwjgl/opengl/A method2063 ()Z
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
+L4:     invokevirtual Method org/lwjgl/opengl/A_714 method2063 ()Z
 L7:     ireturn
 L8:     
     .end code
@@ -2315,17 +2315,17 @@ L37:    dup
 L38:    pop2
 L39:    putfield Field org/lwjgl/opengl/WindowsDisplay field4498 Z
         .catch org/lwjgl/LWJGLException from L42 to L73 using L75
-L42:    invokestatic Method org/lwjgl/opengl/Display method2999 ()Lorg/lwjgl/opengl/k;
-L45:    checkcast org/lwjgl/opengl/C
-L48:    invokeinterface InterfaceMethod org/lwjgl/opengl/C method307 ()Lorg/lwjgl/opengl/G; 1
+L42:    invokestatic Method org/lwjgl/opengl/Display method2999 ()Lorg/lwjgl/opengl/k_886;
+L45:    checkcast org/lwjgl/opengl/C_724
+L48:    invokeinterface InterfaceMethod org/lwjgl/opengl/C_724 method307 ()Lorg/lwjgl/opengl/G_740; 1
 L53:    dup
 L54:    astore_1
 L55:    ifnull L100
 L58:    aload_1
-L59:    invokeinterface InterfaceMethod org/lwjgl/opengl/G method3618 ()Z 1
+L59:    invokeinterface InterfaceMethod org/lwjgl/opengl/G_740 method3618 ()Z 1
 L64:    ifeq L100
 L67:    aload_1
-L68:    invokeinterface InterfaceMethod org/lwjgl/opengl/G method3617 ()V 1
+L68:    invokeinterface InterfaceMethod org/lwjgl/opengl/G_740 method3617 ()V 1
 L73:    return
 L74:    athrow
 L75:    astore_1
@@ -2461,18 +2461,18 @@ L11:    ifne L16
 L14:    return
 L15:    athrow
 L16:    lload_0
-L17:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L20:    invokestatic Method org/lwjgl/opengl/WindowsDisplay method4799 (JLorg/lwjgl/opengl/g;)V
-L23:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L26:    getfield Field org/lwjgl/opengl/g field5297 I
+L17:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L20:    invokestatic Method org/lwjgl/opengl/WindowsDisplay method4799 (JLorg/lwjgl/opengl/g_866;)V
+L23:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L26:    getfield Field org/lwjgl/opengl/g_866 field5297 I
 L29:    istore_2
-L30:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L33:    getfield Field org/lwjgl/opengl/g field5298 I
+L30:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L33:    getfield Field org/lwjgl/opengl/g_866 field5298 I
 L36:    istore_3
-L37:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L40:    getfield Field org/lwjgl/opengl/g field5297 I
-L43:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L46:    getfield Field org/lwjgl/opengl/g field5295 I
+L37:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L40:    getfield Field org/lwjgl/opengl/g_866 field5297 I
+L43:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L46:    getfield Field org/lwjgl/opengl/g_866 field5295 I
 L49:    iadd
 L50:    iconst_2
 L51:    iconst_1
@@ -2480,10 +2480,10 @@ L52:    dup
 L53:    pop2
 L54:    idiv
 L55:    istore 4
-L57:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L60:    getfield Field org/lwjgl/opengl/g field5298 I
-L63:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L66:    getfield Field org/lwjgl/opengl/g field5296 I
+L57:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L60:    getfield Field org/lwjgl/opengl/g_866 field5298 I
+L63:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L66:    getfield Field org/lwjgl/opengl/g_866 field5296 I
 L69:    iadd
 L70:    iconst_2
 L71:    iconst_1
@@ -2529,7 +2529,7 @@ L13:
     .end code
 .end method
 
-.method private static method4799 : (JLorg/lwjgl/opengl/g;)V
+.method private static method4799 : (JLorg/lwjgl/opengl/g_866;)V
     .code stack 5 locals 5
 L0:     getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
 L3:     iconst_0
@@ -2574,9 +2574,9 @@ L62:    iload_3
 L63:    aload_2
 L64:    dup_x1
 L65:    getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L68:    invokevirtual Method org/lwjgl/opengl/g method5511 (Ljava/nio/IntBuffer;)V
+L68:    invokevirtual Method org/lwjgl/opengl/g_866 method5511 (Ljava/nio/IntBuffer;)V
 L71:    iload 4
-L73:    invokevirtual Method org/lwjgl/opengl/g method5514 (II)V
+L73:    invokevirtual Method org/lwjgl/opengl/g_866 method5514 (II)V
 L76:    pop
 L77:    return
 L78:    
@@ -2632,13 +2632,13 @@ L9:
 .method private method4800 : (IJ)V
     .code stack 4 locals 4
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     ifnull L16
 L7:     aload_0
-L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L8:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L11:    iload_1
 L12:    lload_2
-L13:    invokevirtual Method org/lwjgl/opengl/A method2062 (IJ)V
+L13:    invokevirtual Method org/lwjgl/opengl/A_714 method2062 (IJ)V
 L16:    return
 L17:    
         .attribute StackMap b'\x00\x01\x00\x10\x00\x03\x07\x00\x02\x01\x04\x00\x00'
@@ -2653,7 +2653,7 @@ L17:
     .code stack 3 locals 2
         .catch org/lwjgl/LWJGLException from L0 to L29 using L43
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     ifnull L30
 L7:     aload_0
 L8:     invokespecial Method org/lwjgl/opengl/WindowsDisplay method4790 ()Z
@@ -2661,8 +2661,8 @@ L11:    ifeq L30
 L14:    aload_0
 L15:    invokespecial Method org/lwjgl/opengl/WindowsDisplay getHwnd ()J
 L18:    aload_0
-L19:    getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
-L22:    invokevirtual Method org/lwjgl/opengl/A method2070 ()Ljava/lang/Object;
+L19:    getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
+L22:    invokevirtual Method org/lwjgl/opengl/A_714 method2070 ()Ljava/lang/Object;
 L25:    invokestatic Method org/lwjgl/opengl/WindowsDisplay nSetNativeCursor (JLjava/lang/Object;)V
 L28:    return
 L29:    athrow
@@ -2723,9 +2723,9 @@ L15:
 .method public method4703 : (Ljava/nio/ByteBuffer;)V
     .code stack 2 locals 2
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     aload_1
-L5:     invokevirtual Method org/lwjgl/opengl/A method2077 (Ljava/nio/ByteBuffer;)V
+L5:     invokevirtual Method org/lwjgl/opengl/A_714 method2077 (Ljava/nio/ByteBuffer;)V
 L8:     return
 L9:     
     .end code
@@ -2739,11 +2739,11 @@ L9:
 L0:     invokestatic Method org/lwjgl/opengl/Display throw ()Z
 L3:     ifne L23
 L6:     aload_0
-L7:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L7:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L10:    ifnull L93
 L13:    aload_0
-L14:    getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
-L17:    invokevirtual Method org/lwjgl/opengl/A method2065 ()Z
+L14:    getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
+L17:    invokevirtual Method org/lwjgl/opengl/A_714 method2065 ()Z
 L20:    ifeq L93
 L23:    aload_0
 L24:    getfield Field org/lwjgl/opengl/WindowsDisplay y Z
@@ -2902,19 +2902,19 @@ L2:     dup_x1
 L3:     getfield Field org/lwjgl/opengl/WindowsDisplay L J
 L6:     getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
 L9:     invokestatic Method org/lwjgl/opengl/WindowsDisplay getClientRect (JLjava/nio/IntBuffer;)V
-L12:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
+L12:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
 L15:    getstatic Field org/lwjgl/opengl/WindowsDisplay field4499 Ljava/nio/IntBuffer;
-L18:    invokevirtual Method org/lwjgl/opengl/g method5511 (Ljava/nio/IntBuffer;)V
-L21:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L24:    getfield Field org/lwjgl/opengl/g field5295 I
-L27:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L30:    getfield Field org/lwjgl/opengl/g field5297 I
+L18:    invokevirtual Method org/lwjgl/opengl/g_866 method5511 (Ljava/nio/IntBuffer;)V
+L21:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L24:    getfield Field org/lwjgl/opengl/g_866 field5295 I
+L27:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L30:    getfield Field org/lwjgl/opengl/g_866 field5297 I
 L33:    isub
 L34:    putfield Field org/lwjgl/opengl/WindowsDisplay switch I
-L37:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L40:    getfield Field org/lwjgl/opengl/g field5296 I
-L43:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g;
-L46:    getfield Field org/lwjgl/opengl/g field5298 I
+L37:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L40:    getfield Field org/lwjgl/opengl/g_866 field5296 I
+L43:    getstatic Field org/lwjgl/opengl/WindowsDisplay J Lorg/lwjgl/opengl/g_866;
+L46:    getfield Field org/lwjgl/opengl/g_866 field5298 I
 L49:    isub
 L50:    putfield Field org/lwjgl/opengl/WindowsDisplay Z I
 L53:    return
@@ -2922,10 +2922,10 @@ L54:
     .end code
 .end method
 
-.method private native nGetVersion : (Ljava/lang/String;)Lorg/lwjgl/opengl/J;
+.method private native nGetVersion : (Ljava/lang/String;)Lorg/lwjgl/opengl/J_752;
 .end method
 
-.method public method4705 : (Lorg/lwjgl/opengl/a;)Z
+.method public method4705 : (Lorg/lwjgl/opengl/a_835;)Z
     .code stack 1 locals 2
 L0:     aload_1
 L1:     checkcast org/lwjgl/opengl/WindowsPbufferPeerInfo
@@ -3008,19 +3008,19 @@ L30:
 .method public method4758 : (Z)V
     .code stack 4 locals 2
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     iload_1
 L5:     aload_0
 L6:     dup_x2
 L7:     invokespecial Method org/lwjgl/opengl/WindowsDisplay method4790 ()Z
-L10:    invokevirtual Method org/lwjgl/opengl/A method2066 (ZZ)V
+L10:    invokevirtual Method org/lwjgl/opengl/A_714 method2066 (ZZ)V
 L13:    invokespecial Method org/lwjgl/opengl/WindowsDisplay method4801 ()V
 L16:    return
 L17:    
     .end code
 .end method
 
-.method public method4708 : (Lorg/lwjgl/opengl/C;Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/Canvas;II)V
+.method public method4708 : (Lorg/lwjgl/opengl/C_724;Lorg/lwjgl/opengl/DisplayMode;Ljava/awt/Canvas;II)V
     .code stack 17 locals 8
 L0:     aload_0
 L1:     aload_3
@@ -3154,7 +3154,7 @@ L211:   invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;
 L214:   athrow
         .catch org/lwjgl/LWJGLException from L215 to L382 using L383
 L215:   aload_1
-L216:   instanceof org/lwjgl/opengl/q
+L216:   instanceof org/lwjgl/opengl/q_915
 L219:   aload_0
 L220:   swap
 L221:   ifeq L277
@@ -3168,7 +3168,7 @@ L232:   iconst_1
 L233:   dup
 L234:   pop2
 L235:   aload_1
-L236:   invokeinterface InterfaceMethod org/lwjgl/opengl/C method310 ()Lorg/lwjgl/opengl/h; 1
+L236:   invokeinterface InterfaceMethod org/lwjgl/opengl/C_724 method310 ()Lorg/lwjgl/opengl/h_871; 1
 L241:   checkcast org/lwjgl/opengl/PixelFormat
 L244:   aconst_null
 L245:   iconst_1
@@ -3204,7 +3204,7 @@ L284:   pop2
 L285:   invokespecial Method org/lwjgl/opengl/WindowsDisplayPeerInfo <init> (Z)V
 L288:   putfield Field org/lwjgl/opengl/WindowsDisplay throw Lorg/lwjgl/opengl/WindowsDisplayPeerInfo;
 L291:   aload_1
-L292:   checkcast org/lwjgl/opengl/vC
+L292:   checkcast org/lwjgl/opengl/vC_944
 L295:   aload_0
 L296:   getfield Field org/lwjgl/opengl/WindowsDisplay L J
 L299:   aload_0
@@ -3214,9 +3214,9 @@ L304:   iconst_1
 L305:   dup
 L306:   pop2
 L307:   aload_1
-L308:   invokeinterface InterfaceMethod org/lwjgl/opengl/C method310 ()Lorg/lwjgl/opengl/h; 1
+L308:   invokeinterface InterfaceMethod org/lwjgl/opengl/C_724 method310 ()Lorg/lwjgl/opengl/h_871; 1
 L313:   checkcast org/lwjgl/opengles/PixelFormat
-L316:   invokevirtual Method org/lwjgl/opengl/vC method323 (JJILorg/lwjgl/opengles/PixelFormat;)V
+L316:   invokevirtual Method org/lwjgl/opengl/vC_944 method323 (JJILorg/lwjgl/opengles/PixelFormat;)V
 L319:   aload_0
 L320:   getfield Field org/lwjgl/opengl/WindowsDisplay throw Lorg/lwjgl/opengl/WindowsDisplayPeerInfo;
 L323:   aload_0
@@ -3263,7 +3263,7 @@ L400:   invokestatic Method org/lwjgl/opengl/WindowsDisplay nDestroyWindow (J)V
 L403:   athrow
 L404:   return
 L405:   
-        .attribute StackMap b'\x00\x12\x00\x40\x00\x00\x00\x01\x07\x01\x7D\x00\x41\x00\x06\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x00\x00\x45\x00\x06\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x01\x01\x00\x53\x00\x00\x00\x01\x07\x01\x7D\x00\x54\x00\x06\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x00\x00\x55\x00\x06\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x01\x04\x00\x70\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x05\x07\x00\x02\x01\x01\x01\x01\x00\x78\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x05\x07\x00\x02\x01\x01\x01\x01\x00\x7D\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x07\x07\x00\x02\x01\x01\x01\x01\x01\x07\x01\xDB\x00\x89\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x06\x07\x00\x02\x01\x01\x01\x01\x01\x00\x8F\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x08\x07\x00\x02\x01\x01\x01\x01\x01\x01\x04\x00\xB1\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x00\x00\xD7\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x00\x01\x15\x00\x07\x07\x00\x02\x07\x03\x39\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x01\x07\x00\x02\x01\x40\x00\x07\x07\x00\x02\x07\x03\x39\x00\x07\x01\xDB\x01\x01\x04\x00\x01\x07\x00\x02\x01\x70\x00\x07\x07\x00\x02\x07\x03\x39\x00\x07\x01\xDB\x01\x01\x04\x00\x00\x01\x7F\x00\x07\x07\x00\x02\x07\x03\x39\x00\x07\x01\xDB\x01\x01\x04\x00\x01\x07\x00\xF0\x01\x94\x00\x07\x07\x00\x02\x07\x03\x39\x00\x07\x01\xDB\x01\x01\x04\x00\x00'
+        .attribute StackMap b'\x00\x12\x00\x40\x00\x00\x00\x01\x07\x01\x7D\x00\x41\x00\x06\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x00\x00\x45\x00\x06\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x01\x01\x00\x53\x00\x00\x00\x01\x07\x01\x7D\x00\x54\x00\x06\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x00\x00\x55\x00\x06\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x00\x01\x04\x00\x70\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x05\x07\x00\x02\x01\x01\x01\x01\x00\x78\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x05\x07\x00\x02\x01\x01\x01\x01\x00\x7D\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x07\x07\x00\x02\x01\x01\x01\x01\x01\x07\x01\xDB\x00\x89\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x06\x07\x00\x02\x01\x01\x01\x01\x01\x00\x8F\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x08\x07\x00\x02\x01\x01\x01\x01\x01\x01\x04\x00\xB1\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x00\x00\xD7\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x00\x01\x15\x00\x07\x07\x00\x02\x07\x04\x31\x07\x03\xB9\x07\x01\xDB\x01\x01\x04\x00\x01\x07\x00\x02\x01\x40\x00\x07\x07\x00\x02\x07\x04\x31\x00\x07\x01\xDB\x01\x01\x04\x00\x01\x07\x00\x02\x01\x70\x00\x07\x07\x00\x02\x07\x04\x31\x00\x07\x01\xDB\x01\x01\x04\x00\x00\x01\x7F\x00\x07\x07\x00\x02\x07\x04\x31\x00\x07\x01\xDB\x01\x01\x04\x00\x01\x07\x00\xF0\x01\x94\x00\x07\x07\x00\x02\x07\x04\x31\x00\x07\x01\xDB\x01\x01\x04\x00\x00'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -3271,10 +3271,10 @@ L405:
 .method public method4767 : (Ljava/nio/IntBuffer;Ljava/nio/ByteBuffer;)V
     .code stack 3 locals 3
 L0:     aload_0
-L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A;
+L1:     getfield Field org/lwjgl/opengl/WindowsDisplay field4497 Lorg/lwjgl/opengl/A_714;
 L4:     aload_1
 L5:     aload_2
-L6:     invokevirtual Method org/lwjgl/opengl/A method2071 (Ljava/nio/IntBuffer;Ljava/nio/ByteBuffer;)V
+L6:     invokevirtual Method org/lwjgl/opengl/A_714 method2071 (Ljava/nio/IntBuffer;Ljava/nio/ByteBuffer;)V
 L9:     return
 L10:    
     .end code
@@ -3295,7 +3295,7 @@ L10:
 .method private static native createIcon : (IILjava/nio/IntBuffer;)J
 .end method
 .innerclasses
-    org/lwjgl/opengl/g org/lwjgl/opengl/WindowsDisplay [0] private static final
-    org/lwjgl/opengl/l org/lwjgl/opengl/WindowsDisplay [0] static synthetic
+    org/lwjgl/opengl/g_866 org/lwjgl/opengl/WindowsDisplay [0] private static final
+    org/lwjgl/opengl/l_889 org/lwjgl/opengl/WindowsDisplay [0] static synthetic
 .end innerclasses
 .end class

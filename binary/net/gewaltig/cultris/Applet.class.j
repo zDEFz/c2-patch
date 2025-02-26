@@ -199,7 +199,7 @@ L196:   astore_1
         .catch java/net/MalformedURLException from L197 to L208 using L212
 L197:   new java/net/URL
 L200:   dup
-L201:   invokestatic Method dc method1125 ()Ljava/lang/String;
+L201:   invokestatic Method dc_407 method1125 ()Ljava/lang/String;
 L204:   invokespecial Method java/net/URL <init> (Ljava/lang/String;)V
 L207:   astore_3
 L208:   aload_1
@@ -250,7 +250,7 @@ L277:   istore 6
 L279:   aload_1
 L280:   arraylength
 L281:   if_icmpge L428
-L284:   new net/gewaltig/cultris/C
+L284:   new net/gewaltig/cultris/C_644
 L287:   dup
 L288:   aload_0
 L289:   aload_1
@@ -262,7 +262,7 @@ L295:   dup
 L296:   pop2
 L297:   aload 4
 L299:   iload 5
-L301:   invokespecial Method net/gewaltig/cultris/C <init> (Lnet/gewaltig/cultris/Applet;Ljava/lang/String;ILjava/net/URL;I)V
+L301:   invokespecial Method net/gewaltig/cultris/C_644 <init> (Lnet/gewaltig/cultris/Applet;Ljava/lang/String;ILjava/net/URL;I)V
 L304:   astore 7
 L306:   iconst_0
 L307:   aload_0
@@ -308,7 +308,7 @@ L363:   pop2
 L364:   invokevirtual Method java/awt/Label setBounds (IIII)V
 L367:   aload 4
 L369:   ifnull L410
-L372:   new net/gewaltig/cultris/k
+L372:   new net/gewaltig/cultris/k_649
 L375:   aload 7
 L377:   dup_x1
 L378:   dup_x2
@@ -317,7 +317,7 @@ L380:   pop2
 L381:   dup
 L382:   aload_0
 L383:   aload 4
-L385:   invokespecial Method net/gewaltig/cultris/k <init> (Lnet/gewaltig/cultris/Applet;Ljava/net/URL;)V
+L385:   invokespecial Method net/gewaltig/cultris/k_649 <init> (Lnet/gewaltig/cultris/Applet;Ljava/net/URL;)V
 L388:   invokevirtual Method java/awt/Label addMouseListener (Ljava/awt/event/MouseListener;)V
 L391:   new java/awt/Cursor
 L394:   aload 7
@@ -340,7 +340,7 @@ L423:   iload 6
 L425:   goto L279
 L428:   aload_3
 L429:   ifnull L557
-L432:   new net/gewaltig/cultris/e
+L432:   new net/gewaltig/cultris/e_647
 L435:   dup
 L436:   aload_0
 L437:   ldc "The downloadable version should work however."
@@ -349,7 +349,7 @@ L440:   dup
 L441:   dup
 L442:   pop2
 L443:   iload 5
-L445:   invokespecial Method net/gewaltig/cultris/e <init> (Lnet/gewaltig/cultris/Applet;Ljava/lang/String;II)V
+L445:   invokespecial Method net/gewaltig/cultris/e_647 <init> (Lnet/gewaltig/cultris/Applet;Ljava/lang/String;II)V
 L448:   astore 6
 L450:   iconst_0
 L451:   aload_0
@@ -413,7 +413,7 @@ L532:   pop2
 L533:   invokevirtual Method java/awt/Label setBounds (IIII)V
 L536:   aload_3
 L537:   astore 7
-L539:   new net/gewaltig/cultris/D
+L539:   new net/gewaltig/cultris/D_645
 L542:   aload 6
 L544:   dup_x1
 L545:   dup
@@ -421,7 +421,7 @@ L546:   pop2
 L547:   dup
 L548:   aload_0
 L549:   aload 7
-L551:   invokespecial Method net/gewaltig/cultris/D <init> (Lnet/gewaltig/cultris/Applet;Ljava/net/URL;)V
+L551:   invokespecial Method net/gewaltig/cultris/D_645 <init> (Lnet/gewaltig/cultris/Applet;Ljava/net/URL;)V
 L554:   invokevirtual Method java/awt/Label addMouseListener (Ljava/awt/event/MouseListener;)V
 L557:   aload_0
 L558:   iconst_1
@@ -437,11 +437,11 @@ L570:   aload_0
 L571:   iconst_1
 L572:   aload_0
 L573:   dup
-L574:   new net/gewaltig/cultris/M
+L574:   new net/gewaltig/cultris/M_646
 L577:   dup
 L578:   aload_0
 L579:   dup_x2
-L580:   invokespecial Method net/gewaltig/cultris/M <init> (Lnet/gewaltig/cultris/Applet;)V
+L580:   invokespecial Method net/gewaltig/cultris/M_646 <init> (Lnet/gewaltig/cultris/Applet;)V
 L583:   putfield Field net/gewaltig/cultris/Applet field569 Ljava/awt/Canvas;
 L586:   getfield Field net/gewaltig/cultris/Applet field569 Ljava/awt/Canvas;
 L589:   aload_0
@@ -494,14 +494,14 @@ L672:   invokespecial Method java/lang/RuntimeException <init> (Ljava/lang/Strin
 L675:   athrow
 L676:   athrow
 L677:   
-        .attribute StackMap b'\x00\x12\x00\x50\x00\x00\x00\x01\x07\x00\x72\x00\x51\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x01\x07\x00\x4D\x00\x58\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\x74\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\x76\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x01\x07\x00\x63\x00\x9C\x00\x00\x00\x01\x07\x00\x72\x00\x9D\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\xD4\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x01\x07\x00\x4D\x00\xDF\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\xF2\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\xF3\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x01\x07\x00\x74\x01\x17\x00\x07\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x01\x00\x01\x01\x01\x9A\x00\x08\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x01\x07\x00\x06\x00\x00\x01\xAC\x00\x07\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x01\x00\x00\x02\x2D\x00\x06\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x00\x00\x02\x3A\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x00\x02\x90\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x01\x07\x00\x4F\x02\xA4\x00\x00\x00\x01\x07\x00\x72'
+        .attribute StackMap b'\x00\x12\x00\x50\x00\x00\x00\x01\x07\x00\x72\x00\x51\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x01\x07\x00\x4D\x00\x58\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\x74\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\x76\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x01\x07\x00\x63\x00\x9C\x00\x00\x00\x01\x07\x00\x72\x00\x9D\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\xD4\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x01\x07\x00\x4D\x00\xDF\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\xF2\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x05\x07\x00\x63\x00\x00\x00\xF3\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x01\x07\x00\x74\x01\x17\x00\x07\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x01\x00\x01\x01\x01\x9A\x00\x08\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x01\x07\x00\xFF\x00\x00\x01\xAC\x00\x07\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x01\x00\x00\x02\x2D\x00\x06\x07\x00\x02\x07\x00\x74\x01\x07\x00\x5C\x07\x00\x5C\x01\x00\x00\x02\x3A\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x00\x02\x90\x00\x05\x07\x00\x02\x07\x00\x74\x07\x00\x5C\x07\x00\x5C\x07\x00\x63\x00\x01\x07\x00\x4F\x02\xA4\x00\x00\x00\x01\x07\x00\x72'
     .end code
 .end method
 .innerclasses
-    net/gewaltig/cultris/C [0] [0]
-    net/gewaltig/cultris/D [0] [0]
-    net/gewaltig/cultris/M [0] [0]
-    net/gewaltig/cultris/e [0] [0]
-    net/gewaltig/cultris/k [0] [0]
+    net/gewaltig/cultris/C_644 [0] [0]
+    net/gewaltig/cultris/D_645 [0] [0]
+    net/gewaltig/cultris/M_646 [0] [0]
+    net/gewaltig/cultris/e_647 [0] [0]
+    net/gewaltig/cultris/k_649 [0] [0]
 .end innerclasses
 .end class
