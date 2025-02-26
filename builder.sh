@@ -29,7 +29,8 @@ case "$1" in
         echo binary folder exists, continueing
             rm -f ../cultris2.jar
             cd binary || exit
-            zip -r ../cultris2.jar * && cd ..
+        # Repack from ./binary folder but exclude .j files
+            zip -r ../cultris2.jar * -x '*.j' && cd ..
     else
         echo binary folder doesnt exist ... unzipping cultris2.jar
             unzip -o ./cultris2.jar -d binary
