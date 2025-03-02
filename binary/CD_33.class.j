@@ -38,6 +38,7 @@ L58:    aload_2
 L59:    invokespecial Method Ub_283 method5 (Led_422;Ljava/lang/String;)V
 L62:    return
 L63:    
+        .attribute StackMap b'\x00\x05\x00\x0D\x00\x00\x00\x01\x07\x00\x35\x00\x0E\x00\x03\x07\x00\x02\x07\x00\x37\x07\x00\x39\x00\x00\x00\x1E\x00\x03\x07\x00\x02\x07\x00\x37\x07\x00\x39\x00\x00\x00\x37\x00\x00\x00\x01\x07\x00\x35\x00\x38\x00\x03\x07\x00\x02\x07\x00\x37\x07\x00\x39\x00\x00'
         .localvariabletable
             0 is this LCD_33; from L0 to L63
             1 is v1 Led_422; from L0 to L63
@@ -90,6 +91,7 @@ L43:    aload_1
 L44:    invokespecial Method Ub_283 method7 (Ljava/lang/String;)V
 L47:    return
 L48:    
+        .attribute StackMap b'\x00\x03\x00\x10\x00\x02\x07\x00\x02\x07\x00\x39\x00\x00\x00\x29\x00\x00\x00\x01\x07\x00\x35\x00\x2A\x00\x02\x07\x00\x02\x07\x00\x39\x00\x00'
         .localvariabletable
             0 is this LCD_33; from L0 to L48
             1 is v1 Ljava/lang/String; from L0 to L48
@@ -228,7 +230,7 @@ L100:   invokestatic Method Ub_283 method11 (Led_422;)V
 L103:   goto L136
 L106:   aload_2
 L107:   getfield Field pc_978 field943 Led_422;
-L110:   invokevirtual Method ed_422 is_guest ()Z
+L110:   invokevirtual Method ed_422 method94 ()Z
 L113:   ifne L136
 L116:   aload_2
 L117:   getfield Field pc_978 field943 Led_422;
@@ -243,10 +245,10 @@ L137:   aload_1
 L138:   invokespecial Method Ub_283 method8 (LD_43;)V
 L141:   return
 L142:   
+        .attribute StackMap b'\x00\x02\x00\x6A\x00\x03\x07\x00\x02\x07\x00\xAC\x07\x00\x74\x00\x00\x00\x88\x00\x02\x07\x00\x02\x07\x00\xAC\x00\x00'
         .localvariabletable
-            0 is this LCD_33; from L0 to L142
             1 is p1 LD_43; from L0 to L142
-            2 is v2 Lpc_978; from L0 to L142
+            2 is v2 Ljava/lang/Object; from L0 to L142
         .end localvariabletable
     .end code
 .end method
@@ -300,6 +302,7 @@ L100:   getstatic Field CD_33 field61 Ljava/lang/String;
 L103:   invokevirtual Method CD_33 method12 (Ljava/lang/String;)V
 L106:   return
 L107:   
+        .attribute StackMap b'\x00\x04\x00\x28\x00\x02\x07\x00\x02\x07\x00\xBE\x00\x01\x07\x00\xBE\x00\x55\x00\x00\x00\x01\x07\x00\x35\x00\x56\x00\x02\x07\x00\x02\x07\x00\xBE\x00\x00\x00\x6A\x00\x02\x07\x00\x02\x07\x00\xBE\x00\x00'
         .localvariabletable
             0 is this LCD_33; from L0 to L107
             1 is v1 Ljava/util/Iterator; from L0 to L107
