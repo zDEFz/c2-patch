@@ -43,7 +43,6 @@ L43:    dup
 L44:    pop2
 L45:    ireturn
 L46:    
-        .attribute StackMap b'\x00\x05\x00\x06\x00\x03\x07\x00\xF4\x07\x01\x04\x01\x00\x01\x01\x00\x20\x00\x00\x00\x01\x07\x00\x2F\x00\x21\x00\x03\x07\x00\xF4\x07\x01\x04\x01\x00\x00\x00\x28\x00\x00\x00\x01\x07\x00\x2F\x00\x29\x00\x03\x07\x00\xF4\x07\x01\x04\x01\x00\x00'
     .end code
 .end method
 
@@ -197,7 +196,6 @@ L289:   aload_0
 L290:   invokestatic Method ib_476 method1156 (LM_169;)V
 L293:   return
 L294:   
-        .attribute StackMap b'\x00\x08\x00\x1E\x00\x02\x07\x00\xF4\x07\x00\xFE\x00\x00\x00\x62\x00\x03\x07\x00\xF4\x07\x01\x29\x01\x00\x01\x01\x00\x7B\x00\x00\x00\x01\x07\x00\x2F\x00\x7C\x00\x03\x07\x00\xF4\x07\x01\x29\x01\x00\x00\x00\xB6\x00\x04\x07\x00\xF4\x07\x01\x29\x01\x07\x00\x7C\x00\x00\x01\x13\x00\x00\x00\x01\x07\x00\x2F\x01\x17\x00\x02\x07\x00\xF4\x07\x00\x04\x00\x01\x07\x00\x33\x01\x21\x00\x04\x07\x00\xF4\x07\x01\x29\x01\x07\x00\x7C\x00\x00'
     .end code
     .exceptions java/io/IOException
 .end method
@@ -215,7 +213,7 @@ L5:
 .end method
 
 .method public method227 : ()Z
-    .code stack 14 locals 4
+    .code stack 14 locals 5
 L0:     aload_0
 L1:     getfield Field NE_188 field812 Z
 L4:     ifeq L13
@@ -260,7 +258,7 @@ L56:    putfield Field NE_188 field810 I
 L59:    getfield Field NE_188 field811 Lqd_992;
 L62:    getfield Field qd_992 field763 LQB_225;
 L65:    getstatic Field QB_225 field369 LQB_225;
-L68:    if_acmpeq L226
+L68:    if_acmpeq L230
 L71:    aload_0
 L72:    dup
 L73:    dup2
@@ -291,67 +289,71 @@ L112:   pop2
 L113:   invokespecial Method java/util/zip/Deflater <init> (IZ)V
 L116:   invokespecial Method java/util/zip/DeflaterOutputStream <init> (Ljava/io/OutputStream;Ljava/util/zip/Deflater;)V
 L119:   invokespecial Method AC_4 <init> (Ljava/io/OutputStream;)V
-L122:   astore_2
-L123:   aload_0
-L124:   aload_2
-L125:   dup_x1
-L126:   dup_x1
-L127:   aload_0
-L128:   aload_2
-L129:   dup
-L130:   iconst_1
-L131:   dup
+L122:   astore 4
+L124:   aload_0
+L125:   aload 4
+L127:   dup_x1
+L128:   dup_x1
+L129:   aload_0
+L130:   aload 4
 L132:   dup
-L133:   pop2
-L134:   invokevirtual Method AC_4 method691 (I)V
-L137:   getstatic Field ib_476 field2312 F
-L140:   invokevirtual Method AC_4 method685 (F)V
-L143:   getfield Field NE_188 field810 I
-L146:   invokevirtual Method AC_4 method674 (I)V
-L149:   getfield Field NE_188 this Ljava/io/ByteArrayOutputStream;
-L152:   invokevirtual Method java/io/ByteArrayOutputStream toByteArray ()[B
-L155:   invokevirtual Method AC_4 method677 ([B)V
-L158:   invokevirtual Method AC_4 method689 ()V
-L161:   getstatic Field java/lang/System out Ljava/io/PrintStream;
-L164:   new java/lang/StringBuilder
-L167:   dup
-L168:   invokespecial Method java/lang/StringBuilder <init> ()V
-L171:   aload_1
-L172:   dup_x2
-L173:   invokevirtual Method java/io/ByteArrayOutputStream size ()I
-L176:   invokevirtual Method java/lang/StringBuilder append (I)Ljava/lang/StringBuilder;
-L179:   ldc " bytes, "
-L181:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L184:   aload_0
-L185:   getfield Field NE_188 this Ljava/io/ByteArrayOutputStream;
-L188:   invokevirtual Method java/io/ByteArrayOutputStream size ()I
-L191:   invokevirtual Method java/lang/StringBuilder append (I)Ljava/lang/StringBuilder;
-L194:   ldc " bytes uncompressed"
-L196:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L199:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L202:   invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
-L205:   invokevirtual Method java/io/ByteArrayOutputStream toByteArray ()[B
-L208:   putfield Field NE_188 field813 [B
-L211:   iconst_1
-L212:   dup
-L213:   dup
-L214:   pop2
-L215:   putfield Field NE_188 field812 Z
-L218:   invokestatic Method ib_476 method1153 (LM_169;)V
-L221:   iconst_0
-L222:   iconst_1
-L223:   dup
-L224:   pop2
-L225:   ireturn
-L226:   iconst_0
-L227:   iconst_1
-L228:   dup
-L229:   pop2
-L230:   ireturn
-L231:   
-        .attribute StackMap b'\x00\x06\x00\x0C\x00\x00\x00\x01\x07\x00\x2F\x00\x0D\x00\x01\x07\x00\xF4\x00\x00\x00\x1B\x00\x04\x07\x00\xF4\x07\x01\x3A\x01\x01\x00\x01\x01\x00\x2C\x00\x00\x00\x01\x07\x00\x2F\x00\x2D\x00\x04\x07\x00\xF4\x07\x01\x3A\x01\x01\x00\x00\x00\xE2\x00\x04\x07\x00\xF4\x07\x01\x3A\x01\x01\x00\x00'
+L133:   iconst_1
+L134:   dup
+L135:   dup
+L136:   pop2
+L137:   invokevirtual Method AC_4 method691 (I)V
+L140:   getstatic Field ib_476 field2312 F
+L143:   invokevirtual Method AC_4 method685 (F)V
+L146:   getfield Field NE_188 field810 I
+L149:   invokevirtual Method AC_4 method674 (I)V
+L152:   getfield Field NE_188 this Ljava/io/ByteArrayOutputStream;
+L155:   invokevirtual Method java/io/ByteArrayOutputStream toByteArray ()[B
+L158:   invokevirtual Method AC_4 method677 ([B)V
+L161:   invokevirtual Method AC_4 method689 ()V
+L164:   getstatic Field java/lang/System out Ljava/io/PrintStream;
+L167:   new java/lang/StringBuilder
+L170:   dup
+L171:   invokespecial Method java/lang/StringBuilder <init> ()V
+L174:   aload_1
+L175:   dup_x2
+L176:   invokevirtual Method java/io/ByteArrayOutputStream size ()I
+L179:   invokevirtual Method java/lang/StringBuilder append (I)Ljava/lang/StringBuilder;
+L182:   ldc " bytes, "
+L184:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L187:   aload_0
+L188:   getfield Field NE_188 this Ljava/io/ByteArrayOutputStream;
+L191:   invokevirtual Method java/io/ByteArrayOutputStream size ()I
+L194:   invokevirtual Method java/lang/StringBuilder append (I)Ljava/lang/StringBuilder;
+L197:   ldc " bytes uncompressed"
+L199:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L202:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L205:   invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
+L208:   invokevirtual Method java/io/ByteArrayOutputStream toByteArray ()[B
+L211:   putfield Field NE_188 field813 [B
+L214:   iconst_1
+L215:   dup
+L216:   dup
+L217:   pop2
+L218:   putfield Field NE_188 field812 Z
+L221:   invokestatic Method ib_476 method1153 (LM_169;)V
+L224:   aload_0
+L225:   invokestatic Method zz_1114 method5 (LNE_188;)V
+L228:   iconst_0
+L229:   ireturn
+L230:   iconst_0
+L231:   iconst_1
+L232:   dup
+L233:   pop2
+L234:   ireturn
+L235:   
+        .localvariabletable
+            0 is this LNE_188; from L0 to L235
+            2 is i2 I from L0 to L235
+            3 is i3 I from L0 to L235
+            1 is v1 Ljava/lang/Object; from L0 to L235
+            4 is v2 LAC_4; from L0 to L235
+        .end localvariabletable
     .end code
-    .exceptions java/lang/Exception
 .end method
 
 .method public method441 : ()[B
@@ -367,7 +369,6 @@ L15:    aload_0
 L16:    getfield Field NE_188 field813 [B
 L19:    areturn
 L20:    
-        .attribute StackMap b'\x00\x01\x00\x0F\x00\x01\x07\x00\xF4\x00\x00'
     .end code
 .end method
 .innerclasses

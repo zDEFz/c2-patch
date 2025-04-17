@@ -93,7 +93,7 @@ L5:
 .method public static main : ([Ljava/lang/String;)V
     .code stack 5 locals 4
 L0:     invokestatic Method net/gewaltig/cultris/Cultris method1723 ()V
-        .catch java/lang/Throwable from L3 to L202 using L209
+        .catch java/lang/Throwable from L3 to L205 using L212
 L3:     invokestatic Method FE_76 readfpsvalue ()I
 L6:     putstatic Field net/gewaltig/cultris/Cultris framerate I
 L9:     invokestatic Method FE_76 readhzvalue ()I
@@ -158,72 +158,73 @@ L151:   invokestatic Method ReadTeamColor getBlue (I)F
 L154:   putstatic Field net/gewaltig/cultris/Cultris teamYellowB F
 L157:   invokestatic Method od_662 readenemySFXtoggle ()I
 L160:   putstatic Field net/gewaltig/cultris/Cultris enable_enemy_sounds I
-L163:   invokestatic Method net/gewaltig/cultris/Cultris method1725 ()V
-L166:   aload_0
-L167:   arraylength
-L168:   iconst_1
-L169:   dup
-L170:   dup
-L171:   pop2
-L172:   if_icmpne L199
-L175:   ldc "profile_run"
-L177:   aload_0
-L178:   iconst_0
-L179:   iconst_1
-L180:   dup
-L181:   pop2
-L182:   aaload
-L183:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
-L186:   ifeq L199
-L189:   new net/gewaltig/cultris/i_648
-L192:   dup
-L193:   invokespecial Method net/gewaltig/cultris/i_648 <init> ()V
-L196:   invokestatic Method ib_476 method1156 (LM_169;)V
-L199:   invokestatic Method net/gewaltig/cultris/Cultris method1722 ()V
-L202:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
-L205:   goto L262
-L208:   athrow
-L209:   astore_1
-        .catch java/lang/Throwable from L210 to L213 using L218
-L210:   invokestatic Method org/lwjgl/opengl/Display method3009 ()V
-L213:   aload_1
-L214:   goto L220
-L217:   athrow
-L218:   astore_2
-L219:   aload_1
-L220:   invokevirtual Method java/lang/Throwable printStackTrace ()V
-        .catch java/lang/Throwable from L223 to L235 using L238
-        .catch [0] from L3 to L202 using L256
-        .catch [0] from L209 to L217 using L256
-        .catch [0] from L218 to L250 using L256
-L223:   new sD_1013
-L226:   dup
-L227:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
-L230:   aload_1
-L231:   invokespecial Method sD_1013 <init> (LFE_76;Ljava/lang/Throwable;)V
-L234:   pop
-L235:   goto L250
-L238:   astore_2
-L239:   aload_2
-L240:   invokevirtual Method java/lang/Throwable printStackTrace ()V
-L243:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
-L246:   aload_1
-L247:   invokestatic Method sD_1013 method335 (LFE_76;Ljava/lang/Throwable;)V
-L250:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
-L253:   goto L262
-        .catch [0] from L256 to L257 using L256
-L256:   astore_3
-L257:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
-L260:   aload_3
-L261:   athrow
-L262:   invokestatic Method ib_476 method1152 ()V
-L265:   return
-L266:   
+L163:   invokestatic Method zz_1114 method7 ()V
+L166:   invokestatic Method net/gewaltig/cultris/Cultris method1725 ()V
+L169:   aload_0
+L170:   arraylength
+L171:   iconst_1
+L172:   dup
+L173:   dup
+L174:   pop2
+L175:   if_icmpne L202
+L178:   ldc "profile_run"
+L180:   aload_0
+L181:   iconst_0
+L182:   iconst_1
+L183:   dup
+L184:   pop2
+L185:   aaload
+L186:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
+L189:   ifeq L202
+L192:   new net/gewaltig/cultris/i_648
+L195:   dup
+L196:   invokespecial Method net/gewaltig/cultris/i_648 <init> ()V
+L199:   invokestatic Method ib_476 method1156 (LM_169;)V
+L202:   invokestatic Method net/gewaltig/cultris/Cultris method1722 ()V
+L205:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
+L208:   goto L265
+L211:   athrow
+L212:   astore_1
+        .catch java/lang/Throwable from L213 to L216 using L221
+L213:   invokestatic Method org/lwjgl/opengl/Display method3009 ()V
+L216:   aload_1
+L217:   goto L223
+L220:   athrow
+L221:   astore_2
+L222:   aload_1
+L223:   invokevirtual Method java/lang/Throwable printStackTrace ()V
+        .catch java/lang/Throwable from L226 to L238 using L241
+        .catch [0] from L3 to L205 using L259
+        .catch [0] from L212 to L220 using L259
+        .catch [0] from L221 to L253 using L259
+L226:   new sD_1013
+L229:   dup
+L230:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
+L233:   aload_1
+L234:   invokespecial Method sD_1013 <init> (LFE_76;Ljava/lang/Throwable;)V
+L237:   pop
+L238:   goto L253
+L241:   astore_2
+L242:   aload_2
+L243:   invokevirtual Method java/lang/Throwable printStackTrace ()V
+L246:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
+L249:   aload_1
+L250:   invokestatic Method sD_1013 method335 (LFE_76;Ljava/lang/Throwable;)V
+L253:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
+L256:   goto L265
+        .catch [0] from L259 to L260 using L259
+L259:   astore_3
+L260:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
+L263:   aload_3
+L264:   athrow
+L265:   invokestatic Method ib_476 method1152 ()V
+L268:   return
+L269:   
         .localvariabletable
-            0 is p0 [Ljava/lang/String; from L0 to L266
-            1 is v1 Ljava/lang/Throwable; from L0 to L266
-            2 is v2 Ljava/lang/Throwable; from L0 to L266
-            3 is v3 Ljava/lang/Throwable; from L0 to L266
+            0 is p0 [Ljava/lang/String; from L0 to L269
+            1 is v1 Ljava/lang/Throwable; from L0 to L269
+            2 is v2 Ljava/lang/Throwable; from L0 to L269
+            3 is v3 Ljava/lang/Throwable; from L0 to L269
         .end localvariabletable
     .end code
     .runtime visible annotations

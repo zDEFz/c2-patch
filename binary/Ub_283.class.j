@@ -531,10 +531,10 @@ L75:    ldc_w 2.5e-1f
 L78:    invokespecial Method nf_651 <init> (Ljava/lang/String;IFF)V
 L81:    putfield Field Ub_283 new Lnf_651;
 L84:    getfield Field Ub_283 new Lnf_651;
-L87:    new rb_1003
+L87:    new zy_1113
 L90:    dup
 L91:    aload_0
-L92:    invokespecial Method rb_1003 <init> (LUb_283;)V
+L92:    invokespecial Method zy_1113 <init> (LUb_283;)V
 L95:    invokevirtual Method nf_651 method128 (Lh_454;)V
 L98:    new SB_251
 L101:   aload_0
