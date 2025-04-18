@@ -1,0 +1,7 @@
+# 1 if the client should gather replays, 0 if the client shouldn't
+replay_activated = 1
+
+# 0 to not send text to the chat ingame at all. 
+# 1 to only send text when you are playing or tagging replays.
+# 2 to additionally send text when a replay is being saved.
+replay_verbosity = 2

@@ -1,0 +1,32 @@
+HOW THE REPLAY STORING FUNCTIONALITY WORKS:
+
+Write ingame:
+
+/cmd replay <filename>
+
+to play a replay file. For example "/cmd replay replays/2024-04-17/10_37_03.rec"
+
+
+Replays get stored when a winner is declared in a match. Once this happen, you can additionally use
+
+/cmd replay last
+
+and that will play the last replay generated.
+
+
+For organization purposes, you can use
+
+/cmd replay tag <chosen_tag>
+
+and this will save the last replay in a folder called "tags", under the filename "chosen_tag.rec" (or "chosen_tag_(1).rec" if there was already a replay file with that name)
+
+
+You're free to organize this folder however you like. Delete files or folders, rename them, add replays from other players, etc.
+
+
+HOW REPLAY POPUPS WORK INGAME:
+
+Once you're playing a replay:
+- Holding left/right arrows keys rewinds/fast-forward a replay
+- If you're holding Ctrl, it will rewind/fast-forward in 30 seconds intervals
+- If instead you hold Shift it rewinds/fast-forwards in really small intervals instead (around 0.05 seconds
