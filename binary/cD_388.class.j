@@ -40,7 +40,6 @@ L24:    pop2
 L25:    putfield Field cD_388 field76 I
 L28:    return
 L29:    
-        .attribute StackMap b'\x00\x01\x00\x1C\x00\x01\x07\x01\x2F\x00\x00'
     .end code
 .end method
 
@@ -100,53 +99,46 @@ L46:
 .end method
 
 .method public method53 : (LgB_442;I)Z
-    .code stack 4 locals 3
+    .code stack 2 locals 3
 L0:     iload_2
-L1:     bipush 66
-L3:     iconst_1
-L4:     dup
-L5:     pop2
-L6:     if_icmpne L38
-L9:     aload_0
-L10:    dup
-L11:    getfield Field cD_388 this Z
-L14:    ifne L25
-L17:    iconst_1
-L18:    dup
-L19:    dup
-L20:    pop2
-L21:    goto L29
-L24:    athrow
-L25:    iconst_0
-L26:    iconst_1
-L27:    dup
-L28:    pop2
-L29:    putfield Field cD_388 this Z
-L32:    iconst_1
-L33:    dup
-L34:    dup
-L35:    pop2
-L36:    ireturn
-L37:    athrow
-L38:    iload_2
-L39:    bipush 64
-L41:    iconst_1
-L42:    dup
-L43:    pop2
-L44:    if_icmpne L55
-L47:    invokestatic Method UE_281 method89 ()V
-L50:    iconst_1
-L51:    dup
-L52:    dup
-L53:    pop2
-L54:    ireturn
-L55:    iconst_0
-L56:    iconst_1
-L57:    dup
-L58:    pop2
-L59:    ireturn
-L60:    
-        .attribute StackMap b'\x00\x06\x00\x18\x00\x00\x00\x01\x07\x00\x3F\x00\x19\x00\x03\x07\x01\x2F\x07\x01\x4B\x01\x00\x01\x07\x01\x2F\x00\x1D\x00\x03\x07\x01\x2F\x07\x01\x4B\x01\x00\x02\x07\x01\x2F\x01\x00\x25\x00\x00\x00\x01\x07\x00\x3F\x00\x26\x00\x03\x07\x01\x2F\x07\x01\x4B\x01\x00\x00\x00\x37\x00\x03\x07\x01\x2F\x07\x01\x4B\x01\x00\x00'
+L1:     getstatic Field org/lwjgl/input/Keyboard KEY_F8 I
+L4:     if_icmpne L27
+L7:     aload_0
+L8:     dup
+L9:     getfield Field cD_388 this Z
+L12:    ifne L20
+L15:    iconst_1
+L16:    goto L21
+L19:    athrow
+L20:    iconst_0
+L21:    putfield Field cD_388 this Z
+L24:    iconst_1
+L25:    ireturn
+L26:    athrow
+L27:    iload_2
+L28:    getstatic Field org/lwjgl/input/Keyboard KEY_F6 I
+L31:    if_icmpne L39
+L34:    invokestatic Method UE_281 method89 ()V
+L37:    iconst_1
+L38:    ireturn
+L39:    iload_2
+L40:    getstatic Field org/lwjgl/input/Keyboard KEY_F9 I
+L43:    if_icmpne L56
+L46:    ldc "/cmd replay last"
+L48:    invokestatic Method zz_1114 method2 (Ljava/lang/String;)Z
+L51:    pop
+L52:    iconst_1
+L53:    ireturn
+L54:    iconst_0
+L55:    ireturn
+L56:    iconst_0
+L57:    ireturn
+L58:    
+        .localvariabletable
+            0 is this LcD_388; from L0 to L58
+            1 is v1 LgB_442; from L0 to L58
+            2 is i2 I from L0 to L58
+        .end localvariabletable
     .end code
 .end method
 
@@ -205,7 +197,6 @@ L98:    invokevirtual Method IF_119 method37 (FF)V
 L101:   pop2
 L102:   return
 L103:   
-        .attribute StackMap b'\x00\x01\x00\x43\x00\x05\x07\x01\x2F\x07\x01\x37\x02\x07\x00\x6C\x02\x00\x00'
     .end code
 .end method
 
@@ -264,7 +255,6 @@ L98:    invokevirtual Method IF_119 method37 (FF)V
 L101:   pop2
 L102:   return
 L103:   
-        .attribute StackMap b'\x00\x01\x00\x43\x00\x03\x07\x01\x2F\x07\x01\x37\x02\x00\x00'
     .end code
 .end method
 
@@ -421,7 +411,6 @@ L290:   fload_2
 L291:   invokevirtual Method DF_49 method617 (ZF)V
 L294:   return
 L295:   
-        .attribute StackMap b'\x00\x0A\x00\x0B\x00\x04\x07\x01\x2F\x01\x02\x07\x00\x85\x00\x01\x07\x00\x85\x00\x3E\x00\x06\x07\x01\x2F\x01\x02\x07\x00\x85\x07\x01\x37\x02\x00\x00\x00\x64\x00\x00\x00\x01\x07\x00\x3F\x00\x65\x00\x04\x07\x01\x2F\x01\x02\x07\x00\x85\x00\x00\x00\x86\x00\x04\x07\x01\x2F\x01\x02\x07\x00\x85\x00\x00\x01\x07\x00\x00\x00\x01\x07\x00\x3F\x01\x08\x00\x04\x07\x01\x2F\x01\x02\x07\x00\x85\x00\x01\x07\x01\x2F\x01\x0C\x00\x04\x07\x01\x2F\x01\x02\x07\x00\x85\x00\x02\x07\x01\x2F\x01\x01\x16\x00\x04\x07\x01\x2F\x01\x02\x07\x00\x85\x00\x00\x01\x26\x00\x04\x07\x01\x2F\x01\x02\x07\x00\x85\x00\x00'
     .end code
 .end method
 
@@ -550,7 +539,6 @@ L198:   invokeinterface InterfaceMethod java/util/Iterator remove ()V 1
 L203:   goto L33
 L206:   return
 L207:   
-        .attribute StackMap b'\x00\x09\x00\x0C\x00\x00\x00\x01\x07\x00\x3F\x00\x0D\x00\x01\x07\x01\x2F\x00\x00\x00\x21\x00\x04\x07\x01\x2F\x07\x00\x85\x01\x01\x00\x00\x00\x75\x00\x05\x07\x01\x2F\x07\x00\x85\x01\x01\x07\x01\x37\x00\x00\x00\x7F\x00\x00\x00\x01\x07\x00\x3F\x00\x80\x00\x05\x07\x01\x2F\x07\x00\x85\x01\x01\x07\x01\x37\x00\x00\x00\xA3\x00\x05\x07\x01\x2F\x07\x00\x85\x01\x01\x07\x01\x37\x00\x00\x00\xA5\x00\x05\x07\x01\x2F\x07\x00\x85\x01\x01\x07\x01\x37\x00\x01\x07\x01\x37\x00\xCE\x00\x04\x07\x01\x2F\x07\x00\x85\x01\x01\x00\x00'
     .end code
 .end method
 
@@ -587,7 +575,6 @@ L13:    putstatic Field cD_388 field72 LcD_388;
 L16:    getstatic Field cD_388 field72 LcD_388;
 L19:    areturn
 L20:    
-        .attribute StackMap b'\x00\x01\x00\x10\x00\x00\x00\x00'
     .end code
 .end method
 

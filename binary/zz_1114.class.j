@@ -317,19 +317,22 @@ L84:    aload_2
 L85:    invokespecial Method vE_1053 <init> ([B)V
 L88:    invokevirtual Method FE_76 method444 (LbC_373;)V
 L91:    aload_0
-L92:    invokedynamic [_141]
+L92:    invokedynamic [_173]
 L97:    invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
 L100:   goto L112
 
         .stack append Object java/io/File
 L103:   aload_0
-L104:   invokedynamic [_145]
+L104:   invokedynamic [_176]
 L109:   invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
 
-        .stack chop 1
+        .stack same
 L112:   goto L116
 
-        .stack stack_1 Object java/io/IOException
+        .stack full
+            locals Object java/lang/String
+            stack Object java/io/IOException
+        .end stack
 L115:   astore_1
 
         .stack same
@@ -462,12 +465,12 @@ L89:    astore 8
 
         .stack append Integer Object java/lang/String
 L91:    aload 4
-L93:    invokedynamic [_199]
+L93:    invokedynamic [_242]
 L98:    astore 9
 L100:   aload 9
 L102:   aload 8
 L104:   aload 6
-L106:   invokedynamic [_200]
+L106:   invokedynamic [_247]
 L111:   astore 10
 L113:   aload 10
 L115:   putstatic Field zz_1114 field4 Ljava/lang/String;
@@ -504,7 +507,7 @@ L180:   getstatic Field zz_1114 field7 I
 L183:   iconst_1
 L184:   if_icmple L228
 L187:   aload 10
-L189:   invokedynamic [_217]
+L189:   invokedynamic [_263]
 L194:   invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
 L197:   goto L228
 
@@ -517,19 +520,19 @@ L211:   getstatic Field zz_1114 field7 I
 L214:   iconst_1
 L215:   if_icmple L228
 L218:   aload 10
-L220:   invokedynamic [_217]
+L220:   invokedynamic [_263]
 L225:   invokestatic Method zz_1114 l1 (Ljava/lang/String;)V
+
+        .stack same
+L228:   goto L232
 
         .stack full
             locals Object NE_188
-            stack
+            stack Object java/lang/Exception
         .end stack
-L228:   goto L232
-
-        .stack stack_1 Object java/lang/Exception
 L231:   astore_1
 
-        .stack same
+        .stack append Object java/lang/Object
 L232:   getstatic Field zz_1114 field6 Z
 L235:   ifne L246
 L238:   aload_0
@@ -601,208 +604,208 @@ L4:     ldc ""
 L6:     aload_0
 L7:     invokevirtual Method java/lang/String trim ()Ljava/lang/String;
 L10:    invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
-L13:    ifeq L24
+L13:    ifeq L25
 
         .stack same
-L16:    ldc "Usage /cmd replay tag <name>"
-L18:    invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
-L21:    goto L182
-        .catch java/lang/Exception from L24 to L174 using L177
+L16:    ldc_w "Usage /cmd replay tag <name>"
+L19:    invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
+L22:    goto L185
+        .catch java/lang/Exception from L25 to L177 using L180
 
         .stack same
-L24:    getstatic Field zz_1114 field5 [B
-L27:    astore_1
-L28:    ldc "replays/tags"
-L30:    astore_2
-L31:    aload_2
-L32:    aload_0
-L33:    invokedynamic [_225]
-L38:    astore_3
-L39:    new java/io/File
-L42:    dup
-L43:    aload_2
-L44:    invokespecial Method java/io/File <init> (Ljava/lang/String;)V
-L47:    astore 4
-L49:    aload 4
-L51:    invokevirtual Method java/io/File exists ()Z
-L54:    ifne L63
-L57:    aload 4
-L59:    invokevirtual Method java/io/File mkdirs ()Z
-L62:    pop
+L25:    getstatic Field zz_1114 field5 [B
+L28:    astore_1
+L29:    ldc_w "replays/tags"
+L32:    astore_2
+L33:    aload_2
+L34:    aload_0
+L35:    invokedynamic [_289]
+L40:    astore_3
+L41:    new java/io/File
+L44:    dup
+L45:    aload_2
+L46:    invokespecial Method java/io/File <init> (Ljava/lang/String;)V
+L49:    astore 4
+L51:    aload 4
+L53:    invokevirtual Method java/io/File exists ()Z
+L56:    ifne L65
+L59:    aload 4
+L61:    invokevirtual Method java/io/File mkdirs ()Z
+L64:    pop
 
         .stack full
             locals Object java/lang/String Object [B Object java/lang/String Object java/lang/String Object java/io/File
             stack
         .end stack
-L63:    aload_3
-L64:    astore 5
-L66:    iconst_1
-L67:    istore 6
+L65:    aload_3
+L66:    astore 5
+L68:    iconst_1
+L69:    istore 6
 
-        .stack append Object java/lang/Object Integer
-L69:    new java/io/File
-L72:    dup
-L73:    aload 5
-L75:    checkcast java/lang/String
-L78:    invokespecial Method java/io/File <init> (Ljava/lang/String;)V
-L81:    invokevirtual Method java/io/File exists ()Z
-L84:    ifeq L108
-L87:    aload_3
-L88:    ldc ".rec"
-L90:    iload 6
-L92:    invokedynamic [_230]
-L97:    invokevirtual Method java/lang/String replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-L100:   astore 5
-L102:   iinc 6 1
-L105:   goto L69
+        .stack append Object java/lang/String Integer
+L71:    new java/io/File
+L74:    dup
+L75:    aload 5
+L77:    checkcast java/lang/String
+L80:    invokespecial Method java/io/File <init> (Ljava/lang/String;)V
+L83:    invokevirtual Method java/io/File exists ()Z
+L86:    ifeq L111
+L89:    aload_3
+L90:    ldc_w ".rec"
+L93:    iload 6
+L95:    invokedynamic [_295]
+L100:   invokevirtual Method java/lang/String replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+L103:   astore 5
+L105:   iinc 6 1
+L108:   goto L71
 
         .stack same
-L108:   new java/io/FileOutputStream
-L111:   dup
-L112:   aload 5
-L114:   checkcast java/lang/String
-L117:   invokespecial Method java/io/FileOutputStream <init> (Ljava/lang/String;)V
-L120:   astore 7
-L122:   aload 7
-L124:   aload_1
-L125:   invokevirtual Method java/io/FileOutputStream write ([B)V
-L128:   aload 7
-L130:   invokevirtual Method java/io/FileOutputStream close ()V
-L133:   getstatic Field zz_1114 field1 LUb_283;
-L136:   ifnull L161
-L139:   getstatic Field zz_1114 field6 Z
-L142:   ifne L161
-L145:   aload 5
-L147:   checkcast java/lang/String
-L150:   invokedynamic [_236]
-L155:   invokestatic Method zz_1114 l1 (Ljava/lang/String;)V
-L158:   goto L174
+L111:   new java/io/FileOutputStream
+L114:   dup
+L115:   aload 5
+L117:   checkcast java/lang/String
+L120:   invokespecial Method java/io/FileOutputStream <init> (Ljava/lang/String;)V
+L123:   astore 7
+L125:   aload 7
+L127:   aload_1
+L128:   invokevirtual Method java/io/FileOutputStream write ([B)V
+L131:   aload 7
+L133:   invokevirtual Method java/io/FileOutputStream close ()V
+L136:   getstatic Field zz_1114 field1 LUb_283;
+L139:   ifnull L164
+L142:   getstatic Field zz_1114 field6 Z
+L145:   ifne L164
+L148:   aload 5
+L150:   checkcast java/lang/String
+L153:   invokedynamic [_302]
+L158:   invokestatic Method zz_1114 l1 (Ljava/lang/String;)V
+L161:   goto L177
 
         .stack append Object java/io/FileOutputStream
-L161:   aload 5
-L163:   checkcast java/lang/String
-L166:   invokedynamic [_236]
-L171:   invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
+L164:   aload 5
+L166:   checkcast java/lang/String
+L169:   invokedynamic [_302]
+L174:   invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
+
+        .stack same
+L177:   goto L185
 
         .stack full
             locals Object java/lang/String
-            stack
+            stack Object java/lang/Exception
         .end stack
-L174:   goto L182
-
-        .stack stack_1 Object java/lang/Exception
-L177:   astore_1
-L178:   aload_1
-L179:   invokevirtual Method java/lang/Exception printStackTrace ()V
+L180:   astore_1
+L181:   aload_1
+L182:   invokevirtual Method java/lang/Exception printStackTrace ()V
 
         .stack same
-L182:   return
-L183:   
+L185:   return
+L186:   
         .linenumbertable
             L0 147
             L16 148
-            L24 151
-            L28 152
-            L31 153
-            L39 154
-            L49 155
-            L57 156
-            L63 158
-            L66 159
-            L69 160
-            L87 161
-            L102 162
-            L108 164
-            L122 165
-            L128 166
-            L133 167
-            L145 168
-            L161 170
-            L174 175
-            L177 173
-            L178 174
-            L182 177
+            L25 151
+            L29 152
+            L33 153
+            L41 154
+            L51 155
+            L59 156
+            L65 158
+            L68 159
+            L71 160
+            L89 161
+            L105 162
+            L111 164
+            L125 165
+            L131 166
+            L136 167
+            L148 168
+            L164 170
+            L177 175
+            L180 173
+            L181 174
+            L185 177
         .end linenumbertable
         .localvariabletable
-            1 is bytes [B from L28 to L174
-            2 is dirPath Ljava/lang/String; from L31 to L174
-            3 is basePath Ljava/lang/String; from L39 to L174
-            4 is directory Ljava/io/File; from L49 to L174
-            5 is path Ljava/lang/Object; from L66 to L174
-            6 is counter I from L69 to L174
-            7 is stream Ljava/io/FileOutputStream; from L122 to L174
-            1 is e Ljava/lang/Exception; from L178 to L182
-            0 is string1 Ljava/lang/String; from L0 to L183
+            1 is bytes [B from L29 to L177
+            2 is dirPath Ljava/lang/String; from L33 to L177
+            3 is basePath Ljava/lang/String; from L41 to L177
+            4 is directory Ljava/io/File; from L51 to L177
+            5 is path Ljava/lang/Object; from L68 to L177
+            6 is counter I from L71 to L177
+            7 is stream Ljava/io/FileOutputStream; from L125 to L177
+            1 is e Ljava/lang/Exception; from L181 to L185
+            0 is string1 Ljava/lang/String; from L0 to L186
         .end localvariabletable
     .end code
 .end method
 
 .method public static method7 : ()V
-    .code stack 5 locals 9
-L0:     ldc "settings/replay_settings.txt"
-L2:     astore_0
-L3:     new java/io/BufferedReader
-L6:     dup
-L7:     new java/io/FileReader
-L10:    dup
-L11:    aload_0
-L12:    invokespecial Method java/io/FileReader <init> (Ljava/lang/String;)V
-L15:    invokespecial Method java/io/BufferedReader <init> (Ljava/io/Reader;)V
-L18:    astore_1
+    .code stack 5 locals 13
+L0:     ldc_w "settings/replay_settings.txt"
+L3:     astore_0
+L4:     new java/io/BufferedReader
+L7:     dup
+L8:     new java/io/FileReader
+L11:    dup
+L12:    aload_0
+L13:    invokespecial Method java/io/FileReader <init> (Ljava/lang/String;)V
+L16:    invokespecial Method java/io/BufferedReader <init> (Ljava/io/Reader;)V
+L19:    astore_1
 
         .stack append Object java/lang/String Object java/io/BufferedReader
-L19:    aload_1
-L20:    invokevirtual Method java/io/BufferedReader readLine ()Ljava/lang/String;
-L23:    dup
-L24:    astore_2
-L25:    ifnull L221
-L28:    aload_2
-L29:    invokevirtual Method java/lang/String trim ()Ljava/lang/String;
-L32:    astore_2
-L33:    aload_2
-L34:    invokevirtual Method java/lang/String isEmpty ()Z
-L37:    ifne L19
-L40:    aload_2
-L41:    ldc_w "#"
-L44:    invokevirtual Method java/lang/String startsWith (Ljava/lang/String;)Z
-L47:    ifeq L53
-L50:    goto L19
+L20:    aload_1
+L21:    invokevirtual Method java/io/BufferedReader readLine ()Ljava/lang/String;
+L24:    dup
+L25:    astore_2
+L26:    ifnull L221
+L29:    aload_2
+L30:    invokevirtual Method java/lang/String trim ()Ljava/lang/String;
+L33:    astore_2
+L34:    aload_2
+L35:    invokevirtual Method java/lang/String isEmpty ()Z
+L38:    ifne L20
+L41:    aload_2
+L42:    ldc_w "#"
+L45:    invokevirtual Method java/lang/String startsWith (Ljava/lang/String;)Z
+L48:    ifeq L54
+L51:    goto L20
 
         .stack append Object java/lang/String
-L53:    aload_2
-L54:    ldc_w "="
-L57:    iconst_2
-L58:    invokevirtual Method java/lang/String split (Ljava/lang/String;I)[Ljava/lang/String;
-L61:    astore_3
-L62:    aload_3
-L63:    arraylength
-L64:    iconst_2
-L65:    if_icmpeq L71
-L68:    goto L19
+L54:    aload_2
+L55:    ldc_w "="
+L58:    iconst_2
+L59:    invokevirtual Method java/lang/String split (Ljava/lang/String;I)[Ljava/lang/String;
+L62:    astore_3
+L63:    aload_3
+L64:    arraylength
+L65:    iconst_2
+L66:    if_icmpeq L72
+L69:    goto L20
 
         .stack append Object [Ljava/lang/String;
-L71:    aload_3
-L72:    iconst_0
-L73:    aaload
-L74:    invokevirtual Method java/lang/String trim ()Ljava/lang/String;
-L77:    astore 4
-L79:    aload_3
-L80:    iconst_1
-L81:    aaload
-L82:    invokevirtual Method java/lang/String trim ()Ljava/lang/String;
-L85:    astore 5
-        .catch java/lang/NumberFormatException from L87 to L213 using L216
-        .catch java/lang/Throwable from L19 to L221 using L228
-L87:    aload 5
-L89:    invokestatic Method java/lang/Integer parseInt (Ljava/lang/String;)I
-L92:    istore 6
-L94:    aload 4
-L96:    astore 7
-L98:    iconst_m1
-L99:    istore 8
-L101:   aload 7
-L103:   invokevirtual Method java/lang/String hashCode ()I
-L106:   lookupswitch
+L72:    aload_3
+L73:    iconst_0
+L74:    aaload
+L75:    invokevirtual Method java/lang/String trim ()Ljava/lang/String;
+L78:    astore 4
+L80:    aload_3
+L81:    iconst_1
+L82:    aaload
+L83:    invokevirtual Method java/lang/String trim ()Ljava/lang/String;
+L86:    astore 5
+        .catch java/lang/NumberFormatException from L88 to L213 using L216
+        .catch java/lang/Throwable from L20 to L221 using L228
+L88:    aload 5
+L90:    invokestatic Method java/lang/Integer parseInt (Ljava/lang/String;)I
+L93:    istore 6
+L95:    aload 4
+L97:    astore 7
+L99:    iconst_m1
+L100:   istore 8
+L102:   aload 7
+L104:   invokevirtual Method java/lang/String hashCode ()I
+L107:   lookupswitch
             -671937485 : L149
             1420597113 : L132
             default : L163
@@ -851,69 +854,81 @@ L205:   goto L213
 L208:   iload 6
 L210:   putstatic Field zz_1114 field7 I
 
-        .stack chop 3
+        .stack same
 L213:   goto L218
 
-        .stack stack_1 Object java/lang/NumberFormatException
-L216:   astore 6
+        .stack full
+            locals Object java/lang/String Object java/io/BufferedReader Object java/lang/String Object [Ljava/lang/String; Object java/lang/String Object java/lang/String
+            stack Object java/lang/NumberFormatException
+        .end stack
+L216:   astore 9
+
+        .stack same
+L218:   goto L20
 
         .stack chop 3
-L218:   goto L19
-
-        .stack chop 1
 L221:   aload_1
 L222:   invokevirtual Method java/io/BufferedReader close ()V
-L225:   goto L244
-
-        .stack stack_1 Object java/lang/Throwable
-L228:   astore_2
-        .catch java/lang/Throwable from L229 to L233 using L236
-        .catch java/io/IOException from L3 to L244 using L247
-L229:   aload_1
-L230:   invokevirtual Method java/io/BufferedReader close ()V
-L233:   goto L242
+L225:   goto L249
 
         .stack full
-            locals Object java/lang/String Object java/io/BufferedReader Object java/lang/Throwable
+            locals Object java/lang/String Object java/io/BufferedReader
             stack Object java/lang/Throwable
         .end stack
-L236:   astore_3
-L237:   aload_2
-L238:   aload_3
-L239:   invokevirtual Method java/lang/Throwable addSuppressed (Ljava/lang/Throwable;)V
+L228:   astore 10
+        .catch java/lang/Throwable from L230 to L234 using L237
+        .catch java/io/IOException from L4 to L249 using L252
+L230:   aload_1
+L231:   invokevirtual Method java/io/BufferedReader close ()V
+L234:   goto L246
+
+        .stack full
+            locals Object java/lang/String Object java/io/BufferedReader Top Top Top Top Top Top Top Top Object java/lang/Throwable
+            stack Object java/lang/Throwable
+        .end stack
+L237:   astore 11
+L239:   aload 10
+L241:   aload 11
+L243:   invokevirtual Method java/lang/Throwable addSuppressed (Ljava/lang/Throwable;)V
 
         .stack same
-L242:   aload_2
-L243:   athrow
+L246:   aload 10
+L248:   athrow
 
-        .stack chop 2
-L244:   goto L263
+        .stack full
+            locals Object java/lang/String Object java/io/BufferedReader Object java/lang/String
+            stack
+        .end stack
+L249:   goto L270
 
-        .stack stack_1 Object java/io/IOException
-L247:   astore_1
-L248:   getstatic Field java/lang/System err Ljava/io/PrintStream;
-L251:   aload_1
-L252:   invokevirtual Method java/io/IOException getMessage ()Ljava/lang/String;
-L255:   invokedynamic [_298]
-L260:   invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
+        .stack full
+            locals Object java/lang/String
+            stack Object java/io/IOException
+        .end stack
+L252:   astore 12
+L254:   getstatic Field java/lang/System err Ljava/io/PrintStream;
+L257:   aload 12
+L259:   invokevirtual Method java/io/IOException getMessage ()Ljava/lang/String;
+L262:   invokedynamic [_369]
+L267:   invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
 
         .stack same
-L263:   return
-L264:   
+L270:   return
+L271:   
         .linenumbertable
             L0 180
-            L3 182
-            L19 185
-            L28 186
-            L33 189
-            L50 190
-            L53 193
-            L62 194
-            L68 195
-            L71 198
-            L79 199
-            L87 202
-            L94 203
+            L4 182
+            L20 185
+            L29 186
+            L34 189
+            L51 190
+            L54 193
+            L63 194
+            L69 195
+            L72 198
+            L80 199
+            L88 202
+            L95 203
             L192 205
             L205 206
             L208 208
@@ -922,20 +937,25 @@ L264:
             L218 214
             L221 215
             L228 182
-            L244 217
-            L247 215
-            L248 216
-            L263 218
+            L249 217
+            L252 215
+            L254 216
+            L270 218
         .end linenumbertable
         .localvariabletable
-            6 is value I from L94 to L213
-            3 is parts [Ljava/lang/String; from L62 to L218
-            4 is key Ljava/lang/String; from L79 to L218
-            5 is valueStr Ljava/lang/String; from L87 to L218
-            2 is line Ljava/lang/String; from L25 to L221
-            1 is reader Ljava/io/BufferedReader; from L19 to L244
-            1 is e Ljava/io/IOException; from L248 to L263
-            0 is path Ljava/lang/String; from L3 to L264
+            9 is v6 Ljava/lang/NumberFormatException; from L0 to L271
+            7 is v7 Ljava/lang/String; from L0 to L271
+            12 is e Ljava/io/IOException; from L0 to L271
+            2 is line Ljava/lang/String; from L0 to L271
+            1 is reader Ljava/io/BufferedReader; from L0 to L271
+            8 is i8 I from L0 to L271
+            0 is path Ljava/lang/String; from L0 to L271
+            5 is valueStr Ljava/lang/String; from L0 to L271
+            3 is parts [Ljava/lang/String; from L0 to L271
+            10 is v2 Ljava/lang/Throwable; from L0 to L271
+            11 is v3 Ljava/lang/Throwable; from L0 to L271
+            6 is value I from L0 to L271
+            4 is key Ljava/lang/String; from L0 to L271
         .end localvariabletable
     .end code
 .end method
@@ -955,18 +975,18 @@ L9:
         .end linenumbertable
     .end code
 .end method
-.sourcefile "zz_1114.java"
-.bootstrapmethods
 .innerclasses
     java/lang/invoke/MethodHandles$Lookup java/lang/invoke/MethodHandles Lookup public static final
 .end innerclasses
-.const [_141] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Playing replay \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_145] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay \"\u0001\" not found." : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_199] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "replays/\u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_200] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-.const [_217] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay saved to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_225] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-.const [_230] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "_(\u0001).rec" : makeConcatWithConstants (I)Ljava/lang/String;
-.const [_236] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay tagged to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_298] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Failed to read settings file: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.sourcefile "zz_1114.java"
+.bootstrapmethods
+.const [_173] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Playing replay \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_176] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay \"\u0001\" not found." : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_242] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "replays/\u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_247] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.const [_263] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay saved to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_289] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.const [_295] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "_(\u0001).rec" : makeConcatWithConstants (I)Ljava/lang/String;
+.const [_302] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay tagged to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_369] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Failed to read settings file: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
 .end class
