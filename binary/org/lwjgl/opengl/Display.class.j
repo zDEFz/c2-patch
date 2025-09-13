@@ -41,7 +41,6 @@ L27:    athrow
 L28:    getstatic Field org/lwjgl/opengl/Display field3285 I
 L31:    ireturn
 L32:    
-        .attribute StackMap b'\x00\x04\x00\x0D\x00\x00\x00\x01\x07\x00\x44\x00\x0E\x00\x00\x00\x00\x00\x1B\x00\x00\x00\x01\x07\x00\x44\x00\x1C\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -63,88 +62,76 @@ L32:    athrow
 L33:    getstatic Field org/lwjgl/opengl/Display field3284 Lorg/lwjgl/opengl/DisplayMode;
 L36:    areturn
 L37:    
-        .attribute StackMap b'\x00\x02\x00\x20\x00\x00\x00\x01\x07\x00\x44\x00\x21\x00\x00\x00\x00'
     .end code
 .end method
 
 .method public static method2979 : ()[Lorg/lwjgl/opengl/DisplayMode;
-    .code stack 3 locals 5
+    .code stack 8 locals 6
 L0:     getstatic Field org/lwjgl/opengl/GlobalLock lock Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
-        .catch [0] from L6 to L31 using L106
-L6:     getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
-L9:     invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 getAvailableDisplayModes ()[Lorg/lwjgl/opengl/DisplayMode; 1
-L14:    dup
-L15:    astore_1
-L16:    ifnonnull L33
-L19:    iconst_0
-L20:    iconst_1
-L21:    dup
-L22:    pop2
+        .catch [0] from L6 to L20 using L80
+L6:     invokestatic Method DisplayModeHelper getSystemDisplayModes ()[LDisplayModeHelper$SimpleDisplayMode;
+L9:     astore_1
+L10:    aload_1
+L11:    ifnonnull L21
+L14:    iconst_0
+L15:    anewarray org/lwjgl/opengl/DisplayMode
+L18:    aload_0
+L19:    monitorexit
+L20:    areturn
+        .catch [0] from L21 to L79 using L80
+L21:    aload_1
+L22:    arraylength
 L23:    anewarray org/lwjgl/opengl/DisplayMode
-L26:    iconst_1
-L27:    dup
-L28:    pop2
-L29:    aload_0
-L30:    monitorexit
-L31:    areturn
-L32:    athrow
-        .catch [0] from L33 to L104 using L106
-L33:    new java/util/HashSet
-L36:    dup
-L37:    aload_1
-L38:    arraylength
-L39:    invokespecial Method java/util/HashSet <init> (I)V
-L42:    dup
-L43:    astore_2
-L44:    dup
-L45:    aload_1
-L46:    invokestatic Method java/util/Arrays asList ([Ljava/lang/Object;)Ljava/util/List;
-L49:    invokevirtual Method java/util/HashSet addAll (Ljava/util/Collection;)Z
-L52:    pop
-L53:    invokevirtual Method java/util/HashSet size ()I
-L56:    anewarray org/lwjgl/opengl/DisplayMode
-L59:    iconst_1
-L60:    dup
-L61:    pop2
-L62:    astore_3
-L63:    aload_2
-L64:    aload_3
-L65:    invokevirtual Method java/util/HashSet toArray ([Ljava/lang/Object;)[Ljava/lang/Object;
-L68:    pop
-L69:    new java/lang/StringBuilder
-L72:    dup
-L73:    invokespecial Method java/lang/StringBuilder <init> ()V
-L76:    iconst_0
-L77:    ldc "Removed "
-L79:    invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
-L82:    aload_1
-L83:    arraylength
-L84:    aload_3
-L85:    arraylength
-L86:    isub
-L87:    invokevirtual Method java/lang/StringBuilder append (I)Ljava/lang/StringBuilder;
-L90:    ldc " duplicate displaymodes"
-L92:    invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L95:    invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L98:    invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
-L101:   aload_3
-L102:   aload_0
-L103:   monitorexit
-L104:   areturn
-L105:   athrow
-        .catch [0] from L106 to L110 using L106
-L106:   astore 4
-L108:   aload_0
-L109:   monitorexit
-L110:   aload 4
-L112:   athrow
-L113:   
-        .attribute StackMap b'\x00\x04\x00\x20\x00\x00\x00\x01\x07\x00\x44\x00\x21\x00\x02\x07\x00\x04\x07\x00\x6A\x00\x00\x00\x69\x00\x00\x00\x01\x07\x00\x44\x00\x6A\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
+L26:    astore_2
+L27:    iconst_0
+L28:    istore_3
+L29:    iload_3
+L30:    aload_1
+L31:    arraylength
+L32:    if_icmpge L76
+L35:    aload_1
+L36:    iload_3
+L37:    aaload
+L38:    astore 4
+L40:    aload_2
+L41:    iload_3
+L42:    new org/lwjgl/opengl/DisplayMode
+L45:    dup
+L46:    aload 4
+L48:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getWidth ()I
+L51:    aload 4
+L53:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getHeight ()I
+L56:    aload 4
+L58:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getBitDepth ()I
+L61:    aload 4
+L63:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getRefreshRate ()I
+L66:    invokespecial Method org/lwjgl/opengl/DisplayMode <init> (IIII)V
+L69:    aastore
+L70:    iinc 3 1
+L73:    goto L29
+L76:    aload_2
+L77:    aload_0
+L78:    monitorexit
+L79:    areturn
+        .catch [0] from L80 to L84 using L80
+L80:    astore 5
+L82:    aload_0
+L83:    monitorexit
+L84:    aload 5
+L86:    athrow
+L87:    
+        .localvariabletable
+            0 is v0 Ljava/lang/Object; from L0 to L87
+            1 is v1 [LDisplayModeHelper$SimpleDisplayMode; from L0 to L87
+            2 is v2 [Lorg/lwjgl/opengl/DisplayMode; from L0 to L87
+            3 is v3 I from L0 to L87
+            4 is v4 LDisplayModeHelper$SimpleDisplayMode; from L0 to L87
+            5 is v5 Ljava/lang/Throwable; from L0 to L87
+        .end localvariabletable
     .end code
-    .exceptions org/lwjgl/LWJGLException
 .end method
 
 .method public static throw : ()Z
@@ -182,7 +169,6 @@ L40:    monitorexit
 L41:    aload_1
 L42:    athrow
 L43:    
-        .attribute StackMap b'\x00\x05\x00\x1D\x00\x00\x00\x01\x07\x00\x44\x00\x1E\x00\x01\x07\x00\x04\x00\x00\x00\x23\x00\x01\x07\x00\x04\x00\x02\x01\x07\x00\x04\x00\x25\x00\x00\x00\x01\x07\x00\x44\x00\x26\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -311,7 +297,6 @@ L175:   aload 6
 L177:   athrow
 L178:   athrow
 L179:   
-        .attribute StackMap b'\x00\x11\x00\x16\x00\x04\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x00\x00\x00\x24\x00\x04\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x00\x00\x00\x33\x00\x04\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x00\x00\x00\x64\x00\x00\x00\x01\x07\x00\x44\x00\x65\x00\x05\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x07\x03\x09\x00\x05\x07\x03\x09\x08\x00\x4C\x08\x00\x4C\x07\x03\x2A\x07\x03\x18\x00\x66\x00\x05\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x07\x03\x09\x00\x06\x07\x03\x09\x08\x00\x4C\x08\x00\x4C\x07\x03\x2A\x07\x03\x18\x07\x03\x22\x00\x75\x00\x00\x00\x01\x07\x00\x44\x00\x76\x00\x05\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x07\x03\x09\x00\x01\x07\x00\x5B\x00\x80\x00\x00\x00\x01\x07\x00\x44\x00\x83\x00\x05\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x07\x03\x09\x00\x01\x07\x00\x5B\x00\x8B\x00\x00\x00\x01\x07\x00\x44\x00\x8E\x00\x05\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x07\x03\x09\x00\x01\x07\x00\x5B\x00\x98\x00\x00\x00\x01\x07\x00\x44\x00\x9B\x00\x05\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x07\x03\x09\x00\x01\x07\x00\x5B\x00\xA8\x00\x05\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x07\x03\x09\x00\x00\x00\xAB\x00\x04\x07\x00\xB7\x07\x03\x16\x07\x03\x18\x07\x00\x04\x00\x01\x07\x00\x44\x00\xB2\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -404,7 +389,6 @@ L129:   monitorexit
 L130:   aload 4
 L132:   athrow
 L133:   
-        .attribute StackMap b'\x00\x06\x00\x1E\x00\x03\x07\x00\xF8\x07\x00\x04\x01\x00\x01\x01\x00\x5B\x00\x00\x00\x01\x07\x00\x44\x00\x5C\x00\x02\x07\x00\xF8\x07\x00\x04\x00\x00\x00\x76\x00\x00\x00\x01\x07\x00\x44\x00\x77\x00\x02\x07\x00\xF8\x07\x00\x04\x00\x00\x00\x7E\x00\x02\x07\x00\xF8\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -414,144 +398,143 @@ L0:     getstatic Field org/lwjgl/opengl/GlobalLock lock Ljava/lang/Object;
 L3:     dup
 L4:     astore_3
 L5:     monitorenter
-        .catch [0] from L6 to L162 using L249
+        .catch [0] from L6 to L155 using L242
 L6:     invokestatic Method org/lwjgl/opengl/Display method3019 ()Z
-L9:     ifne L23
+L9:     ifne L22
 L12:    new org/lwjgl/LWJGLException
 L15:    dup
-L16:    ldc_w "Display not yet created."
-L19:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
-L22:    athrow
-L23:    fload_1
-L24:    ldc_w -1e0f
-L27:    fcmpg
-L28:    iflt L37
-L31:    fload_1
-L32:    fconst_1
-L33:    fcmpl
-L34:    ifle L48
-L37:    new java/lang/IllegalArgumentException
-L40:    dup
-L41:    ldc_w "Invalid brightness value"
-L44:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
-L47:    athrow
-L48:    fload_2
-L49:    fconst_0
-L50:    fcmpg
-L51:    ifge L65
-L54:    new java/lang/IllegalArgumentException
-L57:    dup
-L58:    ldc_w "Invalid contrast value"
-L61:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
-L64:    athrow
-L65:    getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
-L68:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 method4750 ()I 1
-L73:    dup
-L74:    istore 4
-L76:    ifne L90
-L79:    new org/lwjgl/LWJGLException
-L82:    dup
-L83:    ldc_w "Display configuration not supported"
-L86:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
-L89:    athrow
-L90:    iload 4
-L92:    invokestatic Method org/lwjgl/BufferUtils createFloatBuffer (I)Ljava/nio/FloatBuffer;
-L95:    astore 5
-L97:    iconst_0
-L98:    iconst_1
-L99:    dup
-L100:   pop2
-L101:   dup
-L102:   istore 6
-L104:   iload 4
-L106:   if_icmpge L192
-L109:   iload 6
-L111:   i2f
-L112:   iload 4
-L114:   iconst_1
-L115:   dup
-L116:   dup
-L117:   pop2
-L118:   isub
-L119:   i2f
-L120:   fdiv
-L121:   f2d
-L122:   fload_0
-L123:   f2d
-L124:   invokestatic Method java/lang/Math pow (DD)D
-L127:   d2f
+L16:    ldc "Display not yet created."
+L18:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
+L21:    athrow
+L22:    fload_1
+L23:    ldc -1e0f
+L25:    fcmpg
+L26:    iflt L35
+L29:    fload_1
+L30:    fconst_1
+L31:    fcmpl
+L32:    ifle L45
+L35:    new java/lang/IllegalArgumentException
+L38:    dup
+L39:    ldc "Invalid brightness value"
+L41:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
+L44:    athrow
+L45:    fload_2
+L46:    fconst_0
+L47:    fcmpg
+L48:    ifge L61
+L51:    new java/lang/IllegalArgumentException
+L54:    dup
+L55:    ldc "Invalid contrast value"
+L57:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
+L60:    athrow
+L61:    getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
+L64:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 method4750 ()I 1
+L69:    dup
+L70:    istore 4
+L72:    ifne L85
+L75:    new org/lwjgl/LWJGLException
+L78:    dup
+L79:    ldc "Display configuration not supported"
+L81:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
+L84:    athrow
+L85:    iload 4
+L87:    invokestatic Method org/lwjgl/BufferUtils createFloatBuffer (I)Ljava/nio/FloatBuffer;
+L90:    astore 5
+L92:    iconst_0
+L93:    iconst_1
+L94:    dup
+L95:    pop2
+L96:    dup
+L97:    istore 6
+L99:    iload 4
+L101:   if_icmpge L185
+L104:   iload 6
+L106:   i2f
+L107:   iload 4
+L109:   iconst_1
+L110:   dup
+L111:   dup
+L112:   pop2
+L113:   isub
+L114:   i2f
+L115:   fdiv
+L116:   f2d
+L117:   fload_0
+L118:   f2d
+L119:   invokestatic Method java/lang/Math pow (DD)D
+L122:   d2f
+L123:   dup
+L124:   fstore 7
+L126:   fload_1
+L127:   fadd
 L128:   dup
 L129:   fstore 7
-L131:   fload_1
-L132:   fadd
-L133:   dup
-L134:   fstore 7
-L136:   ldc_w 5e-1f
-L139:   fsub
-L140:   fload_2
-L141:   fmul
-L142:   ldc_w 5e-1f
-L145:   fadd
-L146:   dup
-L147:   fstore 7
-L149:   fconst_1
-L150:   fcmpl
-L151:   ifle L163
-L154:   fconst_1
-L155:   fstore 7
-L157:   aload 5
-L159:   goto L175
-L162:   athrow
-        .catch [0] from L163 to L191 using L249
-L163:   fload 7
-L165:   fconst_0
-L166:   fcmpg
-L167:   ifge L173
-L170:   fconst_0
-L171:   fstore 7
-L173:   aload 5
-L175:   iload 6
-L177:   iinc 6 1
-L180:   fload 7
-L182:   invokevirtual Method java/nio/FloatBuffer put (IF)Ljava/nio/FloatBuffer;
-L185:   pop
-L186:   iload 6
-L188:   goto L104
-L191:   athrow
-        .catch [0] from L192 to L248 using L249
-L192:   getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
-L195:   aload 5
-L197:   invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 setGammaRamp (Ljava/nio/FloatBuffer;)V 2
-L202:   new java/lang/StringBuilder
-L205:   dup
-L206:   invokespecial Method java/lang/StringBuilder <init> ()V
-L209:   iconst_0
-L210:   ldc_w "Gamma set, gamma = "
-L213:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
-L216:   fload_0
-L217:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
-L220:   ldc_w ", brightness = "
-L223:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L226:   fload_1
-L227:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
-L230:   ldc_w ", contrast = "
-L233:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L236:   fload_2
-L237:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
-L240:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L243:   invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
-L246:   aload_3
-L247:   monitorexit
-L248:   return
-        .catch [0] from L249 to L253 using L249
-L249:   astore 8
-L251:   aload_3
-L252:   monitorexit
-L253:   aload 8
-L255:   athrow
-L256:   athrow
-L257:   
-        .attribute StackMap b'\x00\x0E\x00\x17\x00\x04\x02\x02\x02\x07\x00\x04\x00\x00\x00\x25\x00\x04\x02\x02\x02\x07\x00\x04\x00\x00\x00\x30\x00\x04\x02\x02\x02\x07\x00\x04\x00\x00\x00\x41\x00\x04\x02\x02\x02\x07\x00\x04\x00\x00\x00\x5A\x00\x05\x02\x02\x02\x07\x00\x04\x01\x00\x00\x00\x68\x00\x07\x02\x02\x02\x07\x00\x04\x01\x07\x01\x2A\x01\x00\x01\x01\x00\xA2\x00\x00\x00\x01\x07\x00\x44\x00\xA3\x00\x08\x02\x02\x02\x07\x00\x04\x01\x07\x01\x2A\x01\x02\x00\x00\x00\xAD\x00\x08\x02\x02\x02\x07\x00\x04\x01\x07\x01\x2A\x01\x02\x00\x00\x00\xAF\x00\x08\x02\x02\x02\x07\x00\x04\x01\x07\x01\x2A\x01\x02\x00\x01\x07\x01\x2A\x00\xBF\x00\x00\x00\x01\x07\x00\x44\x00\xC0\x00\x07\x02\x02\x02\x07\x00\x04\x01\x07\x01\x2A\x01\x00\x00\x00\xF9\x00\x04\x02\x02\x02\x07\x00\x04\x00\x01\x07\x00\x44\x01\x00\x00\x00\x00\x01\x07\x00\x44'
+L131:   ldc 5e-1f
+L133:   fsub
+L134:   fload_2
+L135:   fmul
+L136:   ldc 5e-1f
+L138:   fadd
+L139:   dup
+L140:   fstore 7
+L142:   fconst_1
+L143:   fcmpl
+L144:   ifle L156
+L147:   fconst_1
+L148:   fstore 7
+L150:   aload 5
+L152:   goto L168
+L155:   athrow
+        .catch [0] from L156 to L184 using L242
+L156:   fload 7
+L158:   fconst_0
+L159:   fcmpg
+L160:   ifge L166
+L163:   fconst_0
+L164:   fstore 7
+L166:   aload 5
+L168:   iload 6
+L170:   iinc 6 1
+L173:   fload 7
+L175:   invokevirtual Method java/nio/FloatBuffer put (IF)Ljava/nio/FloatBuffer;
+L178:   pop
+L179:   iload 6
+L181:   goto L99
+L184:   athrow
+        .catch [0] from L185 to L241 using L242
+L185:   getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
+L188:   aload 5
+L190:   invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 setGammaRamp (Ljava/nio/FloatBuffer;)V 2
+L195:   new java/lang/StringBuilder
+L198:   dup
+L199:   invokespecial Method java/lang/StringBuilder <init> ()V
+L202:   iconst_0
+L203:   ldc_w "Gamma set, gamma = "
+L206:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
+L209:   fload_0
+L210:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
+L213:   ldc_w ", brightness = "
+L216:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L219:   fload_1
+L220:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
+L223:   ldc_w ", contrast = "
+L226:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L229:   fload_2
+L230:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
+L233:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L236:   invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
+L239:   aload_3
+L240:   monitorexit
+L241:   return
+        .catch [0] from L242 to L246 using L242
+L242:   astore 8
+L244:   aload_3
+L245:   monitorexit
+L246:   aload 8
+L248:   athrow
+L249:   athrow
+L250:   
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -594,7 +577,6 @@ L15:    monitorexit
 L16:    aload_1
 L17:    athrow
 L18:    
-        .attribute StackMap b'\x00\x02\x00\x0C\x00\x00\x00\x01\x07\x00\x44\x00\x0D\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -657,7 +639,6 @@ L41:    athrow
 L42:    invokestatic Method org/lwjgl/opengl/Display method3022 ()V
 L45:    return
 L46:    
-        .attribute StackMap b'\x00\x04\x00\x17\x00\x01\x07\x00\x04\x00\x00\x00\x24\x00\x00\x00\x01\x07\x00\x44\x00\x25\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44\x00\x2A\x00\x01\x07\x00\x04\x00\x00'
     .end code
 .end method
 
@@ -691,7 +672,6 @@ L62:    ldc_w "Unsupported platform"
 L65:    invokespecial Method java/lang/IllegalStateException <init> (Ljava/lang/String;)V
 L68:    athrow
 L69:    
-        .attribute StackMap b'\x00\x07\x00\x1C\x00\x00\x00\x00\x00\x1F\x00\x00\x00\x01\x08\x00\x1C\x00\x28\x00\x00\x00\x01\x07\x00\x44\x00\x29\x00\x00\x00\x00\x00\x31\x00\x00\x00\x01\x07\x00\x44\x00\x32\x00\x00\x00\x00\x00\x3A\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -718,7 +698,6 @@ L19:    aload_2
 L20:    athrow
 L21:    athrow
 L22:    
-        .attribute StackMap b'\x00\x03\x00\x0F\x00\x00\x00\x01\x07\x00\x44\x00\x10\x00\x02\x07\x03\x3F\x07\x00\x04\x00\x01\x07\x00\x44\x00\x15\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -746,7 +725,6 @@ L19:    aload_3
 L20:    athrow
 L21:    athrow
 L22:    
-        .attribute StackMap b'\x00\x03\x00\x0F\x00\x00\x00\x01\x07\x00\x44\x00\x10\x00\x03\x07\x03\x3F\x07\x03\x42\x07\x00\x04\x00\x01\x07\x00\x44\x00\x15\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -864,7 +842,6 @@ L126:   aload 6
 L128:   athrow
 L129:   athrow
 L130:   
-        .attribute StackMap b'\x00\x0C\x00\x15\x00\x03\x01\x07\x00\x3F\x07\x00\x04\x00\x00\x00\x36\x00\x05\x01\x07\x00\x3F\x07\x00\x04\x07\x00\x3F\x01\x00\x00\x00\x3F\x00\x00\x00\x01\x07\x00\x44\x00\x40\x00\x05\x01\x07\x00\x3F\x07\x00\x04\x07\x00\x3F\x01\x00\x00\x00\x4F\x00\x00\x00\x01\x07\x00\x44\x00\x50\x00\x05\x01\x07\x00\x3F\x07\x00\x04\x07\x00\x3F\x01\x00\x00\x00\x58\x00\x05\x01\x07\x00\x3F\x07\x00\x04\x07\x00\x3F\x01\x00\x00\x00\x62\x00\x05\x01\x07\x00\x3F\x07\x00\x04\x07\x00\x3F\x01\x00\x01\x07\x00\x5B\x00\x77\x00\x05\x01\x07\x00\x3F\x07\x00\x04\x07\x00\x3F\x01\x00\x00\x00\x78\x00\x05\x01\x07\x00\x3F\x07\x00\x04\x07\x00\x3F\x01\x00\x01\x07\x00\x04\x00\x7A\x00\x03\x01\x07\x00\x3F\x07\x00\x04\x00\x01\x07\x00\x44\x00\x81\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -921,7 +898,6 @@ L86:    aload_3
 L87:    athrow
 L88:    athrow
 L89:    
-        .attribute StackMap b'\x00\x0A\x00\x1A\x00\x00\x00\x01\x07\x00\x44\x00\x1B\x00\x02\x07\x00\x48\x07\x00\x04\x00\x00\x00\x2A\x00\x00\x00\x01\x07\x00\x44\x00\x2B\x00\x02\x07\x00\x48\x07\x00\x04\x00\x00\x00\x33\x00\x02\x07\x00\x48\x07\x00\x04\x00\x00\x00\x3D\x00\x02\x07\x00\x48\x07\x00\x04\x00\x01\x07\x00\x5B\x00\x50\x00\x02\x07\x00\x48\x07\x00\x04\x00\x00\x00\x51\x00\x02\x07\x00\x48\x07\x00\x04\x00\x01\x07\x00\x04\x00\x53\x00\x02\x07\x00\x48\x07\x00\x04\x00\x01\x07\x00\x44\x00\x58\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -957,7 +933,6 @@ L19:    aload_3
 L20:    athrow
 L21:    athrow
 L22:    
-        .attribute StackMap b'\x00\x03\x00\x0F\x00\x00\x00\x01\x07\x00\x44\x00\x10\x00\x03\x07\x00\xB7\x07\x03\x18\x07\x00\x04\x00\x01\x07\x00\x44\x00\x15\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -979,7 +954,6 @@ L27:    athrow
 L28:    getstatic Field org/lwjgl/opengl/Display field3291 I
 L31:    ireturn
 L32:    
-        .attribute StackMap b'\x00\x04\x00\x0D\x00\x00\x00\x01\x07\x00\x44\x00\x0E\x00\x00\x00\x00\x00\x1B\x00\x00\x00\x01\x07\x00\x44\x00\x1C\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -1048,7 +1022,6 @@ L56:    dup
 L57:    pop2
 L58:    ireturn
 L59:    
-        .attribute StackMap b'\x00\x04\x00\x30\x00\x00\x00\x01\x07\x00\x44\x00\x31\x00\x00\x00\x00\x00\x35\x00\x00\x00\x01\x07\x00\x44\x00\x36\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -1150,7 +1123,6 @@ L148:   aload 6
 L150:   athrow
 L151:   athrow
 L152:   
-        .attribute StackMap b'\x00\x0F\x00\x16\x00\x04\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x00\x00\x00\x24\x00\x04\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x00\x00\x00\x33\x00\x04\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x00\x00\x00\x59\x00\x00\x00\x01\x07\x00\x44\x00\x5A\x00\x05\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x07\x03\x03\x00\x01\x07\x00\x5B\x00\x64\x00\x00\x00\x01\x07\x00\x44\x00\x67\x00\x00\x00\x01\x07\x00\x44\x00\x68\x00\x05\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x07\x03\x03\x00\x01\x07\x00\x5B\x00\x70\x00\x00\x00\x01\x07\x00\x44\x00\x73\x00\x05\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x07\x03\x03\x00\x01\x07\x00\x5B\x00\x7D\x00\x00\x00\x01\x07\x00\x44\x00\x80\x00\x05\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x07\x03\x03\x00\x01\x07\x00\x5B\x00\x8D\x00\x05\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x07\x03\x03\x00\x00\x00\x90\x00\x04\x07\x03\x3F\x07\x03\x16\x07\x03\x42\x07\x00\x04\x00\x01\x07\x00\x44\x00\x97\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -1182,7 +1154,6 @@ L37:    monitorexit
 L38:    aload_1
 L39:    athrow
 L40:    
-        .attribute StackMap b'\x00\x03\x00\x17\x00\x01\x07\x00\x04\x00\x00\x00\x22\x00\x00\x00\x01\x07\x00\x44\x00\x23\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1219,7 +1190,6 @@ L32:    aload_2
 L33:    athrow
 L34:    athrow
 L35:    
-        .attribute StackMap b'\x00\x06\x00\x11\x00\x00\x00\x01\x07\x00\x44\x00\x12\x00\x02\x01\x07\x00\x04\x00\x00\x00\x16\x00\x02\x01\x07\x00\x04\x00\x01\x01\x00\x1C\x00\x00\x00\x01\x07\x00\x44\x00\x1D\x00\x02\x01\x07\x00\x04\x00\x01\x07\x00\x44\x00\x22\x00\x00\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1290,7 +1260,6 @@ L106:   aload 4
 L108:   athrow
 L109:   athrow
 L110:   
-        .attribute StackMap b'\x00\x0A\x00\x15\x00\x02\x07\x00\x3F\x07\x00\x04\x00\x00\x00\x3B\x00\x00\x00\x01\x07\x00\x44\x00\x3C\x00\x03\x07\x00\x3F\x07\x00\x04\x01\x00\x00\x00\x45\x00\x03\x07\x00\x3F\x07\x00\x04\x01\x00\x00\x00\x4F\x00\x00\x00\x01\x07\x00\x44\x00\x50\x00\x03\x07\x00\x3F\x07\x00\x04\x01\x00\x01\x07\x00\x5B\x00\x63\x00\x03\x07\x00\x3F\x07\x00\x04\x01\x00\x00\x00\x64\x00\x03\x07\x00\x3F\x07\x00\x04\x01\x00\x01\x07\x00\x04\x00\x66\x00\x02\x07\x00\x3F\x07\x00\x04\x00\x01\x07\x00\x44\x00\x6D\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -1303,7 +1272,6 @@ L6:     getstatic Field org/lwjgl/opengl/Display try Lorg/lwjgl/opengl/C_724;
 L9:     invokeinterface InterfaceMethod org/lwjgl/opengl/C_724 method71 ()V 1
 L14:    return
 L15:    
-        .attribute StackMap b'\x00\x01\x00\x0E\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -1327,7 +1295,6 @@ L20:    monitorexit
 L21:    aload_1
 L22:    athrow
 L23:    
-        .attribute StackMap b'\x00\x02\x00\x11\x00\x00\x00\x01\x07\x00\x44\x00\x12\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1412,7 +1379,6 @@ L112:   invokespecial Method java/lang/RuntimeException <init> (Ljava/lang/Throw
 L115:   athrow
 L116:   athrow
 L117:   
-        .attribute StackMap b'\x00\x03\x00\x69\x00\x00\x00\x01\x07\x00\x44\x00\x6A\x00\x00\x00\x01\x07\x00\x5B\x00\x74\x00\x00\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1442,7 +1408,6 @@ L34:    aload_2
 L35:    athrow
 L36:    athrow
 L37:    
-        .attribute StackMap b'\x00\x04\x00\x1B\x00\x02\x01\x07\x00\x04\x00\x00\x00\x1E\x00\x00\x00\x01\x07\x00\x44\x00\x1F\x00\x02\x01\x07\x00\x04\x00\x01\x07\x00\x44\x00\x24\x00\x00\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1465,7 +1430,6 @@ L15:    monitorexit
 L16:    aload_1
 L17:    athrow
 L18:    
-        .attribute StackMap b'\x00\x02\x00\x0C\x00\x00\x00\x01\x07\x00\x44\x00\x0D\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1499,7 +1463,6 @@ L55:    invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/Strin
 L58:    invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
 L61:    return
 L62:    
-        .attribute StackMap b'\x00\x03\x00\x23\x00\x00\x00\x01\x07\x00\x44\x00\x24\x00\x00\x00\x01\x07\x00\x5B\x00\x3D\x00\x01\x07\x00\x04\x00\x00'
     .end code
 .end method
 
@@ -1539,7 +1502,6 @@ L36:    aload_3
 L37:    athrow
 L38:    athrow
 L39:    
-        .attribute StackMap b'\x00\x04\x00\x1D\x00\x03\x01\x01\x07\x00\x04\x00\x00\x00\x20\x00\x00\x00\x01\x07\x00\x44\x00\x21\x00\x03\x01\x01\x07\x00\x04\x00\x01\x07\x00\x44\x00\x26\x00\x00\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1570,7 +1532,6 @@ L37:    monitorexit
 L38:    aload_1
 L39:    athrow
 L40:    
-        .attribute StackMap b'\x00\x03\x00\x17\x00\x01\x07\x00\x04\x00\x00\x00\x22\x00\x00\x00\x01\x07\x00\x44\x00\x23\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1621,7 +1582,6 @@ L15:    monitorexit
 L16:    aload_1
 L17:    athrow
 L18:    
-        .attribute StackMap b'\x00\x02\x00\x0C\x00\x00\x00\x01\x07\x00\x44\x00\x0D\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1640,7 +1600,6 @@ L23:    getstatic Field org/lwjgl/opengl/Display field3284 Lorg/lwjgl/opengl/Dis
 L26:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 method4730 (Lorg/lwjgl/opengl/DisplayMode;)V 2
 L31:    return
 L32:    
-        .attribute StackMap b'\x00\x01\x00\x14\x00\x00\x00\x00'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -1667,7 +1626,6 @@ L24:    ifeq L30
 L27:    invokestatic Method org/lwjgl/input/G_700 method1915 ()V
 L30:    return
 L31:    
-        .attribute StackMap b'\x00\x03\x00\x0C\x00\x00\x00\x00\x00\x15\x00\x00\x00\x00\x00\x1E\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -1754,7 +1712,6 @@ L155:   invokestatic Method org/lwjgl/opengl/Display method2982 ([Ljava/nio/Byte
 L158:   pop
 L159:   return
 L160:   
-        .attribute StackMap b'\x00\x08\x00\x07\x00\x00\x00\x01\x07\x00\x44\x00\x08\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x07\x00\x44\x00\x13\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x07\x00\x48\x00\x2D\x00\x01\x07\x00\x48\x00\x00\x00\x38\x00\x01\x07\x00\x48\x00\x00\x00\x7F\x00\x02\x07\x00\x48\x07\x00\x3F\x00\x00'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -1791,7 +1748,6 @@ L20:    monitorexit
 L21:    aload_1
 L22:    athrow
 L23:    
-        .attribute StackMap b'\x00\x02\x00\x11\x00\x00\x00\x01\x07\x00\x44\x00\x12\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1854,7 +1810,6 @@ L125:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/Strin
 L128:   invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
 L131:   return
 L132:   
-        .attribute StackMap b'\x00\x08\x00\x1E\x00\x00\x00\x01\x07\x00\x44\x00\x1F\x00\x00\x00\x01\x07\x00\x5B\x00\x30\x00\x00\x00\x01\x07\x00\x44\x00\x31\x00\x01\x07\x00\x5B\x00\x00\x00\x49\x00\x00\x00\x00\x00\x5C\x00\x00\x00\x01\x07\x00\x5B\x00\x6B\x00\x01\x07\x00\x5B\x00\x00\x00\x83\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -1885,7 +1840,6 @@ L55:    pop2
 L56:    putstatic Field org/lwjgl/opengl/Display field3281 Z
 L59:    return
 L60:    
-        .attribute StackMap b'\x00\x05\x00\x07\x00\x00\x00\x01\x07\x00\x44\x00\x08\x00\x00\x00\x00\x00\x17\x00\x00\x00\x00\x00\x23\x00\x00\x00\x00\x00\x2C\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -1919,7 +1873,6 @@ L42:    aload_2
 L43:    athrow
 L44:    athrow
 L45:    
-        .attribute StackMap b'\x00\x05\x00\x0E\x00\x02\x07\x02\x95\x07\x00\x04\x00\x00\x00\x23\x00\x02\x07\x02\x95\x07\x00\x04\x00\x00\x00\x26\x00\x00\x00\x01\x07\x00\x44\x00\x27\x00\x02\x07\x02\x95\x07\x00\x04\x00\x01\x07\x00\x44\x00\x2C\x00\x00\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -1955,7 +1908,6 @@ L52:    aload_1
 L53:    athrow
 L54:    athrow
 L55:    
-        .attribute StackMap b'\x00\x05\x00\x17\x00\x01\x07\x00\x04\x00\x00\x00\x25\x00\x01\x07\x00\x04\x00\x00\x00\x30\x00\x00\x00\x01\x07\x00\x44\x00\x31\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44\x00\x36\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -1993,7 +1945,6 @@ L26:    getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_8
 L29:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 method4704 ()I 1
 L34:    ireturn
 L35:    
-        .attribute StackMap b'\x00\x04\x00\x0B\x00\x00\x00\x01\x07\x00\x44\x00\x0C\x00\x00\x00\x00\x00\x19\x00\x00\x00\x01\x07\x00\x44\x00\x1A\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -2082,7 +2033,6 @@ L164:   aload_3
 L165:   athrow
 L166:   athrow
 L167:   
-        .attribute StackMap b'\x00\x0D\x00\x17\x00\x02\x01\x07\x00\x04\x00\x00\x00\x2D\x00\x02\x01\x07\x00\x04\x00\x00\x00\x33\x00\x00\x00\x01\x07\x00\x44\x00\x34\x00\x02\x01\x07\x00\x04\x00\x01\x07\x00\x5B\x00\x3E\x00\x02\x01\x07\x00\x04\x00\x00\x00\x5C\x00\x00\x00\x01\x07\x00\x44\x00\x5D\x00\x02\x01\x07\x00\x04\x00\x00\x00\x61\x00\x02\x01\x07\x00\x04\x00\x01\x01\x00\x80\x00\x02\x01\x07\x00\x04\x00\x00\x00\x97\x00\x02\x01\x07\x00\x04\x00\x00\x00\x9E\x00\x02\x01\x07\x00\x04\x00\x00\x00\xA1\x00\x02\x01\x07\x00\x04\x00\x01\x07\x00\x44\x00\xA6\x00\x00\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -2140,7 +2090,6 @@ L26:    getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_8
 L29:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 true ()I 1
 L34:    ireturn
 L35:    
-        .attribute StackMap b'\x00\x04\x00\x0B\x00\x00\x00\x01\x07\x00\x44\x00\x0C\x00\x00\x00\x00\x00\x19\x00\x00\x00\x01\x07\x00\x44\x00\x1A\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -2182,7 +2131,6 @@ L56:    dup
 L57:    pop2
 L58:    ireturn
 L59:    
-        .attribute StackMap b'\x00\x04\x00\x30\x00\x00\x00\x01\x07\x00\x44\x00\x31\x00\x00\x00\x00\x00\x35\x00\x00\x00\x01\x07\x00\x44\x00\x36\x00\x00\x00\x00'
     .end code
 .end method
 
@@ -2210,7 +2158,6 @@ L22:    aload_3
 L23:    athrow
 L24:    athrow
 L25:    
-        .attribute StackMap b'\x00\x03\x00\x12\x00\x00\x00\x01\x07\x00\x44\x00\x13\x00\x03\x07\x00\xB7\x07\x03\x16\x07\x00\x04\x00\x01\x07\x00\x44\x00\x18\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -2242,7 +2189,6 @@ L37:    monitorexit
 L38:    aload_1
 L39:    athrow
 L40:    
-        .attribute StackMap b'\x00\x03\x00\x17\x00\x01\x07\x00\x04\x00\x00\x00\x22\x00\x00\x00\x01\x07\x00\x44\x00\x23\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -2269,7 +2215,6 @@ L19:    aload_3
 L20:    athrow
 L21:    athrow
 L22:    
-        .attribute StackMap b'\x00\x03\x00\x0F\x00\x00\x00\x01\x07\x00\x44\x00\x10\x00\x03\x07\x03\x3F\x07\x03\x16\x07\x00\x04\x00\x01\x07\x00\x44\x00\x15\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -2301,7 +2246,6 @@ L37:    monitorexit
 L38:    aload_1
 L39:    athrow
 L40:    
-        .attribute StackMap b'\x00\x03\x00\x17\x00\x01\x07\x00\x04\x00\x00\x00\x22\x00\x00\x00\x01\x07\x00\x44\x00\x23\x00\x01\x07\x00\x04\x00\x01\x07\x00\x44'
     .end code
 .end method
 
@@ -2335,7 +2279,6 @@ L13:    iload_0
 L14:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 method4721 (Z)V 2
 L19:    return
 L20:    
-        .attribute StackMap b'\x00\x01\x00\x13\x00\x01\x01\x00\x00'
     .end code
 .end method
 
@@ -2363,7 +2306,6 @@ L43:    getstatic Field org/lwjgl/opengl/Display new I
 L46:    invokestatic Method org/lwjgl/opengl/Display method3013 (I)V
 L49:    return
 L50:    
-        .attribute StackMap b'\x00\x03\x00\x0E\x00\x00\x00\x01\x07\x00\x44\x00\x0F\x00\x00\x00\x01\x07\x03\x89\x00\x2B\x00\x00\x00\x00'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
@@ -2404,7 +2346,6 @@ L22:    aload_2
 L23:    athrow
 L24:    athrow
 L25:    
-        .attribute StackMap b'\x00\x03\x00\x12\x00\x00\x00\x01\x07\x00\x44\x00\x13\x00\x02\x07\x00\xB7\x07\x00\x04\x00\x01\x07\x00\x44\x00\x18\x00\x00\x00\x01\x07\x00\x44'
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
