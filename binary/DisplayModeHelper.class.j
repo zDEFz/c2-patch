@@ -2,9 +2,8 @@
 .class public super DisplayModeHelper
 .super java/lang/Object
 .field private static cachedModes [LDisplayModeHelper$SimpleDisplayMode;
-.field private static final CACHE_DIR Ljava/lang/String; = "cache"
+.field private static final SETTINGS_DIR Ljava/lang/String; = "settings"
 .field private static final CACHE_FILE Ljava/lang/String;
-.field private static final CACHE_VALIDITY_MS J = 86400000L
 .field private static final RESOLUTION_COMPARATOR Ljava/util/Comparator; .fieldattributes
     .signature Ljava/util/Comparator<LDisplayModeHelper$SimpleDisplayMode;>;
 .end fieldattributes
@@ -37,318 +36,353 @@ L21:    areturn
 L22:    invokestatic Method DisplayModeHelper loadFromFileCache ()[LDisplayModeHelper$SimpleDisplayMode;
 L25:    astore_2
 L26:    aload_2
-L27:    ifnull L79
-L30:    invokestatic Method DisplayModeHelper isCacheValid ()Z
-L33:    ifeq L79
-L36:    aload_2
-L37:    putstatic Field DisplayModeHelper cachedModes [LDisplayModeHelper$SimpleDisplayMode;
-L40:    invokestatic Method java/lang/System nanoTime ()J
-L43:    lstore_3
-L44:    lload_3
-L45:    lload_0
-L46:    lsub
-L47:    l2d
-L48:    ldc2_w 1e6
-L51:    ddiv
-L52:    dstore 5
-L54:    getstatic Field java/lang/System out Ljava/io/PrintStream;
-L57:    ldc "[DEBUG] Loaded display_modes.cache; action took %.2f ms.%n"
-L59:    iconst_1
-L60:    anewarray java/lang/Object
-L63:    dup
-L64:    iconst_0
-L65:    dload 5
-L67:    invokestatic Method java/lang/Double valueOf (D)Ljava/lang/Double;
-L70:    aastore
-L71:    invokevirtual Method java/io/PrintStream printf (Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
-L74:    pop
-L75:    getstatic Field DisplayModeHelper cachedModes [LDisplayModeHelper$SimpleDisplayMode;
-L78:    areturn
+L27:    ifnull L73
+L30:    aload_2
+L31:    putstatic Field DisplayModeHelper cachedModes [LDisplayModeHelper$SimpleDisplayMode;
+L34:    invokestatic Method java/lang/System nanoTime ()J
+L37:    lstore_3
+L38:    lload_3
+L39:    lload_0
+L40:    lsub
+L41:    l2d
+L42:    ldc2_w 1e6
+L45:    ddiv
+L46:    dstore 5
+L48:    getstatic Field java/lang/System out Ljava/io/PrintStream;
+L51:    ldc "[DEBUG] Loaded display_modes.txt; action took %.2f ms.%n"
+L53:    iconst_1
+L54:    anewarray java/lang/Object
+L57:    dup
+L58:    iconst_0
+L59:    dload 5
+L61:    invokestatic Method java/lang/Double valueOf (D)Ljava/lang/Double;
+L64:    aastore
+L65:    invokevirtual Method java/io/PrintStream printf (Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
+L68:    pop
+L69:    getstatic Field DisplayModeHelper cachedModes [LDisplayModeHelper$SimpleDisplayMode;
+L72:    areturn
 
         .stack append Object [LDisplayModeHelper$SimpleDisplayMode;
-L79:    getstatic Field java/lang/System out Ljava/io/PrintStream;
-L82:    ldc "[DEBUG] Cache not used; calculating display modes."
-L84:    invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
-L87:    new java/util/ArrayList
-L90:    dup
-L91:    bipush 32
-L93:    invokespecial Method java/util/ArrayList <init> (I)V
-L96:    astore_3
-L97:    bipush 60
-L99:    istore 4
-L101:   iconst_0
-L102:   istore 5
-        .catch java/lang/Exception from L104 to L383 using L386
-L104:   invokestatic Method java/awt/GraphicsEnvironment getLocalGraphicsEnvironment ()Ljava/awt/GraphicsEnvironment;
-L107:   invokevirtual Method java/awt/GraphicsEnvironment getScreenDevices ()[Ljava/awt/GraphicsDevice;
-L110:   astore 6
-L112:   new java/util/HashMap
-L115:   dup
-L116:   aload 6
-L118:   arraylength
-L119:   bipush 8
-L121:   imul
-L122:   invokespecial Method java/util/HashMap <init> (I)V
-L125:   astore 7
-L127:   aload 6
-L129:   astore 8
-L131:   aload 8
-L133:   arraylength
-L134:   istore 9
-L136:   iconst_0
-L137:   istore 10
+L73:    getstatic Field java/lang/System out Ljava/io/PrintStream;
+L76:    ldc "[DEBUG] Cache not used; calculating display modes."
+L78:    invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
+L81:    new java/util/ArrayList
+L84:    dup
+L85:    bipush 32
+L87:    invokespecial Method java/util/ArrayList <init> (I)V
+L90:    astore_3
+L91:    bipush 60
+L93:    istore 4
+L95:    iconst_0
+L96:    istore 5
+        .catch java/lang/Exception from L98 to L377 using L380
+L98:    invokestatic Method java/awt/GraphicsEnvironment getLocalGraphicsEnvironment ()Ljava/awt/GraphicsEnvironment;
+L101:   invokevirtual Method java/awt/GraphicsEnvironment getScreenDevices ()[Ljava/awt/GraphicsDevice;
+L104:   astore 6
+L106:   new java/util/HashMap
+L109:   dup
+L110:   aload 6
+L112:   arraylength
+L113:   bipush 8
+L115:   imul
+L116:   invokespecial Method java/util/HashMap <init> (I)V
+L119:   astore 7
+L121:   aload 6
+L123:   astore 8
+L125:   aload 8
+L127:   arraylength
+L128:   istore 9
+L130:   iconst_0
+L131:   istore 10
 
         .stack full
             locals Long Object [LDisplayModeHelper$SimpleDisplayMode; Object java/util/List Integer Integer Object [Ljava/awt/GraphicsDevice; Object java/util/Map Object [Ljava/awt/GraphicsDevice; Integer Integer
             stack
         .end stack
-L139:   iload 10
-L141:   iload 9
-L143:   if_icmpge L369
-L146:   aload 8
-L148:   iload 10
-L150:   aaload
-L151:   astore 11
-L153:   aload 11
-L155:   invokevirtual Method java/awt/GraphicsDevice getDisplayModes ()[Ljava/awt/DisplayMode;
-L158:   astore 12
-L160:   aload 12
-L162:   arraylength
-L163:   istore 13
-L165:   iconst_0
-L166:   istore 14
+L133:   iload 10
+L135:   iload 9
+L137:   if_icmpge L363
+L140:   aload 8
+L142:   iload 10
+L144:   aaload
+L145:   astore 11
+L147:   aload 11
+L149:   invokevirtual Method java/awt/GraphicsDevice getDisplayModes ()[Ljava/awt/DisplayMode;
+L152:   astore 12
+L154:   aload 12
+L156:   arraylength
+L157:   istore 13
+L159:   iconst_0
+L160:   istore 14
 
         .stack full
             locals Long Object [LDisplayModeHelper$SimpleDisplayMode; Object java/util/List Integer Integer Object [Ljava/awt/GraphicsDevice; Object java/util/Map Object [Ljava/awt/GraphicsDevice; Integer Integer Object java/awt/GraphicsDevice Object [Ljava/awt/DisplayMode; Integer Integer
             stack
         .end stack
-L168:   iload 14
-L170:   iload 13
-L172:   if_icmpge L363
-L175:   aload 12
-L177:   iload 14
-L179:   aaload
-L180:   astore 15
-L182:   aload 15
-L184:   invokevirtual Method java/awt/DisplayMode getWidth ()I
-L187:   istore 16
-L189:   aload 15
-L191:   invokevirtual Method java/awt/DisplayMode getHeight ()I
-L194:   istore 17
-L196:   iload 16
-L198:   iload 17
-L200:   if_icmpgt L206
-L203:   goto L357
+L162:   iload 14
+L164:   iload 13
+L166:   if_icmpge L357
+L169:   aload 12
+L171:   iload 14
+L173:   aaload
+L174:   astore 15
+L176:   aload 15
+L178:   invokevirtual Method java/awt/DisplayMode getWidth ()I
+L181:   istore 16
+L183:   aload 15
+L185:   invokevirtual Method java/awt/DisplayMode getHeight ()I
+L188:   istore 17
+L190:   iload 16
+L192:   iload 17
+L194:   if_icmpgt L200
+L197:   goto L351
 
         .stack append Object java/awt/DisplayMode Integer Integer
-L206:   aload 15
-L208:   invokevirtual Method java/awt/DisplayMode getBitDepth ()I
-L211:   istore 18
-L213:   iload 18
-L215:   iconst_m1
-L216:   if_icmpne L223
-L219:   bipush 32
-L221:   istore 18
+L200:   aload 15
+L202:   invokevirtual Method java/awt/DisplayMode getBitDepth ()I
+L205:   istore 18
+L207:   iload 18
+L209:   iconst_m1
+L210:   if_icmpne L217
+L213:   bipush 32
+L215:   istore 18
 
         .stack append Integer
-L223:   aload 15
-L225:   invokevirtual Method java/awt/DisplayMode getRefreshRate ()I
-L228:   istore 19
-L230:   iload 19
-L232:   ifne L242
-L235:   iload 4
-L237:   istore 19
-L239:   goto L263
+L217:   aload 15
+L219:   invokevirtual Method java/awt/DisplayMode getRefreshRate ()I
+L222:   istore 19
+L224:   iload 19
+L226:   ifne L236
+L229:   iload 4
+L231:   istore 19
+L233:   goto L257
 
         .stack append Integer
-L242:   iload 19
-L244:   iload 4
-L246:   if_icmple L263
-L249:   iload 19
-L251:   istore 4
-L253:   iload 19
-L255:   bipush 60
-L257:   if_icmple L263
-L260:   iconst_1
-L261:   istore 5
+L236:   iload 19
+L238:   iload 4
+L240:   if_icmple L257
+L243:   iload 19
+L245:   istore 4
+L247:   iload 19
+L249:   bipush 60
+L251:   if_icmple L257
+L254:   iconst_1
+L255:   istore 5
 
         .stack same
-L263:   iload 5
-L265:   ifeq L278
-L268:   iload 19
-L270:   bipush 60
-L272:   if_icmpgt L278
-L275:   goto L357
+L257:   iload 5
+L259:   ifeq L272
+L262:   iload 19
+L264:   bipush 60
+L266:   if_icmpgt L272
+L269:   goto L351
 
         .stack same
-L278:   iload 16
+L272:   iload 16
+L274:   i2l
+L275:   bipush 32
+L277:   lshl
+L278:   iload 17
 L280:   i2l
-L281:   bipush 32
+L281:   bipush 16
 L283:   lshl
-L284:   iload 17
-L286:   i2l
-L287:   bipush 16
-L289:   lshl
-L290:   lor
-L291:   iload 18
-L293:   i2l
-L294:   lor
-L295:   lstore 20
-L297:   aload 7
-L299:   lload 20
-L301:   invokestatic Method java/lang/Long valueOf (J)Ljava/lang/Long;
-L304:   invokeinterface InterfaceMethod java/util/Map get (Ljava/lang/Object;)Ljava/lang/Object; 2
-L309:   checkcast DisplayModeHelper$SimpleDisplayMode
-L312:   astore 22
-L314:   aload 22
-L316:   ifnull L329
-L319:   iload 19
-L321:   aload 22
-L323:   invokevirtual Method DisplayModeHelper$SimpleDisplayMode getRefreshRate ()I
-L326:   if_icmple L357
+L284:   lor
+L285:   iload 18
+L287:   i2l
+L288:   lor
+L289:   lstore 20
+L291:   aload 7
+L293:   lload 20
+L295:   invokestatic Method java/lang/Long valueOf (J)Ljava/lang/Long;
+L298:   invokeinterface InterfaceMethod java/util/Map get (Ljava/lang/Object;)Ljava/lang/Object; 2
+L303:   checkcast DisplayModeHelper$SimpleDisplayMode
+L306:   astore 22
+L308:   aload 22
+L310:   ifnull L323
+L313:   iload 19
+L315:   aload 22
+L317:   invokevirtual Method DisplayModeHelper$SimpleDisplayMode getRefreshRate ()I
+L320:   if_icmple L351
 
         .stack append Long Object DisplayModeHelper$SimpleDisplayMode
-L329:   aload 7
-L331:   lload 20
-L333:   invokestatic Method java/lang/Long valueOf (J)Ljava/lang/Long;
-L336:   new DisplayModeHelper$SimpleDisplayMode
-L339:   dup
-L340:   iload 16
-L342:   iload 17
-L344:   iload 18
-L346:   iload 19
-L348:   invokespecial Method DisplayModeHelper$SimpleDisplayMode <init> (IIII)V
-L351:   invokeinterface InterfaceMethod java/util/Map put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-L356:   pop
+L323:   aload 7
+L325:   lload 20
+L327:   invokestatic Method java/lang/Long valueOf (J)Ljava/lang/Long;
+L330:   new DisplayModeHelper$SimpleDisplayMode
+L333:   dup
+L334:   iload 16
+L336:   iload 17
+L338:   iload 18
+L340:   iload 19
+L342:   invokespecial Method DisplayModeHelper$SimpleDisplayMode <init> (IIII)V
+L345:   invokeinterface InterfaceMethod java/util/Map put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+L350:   pop
 
         .stack full
             locals Long Object [LDisplayModeHelper$SimpleDisplayMode; Object java/util/List Integer Integer Object [Ljava/awt/GraphicsDevice; Object java/util/Map Object [Ljava/awt/GraphicsDevice; Integer Integer Object java/awt/GraphicsDevice Object [Ljava/awt/DisplayMode; Integer Integer
             stack
         .end stack
-L357:   iinc 14 1
-L360:   goto L168
+L351:   iinc 14 1
+L354:   goto L162
 
         .stack full
             locals Long Object [LDisplayModeHelper$SimpleDisplayMode; Object java/util/List Integer Integer Object [Ljava/awt/GraphicsDevice; Object java/util/Map Object [Ljava/awt/GraphicsDevice; Integer Integer
             stack
         .end stack
-L363:   iinc 10 1
-L366:   goto L139
+L357:   iinc 10 1
+L360:   goto L133
 
         .stack chop 3
-L369:   aload_3
-L370:   aload 7
-L372:   invokeinterface InterfaceMethod java/util/Map values ()Ljava/util/Collection; 1
-L377:   invokeinterface InterfaceMethod java/util/List addAll (Ljava/util/Collection;)Z 2
-L382:   pop
-L383:   goto L417
+L363:   aload_3
+L364:   aload 7
+L366:   invokeinterface InterfaceMethod java/util/Map values ()Ljava/util/Collection; 1
+L371:   invokeinterface InterfaceMethod java/util/List addAll (Ljava/util/Collection;)Z 2
+L376:   pop
+L377:   goto L459
 
         .stack full
             locals Long Object [LDisplayModeHelper$SimpleDisplayMode; Object java/util/List Integer Integer
             stack Object java/lang/Exception
         .end stack
-L386:   astore 6
-L388:   iload 5
-L390:   ifne L417
-L393:   aload_3
-L394:   new DisplayModeHelper$SimpleDisplayMode
-L397:   dup
-L398:   sipush 1920
-L401:   sipush 1080
-L404:   bipush 32
-L406:   bipush 60
-L408:   invokespecial Method DisplayModeHelper$SimpleDisplayMode <init> (IIII)V
-L411:   invokeinterface InterfaceMethod java/util/List add (Ljava/lang/Object;)Z 2
-L416:   pop
+L380:   astore 6
+L382:   iload 5
+L384:   ifne L459
+L387:   invokestatic Method java/awt/GraphicsEnvironment getLocalGraphicsEnvironment ()Ljava/awt/GraphicsEnvironment;
+L390:   invokevirtual Method java/awt/GraphicsEnvironment getDefaultScreenDevice ()Ljava/awt/GraphicsDevice;
+L393:   astore 7
+L395:   aload 7
+L397:   invokevirtual Method java/awt/GraphicsDevice getDisplayMode ()Ljava/awt/DisplayMode;
+L400:   astore 8
+L402:   aload 8
+L404:   invokevirtual Method java/awt/DisplayMode getWidth ()I
+L407:   istore 9
+L409:   aload 8
+L411:   invokevirtual Method java/awt/DisplayMode getHeight ()I
+L414:   istore 10
+L416:   aload 8
+L418:   invokevirtual Method java/awt/DisplayMode getBitDepth ()I
+L421:   istore 11
+L423:   iload 11
+L425:   iconst_m1
+L426:   if_icmpne L433
+L429:   bipush 32
+L431:   istore 11
 
-        .stack same
-L417:   aload_3
-L418:   iconst_0
-L419:   anewarray DisplayModeHelper$SimpleDisplayMode
-L422:   invokeinterface InterfaceMethod java/util/List toArray ([Ljava/lang/Object;)[Ljava/lang/Object; 2
-L427:   checkcast [LDisplayModeHelper$SimpleDisplayMode;
-L430:   astore 6
-L432:   aload 6
-L434:   getstatic Field DisplayModeHelper RESOLUTION_COMPARATOR Ljava/util/Comparator;
-L437:   invokestatic Method java/util/Arrays sort ([Ljava/lang/Object;Ljava/util/Comparator;)V
-L440:   aload 6
-L442:   putstatic Field DisplayModeHelper cachedModes [LDisplayModeHelper$SimpleDisplayMode;
-L445:   aload 6
-L447:   invokestatic Method DisplayModeHelper saveToFileCache ([LDisplayModeHelper$SimpleDisplayMode;)V
-L450:   invokestatic Method java/lang/System nanoTime ()J
-L453:   lstore 7
-L455:   lload 7
-L457:   lload_0
-L458:   lsub
-L459:   l2d
-L460:   ldc2_w 1e6
-L463:   ddiv
-L464:   dstore 9
-L466:   getstatic Field java/lang/System out Ljava/io/PrintStream;
-L469:   ldc "[DEBUG] Calculated display modes; action took %.2f ms.%n"
-L471:   iconst_1
-L472:   anewarray java/lang/Object
-L475:   dup
-L476:   iconst_0
-L477:   dload 9
-L479:   invokestatic Method java/lang/Double valueOf (D)Ljava/lang/Double;
-L482:   aastore
-L483:   invokevirtual Method java/io/PrintStream printf (Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
-L486:   pop
+        .stack full
+            locals Long Object [LDisplayModeHelper$SimpleDisplayMode; Object java/util/List Integer Integer Object java/lang/Exception Object java/awt/GraphicsDevice Object java/awt/DisplayMode Integer Integer Integer
+            stack
+        .end stack
+L433:   bipush 60
+L435:   istore 12
+L437:   aload_3
+L438:   new DisplayModeHelper$SimpleDisplayMode
+L441:   dup
+L442:   iload 9
+L444:   iload 10
+L446:   iload 11
+L448:   iload 12
+L450:   invokespecial Method DisplayModeHelper$SimpleDisplayMode <init> (IIII)V
+L453:   invokeinterface InterfaceMethod java/util/List add (Ljava/lang/Object;)Z 2
+L458:   pop
+
+        .stack full
+            locals Long Object [LDisplayModeHelper$SimpleDisplayMode; Object java/util/List Integer Integer
+            stack
+        .end stack
+L459:   aload_3
+L460:   iconst_0
+L461:   anewarray DisplayModeHelper$SimpleDisplayMode
+L464:   invokeinterface InterfaceMethod java/util/List toArray ([Ljava/lang/Object;)[Ljava/lang/Object; 2
+L469:   checkcast [LDisplayModeHelper$SimpleDisplayMode;
+L472:   astore 6
+L474:   aload 6
+L476:   getstatic Field DisplayModeHelper RESOLUTION_COMPARATOR Ljava/util/Comparator;
+L479:   invokestatic Method java/util/Arrays sort ([Ljava/lang/Object;Ljava/util/Comparator;)V
+L482:   aload 6
+L484:   putstatic Field DisplayModeHelper cachedModes [LDisplayModeHelper$SimpleDisplayMode;
 L487:   aload 6
-L489:   areturn
-L490:   
+L489:   invokestatic Method DisplayModeHelper saveToFileCache ([LDisplayModeHelper$SimpleDisplayMode;)V
+L492:   invokestatic Method java/lang/System nanoTime ()J
+L495:   lstore 7
+L497:   lload 7
+L499:   lload_0
+L500:   lsub
+L501:   l2d
+L502:   ldc2_w 1e6
+L505:   ddiv
+L506:   dstore 9
+L508:   getstatic Field java/lang/System out Ljava/io/PrintStream;
+L511:   ldc "[DEBUG] Calculated display modes; action took %.2f ms.%n"
+L513:   iconst_1
+L514:   anewarray java/lang/Object
+L517:   dup
+L518:   iconst_0
+L519:   dload 9
+L521:   invokestatic Method java/lang/Double valueOf (D)Ljava/lang/Double;
+L524:   aastore
+L525:   invokevirtual Method java/io/PrintStream printf (Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
+L528:   pop
+L529:   aload 6
+L531:   areturn
+L532:   
         .linenumbertable
-            L0 75
-            L4 78
-            L10 79
-            L18 80
-            L22 84
-            L26 85
-            L36 86
-            L40 87
-            L44 88
-            L54 89
-            L75 90
-            L79 93
-            L87 95
-            L97 96
-            L101 97
-            L104 100
-            L112 101
-            L127 103
-            L153 104
-            L182 105
-            L189 106
-            L196 107
-            L206 109
-            L213 110
-            L223 112
-            L230 113
-            L235 114
-            L242 116
-            L249 117
-            L253 118
-            L263 122
-            L278 124
-            L297 125
-            L314 126
-            L329 127
-            L357 104
-            L363 103
-            L369 132
-            L383 138
-            L386 134
-            L388 135
-            L393 136
-            L417 140
-            L432 141
-            L440 143
-            L445 144
-            L450 146
-            L455 147
-            L466 148
-            L487 150
+            L0 82
+            L4 85
+            L10 86
+            L18 87
+            L22 91
+            L26 92
+            L30 93
+            L34 94
+            L38 95
+            L48 96
+            L69 97
+            L73 100
+            L81 102
+            L91 103
+            L95 104
+            L98 107
+            L106 108
+            L121 110
+            L147 111
+            L176 112
+            L183 113
+            L190 114
+            L200 116
+            L207 117
+            L217 119
+            L224 120
+            L229 121
+            L236 123
+            L243 124
+            L247 125
+            L257 129
+            L272 131
+            L291 132
+            L308 133
+            L323 134
+            L351 111
+            L357 110
+            L363 139
+            L377 155
+            L380 141
+            L382 142
+            L387 143
+            L395 144
+            L402 146
+            L409 147
+            L416 148
+            L423 149
+            L433 151
+            L437 153
+            L459 157
+            L474 158
+            L482 160
+            L487 161
+            L492 163
+            L497 164
+            L508 165
+            L529 167
         .end linenumbertable
     .end code
 .end method
@@ -439,25 +473,25 @@ L105:   astore_1
 L106:   getstatic Field java/lang/System err Ljava/io/PrintStream;
 L109:   aload_1
 L110:   invokevirtual Method java/lang/Exception getMessage ()Ljava/lang/String;
-L113:   invokedynamic [_197]
+L113:   invokedynamic [_202]
 L118:   invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
 L121:   aconst_null
 L122:   areturn
 L123:   
         .linenumbertable
-            L0 154
-            L11 155
-            L20 157
-            L36 158
-            L44 160
-            L53 161
-            L67 163
-            L82 164
-            L86 163
-            L89 157
-            L105 164
-            L106 165
-            L121 166
+            L0 171
+            L11 172
+            L20 174
+            L36 175
+            L44 177
+            L53 178
+            L67 180
+            L82 181
+            L86 180
+            L89 174
+            L105 181
+            L106 182
+            L121 183
         .end linenumbertable
     .end code
 .end method
@@ -466,7 +500,7 @@ L123:
     .code stack 5 locals 7
 L0:     new java/io/File
 L3:     dup
-L4:     ldc "cache"
+L4:     ldc "settings"
 L6:     invokespecial Method java/io/File <init> (Ljava/lang/String;)V
 L9:     astore_1
 L10:    aload_1
@@ -476,13 +510,13 @@ L17:    aload_1
 L18:    invokevirtual Method java/io/File mkdir ()Z
 L21:    ifeq L35
 L24:    getstatic Field java/lang/System out Ljava/io/PrintStream;
-L27:    ldc "[DEBUG] Created cache directory."
+L27:    ldc "[DEBUG] Created settings directory."
 L29:    invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
 L32:    goto L44
 
         .stack append Object java/io/File
 L35:    getstatic Field java/lang/System err Ljava/io/PrintStream;
-L38:    ldc "[DEBUG] Failed to create cache directory."
+L38:    ldc "[DEBUG] Failed to create settings directory."
 L40:    invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
 L43:    return
 
@@ -561,120 +595,50 @@ L139:   astore_2
 L140:   getstatic Field java/lang/System err Ljava/io/PrintStream;
 L143:   aload_2
 L144:   invokevirtual Method java/lang/Exception getMessage ()Ljava/lang/String;
-L147:   invokedynamic [_230]
+L147:   invokedynamic [_235]
 L152:   invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
 
         .stack same
 L155:   return
 L156:   
         .linenumbertable
-            L0 171
-            L10 172
-            L17 173
-            L24 174
-            L35 176
-            L43 177
-            L44 181
-            L62 182
-            L84 183
-            L93 184
-            L97 182
-            L103 186
-            L111 187
-            L118 181
-            L136 189
-            L139 187
-            L140 188
-            L155 190
-        .end linenumbertable
-    .end code
-.end method
-
-.method private static isCacheValid : ()Z
-    .code stack 4 locals 3
-L0:     new java/io/File
-L3:     dup
-L4:     getstatic Field DisplayModeHelper CACHE_FILE Ljava/lang/String;
-L7:     invokespecial Method java/io/File <init> (Ljava/lang/String;)V
-L10:    astore_0
-L11:    aload_0
-L12:    invokevirtual Method java/io/File exists ()Z
-L15:    ifne L20
-L18:    iconst_0
-L19:    ireturn
-
-        .stack append Object java/io/File
-L20:    invokestatic Method java/lang/System currentTimeMillis ()J
-L23:    aload_0
-L24:    invokevirtual Method java/io/File lastModified ()J
-L27:    lsub
-L28:    lstore_1
-L29:    lload_1
-L30:    ldc2_w 86400000L
-L33:    lcmp
-L34:    ifge L41
-L37:    iconst_1
-L38:    goto L42
-
-        .stack append Long
-L41:    iconst_0
-
-        .stack stack_1 Integer
-L42:    ireturn
-L43:    
-        .linenumbertable
-            L0 193
-            L11 194
-            L20 195
-            L29 196
+            L0 188
+            L10 189
+            L17 190
+            L24 191
+            L35 193
+            L43 194
+            L44 198
+            L62 199
+            L84 200
+            L93 201
+            L97 199
+            L103 203
+            L111 204
+            L118 198
+            L136 206
+            L139 204
+            L140 205
+            L155 207
         .end linenumbertable
     .end code
 .end method
 
 .method public static main : ([Ljava/lang/String;)V
-    .code stack 2 locals 6
+    .code stack 2 locals 2
 L0:     invokestatic Method DisplayModeHelper getSystemDisplayModes ()[LDisplayModeHelper$SimpleDisplayMode;
 L3:     astore_1
 L4:     getstatic Field java/lang/System out Ljava/io/PrintStream;
 L7:     aload_1
 L8:     arraylength
-L9:     invokedynamic [_242]
+L9:     invokedynamic [_239]
 L14:    invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
-L17:    aload_1
-L18:    astore_2
-L19:    aload_2
-L20:    arraylength
-L21:    istore_3
-L22:    iconst_0
-L23:    istore 4
-
-        .stack full
-            locals Object [Ljava/lang/String; Object [LDisplayModeHelper$SimpleDisplayMode; Object [LDisplayModeHelper$SimpleDisplayMode; Integer Integer
-            stack
-        .end stack
-L25:    iload 4
-L27:    iload_3
-L28:    if_icmpge L51
-L31:    aload_2
-L32:    iload 4
-L34:    aaload
-L35:    astore 5
-L37:    getstatic Field java/lang/System out Ljava/io/PrintStream;
-L40:    aload 5
-L42:    invokevirtual Method java/io/PrintStream println (Ljava/lang/Object;)V
-L45:    iinc 4 1
-L48:    goto L25
-
-        .stack chop 3
-L51:    return
-L52:    
+L17:    return
+L18:    
         .linenumbertable
-            L0 200
-            L4 201
-            L17 202
-            L37 203
-            L45 202
-            L51 205
+            L0 210
+            L4 211
+            L17 212
         .end linenumbertable
     .end code
 .end method
@@ -684,7 +648,7 @@ L52:
 L0:     aconst_null
 L1:     putstatic Field DisplayModeHelper cachedModes [LDisplayModeHelper$SimpleDisplayMode;
 L4:     getstatic Field java/io/File separator Ljava/lang/String;
-L7:     invokedynamic [_251]
+L7:     invokedynamic [_245]
 L12:    putstatic Field DisplayModeHelper CACHE_FILE Ljava/lang/String;
 L15:    new DisplayModeHelper$1
 L18:    dup
@@ -695,7 +659,7 @@ L26:
         .linenumbertable
             L0 58
             L4 60
-            L15 63
+            L15 62
         .end linenumbertable
     .end code
 .end method
@@ -707,8 +671,8 @@ L26:
     DisplayModeHelper$1 [0] [0]
     java/lang/invoke/MethodHandles$Lookup java/lang/invoke/MethodHandles Lookup public static final
 .end innerclasses
-.const [_197] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "[DEBUG] Failed to load from file cache: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_230] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "[DEBUG] Failed to save cache: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_242] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Found \u0001 landscape display modes:" : makeConcatWithConstants (I)Ljava/lang/String;
-.const [_251] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "cache\u0001display_modes.cache" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_202] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "[DEBUG] Failed to load from file cache: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_235] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "[DEBUG] Failed to save cache: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_239] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Found \u0001 landscape display modes." : makeConcatWithConstants (I)Ljava/lang/String;
+.const [_245] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "settings\u0001display_modes.txt" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
 .end class

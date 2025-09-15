@@ -56,18 +56,25 @@ public class DisplayModeHelper {
     }
 
     private static SimpleDisplayMode[] cachedModes = null;
-    private static final String CACHE_DIR = "cache";
-    private static final String CACHE_FILE = CACHE_DIR + File.separator + "display_modes.cache";
-    private static final long CACHE_VALIDITY_MS = 24 * 60 * 60 * 1000; // 24 hours
+    private static final String SETTINGS_DIR = "settings";
+    private static final String CACHE_FILE = SETTINGS_DIR + File.separator + "display_modes.txt";
 
     private static final Comparator<SimpleDisplayMode> RESOLUTION_COMPARATOR = new Comparator<SimpleDisplayMode>() {
         public int compare(SimpleDisplayMode a, SimpleDisplayMode b) {
-            int areaA = a.getWidth() * a.getHeight();
-            int areaB = b.getWidth() * b.getHeight();
-            if (areaA != areaB) {
-                return Integer.compare(areaB, areaA); // Descending
-            }
-            return Integer.compare(b.getWidth(), a.getWidth()); // Tiebreaker
+            // First compare width descending
+            int cmp = Integer.compare(b.getWidth(), a.getWidth());
+            if (cmp != 0) return cmp;
+
+            // Then compare height descending
+            cmp = Integer.compare(b.getHeight(), a.getHeight());
+            if (cmp != 0) return cmp;
+
+            // Optionally: bitDepth descending
+            cmp = Integer.compare(b.getBitDepth(), a.getBitDepth());
+            if (cmp != 0) return cmp;
+
+            // Optionally: refreshRate descending
+            return Integer.compare(b.getRefreshRate(), a.getRefreshRate());
         }
     };
 
@@ -80,13 +87,13 @@ public class DisplayModeHelper {
             return cachedModes;
         }
 
-        // Check file cache
+        // Check file cache (no cache validity check - always use cache if present)
         SimpleDisplayMode[] fileCachedModes = loadFromFileCache();
-        if (fileCachedModes != null && isCacheValid()) {
+        if (fileCachedModes != null) {
             cachedModes = fileCachedModes;
             long end = System.nanoTime();
             double elapsedMs = (end - start) / 1_000_000.0;
-            System.out.printf("[DEBUG] Loaded display_modes.cache; action took %.2f ms.%n", elapsedMs);
+            System.out.printf("[DEBUG] Loaded display_modes.txt; action took %.2f ms.%n", elapsedMs);
             return cachedModes;
         }
 
@@ -133,7 +140,17 @@ public class DisplayModeHelper {
 
         } catch (Exception e) {
             if (!hasHighRefresh) {
-                modes.add(new SimpleDisplayMode(1920, 1080, 32, 60));
+                GraphicsDevice defaultDevice = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+                DisplayMode defaultMode = defaultDevice.getDisplayMode();
+
+                int width = defaultMode.getWidth();
+                int height = defaultMode.getHeight();
+                int bitDepth = defaultMode.getBitDepth();
+                if (bitDepth == DisplayMode.BIT_DEPTH_MULTI) bitDepth = 32;
+
+                int refreshRate = 60; // force to 60 Hz
+
+                modes.add(new SimpleDisplayMode(width, height, bitDepth, refreshRate));
             }
         }
 
@@ -168,12 +185,12 @@ public class DisplayModeHelper {
     }
 
     private static void saveToFileCache(SimpleDisplayMode[] modes) {
-        File dir = new File(CACHE_DIR);
+        File dir = new File(SETTINGS_DIR);
         if (!dir.exists()) {
             if (dir.mkdir()) {
-                System.out.println("[DEBUG] Created cache directory.");
+                System.out.println("[DEBUG] Created settings directory.");
             } else {
-                System.err.println("[DEBUG] Failed to create cache directory.");
+                System.err.println("[DEBUG] Failed to create settings directory.");
                 return;
             }
         }
@@ -189,18 +206,8 @@ public class DisplayModeHelper {
         }
     }
 
-    private static boolean isCacheValid() {
-        File cacheFile = new File(CACHE_FILE);
-        if (!cacheFile.exists()) return false;
-        long age = System.currentTimeMillis() - cacheFile.lastModified();
-        return age < CACHE_VALIDITY_MS;
-    }
-
     public static void main(String[] args) {
         SimpleDisplayMode[] modes = getSystemDisplayModes();
-        System.out.println("Found " + modes.length + " landscape display modes:");
-        for (SimpleDisplayMode mode : modes) {
-            System.out.println(mode);
-        }
+        System.out.println("Found " + modes.length + " landscape display modes.");
     }
 }
