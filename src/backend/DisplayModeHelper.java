@@ -79,6 +79,13 @@ public class DisplayModeHelper {
     };
 
     public static SimpleDisplayMode[] getSystemDisplayModes() {
+        // Check if the operating system is Windows
+        String osName = System.getProperty("os.name").toLowerCase();
+        if (!osName.contains("win")) {
+            System.out.println("[DEBUG] Non-Windows OS detected (" + osName + "); skipping display mode retrieval.");
+            return new SimpleDisplayMode[0]; // Return empty array for non-Windows systems
+        }
+
         long start = System.nanoTime();
 
         // Check memory cache
