@@ -66,70 +66,127 @@ L37:
 .end method
 
 .method public static method2979 : ()[Lorg/lwjgl/opengl/DisplayMode;
-    .code stack 8 locals 6
+    .code stack 8 locals 9
 L0:     getstatic Field org/lwjgl/opengl/GlobalLock lock Ljava/lang/Object;
 L3:     dup
 L4:     astore_0
 L5:     monitorenter
-        .catch [0] from L6 to L20 using L80
-L6:     invokestatic Method DisplayModeHelper getSystemDisplayModes ()[LDisplayModeHelper$SimpleDisplayMode;
-L9:     astore_1
-L10:    aload_1
-L11:    ifnonnull L21
-L14:    iconst_0
-L15:    anewarray org/lwjgl/opengl/DisplayMode
-L18:    aload_0
-L19:    monitorexit
-L20:    areturn
-        .catch [0] from L21 to L79 using L80
-L21:    aload_1
-L22:    arraylength
-L23:    anewarray org/lwjgl/opengl/DisplayMode
-L26:    astore_2
-L27:    iconst_0
-L28:    istore_3
-L29:    iload_3
-L30:    aload_1
-L31:    arraylength
-L32:    if_icmpge L76
-L35:    aload_1
-L36:    iload_3
-L37:    aaload
-L38:    astore 4
-L40:    aload_2
-L41:    iload_3
-L42:    new org/lwjgl/opengl/DisplayMode
+        .catch [0] from L6 to L36 using L194
+L6:     ldc "os.name"
+L8:     invokestatic Method java/lang/System getProperty (Ljava/lang/String;)Ljava/lang/String;
+L11:    invokevirtual Method java/lang/String toLowerCase ()Ljava/lang/String;
+L14:    ldc "win"
+L16:    invokevirtual Method java/lang/String contains (Ljava/lang/CharSequence;)Z
+L19:    ifeq L37
+L22:    invokestatic Method DisplayModeHelper getSystemDisplayModes ()[LDisplayModeHelper$SimpleDisplayMode;
+L25:    astore_1
+L26:    aload_1
+L27:    ifnonnull L57
+L30:    iconst_0
+L31:    anewarray org/lwjgl/opengl/DisplayMode
+L34:    aload_0
+L35:    monitorexit
+L36:    areturn
+        .catch [0] from L37 to L193 using L194
+L37:    getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
+L40:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 getAvailableDisplayModes ()[Lorg/lwjgl/opengl/DisplayMode; 1
 L45:    dup
-L46:    aload 4
-L48:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getWidth ()I
-L51:    aload 4
-L53:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getHeight ()I
-L56:    aload 4
-L58:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getBitDepth ()I
-L61:    aload 4
-L63:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getRefreshRate ()I
-L66:    invokespecial Method org/lwjgl/opengl/DisplayMode <init> (IIII)V
-L69:    aastore
-L70:    iinc 3 1
-L73:    goto L29
-L76:    aload_2
-L77:    aload_0
-L78:    monitorexit
-L79:    areturn
-        .catch [0] from L80 to L84 using L80
-L80:    astore 5
-L82:    aload_0
-L83:    monitorexit
-L84:    aload 5
-L86:    athrow
-L87:    
+L46:    astore_2
+L47:    ifnonnull L120
+L50:    iconst_0
+L51:    anewarray org/lwjgl/opengl/DisplayMode
+L54:    aload_0
+L55:    monitorexit
+L56:    areturn
+L57:    aload_1
+L58:    arraylength
+L59:    anewarray org/lwjgl/opengl/DisplayMode
+L62:    astore_3
+L63:    iconst_0
+L64:    istore 4
+L66:    iload 4
+L68:    aload_1
+L69:    arraylength
+L70:    if_icmpge L116
+L73:    aload_1
+L74:    iload 4
+L76:    aaload
+L77:    astore 5
+L79:    aload_3
+L80:    iload 4
+L82:    new org/lwjgl/opengl/DisplayMode
+L85:    dup
+L86:    aload 5
+L88:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getWidth ()I
+L91:    aload 5
+L93:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getHeight ()I
+L96:    aload 5
+L98:    invokevirtual Method DisplayModeHelper$SimpleDisplayMode getBitDepth ()I
+L101:   aload 5
+L103:   invokevirtual Method DisplayModeHelper$SimpleDisplayMode getRefreshRate ()I
+L106:   invokespecial Method org/lwjgl/opengl/DisplayMode <init> (IIII)V
+L109:   aastore
+L110:   iinc 4 1
+L113:   goto L66
+L116:   aload_3
+L117:   aload_0
+L118:   monitorexit
+L119:   areturn
+L120:   new java/util/HashSet
+L123:   dup
+L124:   aload_2
+L125:   arraylength
+L126:   invokespecial Method java/util/HashSet <init> (I)V
+L129:   dup
+L130:   astore 6
+L132:   dup
+L133:   aload_2
+L134:   invokestatic Method java/util/Arrays asList ([Ljava/lang/Object;)Ljava/util/List;
+L137:   invokevirtual Method java/util/HashSet addAll (Ljava/util/Collection;)Z
+L140:   pop
+L141:   invokevirtual Method java/util/HashSet size ()I
+L144:   anewarray org/lwjgl/opengl/DisplayMode
+L147:   astore 7
+L149:   aload 6
+L151:   aload 7
+L153:   invokevirtual Method java/util/HashSet toArray ([Ljava/lang/Object;)[Ljava/lang/Object;
+L156:   pop
+L157:   new java/lang/StringBuilder
+L160:   dup
+L161:   invokespecial Method java/lang/StringBuilder <init> ()V
+L164:   ldc "Removed "
+L166:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L169:   aload_2
+L170:   arraylength
+L171:   aload 7
+L173:   arraylength
+L174:   isub
+L175:   invokevirtual Method java/lang/StringBuilder append (I)Ljava/lang/StringBuilder;
+L178:   ldc " duplicate displaymodes"
+L180:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L183:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L186:   invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
+L189:   aload 7
+L191:   aload_0
+L192:   monitorexit
+L193:   areturn
+        .catch [0] from L194 to L198 using L194
+L194:   astore 8
+L196:   aload_0
+L197:   monitorexit
+L198:   aload 8
+L200:   athrow
+L201:   
         .localvariabletable
-            0 is v0 Ljava/lang/Object; from L0 to L87
-            1 is v1 [LDisplayModeHelper$SimpleDisplayMode; from L0 to L87
-            2 is v2 [Lorg/lwjgl/opengl/DisplayMode; from L0 to L87
-            3 is v3 I from L0 to L87
-            4 is v4 LDisplayModeHelper$SimpleDisplayMode; from L0 to L87
-            5 is v5 Ljava/lang/Throwable; from L0 to L87
+            6 is v6 Ljava/util/HashSet; from L0 to L201
+            7 is v7 [Lorg/lwjgl/opengl/DisplayMode; from L0 to L201
+            8 is v8 Ljava/lang/Throwable; from L0 to L201
+            0 is v0 Ljava/lang/Object; from L0 to L201
+            1 is v1 [LDisplayModeHelper$SimpleDisplayMode; from L0 to L201
+            2 is v2 [Lorg/lwjgl/opengl/DisplayMode; from L0 to L201
+            3 is v3 [Lorg/lwjgl/opengl/DisplayMode; from L0 to L201
+            4 is v4 I from L0 to L201
+            5 is v5 LDisplayModeHelper$SimpleDisplayMode; from L0 to L201
         .end localvariabletable
     .end code
 .end method
@@ -398,143 +455,143 @@ L0:     getstatic Field org/lwjgl/opengl/GlobalLock lock Ljava/lang/Object;
 L3:     dup
 L4:     astore_3
 L5:     monitorenter
-        .catch [0] from L6 to L155 using L242
+        .catch [0] from L6 to L162 using L249
 L6:     invokestatic Method org/lwjgl/opengl/Display method3019 ()Z
-L9:     ifne L22
+L9:     ifne L23
 L12:    new org/lwjgl/LWJGLException
 L15:    dup
-L16:    ldc "Display not yet created."
-L18:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
-L21:    athrow
-L22:    fload_1
-L23:    ldc -1e0f
-L25:    fcmpg
-L26:    iflt L35
-L29:    fload_1
-L30:    fconst_1
-L31:    fcmpl
-L32:    ifle L45
-L35:    new java/lang/IllegalArgumentException
-L38:    dup
-L39:    ldc "Invalid brightness value"
-L41:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
-L44:    athrow
-L45:    fload_2
-L46:    fconst_0
-L47:    fcmpg
-L48:    ifge L61
-L51:    new java/lang/IllegalArgumentException
-L54:    dup
-L55:    ldc "Invalid contrast value"
-L57:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
-L60:    athrow
-L61:    getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
-L64:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 method4750 ()I 1
-L69:    dup
-L70:    istore 4
-L72:    ifne L85
-L75:    new org/lwjgl/LWJGLException
-L78:    dup
-L79:    ldc "Display configuration not supported"
-L81:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
-L84:    athrow
-L85:    iload 4
-L87:    invokestatic Method org/lwjgl/BufferUtils createFloatBuffer (I)Ljava/nio/FloatBuffer;
-L90:    astore 5
-L92:    iconst_0
-L93:    iconst_1
-L94:    dup
-L95:    pop2
-L96:    dup
-L97:    istore 6
-L99:    iload 4
-L101:   if_icmpge L185
-L104:   iload 6
-L106:   i2f
-L107:   iload 4
-L109:   iconst_1
-L110:   dup
-L111:   dup
-L112:   pop2
-L113:   isub
-L114:   i2f
-L115:   fdiv
-L116:   f2d
-L117:   fload_0
-L118:   f2d
-L119:   invokestatic Method java/lang/Math pow (DD)D
-L122:   d2f
-L123:   dup
-L124:   fstore 7
-L126:   fload_1
-L127:   fadd
+L16:    ldc_w "Display not yet created."
+L19:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
+L22:    athrow
+L23:    fload_1
+L24:    ldc_w -1e0f
+L27:    fcmpg
+L28:    iflt L37
+L31:    fload_1
+L32:    fconst_1
+L33:    fcmpl
+L34:    ifle L48
+L37:    new java/lang/IllegalArgumentException
+L40:    dup
+L41:    ldc_w "Invalid brightness value"
+L44:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
+L47:    athrow
+L48:    fload_2
+L49:    fconst_0
+L50:    fcmpg
+L51:    ifge L65
+L54:    new java/lang/IllegalArgumentException
+L57:    dup
+L58:    ldc_w "Invalid contrast value"
+L61:    invokespecial Method java/lang/IllegalArgumentException <init> (Ljava/lang/String;)V
+L64:    athrow
+L65:    getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
+L68:    invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 method4750 ()I 1
+L73:    dup
+L74:    istore 4
+L76:    ifne L90
+L79:    new org/lwjgl/LWJGLException
+L82:    dup
+L83:    ldc_w "Display configuration not supported"
+L86:    invokespecial Method org/lwjgl/LWJGLException <init> (Ljava/lang/String;)V
+L89:    athrow
+L90:    iload 4
+L92:    invokestatic Method org/lwjgl/BufferUtils createFloatBuffer (I)Ljava/nio/FloatBuffer;
+L95:    astore 5
+L97:    iconst_0
+L98:    iconst_1
+L99:    dup
+L100:   pop2
+L101:   dup
+L102:   istore 6
+L104:   iload 4
+L106:   if_icmpge L192
+L109:   iload 6
+L111:   i2f
+L112:   iload 4
+L114:   iconst_1
+L115:   dup
+L116:   dup
+L117:   pop2
+L118:   isub
+L119:   i2f
+L120:   fdiv
+L121:   f2d
+L122:   fload_0
+L123:   f2d
+L124:   invokestatic Method java/lang/Math pow (DD)D
+L127:   d2f
 L128:   dup
 L129:   fstore 7
-L131:   ldc 5e-1f
-L133:   fsub
-L134:   fload_2
-L135:   fmul
-L136:   ldc 5e-1f
-L138:   fadd
-L139:   dup
-L140:   fstore 7
-L142:   fconst_1
-L143:   fcmpl
-L144:   ifle L156
-L147:   fconst_1
-L148:   fstore 7
-L150:   aload 5
-L152:   goto L168
-L155:   athrow
-        .catch [0] from L156 to L184 using L242
-L156:   fload 7
-L158:   fconst_0
-L159:   fcmpg
-L160:   ifge L166
-L163:   fconst_0
-L164:   fstore 7
-L166:   aload 5
-L168:   iload 6
-L170:   iinc 6 1
-L173:   fload 7
-L175:   invokevirtual Method java/nio/FloatBuffer put (IF)Ljava/nio/FloatBuffer;
-L178:   pop
-L179:   iload 6
-L181:   goto L99
-L184:   athrow
-        .catch [0] from L185 to L241 using L242
-L185:   getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
-L188:   aload 5
-L190:   invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 setGammaRamp (Ljava/nio/FloatBuffer;)V 2
-L195:   new java/lang/StringBuilder
-L198:   dup
-L199:   invokespecial Method java/lang/StringBuilder <init> ()V
-L202:   iconst_0
-L203:   ldc_w "Gamma set, gamma = "
-L206:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
-L209:   fload_0
-L210:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
-L213:   ldc_w ", brightness = "
-L216:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L219:   fload_1
-L220:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
-L223:   ldc_w ", contrast = "
-L226:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-L229:   fload_2
-L230:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
-L233:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
-L236:   invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
-L239:   aload_3
-L240:   monitorexit
-L241:   return
-        .catch [0] from L242 to L246 using L242
-L242:   astore 8
-L244:   aload_3
-L245:   monitorexit
-L246:   aload 8
-L248:   athrow
-L249:   athrow
-L250:   
+L131:   fload_1
+L132:   fadd
+L133:   dup
+L134:   fstore 7
+L136:   ldc_w 5e-1f
+L139:   fsub
+L140:   fload_2
+L141:   fmul
+L142:   ldc_w 5e-1f
+L145:   fadd
+L146:   dup
+L147:   fstore 7
+L149:   fconst_1
+L150:   fcmpl
+L151:   ifle L163
+L154:   fconst_1
+L155:   fstore 7
+L157:   aload 5
+L159:   goto L175
+L162:   athrow
+        .catch [0] from L163 to L191 using L249
+L163:   fload 7
+L165:   fconst_0
+L166:   fcmpg
+L167:   ifge L173
+L170:   fconst_0
+L171:   fstore 7
+L173:   aload 5
+L175:   iload 6
+L177:   iinc 6 1
+L180:   fload 7
+L182:   invokevirtual Method java/nio/FloatBuffer put (IF)Ljava/nio/FloatBuffer;
+L185:   pop
+L186:   iload 6
+L188:   goto L104
+L191:   athrow
+        .catch [0] from L192 to L248 using L249
+L192:   getstatic Field org/lwjgl/opengl/Display field3290 Lorg/lwjgl/opengl/m_893;
+L195:   aload 5
+L197:   invokeinterface InterfaceMethod org/lwjgl/opengl/m_893 setGammaRamp (Ljava/nio/FloatBuffer;)V 2
+L202:   new java/lang/StringBuilder
+L205:   dup
+L206:   invokespecial Method java/lang/StringBuilder <init> ()V
+L209:   iconst_0
+L210:   ldc_w "Gamma set, gamma = "
+L213:   invokevirtual Method java/lang/StringBuilder insert (ILjava/lang/String;)Ljava/lang/StringBuilder;
+L216:   fload_0
+L217:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
+L220:   ldc_w ", brightness = "
+L223:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L226:   fload_1
+L227:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
+L230:   ldc_w ", contrast = "
+L233:   invokevirtual Method java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+L236:   fload_2
+L237:   invokevirtual Method java/lang/StringBuilder append (F)Ljava/lang/StringBuilder;
+L240:   invokevirtual Method java/lang/StringBuilder toString ()Ljava/lang/String;
+L243:   invokestatic Method org/lwjgl/LWJGLUtil log (Ljava/lang/CharSequence;)V
+L246:   aload_3
+L247:   monitorexit
+L248:   return
+        .catch [0] from L249 to L253 using L249
+L249:   astore 8
+L251:   aload_3
+L252:   monitorexit
+L253:   aload 8
+L255:   athrow
+L256:   athrow
+L257:   
     .end code
     .exceptions org/lwjgl/LWJGLException
 .end method
