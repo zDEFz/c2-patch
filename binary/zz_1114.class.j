@@ -266,7 +266,7 @@ L101:
 .end method
 
 .method private static method4 : (Ljava/lang/String;)V
-    .code stack 4 locals 4
+    .code stack 4 locals 5
 L0:     aload_0
 L1:     ifnull L16
 L4:     ldc ""
@@ -278,7 +278,7 @@ L13:    ifeq L24
         .stack same
 L16:    ldc "Usage /cmd replay <filename | on | off | last>"
 L18:    invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
-L21:    goto L116
+L21:    goto L117
         .catch java/io/IOException from L24 to L112 using L115
 
         .stack same
@@ -309,35 +309,35 @@ L66:    invokevirtual Method java/io/FileInputStream read ([B)I
 L69:    pop
 L70:    aload_3
 L71:    invokevirtual Method java/io/FileInputStream close ()V
-L74:    getstatic Field zz_1114 field2 LUb_283;
-L77:    getfield Field Ub_283 field1136 LFE_76;
+L74:    invokestatic Method cD_388 method59 ()LcD_388;
+L77:    getfield Field bC_373 field1136 LFE_76;
 L80:    new vE_1053
 L83:    dup
 L84:    aload_2
 L85:    invokespecial Method vE_1053 <init> ([B)V
 L88:    invokevirtual Method FE_76 method444 (LbC_373;)V
 L91:    aload_0
-L92:    invokedynamic [_173]
+L92:    invokedynamic [_181]
 L97:    invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
 L100:   goto L112
 
         .stack append Object java/io/File
 L103:   aload_0
-L104:   invokedynamic [_176]
+L104:   invokedynamic [_184]
 L109:   invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
 
         .stack same
-L112:   goto L116
+L112:   goto L117
 
         .stack full
             locals Object java/lang/String
             stack Object java/io/IOException
         .end stack
-L115:   astore_1
+L115:   astore 4
 
         .stack same
-L116:   return
-L117:   
+L117:   return
+L118:   
         .linenumbertable
             L0 69
             L16 70
@@ -353,15 +353,19 @@ L117:
             L103 82
             L112 87
             L115 85
-            L116 89
+            L117 89
         .end linenumbertable
         .localvariabletable
-            2 is bytes [B from L55 to L100
-            3 is inputStream Ljava/io/FileInputStream; from L64 to L100
-            1 is file Ljava/io/File; from L33 to L112
-            0 is string1 Ljava/lang/String; from L0 to L117
+            0 is string1 Ljava/lang/String; from L0 to L118
+            1 is file Ljava/io/File; from L0 to L118
+            2 is bytes [B from L0 to L118
+            3 is inputStream Ljava/io/FileInputStream; from L0 to L118
+            4 is v1 Ljava/io/IOException; from L0 to L118
         .end localvariabletable
     .end code
+    .methodparameters
+        string1
+    .end methodparameters
 .end method
 
 .method public static on_method52 : (Lqd_992;)V
@@ -465,12 +469,12 @@ L89:    astore 8
 
         .stack append Integer Object java/lang/String
 L91:    aload 4
-L93:    invokedynamic [_242]
+L93:    invokedynamic [_252]
 L98:    astore 9
 L100:   aload 9
 L102:   aload 8
 L104:   aload 6
-L106:   invokedynamic [_247]
+L106:   invokedynamic [_257]
 L111:   astore 10
 L113:   aload 10
 L115:   putstatic Field zz_1114 field4 Ljava/lang/String;
@@ -507,7 +511,7 @@ L180:   getstatic Field zz_1114 field7 I
 L183:   iconst_1
 L184:   if_icmple L228
 L187:   aload 10
-L189:   invokedynamic [_263]
+L189:   invokedynamic [_273]
 L194:   invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
 L197:   goto L228
 
@@ -520,7 +524,7 @@ L211:   getstatic Field zz_1114 field7 I
 L214:   iconst_1
 L215:   if_icmple L228
 L218:   aload 10
-L220:   invokedynamic [_263]
+L220:   invokedynamic [_273]
 L225:   invokestatic Method zz_1114 l1 (Ljava/lang/String;)V
 
         .stack same
@@ -619,7 +623,7 @@ L29:    ldc_w "replays/tags"
 L32:    astore_2
 L33:    aload_2
 L34:    aload_0
-L35:    invokedynamic [_289]
+L35:    invokedynamic [_299]
 L40:    astore_3
 L41:    new java/io/File
 L44:    dup
@@ -653,7 +657,7 @@ L86:    ifeq L111
 L89:    aload_3
 L90:    ldc_w ".rec"
 L93:    iload 6
-L95:    invokedynamic [_295]
+L95:    invokedynamic [_305]
 L100:   invokevirtual Method java/lang/String replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 L103:   astore 5
 L105:   iinc 6 1
@@ -677,14 +681,14 @@ L142:   getstatic Field zz_1114 field6 Z
 L145:   ifne L164
 L148:   aload 5
 L150:   checkcast java/lang/String
-L153:   invokedynamic [_302]
+L153:   invokedynamic [_312]
 L158:   invokestatic Method zz_1114 l1 (Ljava/lang/String;)V
 L161:   goto L177
 
         .stack append Object java/io/FileOutputStream
 L164:   aload 5
 L166:   checkcast java/lang/String
-L169:   invokedynamic [_302]
+L169:   invokedynamic [_312]
 L174:   invokestatic Method zz_1114 l2 (Ljava/lang/String;)V
 
         .stack same
@@ -909,7 +913,7 @@ L252:   astore 12
 L254:   getstatic Field java/lang/System err Ljava/io/PrintStream;
 L257:   aload 12
 L259:   invokevirtual Method java/io/IOException getMessage ()Ljava/lang/String;
-L262:   invokedynamic [_369]
+L262:   invokedynamic [_378]
 L267:   invokevirtual Method java/io/PrintStream println (Ljava/lang/String;)V
 
         .stack same
@@ -980,13 +984,13 @@ L9:
 .end innerclasses
 .sourcefile "zz_1114.java"
 .bootstrapmethods
-.const [_173] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Playing replay \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_176] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay \"\u0001\" not found." : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_242] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "replays/\u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_247] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-.const [_263] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay saved to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_289] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-.const [_295] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "_(\u0001).rec" : makeConcatWithConstants (I)Ljava/lang/String;
-.const [_302] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay tagged to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
-.const [_369] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Failed to read settings file: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_181] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Playing replay \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_184] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay \"\u0001\" not found." : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_252] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "replays/\u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_257] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.const [_273] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay saved to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_299] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "\u0001/\u0001.rec" : makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.const [_305] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "_(\u0001).rec" : makeConcatWithConstants (I)Ljava/lang/String;
+.const [_312] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Replay tagged to \"\u0001\"" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
+.const [_378] = InvokeDynamic invokeStatic Method java/lang/invoke/StringConcatFactory makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; String "Failed to read settings file: \u0001" : makeConcatWithConstants (Ljava/lang/String;)Ljava/lang/String;
 .end class
