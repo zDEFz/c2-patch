@@ -29,6 +29,9 @@
 .field public static teamYellowB F = 5e-1f
 .field public static animtoggle I = 1
 .field public static enable_enemy_sounds I = 1
+.field public static oneKeyFinesseEnabled Z = 0
+.field public static oneKeyFinesseSoftdropByDefault Z = 1
+.field public static oneKeyFinesseKeyMap Ljava/util/HashMap;
 
 .method static method1722 : ()V
     .code stack 1 locals 0
@@ -88,12 +91,15 @@ L5:
             0 is this Lnet/gewaltig/cultris/Cultris; from L0 to L5
         .end localvariabletable
     .end code
+    .methodparameters
+        this
+    .end methodparameters
 .end method
 
 .method public static main : ([Ljava/lang/String;)V
     .code stack 5 locals 4
 L0:     invokestatic Method net/gewaltig/cultris/Cultris method1723 ()V
-        .catch java/lang/Throwable from L3 to L205 using L212
+        .catch java/lang/Throwable from L3 to L227 using L234
 L3:     invokestatic Method FE_76 readfpsvalue ()I
 L6:     putstatic Field net/gewaltig/cultris/Cultris framerate I
 L9:     invokestatic Method FE_76 readhzvalue ()I
@@ -158,73 +164,81 @@ L151:   invokestatic Method ReadTeamColor getBlue (I)F
 L154:   putstatic Field net/gewaltig/cultris/Cultris teamYellowB F
 L157:   invokestatic Method od_662 readenemySFXtoggle ()I
 L160:   putstatic Field net/gewaltig/cultris/Cultris enable_enemy_sounds I
-L163:   invokestatic Method zz_1114 method7 ()V
-L166:   invokestatic Method net/gewaltig/cultris/Cultris method1725 ()V
-L169:   aload_0
-L170:   arraylength
-L171:   iconst_1
-L172:   dup
-L173:   dup
-L174:   pop2
-L175:   if_icmpne L202
-L178:   ldc "profile_run"
-L180:   aload_0
-L181:   iconst_0
-L182:   iconst_1
-L183:   dup
-L184:   pop2
-L185:   aaload
-L186:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
-L189:   ifeq L202
-L192:   new net/gewaltig/cultris/i_648
+L163:   ldc "ONE_KEY_FINESSE_ENABLED"
+L165:   invokestatic Method OneKeyFinesse/OneKeyFinesse loadSetting (Ljava/lang/String;)Z
+L168:   putstatic Field net/gewaltig/cultris/Cultris oneKeyFinesseEnabled Z
+L171:   ldc "SOFTDROP_BY_DEFAULT"
+L173:   invokestatic Method OneKeyFinesse/OneKeyFinesse loadSetting (Ljava/lang/String;)Z
+L176:   putstatic Field net/gewaltig/cultris/Cultris oneKeyFinesseSoftdropByDefault Z
+L179:   invokestatic Method OneKeyFinesse/OneKeyFinesse loadKeymap ()Ljava/util/HashMap;
+L182:   putstatic Field net/gewaltig/cultris/Cultris oneKeyFinesseKeyMap Ljava/util/HashMap;
+L185:   invokestatic Method zz_1114 method7 ()V
+L188:   invokestatic Method net/gewaltig/cultris/Cultris method1725 ()V
+L191:   aload_0
+L192:   arraylength
+L193:   iconst_1
+L194:   dup
 L195:   dup
-L196:   invokespecial Method net/gewaltig/cultris/i_648 <init> ()V
-L199:   invokestatic Method ib_476 method1156 (LM_169;)V
-L202:   invokestatic Method net/gewaltig/cultris/Cultris method1722 ()V
-L205:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
-L208:   goto L265
-L211:   athrow
-L212:   astore_1
-        .catch java/lang/Throwable from L213 to L216 using L221
-L213:   invokestatic Method org/lwjgl/opengl/Display method3009 ()V
-L216:   aload_1
-L217:   goto L223
-L220:   athrow
-L221:   astore_2
-L222:   aload_1
-L223:   invokevirtual Method java/lang/Throwable printStackTrace ()V
-        .catch java/lang/Throwable from L226 to L238 using L241
-        .catch [0] from L3 to L205 using L259
-        .catch [0] from L212 to L220 using L259
-        .catch [0] from L221 to L253 using L259
-L226:   new sD_1013
-L229:   dup
-L230:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
-L233:   aload_1
-L234:   invokespecial Method sD_1013 <init> (LFE_76;Ljava/lang/Throwable;)V
-L237:   pop
-L238:   goto L253
-L241:   astore_2
-L242:   aload_2
-L243:   invokevirtual Method java/lang/Throwable printStackTrace ()V
-L246:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
-L249:   aload_1
-L250:   invokestatic Method sD_1013 method335 (LFE_76;Ljava/lang/Throwable;)V
-L253:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
-L256:   goto L265
-        .catch [0] from L259 to L260 using L259
-L259:   astore_3
-L260:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
-L263:   aload_3
-L264:   athrow
-L265:   invokestatic Method ib_476 method1152 ()V
-L268:   return
-L269:   
+L196:   pop2
+L197:   if_icmpne L224
+L200:   ldc "profile_run"
+L202:   aload_0
+L203:   iconst_0
+L204:   iconst_1
+L205:   dup
+L206:   pop2
+L207:   aaload
+L208:   invokevirtual Method java/lang/String equals (Ljava/lang/Object;)Z
+L211:   ifeq L224
+L214:   new net/gewaltig/cultris/i_648
+L217:   dup
+L218:   invokespecial Method net/gewaltig/cultris/i_648 <init> ()V
+L221:   invokestatic Method ib_476 method1156 (LM_169;)V
+L224:   invokestatic Method net/gewaltig/cultris/Cultris method1722 ()V
+L227:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
+L230:   goto L287
+L233:   athrow
+L234:   astore_1
+        .catch java/lang/Throwable from L235 to L238 using L243
+L235:   invokestatic Method org/lwjgl/opengl/Display method3009 ()V
+L238:   aload_1
+L239:   goto L245
+L242:   athrow
+L243:   astore_2
+L244:   aload_1
+L245:   invokevirtual Method java/lang/Throwable printStackTrace ()V
+        .catch java/lang/Throwable from L248 to L260 using L263
+        .catch [0] from L3 to L227 using L281
+        .catch [0] from L234 to L242 using L281
+        .catch [0] from L243 to L275 using L281
+L248:   new sD_1013
+L251:   dup
+L252:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
+L255:   aload_1
+L256:   invokespecial Method sD_1013 <init> (LFE_76;Ljava/lang/Throwable;)V
+L259:   pop
+L260:   goto L275
+L263:   astore_2
+L264:   aload_2
+L265:   invokevirtual Method java/lang/Throwable printStackTrace ()V
+L268:   getstatic Field net/gewaltig/cultris/Cultris field2394 LFE_76;
+L271:   aload_1
+L272:   invokestatic Method sD_1013 method335 (LFE_76;Ljava/lang/Throwable;)V
+L275:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
+L278:   goto L287
+        .catch [0] from L281 to L282 using L281
+L281:   astore_3
+L282:   invokestatic Method net/gewaltig/cultris/Cultris method1724 ()V
+L285:   aload_3
+L286:   athrow
+L287:   invokestatic Method ib_476 method1152 ()V
+L290:   return
+L291:   
         .localvariabletable
-            0 is p0 [Ljava/lang/String; from L0 to L269
-            1 is v1 Ljava/lang/Throwable; from L0 to L269
-            2 is v2 Ljava/lang/Throwable; from L0 to L269
-            3 is v3 Ljava/lang/Throwable; from L0 to L269
+            0 is p0 [Ljava/lang/String; from L0 to L291
+            1 is v1 Ljava/lang/Throwable; from L0 to L291
+            2 is v2 Ljava/lang/Throwable; from L0 to L291
+            3 is v3 Ljava/lang/Throwable; from L0 to L291
         .end localvariabletable
     .end code
     .runtime visible annotations
@@ -232,6 +246,9 @@ L269:
             At_2 = string "save framerate value onto a field to read it later from FE"
         .end annotation
     .end runtime
+    .methodparameters
+        p0
+    .end methodparameters
 .end method
 
 .method static <clinit> : ()V
@@ -251,19 +268,19 @@ L15:    iconst_1
 L16:    dup
 L17:    pop2
 L18:    putstatic Field net/gewaltig/cultris/Cultris field2393 Z
-L21:    ldc "org.lwjgl.util.NoCheck"
-L23:    ldc "true"
-L25:    invokestatic Method java/lang/System setProperty (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-L28:    ldc "org.lwjgl.opengl.Display.allowSoftwareOpenGL"
-L30:    ldc "true"
-L32:    invokestatic Method java/lang/System setProperty (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-L35:    invokestatic Method java/awt/Toolkit getDefaultToolkit ()Ljava/awt/Toolkit;
-L38:    getstatic Field java/util/Locale ROOT Ljava/util/Locale;
-L41:    invokestatic Method java/util/Locale setDefault (Ljava/util/Locale;)V
-L44:    pop
-L45:    pop2
-L46:    return
-L47:    
+L21:    ldc_w "org.lwjgl.util.NoCheck"
+L24:    ldc_w "true"
+L27:    invokestatic Method java/lang/System setProperty (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+L30:    ldc_w "org.lwjgl.opengl.Display.allowSoftwareOpenGL"
+L33:    ldc_w "true"
+L36:    invokestatic Method java/lang/System setProperty (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+L39:    invokestatic Method java/awt/Toolkit getDefaultToolkit ()Ljava/awt/Toolkit;
+L42:    getstatic Field java/util/Locale ROOT Ljava/util/Locale;
+L45:    invokestatic Method java/util/Locale setDefault (Ljava/util/Locale;)V
+L48:    pop
+L49:    pop2
+L50:    return
+L51:    
     .end code
 .end method
 
@@ -466,7 +483,7 @@ L410:   return
 L411:   
         .localvariabletable
             0 is v0 Ljava/io/Serializable; from L0 to L411
-            1 is v1 Lgg_453; from L0 to L411
+            1 is v1 LuB_1037; from L0 to L411
             2 is v2 Lcb_392; from L0 to L411
             3 is v3 LkD_594; from L0 to L411
         .end localvariabletable

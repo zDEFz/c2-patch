@@ -1,0 +1,33 @@
+Set this to 1 to enable one key finesse, 0 to disable. 
+ONE_KEY_FINESSE_ENABLED=0
+
+Adjust the matrix below so it matches your keyboard layout. Do not change the >: part. Separate each key with a space.
+Use key names from the above list. Make sure the keys that are bound on your in-game
+keybindings screen are not the same as any keys defined in this file as that may cause conflicts.
+
+These are the default 1kf controls:
+>:1 2 3 4 5 6 7 8 9 0
+>:q w e r t y u i o p
+>:a s d f g h j k l semicolon
+>:z x c v b n m comma period slash
+If you want your 1kf controls to be different, you can find the name of the keys on https://c2.tail.ws/1kf_keys.txt
+Note that if the key you use to show the chat and stats screen is also in your 1kf bindings, you will want to change that key
+to something else on the in-game keybindings screen to avoid the chat poping up when you press that key during gameplay.
+
+180 modifier key:
+>:space
+After pressing the 180 modifier, all rows behave as if they were the 180 row for your next piece placement.
+Using this feature is optional but it can reduce strain and improve comfort as it reduces vertical finger movement and allows you to play using only three rows.
+This works best with a thumb key if you have one.
+
+Topdrop modifier key:
+>:rshift
+1kf drops the piece in the lowest reachable position by default. 
+If you want to drop a piece on the top of your stack when there is a reachable hole under it, 
+press the topdrop key and your piece will drop on the top of the stack instead.
+
+SOFTDROP_BY_DEFAULT=1
+If you do not want the piece to drop in the lowest position by default, set SOFTDROP_BY_DEFAULT to 0.
+Doing so will inverse the behavior such that the piece is dropped in the highest position by default and 
+the topdrop modifier needs to be pressed every time you want to drop the piece in the lowest position instead.
+This setting is enabled (1) by default because it results in the fewest keys per piece in most situations.
