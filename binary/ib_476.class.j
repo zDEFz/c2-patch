@@ -15,7 +15,13 @@ L0:     aload_0
 L1:     invokespecial Method java/lang/Object <init> ()V
 L4:     return
 L5:     
+        .localvariabletable
+            0 is this Lib_476; from L0 to L5
+        .end localvariabletable
     .end code
+    .methodparameters
+        this
+    .end methodparameters
 .end method
 
 .method public static method1150 : (Ljava/lang/Runnable;D)V
@@ -48,8 +54,17 @@ L39:    aload 4
 L41:    athrow
 L42:    athrow
 L43:    
-        .attribute StackMap b'\x00\x03\x00\x22\x00\x00\x00\x01\x07\x00\x37\x00\x23\x00\x03\x07\x00\x39\x03\x07\x00\x31\x00\x01\x07\x00\x37\x00\x2A\x00\x00\x00\x01\x07\x00\x37'
+        .localvariabletable
+            0 is v0 Ljava/lang/Runnable; from L0 to L43
+            1 is d1 D from L0 to L43
+            3 is v3 Ljava/util/List; from L0 to L43
+            4 is v4 Ljava/lang/Throwable; from L0 to L43
+        .end localvariabletable
     .end code
+    .methodparameters
+        v0
+        d1
+    .end methodparameters
 .end method
 
 .method public static method1151 : ()V
@@ -86,13 +101,16 @@ L42:    goto L16
 L45:    athrow
 L46:    return
 L47:    
-        .attribute StackMap b'\x00\x03\x00\x10\x00\x01\x07\x00\x57\x00\x01\x07\x00\x57\x00\x2D\x00\x00\x00\x01\x07\x00\x37\x00\x2E\x00\x01\x07\x00\x57\x00\x00'
+        .localvariabletable
+            0 is v0 Ljava/util/Iterator; from L0 to L47
+            1 is v1 LM_169; from L0 to L47
+        .end localvariabletable
     .end code
 .end method
 
 .method public static <clinit> : ()V
     .code stack 5 locals 0
-L0:     ldc 1.25e-2f
+L0:     ldc 4.1666e-3f
 L2:     putstatic Field ib_476 field2312 F
 L5:     new java/util/LinkedHashSet
 L8:     dup
@@ -150,8 +168,13 @@ L63:    invokevirtual Method java/util/HashMap put (Ljava/lang/Object;Ljava/lang
 L66:    pop
 L67:    return
 L68:    
-        .attribute StackMap b'\x00\x05\x00\x0C\x00\x00\x00\x01\x07\x00\x37\x00\x0D\x00\x01\x07\x01\x03\x00\x00\x00\x2D\x00\x00\x00\x01\x07\x00\x37\x00\x2E\x00\x01\x07\x01\x03\x00\x00\x00\x43\x00\x01\x07\x01\x03\x00\x00'
+        .localvariabletable
+            0 is v0 LM_169; from L0 to L68
+        .end localvariabletable
     .end code
+    .methodparameters
+        v0
+    .end methodparameters
 .end method
 
 .method public static method1154 : (Ljava/lang/Runnable;)V
@@ -161,11 +184,17 @@ L1:     ldc2_w -1e0
 L4:     invokestatic Method ib_476 method1150 (Ljava/lang/Runnable;D)V
 L7:     return
 L8:     
+        .localvariabletable
+            0 is v0 Ljava/lang/Runnable; from L0 to L8
+        .end localvariabletable
     .end code
+    .methodparameters
+        v0
+    .end methodparameters
 .end method
 
 .method public static method1155 : ()Z
-    .code stack 6 locals 5
+    .code stack 6 locals 8
 L0:     ldc Class ib_476
 L2:     dup
 L3:     astore_0
@@ -235,172 +264,179 @@ L152:   monitorexit
 L153:   aload_3
 L154:   athrow
 L155:   invokestatic Method OC_199 method1015 ()D
-L158:   dstore_0
-L159:   getstatic Field ib_476 new D
-L162:   dload_0
-L163:   getstatic Field ib_476 field2309 D
-L166:   dsub
-L167:   dadd
-L168:   putstatic Field ib_476 new D
-L171:   getstatic Field ib_476 new D
-L174:   getstatic Field ib_476 field2312 F
-L177:   f2d
-L178:   dcmpl
-L179:   ifle L272
-L182:   getstatic Field ib_476 this Ljava/util/LinkedHashSet;
-L185:   invokevirtual Method java/util/LinkedHashSet iterator ()Ljava/util/Iterator;
-L188:   astore_2
-L189:   aload_2
-L190:   invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
-L195:   ifeq L238
-L198:   aload_2
-L199:   invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
-L204:   checkcast M_169
-L207:   astore_3
-L208:   getstatic Field ib_476 field2310 Ljava/util/HashMap;
-L211:   aload_3
-L212:   invokevirtual Method java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object;
-L215:   getstatic Field java/lang/Boolean FALSE Ljava/lang/Boolean;
-L218:   if_acmpeq L189
-L221:   aload_3
-L222:   invokeinterface InterfaceMethod M_169 method227 ()Z 1
-L227:   ifeq L189
-L230:   iconst_0
-L231:   iconst_1
-L232:   dup
-L233:   pop2
-L234:   ireturn
-L235:   nop
-L236:   nop
-L237:   athrow
-L238:   getstatic Field ib_476 field2311 LFE_76;
-L241:   ifnull L258
-L244:   getstatic Field ib_476 field2311 LFE_76;
-L247:   invokevirtual Method FE_76 method227 ()Z
-L250:   ifeq L258
-L253:   iconst_0
-L254:   iconst_1
-L255:   dup
-L256:   pop2
-L257:   ireturn
-L258:   getstatic Field ib_476 new D
-L261:   getstatic Field ib_476 field2312 F
-L264:   f2d
-L265:   dsub
-L266:   putstatic Field ib_476 new D
-L269:   goto L171
-L272:   getstatic Field ib_476 field2311 LFE_76;
-L275:   ifnull L284
-L278:   getstatic Field ib_476 field2311 LFE_76;
-L281:   invokevirtual Method FE_76 method67 ()V
-L284:   getstatic Field ib_476 field2311 LFE_76;
-L287:   ifnull L296
-L290:   getstatic Field ib_476 field2311 LFE_76;
-L293:   invokevirtual Method FE_76 method417 ()V
-L296:   getstatic Field ib_476 this Ljava/util/LinkedHashSet;
-L299:   invokevirtual Method java/util/LinkedHashSet iterator ()Ljava/util/Iterator;
-L302:   astore_2
-L303:   aload_2
-L304:   invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
-L309:   ifeq L358
-L312:   aload_2
-L313:   invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
-L318:   checkcast M_169
-L321:   astore_3
-L322:   getstatic Field ib_476 field2310 Ljava/util/HashMap;
-L325:   aload_3
-L326:   invokevirtual Method java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object;
-L329:   getstatic Field java/lang/Boolean FALSE Ljava/lang/Boolean;
-L332:   if_acmpeq L303
-L335:   aload_3
-L336:   dload_0
-L337:   getstatic Field ib_476 field2309 D
-L340:   dsub
-L341:   d2f
-L342:   invokeinterface InterfaceMethod M_169 fpsfoundhere (F)Z 2
-L347:   ifeq L303
-L350:   iconst_0
-L351:   iconst_1
-L352:   dup
-L353:   pop2
-L354:   ireturn
-L355:   nop
-L356:   nop
-L357:   athrow
-L358:   getstatic Field ib_476 field2311 LFE_76;
-L361:   ifnull L370
-L364:   getstatic Field ib_476 field2311 LFE_76;
-L367:   invokevirtual Method FE_76 method67 ()V
-L370:   getstatic Field ib_476 field2311 LFE_76;
-L373:   ifnull L396
-L376:   getstatic Field ib_476 field2311 LFE_76;
-L379:   dload_0
-L380:   getstatic Field ib_476 field2309 D
-L383:   dsub
-L384:   d2f
-L385:   invokevirtual Method FE_76 fpsfoundhere (F)Z
-L388:   ifeq L396
-L391:   iconst_0
-L392:   iconst_1
-L393:   dup
-L394:   pop2
-L395:   ireturn
-L396:   getstatic Field ib_476 field2308 Ljava/util/List;
-L399:   dup
-L400:   astore_2
-L401:   monitorenter
-        .catch [0] from L402 to L480 using L484
-L402:   iconst_0
-L403:   iconst_1
-L404:   dup
-L405:   pop2
-L406:   dup
-L407:   istore_3
-L408:   getstatic Field ib_476 field2308 Ljava/util/List;
-L411:   invokeinterface InterfaceMethod java/util/List size ()I 1
-L416:   if_icmpge L478
-L419:   getstatic Field ib_476 field2308 Ljava/util/List;
-L422:   iload_3
-L423:   invokeinterface InterfaceMethod java/util/List get (I)Ljava/lang/Object; 2
-L428:   checkcast Dc_52
-L431:   getfield Field Dc_52 field1794 Ljava/lang/Object;
-L434:   checkcast java/lang/Double
-L437:   invokevirtual Method java/lang/Double doubleValue ()D
-L440:   dload_0
-L441:   dcmpg
-L442:   ifgt L471
-L445:   getstatic Field ib_476 field2308 Ljava/util/List;
-L448:   iload_3
-L449:   invokeinterface InterfaceMethod java/util/List remove (I)Ljava/lang/Object; 2
-L454:   checkcast Dc_52
-L457:   getfield Field Dc_52 field1793 Ljava/lang/Object;
-L460:   iinc 3 -1
-L463:   checkcast java/lang/Runnable
-L466:   invokeinterface InterfaceMethod java/lang/Runnable run ()V 1
-L471:   iinc 3 1
-L474:   iload_3
-L475:   goto L408
-L478:   aload_2
-L479:   monitorexit
-L480:   dload_0
-L481:   goto L492
-        .catch [0] from L484 to L488 using L484
-L484:   astore 4
-L486:   aload_2
-L487:   monitorexit
-L488:   aload 4
-L490:   athrow
-L491:   athrow
-L492:   putstatic Field ib_476 field2309 D
-L495:   iconst_1
-L496:   dup
-L497:   dup
-L498:   pop2
-L499:   ireturn
-L500:   
-        .attribute StackMap b'\x00\x1B\x00\x11\x00\x02\x07\x00\xA3\x07\x00\x57\x00\x00\x00\x69\x00\x00\x00\x01\x07\x00\x37\x00\x6A\x00\x03\x07\x00\xA3\x07\x00\x57\x07\x00\x06\x00\x00\x00\x7A\x00\x00\x00\x01\x07\x00\x37\x00\x7B\x00\x03\x07\x00\xA3\x07\x00\x57\x07\x00\x06\x00\x00\x00\x8B\x00\x02\x07\x00\xA3\x07\x00\x57\x00\x00\x00\x96\x00\x01\x07\x00\xA3\x00\x01\x07\x00\x37\x00\x9B\x00\x02\x07\x00\xA3\x07\x00\x57\x00\x00\x00\xAB\x00\x01\x03\x00\x00\x00\xBD\x00\x02\x03\x07\x00\x57\x00\x00\x00\xEB\x00\x00\x00\x01\x07\x00\x37\x00\xEE\x00\x02\x03\x07\x00\x57\x00\x00\x01\x02\x00\x02\x03\x07\x00\x57\x00\x00\x01\x10\x00\x01\x03\x00\x00\x01\x1C\x00\x01\x03\x00\x00\x01\x28\x00\x01\x03\x00\x00\x01\x2F\x00\x02\x03\x07\x00\x57\x00\x00\x01\x63\x00\x00\x00\x01\x07\x00\x37\x01\x66\x00\x02\x03\x07\x00\x57\x00\x00\x01\x72\x00\x02\x03\x07\x00\x57\x00\x00\x01\x8C\x00\x02\x03\x07\x00\x57\x00\x00\x01\x98\x00\x03\x03\x07\x00\x31\x01\x00\x01\x01\x01\xD7\x00\x03\x03\x07\x00\x31\x01\x00\x00\x01\xDE\x00\x03\x03\x07\x00\x31\x01\x00\x00\x01\xE4\x00\x02\x03\x07\x00\x31\x00\x01\x07\x00\x37\x01\xEB\x00\x00\x00\x01\x07\x00\x37\x01\xEC\x00\x03\x03\x07\x00\x31\x01\x00\x01\x03'
+L158:   dstore 4
+L160:   getstatic Field ib_476 new D
+L163:   dload 4
+L165:   getstatic Field ib_476 field2309 D
+L168:   dsub
+L169:   dadd
+L170:   putstatic Field ib_476 new D
+L173:   getstatic Field ib_476 new D
+L176:   getstatic Field ib_476 field2312 F
+L179:   f2d
+L180:   dcmpl
+L181:   ifle L274
+L184:   getstatic Field ib_476 this Ljava/util/LinkedHashSet;
+L187:   invokevirtual Method java/util/LinkedHashSet iterator ()Ljava/util/Iterator;
+L190:   astore_2
+L191:   aload_2
+L192:   invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
+L197:   ifeq L240
+L200:   aload_2
+L201:   invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
+L206:   checkcast M_169
+L209:   astore_3
+L210:   getstatic Field ib_476 field2310 Ljava/util/HashMap;
+L213:   aload_3
+L214:   invokevirtual Method java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object;
+L217:   getstatic Field java/lang/Boolean FALSE Ljava/lang/Boolean;
+L220:   if_acmpeq L191
+L223:   aload_3
+L224:   invokeinterface InterfaceMethod M_169 method227 ()Z 1
+L229:   ifeq L191
+L232:   iconst_0
+L233:   iconst_1
+L234:   dup
+L235:   pop2
+L236:   ireturn
+L237:   nop
+L238:   nop
+L239:   athrow
+L240:   getstatic Field ib_476 field2311 LFE_76;
+L243:   ifnull L260
+L246:   getstatic Field ib_476 field2311 LFE_76;
+L249:   invokevirtual Method FE_76 method227 ()Z
+L252:   ifeq L260
+L255:   iconst_0
+L256:   iconst_1
+L257:   dup
+L258:   pop2
+L259:   ireturn
+L260:   getstatic Field ib_476 new D
+L263:   getstatic Field ib_476 field2312 F
+L266:   f2d
+L267:   dsub
+L268:   putstatic Field ib_476 new D
+L271:   goto L173
+L274:   getstatic Field ib_476 field2311 LFE_76;
+L277:   ifnull L286
+L280:   getstatic Field ib_476 field2311 LFE_76;
+L283:   invokevirtual Method FE_76 method67 ()V
+L286:   getstatic Field ib_476 field2311 LFE_76;
+L289:   ifnull L298
+L292:   getstatic Field ib_476 field2311 LFE_76;
+L295:   invokevirtual Method FE_76 method417 ()V
+L298:   getstatic Field ib_476 this Ljava/util/LinkedHashSet;
+L301:   invokevirtual Method java/util/LinkedHashSet iterator ()Ljava/util/Iterator;
+L304:   astore_2
+L305:   aload_2
+L306:   invokeinterface InterfaceMethod java/util/Iterator hasNext ()Z 1
+L311:   ifeq L361
+L314:   aload_2
+L315:   invokeinterface InterfaceMethod java/util/Iterator next ()Ljava/lang/Object; 1
+L320:   checkcast M_169
+L323:   astore_3
+L324:   getstatic Field ib_476 field2310 Ljava/util/HashMap;
+L327:   aload_3
+L328:   invokevirtual Method java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object;
+L331:   getstatic Field java/lang/Boolean FALSE Ljava/lang/Boolean;
+L334:   if_acmpeq L305
+L337:   aload_3
+L338:   dload 4
+L340:   getstatic Field ib_476 field2309 D
+L343:   dsub
+L344:   d2f
+L345:   invokeinterface InterfaceMethod M_169 fpsfoundhere (F)Z 2
+L350:   ifeq L305
+L353:   iconst_0
+L354:   iconst_1
+L355:   dup
+L356:   pop2
+L357:   ireturn
+L358:   nop
+L359:   nop
+L360:   athrow
+L361:   getstatic Field ib_476 field2311 LFE_76;
+L364:   ifnull L373
+L367:   getstatic Field ib_476 field2311 LFE_76;
+L370:   invokevirtual Method FE_76 method67 ()V
+L373:   getstatic Field ib_476 field2311 LFE_76;
+L376:   ifnull L400
+L379:   getstatic Field ib_476 field2311 LFE_76;
+L382:   dload 4
+L384:   getstatic Field ib_476 field2309 D
+L387:   dsub
+L388:   d2f
+L389:   invokevirtual Method FE_76 fpsfoundhere (F)Z
+L392:   ifeq L400
+L395:   iconst_0
+L396:   iconst_1
+L397:   dup
+L398:   pop2
+L399:   ireturn
+L400:   getstatic Field ib_476 field2308 Ljava/util/List;
+L403:   dup
+L404:   astore_2
+L405:   monitorenter
+        .catch [0] from L406 to L489 using L494
+L406:   iconst_0
+L407:   iconst_1
+L408:   dup
+L409:   pop2
+L410:   dup
+L411:   istore 6
+L413:   getstatic Field ib_476 field2308 Ljava/util/List;
+L416:   invokeinterface InterfaceMethod java/util/List size ()I 1
+L421:   if_icmpge L487
+L424:   getstatic Field ib_476 field2308 Ljava/util/List;
+L427:   iload 6
+L429:   invokeinterface InterfaceMethod java/util/List get (I)Ljava/lang/Object; 2
+L434:   checkcast Dc_52
+L437:   getfield Field Dc_52 field1794 Ljava/lang/Object;
+L440:   checkcast java/lang/Double
+L443:   invokevirtual Method java/lang/Double doubleValue ()D
+L446:   dload 4
+L448:   dcmpg
+L449:   ifgt L479
+L452:   getstatic Field ib_476 field2308 Ljava/util/List;
+L455:   iload 6
+L457:   invokeinterface InterfaceMethod java/util/List remove (I)Ljava/lang/Object; 2
+L462:   checkcast Dc_52
+L465:   getfield Field Dc_52 field1793 Ljava/lang/Object;
+L468:   iinc 6 -1
+L471:   checkcast java/lang/Runnable
+L474:   invokeinterface InterfaceMethod java/lang/Runnable run ()V 1
+L479:   iinc 6 1
+L482:   iload 6
+L484:   goto L413
+L487:   aload_2
+L488:   monitorexit
+L489:   dload 4
+L491:   goto L502
+        .catch [0] from L494 to L498 using L494
+L494:   astore 7
+L496:   aload_2
+L497:   monitorexit
+L498:   aload 7
+L500:   athrow
+L501:   athrow
+L502:   putstatic Field ib_476 field2309 D
+L505:   iconst_1
+L506:   dup
+L507:   dup
+L508:   pop2
+L509:   ireturn
+L510:   
+        .localvariabletable
+            6 is i3 I from L0 to L510
+            0 is v0 Ljava/lang/Class; from L0 to L510
+            1 is v1 Ljava/util/Iterator; from L0 to L510
+            4 is d0 D from L0 to L510
+            2 is v2 Ljava/lang/Object; from L0 to L510
+            3 is v3 Ljava/lang/Object; from L0 to L510
+            7 is v4 Ljava/lang/Throwable; from L0 to L510
+        .end localvariabletable
     .end code
-    .exceptions java/lang/Exception
 .end method
 
 .method public static synchronized method1156 : (LM_169;)V
@@ -441,8 +477,13 @@ L72:    invokevirtual Method java/util/HashMap put (Ljava/lang/Object;Ljava/lang
 L75:    pop
 L76:    return
 L77:    
-        .attribute StackMap b'\x00\x05\x00\x15\x00\x00\x00\x01\x07\x00\x37\x00\x16\x00\x01\x07\x01\x03\x00\x00\x00\x36\x00\x00\x00\x01\x07\x00\x37\x00\x37\x00\x01\x07\x01\x03\x00\x00\x00\x4C\x00\x01\x07\x01\x03\x00\x00'
+        .localvariabletable
+            0 is v0 LM_169; from L0 to L77
+        .end localvariabletable
     .end code
+    .methodparameters
+        v0
+    .end methodparameters
 .end method
 .innerclasses
     java/util/Map$Entry java/util/Map Entry public static interface abstract
