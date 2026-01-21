@@ -110,26 +110,25 @@ L47:
 
 .method public static <clinit> : ()V
     .code stack 5 locals 0
-L0:     ldc 4.1666e-3f
-L2:     putstatic Field ib_476 field2312 F
-L5:     new java/util/LinkedHashSet
-L8:     dup
-L9:     sipush 128
-L12:    iconst_1
-L13:    dup
-L14:    pop2
-L15:    invokespecial Method java/util/LinkedHashSet <init> (I)V
-L18:    putstatic Field ib_476 this Ljava/util/LinkedHashSet;
-L21:    new java/util/HashMap
-L24:    dup
-L25:    invokespecial Method java/util/HashMap <init> ()V
-L28:    putstatic Field ib_476 field2310 Ljava/util/HashMap;
-L31:    new java/util/ArrayList
-L34:    dup
-L35:    invokespecial Method java/util/ArrayList <init> ()V
-L38:    putstatic Field ib_476 field2308 Ljava/util/List;
-L41:    return
-L42:    
+L0:     invokestatic Method ReadRepeatRateMultiplierSoftdrop read ()V
+L3:     new java/util/LinkedHashSet
+L6:     dup
+L7:     sipush 128
+L10:    iconst_1
+L11:    dup
+L12:    pop2
+L13:    invokespecial Method java/util/LinkedHashSet <init> (I)V
+L16:    putstatic Field ib_476 this Ljava/util/LinkedHashSet;
+L19:    new java/util/HashMap
+L22:    dup
+L23:    invokespecial Method java/util/HashMap <init> ()V
+L26:    putstatic Field ib_476 field2310 Ljava/util/HashMap;
+L29:    new java/util/ArrayList
+L32:    dup
+L33:    invokespecial Method java/util/ArrayList <init> ()V
+L36:    putstatic Field ib_476 field2308 Ljava/util/List;
+L39:    return
+L40:    
     .end code
 .end method
 
